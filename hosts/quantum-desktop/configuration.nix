@@ -4,7 +4,7 @@
   imports = [
     ./hardware-configuration.nix
     ../../modules/nixos/main-user.nix
-    ../../nvidia.nix
+    ../../modules/nixos/nvidia.nix
   ];
 
   nixpkgs.config.allowUnfree = true;
