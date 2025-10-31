@@ -12,6 +12,12 @@
         "QT_QPA_PLATFORM,wayland"
         "XDG_SCREENSHOTS_DIR,$HOME/screens"
       ];
+      
+      # TODO: host based monitor layout
+      monitor = [
+        "DP-1, 2560x1440@144, 0x0, 1"
+        "HDMI-A-1, 800x1280@60, 2560x0, 1, transform, 1"
+      ];
       general = {
         gaps_in = 0;
         gaps_out = 0;

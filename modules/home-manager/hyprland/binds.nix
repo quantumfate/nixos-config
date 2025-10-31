@@ -1,11 +1,13 @@
 {
   wayland.windowManager.hyprland = {
     settings = {
-      "$mod" = "SUPER";
+      "$mainMod" = "SUPER";
       bind = [
-        "$mod, F, exec, brave"
-        "$mod, R, exec, rofi -show run"
-        "$mod, X, killactive"
+        "$mainMod, T, exec, kitty"
+        "$mainMod, F, exec, brave"
+        "$mainMod, R, exec, rofi -show run"
+        "$mainMod, X, killactive"
+
 
         # Switching workspaces
         "$mainMod, 1, workspace, 1"

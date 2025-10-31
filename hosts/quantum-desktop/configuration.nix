@@ -7,6 +7,8 @@
     ../../nvidia.nix
   ];
 
+  nixpkgs.config.allowUnfree = true;
+
   main-user.enable = true;
   main-user.userName = "quantum";
 
