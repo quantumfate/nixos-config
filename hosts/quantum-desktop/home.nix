@@ -20,10 +20,8 @@
       user = {
         name = "Leon Connor Holm";
         email = "leonconnorholm@gmail.com";
+        init.defaultBranch = "main";
       };
-    };
-    extraConfig = {
-      init.defaultBranch = "main";
     };
   };
   programs.ssh = {
@@ -35,7 +33,6 @@
         IdentityFile ~/.ssh/github
         IdentitiesOnly yes
         AddKeysToAgent yes
-        UseKeychain yes
     '';
     enableDefaultConfig = false;
     matchBlocks."*" = {
