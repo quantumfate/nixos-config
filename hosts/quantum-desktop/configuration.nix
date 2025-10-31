@@ -36,11 +36,6 @@
   # services.xserver.xkb.layout = "us";
   # services.xserver.xkb.options = "eurosign:e,caps:escape";
 
-  services.pipewire = {
-    enable = true;
-    pulse.enable = true;
-  };
-
   services.getty.autologinUser = "quantum";
 
   services.udisks2.enable = true;
