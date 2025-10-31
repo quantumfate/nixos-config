@@ -42,11 +42,6 @@
 
   programs.firefox.enable = true;
   programs.zsh.enable = false;
-  programs.hyprland = {
-    enable = true;
-    package = inputs.hyprland.packages."${pkgs.system}".hyprland;
-    xwayland.enable = true;
-  };
 
   environment.systemPackages = with pkgs; [ vim wget git zsh pciutils ];
 
