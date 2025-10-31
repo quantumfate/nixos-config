@@ -11,6 +11,7 @@
         "XDG_SESSION_DESKTOP,Hyprland"
         "QT_QPA_PLATFORM,wayland"
         "XDG_SCREENSHOTS_DIR,$HOME/screens"
+        "EDITOR,nvim"
       ];
       
       # TODO: host based monitor layout
