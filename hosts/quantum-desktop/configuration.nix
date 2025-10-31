@@ -52,30 +52,7 @@
     xwayland.enable = true;
   };
 
-  environment.systemPackages = with pkgs; [
-    vim
-    wget
-    git
-    zsh
-    ranger
-    foot
-    waybar
-    hyprpaper
-    kitty
-    rofi
-    pciutils
-    neovim
-    brave
-    udiskie
-    udisks2
-    spotify
-    vscode
-    pavucontrol
-    nixfmt-classic
-    keepassxc
-  ];
-
-  nixpkgs.config.allowUnfree = true;
+  environment.systemPackages = with pkgs; [ vim wget git zsh pciutils ];
 
   system.stateVersion = "25.05";
 
