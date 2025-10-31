@@ -1,0 +1,1 @@
+- Implement preferred [hyprland workspaces](https://github.com/Duckonaut/split-monitor-workspaces)
