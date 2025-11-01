@@ -1,4 +1,4 @@
 {
 
-  imports = [ ./hyprland ./git.nix ./ssh.nix ./bash.nix ./waybar ./chromuium.nix ];
+  imports = [ ./hyprland ./git.nix ./ssh.nix ./bash.nix ./chromuium.nix ];
 }
