@@ -8,13 +8,10 @@ in {
     accent = accent;
 
     # obsolete because of catppuccin.enable = true
-    tty.enable = true;
     alacritty.enable = true;
-    grub.enable = true;
     chromium.enable = true;
     brave.enable = true;
     dunst.enable = true;
-    gtk.enable = true;
     hyprland.enable = true;
     kitty.enable = true;
     rofi.enable = true;

@@ -27,10 +27,14 @@
             useGlobalPkgs = true;
             useUserPackages = true;
             backupFileExtension = "backup";
-            users.quantum = import ./hosts/quantum-desktop/home.nix;
+            users.quantum = {
+              imports = [
+                ./hosts/quantum-desktop/home.nix
+                inputs.catppuccin.homeModules.catppuccin
+              ];
+            };          
           };
         }
-        catppuccin.homeModules.catppuccin
       ];
     };
   };

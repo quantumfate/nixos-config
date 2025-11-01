@@ -145,18 +145,23 @@
     '';
     #style = ./style.css;
     settings = {
-      include = "~/.config/hypr/waybar/modules";
-      position = "top";
-      height = 15;
-      ipc = true;
-      margin-left = 0;
-      layer = "top";
-      margin-right = 0;
-      spacing = 6;
-      fixed-center = true;
-      modules-left = [ "hyprland/workspaces" "cpu" "memory" "disk" "network" ];
-      modules-center = [ "hyprland/window" "custom/spotify" "custom/weather" ];
-      modules-right = [ "hyprland/language" "pulseaudio" "clock" "tray" "custom/dunst" ];
+      mainBar = {
+
+        include = "~/.config/hypr/waybar/modules";
+        position = "top";
+        height = 15;
+        ipc = true;
+        margin-left = 0;
+        layer = "top";
+        margin-right = 0;
+        spacing = 6;
+        fixed-center = true;
+        modules-left =
+          [ "hyprland/workspaces" "cpu" "memory" "disk" "network" ];
+        modules-center =
+          [ "hyprland/window" "custom/spotify" "custom/weather" ];
+        modules-right = [ "hyprland/language" "pulseaudio" "clock" "tray" ];
+      };
     };
   };
 }
