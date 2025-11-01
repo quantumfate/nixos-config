@@ -7,7 +7,7 @@
         background-color: @base;
         border: none;
         border-radius: 0;
-        font-family: Inconsolata Nerd Font;
+        font-family: Inconsolata Nerd Font Mono;
         font-size: 15px;
         min-height: 0;
       }
@@ -30,6 +30,7 @@
       }
 
       #workspaces button:hover {
+        background-color: @mauve;
         border-radius: 5px;
       }
 
@@ -146,8 +147,7 @@
     #style = ./style.css;
     settings = {
       mainBar = {
-
-        include = "~/.config/hypr/waybar/modules";
+        include = "~/.config/waybar/modules";
         position = "top";
         height = 15;
         ipc = true;
@@ -160,7 +160,7 @@
           [ "hyprland/workspaces" "cpu" "memory" "disk" "network" ];
         modules-center =
           [ "hyprland/window" "custom/spotify" "custom/weather" ];
-        modules-right = [ "hyprland/language" "pulseaudio" "clock" "tray" ];
+        modules-right = [ "hyprland/language" "pulseaudio" "clock" "tray" "custom/dunst"];
       };
     };
   };

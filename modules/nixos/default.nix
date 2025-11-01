@@ -6,5 +6,6 @@
     ./audio.nix
     ./kernel.nix
     ./fonts.nix
+    ./steam.nix
   ];
 }
