@@ -13,6 +13,7 @@
       url = "github:hyprwm/hyprland-plugins";
       inputs.hyprland.follows = "hyprland";
     };
+    catppuccin.url = "github:catppuccin/nix";
   };
 
   outputs = { self, nixpkgs, ... }@inputs: {
@@ -29,6 +30,7 @@
             users.quantum = import ./hosts/quantum-desktop/home.nix;
           };
         }
+        catppuccin.homeModules.catppuccin
       ];
     };
   };

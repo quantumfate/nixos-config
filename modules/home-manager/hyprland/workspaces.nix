@@ -11,7 +11,7 @@
         "7,monitor:DP-1"
         "8,monitor:DP-1"
         "9,monitor:DP-1"
-        "0,monitor:HDMI-A-1"
+        "0,monitor:DP-1"
       ];
     };
   };

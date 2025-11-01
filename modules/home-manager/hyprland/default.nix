@@ -2,6 +2,7 @@
   imports = [
     ./binds.nix
     ./main.nix
-    ./workspaces
+    ./workspaces.nix
+    ./startup.nix
   ];
 }

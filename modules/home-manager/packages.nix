@@ -1,6 +1,7 @@
 { pkgs, ... }: {
 
   home.packages = with pkgs; [
+    alacritty
     anki
     mpv
     obs-studio
@@ -21,5 +22,8 @@
     neovim
     brave
     vscode
+    pamixer
+    networkmanagerapplet
+    python3
   ];
 }
