@@ -8,6 +8,6 @@
     ./chromium.nix
     ./rofi
     ./waybar
-    ./mako.nix
+    ./dunst.nix
   ];
 }

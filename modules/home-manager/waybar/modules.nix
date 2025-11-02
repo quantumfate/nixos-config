@@ -1,10 +1,6 @@
 let scriptLocation = "/home/quantum/.config/waybar/scripts";
 in {
-  home.file.".config/waybar/scripts/" = {
-    source = ./scripts;
-    recursive = true;
-  };
-
+  
   home.file.".config/waybar/modules" = {
     enable = true;
     text = ''

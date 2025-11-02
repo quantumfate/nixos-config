@@ -1,6 +1,7 @@
 {
   imports = [
     ./main.nix
-    ./files.nix
+    ./modules.nix
+    ./style.nix
   ];
 }
