@@ -7,7 +7,7 @@
         background-color: @base;
         border: none;
         border-radius: 0;
-        font-family: Inconsolata Nerd Font Mono;
+        font-family: Fira Code Nerd Font Mono;
         font-size: 15px;
         min-height: 0;
       }
@@ -147,9 +147,9 @@
     #style = ./style.css;
     settings = {
       mainBar = {
-        include = "~/.config/waybar/modules";
+        include = "/home/quantum/.config/waybar/modules";
         position = "top";
-        height = 15;
+        height = 35;
         ipc = true;
         margin-left = 0;
         layer = "top";

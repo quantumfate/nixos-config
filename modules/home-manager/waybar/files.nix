@@ -85,7 +85,7 @@ in {
     },
     "memory": {
         "interval": 10,
-        "format": " {used:0.1f}G"
+        "format": " {used:0.1f}G "
     },
     "network": {
         "interval": 5,

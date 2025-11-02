@@ -1,10 +1,7 @@
 { config, lib, pkgs, inputs, ... }:
 
 {
-  imports = [
-    ./hardware-configuration.nix
-    ../../modules/nixos
-  ];
+  imports = [ ./hardware-configuration.nix ../../modules/nixos ];
 
   nixpkgs.config.allowUnfree = true;
 
@@ -36,6 +33,17 @@
   # services.xserver.xkb.layout = "us";
   # services.xserver.xkb.options = "eurosign:e,caps:escape";
 
+  console = {
+    useXkbConfig = true; # use xkbOptions in tty.
+  };
+  services.xserver = {
+    enable = false; # true breaks the system xD
+    xkb = {
+      layout = "us";
+      variant = "intl";
+    };
+  };
+  services.xserver.xkbVariant = "intl";
   services.getty.autologinUser = "quantum";
 
   services.udisks2.enable = true;

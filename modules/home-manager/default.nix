@@ -8,6 +8,6 @@
     ./rofi
     ./colors.nix
     ./waybar
-    ./dunst.nix
+    ./mako.nix
   ];
 }
