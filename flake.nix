@@ -14,9 +14,10 @@
       inputs.hyprland.follows = "hyprland";
     };
     catppuccin.url = "github:catppuccin/nix";
+    nix-colors.url = "github:misterio77/nix-colors";
   };
 
-  outputs = { self, nixpkgs, ... }@inputs: {
+  outputs = { self, nixpkgs, nix-colors, ... }@inputs: {
     nixosConfigurations.quantum-desktop = nixpkgs.lib.nixosSystem {
       specialArgs = { inherit inputs; };
       modules = [
@@ -31,7 +32,9 @@
               imports = [
                 ./hosts/quantum-desktop/home.nix
                 inputs.catppuccin.homeModules.catppuccin
+                inputs.nix-colors.homeManagerModules.default
               ];
+              colorScheme = inputs.nix-colors.colorSchemes.catppuccin-mocha;
             };          
           };
         }

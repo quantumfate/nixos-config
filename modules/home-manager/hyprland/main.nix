@@ -1,3 +1,5 @@
+{pkgs, config, ... }:
+
 {
   wayland.windowManager.hyprland = {
     enable = true;
@@ -23,10 +25,10 @@
         gaps_in = 0;
         gaps_out = 0;
 
-        border_size = 5;
+        border_size = 3;
 
-        "col.active_border" = "rgba(d65d0eff) rgba(98971aff) 45deg";
-        "col.inactive_border" = "rgba(3c3836ff)";
+        "col.active_border" = "rgb(${config.colorScheme.palette.base06})";
+        "col.inactive_border" = "rgb(${config.colorScheme.palette.base00})";
 
         resize_on_border = true;
 

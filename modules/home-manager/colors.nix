@@ -1,6 +1,6 @@
 let
   flavor = "mocha";
-  accent = "lavender";
+  accent = "rosewater";
 in {
   catppuccin = {
     enable = true; # enables everything
@@ -11,11 +11,10 @@ in {
     alacritty.enable = true;
     chromium.enable = true;
     brave.enable = true;
-    dunst.enable = true;
     hyprland.enable = true;
     kitty.enable = true;
     rofi.enable = true;
-    vscode.enable = true;
+    vscode.profiles.default.enable = true;
     waybar.enable = true;
     obs.enable = true;
   };

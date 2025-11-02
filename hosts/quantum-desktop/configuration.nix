@@ -43,7 +43,6 @@
       variant = "intl";
     };
   };
-  services.xserver.xkbVariant = "intl";
   services.getty.autologinUser = "quantum";
 
   services.udisks2.enable = true;
