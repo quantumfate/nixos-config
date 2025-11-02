@@ -26,6 +26,5 @@
     networkmanagerapplet
     python3
     xdg-desktop-portal
-    libnotify
   ];
 }

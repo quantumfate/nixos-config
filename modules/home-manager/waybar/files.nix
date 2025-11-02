@@ -15,7 +15,7 @@ in {
         "restart-interval": 1
     },
     "hyprland/workspaces": {
-        "format": "<sub>{icon}</sub>",
+        "format": "{icon}",
         "format-window-separator": "\n",
         "window-rewrite-default": "",
         "window-rewrite": {
