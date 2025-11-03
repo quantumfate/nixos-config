@@ -9,10 +9,10 @@
         ipc = true;
         margin-right = 0;
         margin-left = 0;
-        padding-right = 30;
         layer = "top";
         spacing = 6;
         fixed-center = true;
+        output = "DP-1";
         modules-left =
           [ "hyprland/workspaces" "cpu" "memory" "disk" "network" ];
         modules-center =

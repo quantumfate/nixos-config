@@ -50,7 +50,13 @@
   programs.firefox.enable = true;
   programs.zsh.enable = false;
 
-  environment.systemPackages = with pkgs; [ vim wget git zsh pciutils ];
+  environment.systemPackages = with pkgs; [
+    vim
+    wget
+    git
+    zsh
+    pciutils
+  ];
 
   system.stateVersion = "25.05";
 

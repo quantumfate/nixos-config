@@ -1,6 +1,9 @@
 # Colors
 
+
 from https://github.com/tinted-theming/base16-schemes/blob/main/catppuccin-mocha.yaml
+
+with https://github.com/tinted-theming/base16-schemes/tree/main
 
 - scheme "Catppuccin Mocha"
 - author "https://github.com/catppuccin/catppuccin"
