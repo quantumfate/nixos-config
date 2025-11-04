@@ -8,30 +8,27 @@
   main-user.enable = true;
   main-user.userName = "quantum";
 
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
+  boot.loader = {
+    efi = {
+      canTouchEfiVariables = true;
+    };
+    grub = {
+      enable = true;
+      devices = [ "nodev" ];
+      efiSupport = true;
+      useOSProber = true;
+    };
+  };
 
-  networking.hostName = "quantum-desktop"; # Define your hostname.
+  networking.hostName = "quantum-desktop";
   networking.networkmanager.enable =
-    true; # Easiest to use and most distros use this by default.
+    true;
 
   time.timeZone = "Europe/Berlin";
+
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
-  # Select internationalisation properties.
-  # i18n.defaultLocale = "en_US.UTF-8";
-  # console = {
-  #   font = "Lat2-Terminus16";
-  #   keyMap = "us";
-  #   useXkbConfig = true; # use xkb.options in tty.
-  # };
-
-  # Enable the X11 windowing system.
-  # services.xserver.enable = true;
-
-  # Configure keymap in X11
-  # services.xserver.xkb.layout = "us";
-  # services.xserver.xkb.options = "eurosign:e,caps:escape";
+  i18n.defaultLocale = "en_EN.UTF-8";
 
   console = {
     useXkbConfig = true; # use xkbOptions in tty.
