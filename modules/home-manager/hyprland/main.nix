@@ -25,9 +25,9 @@
         gaps_in = 0;
         gaps_out = 0;
 
-        border_size = 3;
+        border_size = 1;
 
-        "col.active_border" = "rgb(${config.colorScheme.palette.base06})";
+        "col.active_border" = "rgb(${config.colorScheme.palette.base01})";
         "col.inactive_border" = "rgb(${config.colorScheme.palette.base00})";
 
         resize_on_border = true;
@@ -40,7 +40,7 @@
         rounding = 0;
 
         active_opacity = 1.0;
-        inactive_opacity = 0.8;
+        inactive_opacity = 1.0;
 
         shadow = { enabled = false; };
 

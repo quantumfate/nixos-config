@@ -17,13 +17,13 @@
     nix-colors.url = "github:misterio77/nix-colors";
   };
 
-  outputs = { self, nixpkgs, nix-colors, ... }@inputs: {
+  outputs = { self, nixpkgs, ... }@inputs: {
     nixosConfigurations.quantum-desktop = nixpkgs.lib.nixosSystem {
       specialArgs = { inherit inputs; };
       modules = [
         ./hosts/quantum-desktop/configuration.nix
         inputs.home-manager.nixosModules.home-manager
-        catppuccin.nixosModules.catppuccin
+        inputs.catppuccin.nixosModules.catppuccin
         {
           home-manager = {
             useGlobalPkgs = true;
@@ -31,7 +31,7 @@
             backupFileExtension = "backup";
             users.quantum = {
               imports = [
-                ./hosts/quantum-desktop/home.nix
+                ./modules/nixos/home.nix
                 inputs.catppuccin.homeModules.catppuccin
                 inputs.nix-colors.homeManagerModules.default
               ];

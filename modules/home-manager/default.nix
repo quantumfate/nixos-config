@@ -9,5 +9,6 @@
     ./rofi
     ./waybar
     ./dunst.nix
+    ./udiskie.nix
   ];
 }
