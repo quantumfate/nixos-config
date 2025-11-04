@@ -11,7 +11,7 @@ in {
       '';
     };
     main-user.shell = lib.mkOption {
-      default = pkgs.bash;
+      default = pkgs.zsh;
       description = ''
         shell
       '';

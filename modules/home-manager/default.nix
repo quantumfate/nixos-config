@@ -10,5 +10,6 @@
     ./waybar
     ./dunst.nix
     ./udiskie.nix
+    ./zsh.nix
   ];
 }
