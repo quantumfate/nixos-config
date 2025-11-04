@@ -45,7 +45,6 @@
   services.udisks2.enable = true;
 
   programs.firefox.enable = true;
-  programs.zsh.enable = false;
 
   environment.systemPackages = with pkgs; [
     vim
@@ -53,6 +52,10 @@
     git
     zsh
     pciutils
+  ];
+  
+  environment.pathsToLink = [
+    "/share/zsh"
   ];
 
   system.stateVersion = "25.05";

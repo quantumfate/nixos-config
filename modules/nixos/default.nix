@@ -8,5 +8,6 @@
     ./fonts.nix
     ./steam.nix
     ./colors.nix
+    ./zsh.nix
   ];
 }
