@@ -28,7 +28,7 @@
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
-  i18n.defaultLocale = "en_EN.UTF-8";
+  i18n.defaultLocale = "en_US.UTF-8";
 
   console = {
     useXkbConfig = true; # use xkbOptions in tty.

@@ -27,5 +27,6 @@
     python3
     xdg-desktop-portal
     lutris
+    npins
   ];
 }

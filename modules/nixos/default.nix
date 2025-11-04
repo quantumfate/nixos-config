@@ -7,5 +7,6 @@
     ./kernel.nix
     ./fonts.nix
     ./steam.nix
+    ./colors.nix
   ];
 }

@@ -23,6 +23,7 @@
       modules = [
         ./hosts/quantum-desktop/configuration.nix
         inputs.home-manager.nixosModules.home-manager
+        catppuccin.nixosModules.catppuccin
         {
           home-manager = {
             useGlobalPkgs = true;
