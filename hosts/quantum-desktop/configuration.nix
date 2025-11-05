@@ -1,17 +1,24 @@
 { config, lib, pkgs, inputs, ... }:
 
 {
-  imports = [ ./hardware-configuration.nix ../../modules/nixos ];
+  imports = [ ./hardware-configuration.nix ../../modules ];
 
+  # General
   nixpkgs.config.allowUnfree = true;
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
+  # User Modules
   main-user.enable = true;
-  main-user.userName = "quantum";
+  main-user.userName = "quantum"; # TODO: pass down with flakes
+
+  userPrograms.zsh.enable = true;
+
+  # System
+  networking.hostName = "quantum-desktop"; # TODO: pass down with flakes
+  networking.networkmanager.enable = true;
 
   boot.loader = {
-    efi = {
-      canTouchEfiVariables = true;
-    };
+    efi = { canTouchEfiVariables = true; };
     grub = {
       enable = true;
       devices = [ "nodev" ];
@@ -20,19 +27,13 @@
     };
   };
 
-  networking.hostName = "quantum-desktop";
-  networking.networkmanager.enable =
-    true;
-
   time.timeZone = "Europe/Berlin";
-
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
-
   i18n.defaultLocale = "en_US.UTF-8";
 
   console = {
     useXkbConfig = true; # use xkbOptions in tty.
   };
+
   services.xserver = {
     enable = false; # true breaks the system xD
     xkb = {
@@ -40,25 +41,13 @@
       variant = "intl";
     };
   };
-  services.getty.autologinUser = "quantum";
 
-  services.udisks2.enable = true;
-
-  programs.firefox.enable = true;
-
-  environment.systemPackages = with pkgs; [
-    vim
-    wget
-    git
-    zsh
-    pciutils
-  ];
-  
-  environment.pathsToLink = [
-    "/share/zsh"
-  ];
-
+  environment.systemPackages = with pkgs; [ vim wget git zsh pciutils ];
   system.stateVersion = "25.05";
 
+  # to be moved
+  services.udisks2.enable = true;
+  services.getty.autologinUser = config.main-user.userName;
+  programs.firefox.enable = true;
 }
 

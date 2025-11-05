@@ -1,17 +1,17 @@
 { lib, config, pkgs, ... }:
 
-let cfg = config.main-user;
+let cfg = config.mainUser;
 in {
   options = {
-    main-user.enable = lib.mkEnableOption "enable user module";
-    main-user.userName = lib.mkOption {
-      default = "mainuser";
+    mainUser.enable = lib.mkEnableOption "enable user module";
+    mainUser.userName = lib.mkOption {
+      default = "nixos";
       description = ''
         username
       '';
     };
-    main-user.shell = lib.mkOption {
-      default = pkgs.zsh;
+    mainUser.shell = lib.mkOption {
+      default = pkgs.bash;
       description = ''
         shell
       '';
