@@ -3,7 +3,7 @@
     settings = {
       "$mainMod" = "SUPER";
       bind = [
-        "$mainMod, T, exec, kitty"
+        "$mainMod, T, exec, alacritty"
         "$mainMod, F, exec, brave"
         "$mainMod, R, exec, rofi -show run"
         "$mainMod, X, killactive"
