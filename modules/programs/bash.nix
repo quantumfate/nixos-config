@@ -1,5 +1,8 @@
+{ config, pkgs, lib, ... }:
+
+# Not optional to have a fallback
 {
- programs.bash = {
+  programs.bash = {
     enable = true;
     shellAliases = { btw = "echo i use hyprland btw"; };
     profileExtra = ''
@@ -7,5 +10,5 @@
         exec hyprland
       fi
     '';
-  }; 
+  };
 }
