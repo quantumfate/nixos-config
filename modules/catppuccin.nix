@@ -1,6 +1,7 @@
-{ config, ... }:
+{ config, lib, ... }:
 
 let
+  cfg = config.colorscheme.catppuccin;
   hostName = config.networking.hostName;
   userCfg = config.mainUser;
 

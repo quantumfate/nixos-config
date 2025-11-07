@@ -4,5 +4,7 @@
     ./bash.nix
     ./hyprland
     ./waybar
+    ./rofi
+    ./dunst.nix
   ];
 }
