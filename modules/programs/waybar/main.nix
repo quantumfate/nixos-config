@@ -7,7 +7,6 @@ in {
   home-manager.users."${userCfg.userName}" = {
     programs.waybar = {
       enable = true;
-      systemd.enable = true;
       settings = {
         mainBar = {
           include = "/home/${userCfg.userName}/.config/waybar/modules";
@@ -19,7 +18,7 @@ in {
           layer = "top";
           spacing = 6;
           fixed-center = true;
-          output =  [ "DP-1" ]; # TODO: set a list of active monitors
+          output = [ "DP-1" ]; # TODO: set a list of active monitors
           modules-left =
             [ "hyprland/workspaces" "cpu" "memory" "disk" "network" ];
           modules-center =
