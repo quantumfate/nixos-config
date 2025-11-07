@@ -1,41 +1,49 @@
-{
-  programs.waybar = {
-    style = ''
-* {
-  
-}
+{ config, ... }:
 
-#waybar {
-  background-color: @base;
-}
+let
+  hostName = config.networking.hostName;
+  mainUser = config.mainUser;
+  scriptLocation = "/home/${mainUser}/.config/waybar/scripts";
+in {
+  home-manager.users."${mainUser}" = {
+    programs.waybar = {
+      style = ''
+        * {
+          
+        }
 
-#workspaces button {
-  box-shadow: none;
-  text-shadow: none;
-  padding: 0px;
-  border-radius: 2px;
-  margin: 5px 0px 5px 3px;
-  padding: 0 2px 0 2px;
-  background-color: @maroon;
-  color: @crust;
-  animation: gradient_f 20s ease-in infinite;
-  transition: all 0.5s cubic-bezier(0.55, -0.68, 0.48, 1.682);
-}
+        #waybar {
+          background-color: @base;
+        }
 
-#workspaces button.active {
-  background: @teal;
-  animation: gradient_f 20s ease-in infinite;
-  transition: all 0.3s cubic-bezier(0.55, -0.68, 0.48, 1.682);
-}
+        #workspaces button {
+          box-shadow: none;
+          text-shadow: none;
+          padding: 0px;
+          border-radius: 2px;
+          margin: 5px 0px 5px 3px;
+          padding: 0 2px 0 2px;
+          background-color: @maroon;
+          color: @crust;
+          animation: gradient_f 20s ease-in infinite;
+          transition: all 0.5s cubic-bezier(0.55, -0.68, 0.48, 1.682);
+        }
 
-#workspaces button:hover {
-  background: @teal;
-  border-color: @teal;
-  animation: gradient_f 20s ease-in infinite;
-  transition: all 0.3s cubic-bezier(0.55, -0.68, 0.48, 1.682);
-}
+        #workspaces button.active {
+          background: @teal;
+          animation: gradient_f 20s ease-in infinite;
+          transition: all 0.3s cubic-bezier(0.55, -0.68, 0.48, 1.682);
+        }
+
+        #workspaces button:hover {
+          background: @teal;
+          border-color: @teal;
+          animation: gradient_f 20s ease-in infinite;
+          transition: all 0.3s cubic-bezier(0.55, -0.68, 0.48, 1.682);
+        }
 
 
-    '';
+      '';
+    };
   };
 }
