@@ -9,12 +9,12 @@
 
   # User Modules
   main-user.enable = true;
-  main-user.userName = "quantum"; # TODO: pass down with flakes
+  main-user.userName = "quantum"; 
 
   userPrograms.zsh.enable = true;
 
   # System
-  networking.hostName = "quantum-desktop"; # TODO: pass down with flakes
+  networking.hostName = "quantum-desktop"; 
   networking.networkmanager.enable = true;
 
   boot.loader = {

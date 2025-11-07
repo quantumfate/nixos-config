@@ -1,6 +1,6 @@
 {
   imports = [
-    ./mainUser.nix
+    ./main-user.nix
     ./home.nix
     ./programs
   ];

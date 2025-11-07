@@ -2,9 +2,9 @@
 
 let
   hostName = config.networking.hostName;
-  mainUser = config.mainUser;
+  userCfg = config.mainUser;
 in {
-  home-manager.users."${mainUser}" = {
+  home-manager.users."${userCfg.userName}" = {
     wayland.windowManager.hyprland = {
       settings = {
         workspace = [

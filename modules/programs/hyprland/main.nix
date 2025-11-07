@@ -2,7 +2,7 @@
 
 let
   hostName = config.networking.hostName;
-  mainUser = config.mainUser;
+  userCfg = config.mainUser;
 
   monitorMaps = {
     "quantum-desktop" = [
@@ -20,7 +20,7 @@ in {
     xwayland.enable = true;
   };
 
-  home-manager.users."${mainUser}" = {
+  home-manager.users."${userCfg.userName}" = {
     wayland.windowManager.hyprland = {
       enable = true;
       systemd.enable = true;
@@ -42,6 +42,7 @@ in {
 
           border_size = 1;
 
+          # TODO: migrate to own colors
           "col.active_border" = "rgb(${config.colorScheme.palette.base01})";
           "col.inactive_border" = "rgb(${config.colorScheme.palette.base00})";
 

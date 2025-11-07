@@ -2,10 +2,10 @@
 
 let
   hostName = config.networking.hostName;
-  mainUser = config.mainUser;
-  scriptLocation = "/home/${mainUser}/.config/waybar/scripts";
+  userCfg = config.mainUser;
+  scriptLocation = "/home/${userCfg.userName}/.config/waybar/scripts";
 in {
-  home-manager.users."${mainUser}" = {
+  home-manager.users."${userCfg.userName}" = {
     home.file.".config/waybar/modules" = {
       enable = true;
       text = ''

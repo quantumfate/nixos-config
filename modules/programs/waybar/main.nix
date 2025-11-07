@@ -2,15 +2,15 @@
 
 let
   hostName = config.networking.hostName;
-  mainUser = config.mainUser;
+  userCfg = config.mainUser;
 in {
-  home-manager.users."${mainUser}" = {
+  home-manager.users."${userCfg.userName}" = {
     programs.waybar = {
       enable = true;
       systemd.enable = true;
       settings = {
         mainBar = {
-          include = "/home/${mainUser}/.config/waybar/modules";
+          include = "/home/${userCfg.userName}/.config/waybar/modules";
           position = "top";
           height = 35;
           ipc = true;
