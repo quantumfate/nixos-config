@@ -1,7 +1,6 @@
 { pkgs, config, ... }:
 
 let
-  cfg = config.userPrograms.hyprland;
   hostName = config.networking.hostName;
   mainUser = config.mainUser;
 
