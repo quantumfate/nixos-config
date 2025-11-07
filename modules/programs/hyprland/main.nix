@@ -1,4 +1,4 @@
-{ pkgs, config, ... }:
+{ pkgs, config, inputs, ... }:
 
 let
   hostName = config.networking.hostName;
@@ -43,8 +43,8 @@ in {
           border_size = 1;
 
           # TODO: migrate to own colors
-          "col.active_border" = "rgb(${config.colorScheme.palette.base01})";
-          "col.inactive_border" = "rgb(${config.colorScheme.palette.base00})";
+          #"col.active_border" = "rgb(${config.colorScheme.palette.base01})";
+          #"col.inactive_border" = "rgb(${config.colorScheme.palette.base00})";
 
           resize_on_border = true;
 

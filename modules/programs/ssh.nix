@@ -1,14 +1,12 @@
 { config, lib, ... }:
 
 let
-  cfg = config.userPrograms.ssh;
   hostName = config.networking.hostName;
   userCfg = config.mainUser;
 in {
-  options.userPrograms.ssh.enable lib.mkEnableOption "SSH configuration for the user.";
   home-manager.users."${userCfg.userName}" = {
     programs.ssh = {
-      enable = cfg.enable;
+      enable = true;
       extraConfig = ''
         Host github.com
           HostName github.com

@@ -20,7 +20,7 @@
   outputs = { self, nixpkgs, ... }@inputs:
     let
       mainUser = "quantum";
-      mkSystem = configNix: {
+      mkSystem = { configNix }: {
         specialArgs = { inherit inputs; };
         modules = [
           (import configNix)

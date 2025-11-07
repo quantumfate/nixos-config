@@ -3,21 +3,17 @@
 # TODO: eventually add ProtonGE for more compatibility
 
 let
-  cfg = config.userPrograms.steam;
   hostName = config.networking.hostName;
   userCfg = config.mainUser;
 in
 {
+  programs.steam.enable = true;
+  programs.steam.gamescopeSession.enable = true;
 
-  options.userPrograms.steam.enable = lib.mkEnableOption "Steam client.";
-
-  programs.steam.enable = cfg.enable;
-  programs.steam.gamescopeSession.enable = cfg.enable;
-
-  environment.systemPackages = lib.mkIf cfg.enable [
-    pkgs.mangohud
+  environment.systemPackages = with pkgs; [
+    mangohud
   ];
 
-  programs.gamemode.enable = cfg.enable;
+  programs.gamemode.enable = true;
 
 }

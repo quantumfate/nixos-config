@@ -1,16 +1,13 @@
 { config, pkgs, lib, ... }:
 
 let
-  cfg = config.userPrograms.chromium;
   hostName = config.networking.hostName;
   userCfg = config.mainUser;
 in {
-  options.userPrograms.chromium.enable =
-    lib.mkEnableOption "Chrome based browser.";
 
   home-manager.users."${userCfg.userName}" = {
     programs.chromium = {
-      enable = cfg.enable;
+      enable = true;
       extensions = [
         # Dark Reader
         {

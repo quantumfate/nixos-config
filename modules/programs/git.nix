@@ -1,16 +1,13 @@
 { config, lib, ... }:
 
 let
-  cfg = config.userPrograms.git;
   hostName = config.networking.hostName;
   userCfg = config.mainUser;
 in {
-  options.userPrograms.git.enable =
-    lib.mkEnableOption "Git configuration for the user.";
 
   home-manager.users."${userCfg.userName}" = {
     programs.git = {
-      enable = cfg.enable;
+      enable = true;
       settings = {
         user = {
           name = "Leon Connor Holm";
