@@ -6,5 +6,6 @@
     ./waybar
     ./rofi
     ./dunst.nix
+    ./steam.nix
   ];
 }

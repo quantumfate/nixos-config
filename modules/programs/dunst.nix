@@ -5,6 +5,7 @@ let
   hostName = config.networking.hostName;
   userCfg = config.mainUser;
 in {
+  options.userPrograms.dunst.enable = lib.mkEnableOption "Dunst notification daemon for the user.";
 
   home-manager.users."${userCfg.userName}" = {
 
