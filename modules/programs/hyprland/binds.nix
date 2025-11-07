@@ -1,4 +1,11 @@
+{ config, ... }:
+
+let
+  hostName = config.networking.hostName;
+  mainUser = config.mainUser;
+in
 {
+  home-manager.users."${mainUser}" = {
   wayland.windowManager.hyprland = {
     settings = {
       "$mainMod" = "SUPER";
@@ -43,6 +50,7 @@
       bindm =
         [ "ALT, mouse:272, movewindow" "$mainMod, mouse:273, resizewindow" ];
     };
+  };
   };
 }
 

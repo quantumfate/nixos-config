@@ -1,6 +1,12 @@
-{
-  wayland.windowManager.hyprland = {
-    settings = {
+{ config, ... }:
+
+let
+  hostName = config.networking.hostName;
+  mainUser = config.mainUser;
+in {
+  home-manager.users."${mainUser}" = {
+    wayland.windowManager.hyprland = {
+      settings = {
       workspace = [
         "1,monitor:DP-1"
         "2,monitor:DP-1"
@@ -13,6 +19,7 @@
         "9,monitor:DP-1"
         "0,monitor:DP-1"
       ];
+    };
     };
   };
 }
