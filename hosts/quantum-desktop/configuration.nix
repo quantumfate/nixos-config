@@ -46,7 +46,6 @@
   system.stateVersion = "25.05";
 
   # to be moved
-  services.udisks2.enable = true;
   services.getty.autologinUser = config.main-user.userName;
   programs.firefox.enable = true;
 }
