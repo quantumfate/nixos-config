@@ -1,4 +1,4 @@
-{ pkgs, config, inputs, ... }:
+{ pkgs, config, inputs, lib, ... }:
 
 let
   hostName = config.networking.hostName;
@@ -13,6 +13,9 @@ let
     "quantum-laptop" = [ "eDP-1, 1920x1080@60, auto, 1" ];
     "default" = [ ", preferred, auto, 1" ];
   };
+  
+  removeHash = s: lib.strings.replaceStrings [ "#" ] [ "" ] s;
+  colors = config.colors.catppuccin.mocha;
 in {
   programs.hyprland = {
     enable = true;
@@ -37,14 +40,13 @@ in {
 
         monitor = monitorMaps.${hostName} or monitorMaps.default;
         general = {
-          gaps_in = 0;
-          gaps_out = 0;
+          gaps_in = 5;
+          gaps_out = 10;
 
-          border_size = 1;
+          border_size = 2;
 
-          # TODO: migrate to own colors
-          #"col.active_border" = "rgb(${config.colorScheme.palette.base01})";
-          #"col.inactive_border" = "rgb(${config.colorScheme.palette.base00})";
+          "col.active_border" = "rgb(${removeHash colors.teal.hex})";
+          "col.inactive_border" = "rgb(${removeHash colors.maroon.hex})";
 
           resize_on_border = true;
 
