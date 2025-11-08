@@ -554,7 +554,7 @@ let
     };
   };
 in {
-  options.colors.catppuccinPalette = lib.mkOption {
+  options.colors.catppuccin = lib.mkOption {
     type = lib.types.attrs;
     default = palette;
     description = "The complete Catppuccin color palette structure.";
