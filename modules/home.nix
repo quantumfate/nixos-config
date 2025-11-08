@@ -45,10 +45,7 @@ in {
           programs.home-manager.enable = true;
         }
         inputs.catppuccin.homeModules.catppuccin
-        inputs.nix-colors.homeManagerModules.default
       ];
-      # Remove nix-colors, it only supports base 16 and removes some of the colors available
-      colorScheme = inputs.nix-colors.colorSchemes.catppuccin-mocha;
     };
   };
 }

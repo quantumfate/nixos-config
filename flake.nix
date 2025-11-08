@@ -14,7 +14,6 @@
       inputs.hyprland.follows = "hyprland";
     };
     catppuccin.url = "github:catppuccin/nix";
-    nix-colors.url = "github:misterio77/nix-colors";
   };
 
   outputs = { self, nixpkgs, ... }@inputs:
