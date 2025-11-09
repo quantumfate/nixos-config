@@ -10,11 +10,6 @@ in {
       enable = true;
       text = ''
         {
-            "custom/dunst": {
-                "exec": "${scriptLocation}/dunst.sh",
-                "on-click": "dunstctl set-paused toggle",
-                "restart-interval": 1
-            },
             "hyprland/workspaces": {
                 "format": "{icon}",
                 "format-window-separator": "\n",
@@ -30,7 +25,7 @@ in {
             "hyprland/window": {
                 "format": "{}",
                 "rewrite": {
-                    "(.*) - Brave": "🌎 $1",
+                    "(.*) - Brave": "$1",
                     "(.*) - fish": "> [$1]",
                     "(.*) - Discord": " [$1]"
                 },
@@ -67,14 +62,6 @@ in {
                     "on-scroll-down": "shift_down"
                 }
             },
-            "custom/spotify": {
-                "exec": "/usr/bin/python3 ${scriptLocation}/mediaplayer.py --player spotify",
-                "format": "{}  ",
-                "return-type": "json",
-                "on-click": "playerctl play-pause",
-                "on-scroll-up": "playerctl next",
-                "on-scroll-down": "playerctl previous"
-            },
             "cpu": {
                 "interval": 4,
                 "format": "{icon0}{icon1}{icon2}{icon3} {usage:>2}% ",
@@ -86,7 +73,7 @@ in {
             },
             "memory": {
                 "interval": 10,
-                "format": " {used:0.1f}G "
+                "format": "{used:0.1f}G "
             },
             "network": {
                 "interval": 5,
@@ -99,22 +86,13 @@ in {
                 "tooltip-format": " {ifname} via {gwaddr}",
                 "on-right-click": "nm-connection-editor"
             },
-            "custom/weather": {
-                "format": "{}",
-                "format-alt": "{alt}: {}",
-                "format-alt-click": "click-right",
-                "interval": 1800,
-                "return-type": "json",
-                "exec": "${scriptLocation}/weather.sh 'hamburg'",
-                "exec-if": "ping wttr.in -c1"
-            },
             "pulseaudio": {
-                "format": "{icon} {volume}",
-                "format-muted": " Mute",
-                "format-bluetooth": " {volume}% {format_source}",
-                "format-bluetooth-muted": " Mute",
-                "format-source": " ",
-                "format-source-muted": "",
+                "format": "{volume} {icon}",
+                "format-muted": "Mute ",
+                "format-bluetooth": "{volume}% {format_source} ",
+                "format-bluetooth-muted": "Mute ",
+                "format-source": " ",
+                "format-source-muted": " ",
                 "format-icons": {
                     "headphone": "",
                     "hands-free": "",
@@ -136,6 +114,11 @@ in {
             "tray": {
                 "icon-size": 14,
                 "spacing": 6
+            },
+            "custom/dunst": {
+                "exec": "${scriptLocation}/dunst.sh",
+                "on-click": "dunstctl set-paused toggle",
+                "restart-interval": 1
             }
         }
       '';

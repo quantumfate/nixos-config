@@ -22,7 +22,7 @@ in {
           modules-left =
             [ "hyprland/workspaces" "cpu" "memory" "disk" "network" ];
           modules-center =
-            [ "hyprland/window" "custom/spotify" "custom/weather" ];
+            [ "hyprland/window" ];
           modules-right =
             [ "hyprland/language" "pulseaudio" "clock" "tray" "custom/dunst" ];
         };

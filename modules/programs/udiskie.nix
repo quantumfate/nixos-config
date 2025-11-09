@@ -4,7 +4,7 @@ let
   hostName = config.networking.hostName;
   userCfg = config.mainUser;
 in {
-  services.udisks2.enable = cfg.enable;
+  services.udisks2.enable = true;
 
   home-manager.users."${userCfg.userName}" = {
     services.udiskie = {
