@@ -31,6 +31,10 @@ label.module, #window, #tray {
   margin: 0 11px 0 0;
 }
 
+#workspaces {
+  padding-right: 20px;
+}
+
 #workspaces button {
   box-shadow: none;
   text-shadow: none;
@@ -66,19 +70,19 @@ window#waybar.empty #window {
 }
 
 #cpu {
-  background-color: @maroon;
+  background-color: @mauve;
 }
 
 #disk {
-  background-color: @maroon;
+  background-color: @mauve;
 }
 
 #memory {
-  background-color: @maroon;
+  background-color: @mauve;
 }
 
 #network {
-  background-color: @maroon;
+  background-color: @mauve;
 }
 
 #language {

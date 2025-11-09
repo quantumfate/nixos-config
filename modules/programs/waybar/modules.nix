@@ -69,7 +69,7 @@ in {
                 },
             "disk": {
                 "interval": 30,
-                "format": " {free}"
+                "format": "{free} "
             },
             "memory": {
                 "interval": 10,
@@ -77,11 +77,11 @@ in {
             },
             "network": {
                 "interval": 5,
-                "format-wifi": "  {essid}",
-                "format-ethernet": " {ipaddr}/{cidr}",
+                "format-wifi": "{essid}  ",
+                "format-ethernet": "{ipaddr}/{cidr} 󱎔",
                 "format-linked": " {ifname} (No IP)",
-                "format-disconnected": "睊 Disconnected",
-                "format-disabled": "睊 Disabled",
+                "format-disconnected": "Disconnected ",
+                "format-disabled": "Disabled ",
                 "format-alt": " {bandwidthUpBits} |  {bandwidthDownBits}",
                 "tooltip-format": " {ifname} via {gwaddr}",
                 "on-right-click": "nm-connection-editor"
