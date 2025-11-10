@@ -6,7 +6,7 @@ let
 in {
   home-manager.users."${userCfg.userName}" = {
     wayland.windowManager.hyprland = {
-      settings = { "exec-once" = [ "waybar" ]; };
+      settings = { "exec-once" = [ "waybar" "hyprpaper" ]; };
     };
   };
 }
