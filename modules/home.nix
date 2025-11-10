@@ -22,7 +22,6 @@ in {
         spotify
         udiskie
         udisks2
-        hyprpaper
         waybar
         foot
         kitty
@@ -33,9 +32,14 @@ in {
         pamixer
         networkmanagerapplet
         python3
-        xdg-desktop-portal
         lutris
         npins
+        # Hyprland
+        hyprpaper
+        hypridle
+        hyprpicker
+        hyprlock
+        xdg-desktop-portal-hyprland
       ];
       imports = [
         {
