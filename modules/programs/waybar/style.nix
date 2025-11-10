@@ -9,18 +9,13 @@ in {
     programs.waybar = {
       style = ''
 * {
-  
+  font-family: Fira Code Nerd Font, FontAwesome, Roboto, Helvetica, Arial, sans-serif;
+  font-size: 13px;
 }
 
 #waybar {
-  background-color: @base;
-}
-
-label.module, #window, #tray {
-  padding-right: 20px;
-  padding-left: 20px;
-  margin: 5px 0px 5px 0px;
-  border-radius: 2px;
+  background-color: transparent;
+  color: @crust;
 }
 
 .modules-left {
@@ -31,79 +26,88 @@ label.module, #window, #tray {
   margin: 0 11px 0 0;
 }
 
+#cpu,
+#disk,
+#memory,
+#network,
+#language,
+#pulseaudio,
+#clock,
+#tray,
+#custom-dunst {
+  background-color: @surface0;
+  color: @mauve;
+  border: 2px solid @mauve;
+  border-radius: 10px;
+  padding: 0 15px;
+  margin-right: 10px;
+}
+
 #workspaces {
-  padding-right: 20px;
+  background-color: @surface0;
+  border: 2px solid @teal;
+  border-radius: 10px;
+  padding: 0 5px;
+  margin-right: 10px;
 }
 
 #workspaces button {
   box-shadow: none;
   text-shadow: none;
-  padding: 0px;
-  border-radius: 2px;
-  margin: 5px 0px 5px 3px;
-  padding: 0 2px 0 2px;
-  background-color: @maroon;
-  color: @crust;
+  padding: 0 4px;
+  color: @maroon;
   animation: gradient_f 20s ease-in infinite;
   transition: all 0.5s cubic-bezier(0.55, -0.68, 0.48, 1.682);
 }
 
-#workspaces button.active {
-  background: @teal;
-  animation: gradient_f 20s ease-in infinite;
-  transition: all 0.3s cubic-bezier(0.55, -0.68, 0.48, 1.682);
+#workspaces button.active,
+#workspaces button:hover {
+  color: @teal;
 }
 
 #workspaces button:hover {
-  background: @teal;
-  border-color: @teal;
-  animation: gradient_f 20s ease-in infinite;
-  transition: all 0.3s cubic-bezier(0.55, -0.68, 0.48, 1.682);
+  background: @surface0;
+  border-color: @surface0;
 }
 
 #window {
-  background-color: @lavender;
+  border: 2px solid @mauve;
+  background-color: @surface0;
+  border-radius: 10px;
+  padding: 0 10px;
+  color: @mauve;
 }
 
 window#waybar.empty #window {
+  border: none;
   background-color: transparent;
 }
 
-#cpu {
-  background-color: @mauve;
+#custom-lock,
+#custom-reboot,
+#custom-power {
+  background-color: @surface0;
+  border-bottom: 2px solid @maroon;
+  border-top: 2px solid @maroon;
 }
 
-#disk {
-  background-color: @mauve;
+#custom-lock {
+  border-left: 2px solid @maroon;
+  border-radius: 10px 0 0 10px;
+  padding-left: 14px;
+  padding-right: 10px;
 }
 
-#memory {
-  background-color: @mauve;
+#custom-reboot {
+  padding: 0 10px;
 }
 
-#network {
-  background-color: @mauve;
-}
-
-#language {
-  background-color: @flamingo;
-}
-
-#pulseaudio {
-  background-color: @mauve;
-}
-
-#clock {
-  background-color: @maroon;
+#custom-power {
+  border-right: 2px solid @maroon;
+  border-radius: 0 10px 10px 0;
+  padding-right: 14px;
+  padding-left: 10px;
 } 
-
-#tray {
-  background-color: @lavender;
-}
-
-#custom-dunst {
-  background-color: @teal;
-}        
       '';
     };
   };

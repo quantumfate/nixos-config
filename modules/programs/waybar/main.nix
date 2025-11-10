@@ -11,12 +11,13 @@ in {
         mainBar = {
           include = "/home/${userCfg.userName}/.config/waybar/modules";
           position = "top";
-          height = 35;
+          height = 25;
           ipc = true;
+          margin-top = 10;
           margin-right = 0;
           margin-left = 0;
           layer = "top";
-          spacing = 6;
+          spacing = 0;
           fixed-center = true;
           output = [ "DP-1" ]; # TODO: set a list of active monitors
           modules-left =
@@ -24,7 +25,7 @@ in {
           modules-center =
             [ "hyprland/window" ];
           modules-right =
-            [ "hyprland/language" "pulseaudio" "clock" "tray" "custom/dunst" ];
+            [ "hyprland/language" "pulseaudio" "clock" "tray" "custom/dunst" "custom/lock" "custom/reboot" "custom/power" ];
         };
       };
     };
