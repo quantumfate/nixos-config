@@ -43,7 +43,7 @@ in {
         #pulseaudio,
         #clock,
         #tray,
-        #custom-dunst {
+        #custom-mako {
           background-color: @surface0;
           color: @teal;
           border: 2px solid ${borderColor};

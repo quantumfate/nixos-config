@@ -14,12 +14,10 @@ in {
       enable = true;
       settings = {
         # Global Options
-        max-history = "5";
-        # Binding Options
-
+        max-history = "8";
         # Style options
         font = "Inconsolata Nerd Font 10";
-        default-timeout = 3000;
+        default-timeout = 0;
         background-color = "${colors.base.hex}";
         text-color = "${colors.text.hex}";
         width = 300;
@@ -33,19 +31,24 @@ in {
         progress-color = "${colors.mauve.hex}";
         icons = 1;
         max-icon-size = 64;
-        # icon-path = "";
+        icon-path = "/run/current-system/sw/share/icons/hicolor";
         icon-location = "left";
         output= "DP-1";
         layer = "top";
         anchor = "top-right";
         "urgency=low" = { border-color = "${colors.green.hex}"; };
-        "urgency=normal" = { border-color = "${colors.blue.hex}"; };
+        "urgency=normal" = { border-color = "${colors.yellow.hex}"; };
         "urgency=high" = {
           border-color = "${colors.red.hex}";
           default-timeout = 0;
         };
         "app-name=Spotify" = {
+          default-timeout = 3000;
           anchor = "top-center";
+        };
+        "app-name=pavucontrol" = {
+          width = 80;
+          default-timeout = 3000;
         };
         "mode=do-not-disturb" = {
           invisible = 1;

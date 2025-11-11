@@ -25,7 +25,7 @@ in {
           modules-center =
             [ "hyprland/window" ];
           modules-right =
-            [ "hyprland/language" "pulseaudio" "clock" "tray" "custom/dunst" "custom/lock" "custom/reboot" "custom/power" ];
+            [ "hyprland/language" "pulseaudio" "clock" "tray" "custom/mako" "custom/lock" "custom/reboot" "custom/power" ];
         };
       };
     };

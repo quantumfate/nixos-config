@@ -117,9 +117,9 @@ in {
                 "icon-size": 14,
                 "spacing": 6
             },
-            "custom/dunst": {
-                "exec": "${scriptLocation}/dunst.sh",
-                "on-click": "dunstctl set-paused toggle",
+            "custom/mako": {
+                "exec": "${scriptLocation}/mako.sh",
+                "on-click": "makoctl mode -t do-not-disturb",
                 "restart-interval": 1
             },
             "custom/lock": {
