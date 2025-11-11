@@ -42,7 +42,6 @@ in {
 
         # Media
         discord
-        brave
         spotify
 
         # Programming

@@ -8,6 +8,7 @@ in {
   home-manager.users."${userCfg.userName}" = {
     programs.chromium = {
       enable = true;
+      package = pkgs.brave;
       extensions = [
         # Dark Reader
         {
@@ -22,6 +23,7 @@ in {
         # FireShot
         { id = "mcbpblocgmgfnpjjppndjkmgjaogfceg"; }
       ];
+      commandLineArgs = [ "--force-dark-mode" ];
     };
   };
 }

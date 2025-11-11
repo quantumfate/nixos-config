@@ -5,7 +5,7 @@
     ./hyprland
     ./waybar
     ./rofi
-    ./dunst.nix
+    ./mako.nix
     ./steam.nix
     ./chromium.nix
     ./udiskie.nix

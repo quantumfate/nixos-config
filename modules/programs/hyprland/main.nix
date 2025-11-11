@@ -50,6 +50,7 @@ in {
           "EDITOR,nvim"
           "QT_QPA_PLATFORMTHEME,hyprqt6engine"
           "XDG_CONFIG_HOME,$HOME/.config"
+          "GKT_THEME,Catppuccin-Mocha-Standard-Teal-Dark"
         ];
 
         monitor = monitorMaps.${hostName} or monitorMaps.default;
