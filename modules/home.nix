@@ -9,31 +9,44 @@ in {
 
     users.${userCfg.userName} = {
       home.packages = with pkgs; [
-        alacritty
-        anki
-        mpv
-        obs-studio
-        obsidian
-        pavucontrol
-        ranger
+        waybar
+        rofi
+        npins
+
+        # Formatters
         nixfmt-classic
-        discord
+
+        # Office
+        anki
+        obsidian
+
+        # Tools
+        networkmanagerapplet
+        pavucontrol
+        pamixer
+        obs-studio
+        mpv
         keepassxc
-        spotify
         udiskie
         udisks2
-        waybar
+
+        # Media
+        discord
+        brave
+        spotify
+
+        # Programming
+        vscode
+        python3
+        neovim
+
+        # Terminal
+        ranger
         foot
         kitty
-        rofi
-        neovim
-        brave
-        vscode
-        pamixer
-        networkmanagerapplet
-        python3
-        lutris
-        npins
+        alacritty
+        jq
+
         # Hyprland
         hyprpaper
         hypridle

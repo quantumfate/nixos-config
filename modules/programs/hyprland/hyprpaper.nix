@@ -9,11 +9,12 @@ in {
     services.hyprpaper = {
       enable = true;
       settings = {
-        preload = {
+        preload = [
           "${wallpapersDir}Clearnight.jpg"
           "${wallpapersDir}Rainnight.jpg"
-          "${wallpapersDir}shaded_landscape.png"
-        };  
+          "${wallpapersDir}city.png"
+        ];
+        wallpaper = ", ${wallpapersDir}/city.png";
       };
     };
 

@@ -1,0 +1,66 @@
+{ config, pkgs, lib, inputs, ... }:
+
+let userCfg = config.mainUser;
+in {
+  home-manager = {
+    useGlobalPkgs = true;
+    useUserPackages = true;
+    backupFileExtension = "backup";
+
+    users.${userCfg.userName} = {
+      home.packages = with pkgs; [
+        nixfmt-classic
+        keepassxc
+        udiskie
+        udisks2
+        waybar
+        rofi
+        brave
+        vscode
+        networkmanagerapplet
+        npins
+
+        # Office
+        anki
+        obsidian
+
+        # Tools
+        pavucontrol
+        pamixer
+        obs-studio
+        mpv
+
+        # Media
+        discord
+        spotify
+
+        # Programming
+        python3
+        neovim
+
+        # Terminal
+        ranger
+        foot
+        kitty
+        alacritty
+        jq
+
+        # Hyprland
+        hyprpaper
+        hypridle
+        hyprpicker
+        hyprlock
+        xdg-desktop-portal-hyprland
+      ];
+      imports = [
+        {
+          home.username = "${userCfg.userName}";
+          home.homeDirectory = "/home/${userCfg.userName}";
+          home.stateVersion = "25.05";
+          programs.home-manager.enable = true;
+        }
+        inputs.catppuccin.homeModules.catppuccin
+      ];
+    };
+  };
+}

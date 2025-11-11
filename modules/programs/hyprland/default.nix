@@ -6,6 +6,6 @@
     ./main.nix
     ./workspaces.nix
     ./startup.nix
-    ./wallpapers.nix
+    ./hyprpaper.nix
   ];
 }
