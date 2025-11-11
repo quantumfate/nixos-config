@@ -29,6 +29,7 @@ in {
         keepassxc
         udiskie
         udisks2
+        gimp
 
         # Media
         discord
@@ -46,6 +47,7 @@ in {
         kitty
         alacritty
         jq
+        neofetch
 
         # Hyprland
         hyprpaper

@@ -3,7 +3,8 @@
 let
   hostName = config.networking.hostName;
   userCfg = config.mainUser;
-  wallpapersDir = "~/.config/hypr/wallpapers/";
+  userHome = config.users.users."${userCfg.userName}".home;
+  wallpapersDir = "${userHome}/.config/hypr/wallpapers/";
 in {
   home-manager.users."${userCfg.userName}" = {
     services.hyprpaper = {
@@ -12,9 +13,13 @@ in {
         preload = [
           "${wallpapersDir}Clearnight.jpg"
           "${wallpapersDir}Rainnight.jpg"
-          "${wallpapersDir}city.png"
+          "${wallpapersDir}purple-forest.jpg"
+          "${wallpapersDir}anime-girl.jpg"
         ];
-        wallpaper = ", ${wallpapersDir}/city.png";
+        wallpaper = [ 
+          "DP-1,${wallpapersDir}anime-girl-fixed.jpg" 
+          "HDMI-A-1,${wallpapersDir}anime-girl-fixed.jpg" 
+        ];
       };
     };
 
