@@ -5,5 +5,6 @@
     ./catppuccin.nix
     ./nixos
     ./programs
+    ./style
   ];
 }

@@ -17,8 +17,7 @@ in {
           "${wallpapersDir}anime-girl.jpg"
         ];
         wallpaper = [ 
-          "DP-1,${wallpapersDir}anime-girl-fixed.jpg" 
-          "HDMI-A-1,${wallpapersDir}anime-girl-fixed.jpg" 
+          ",${wallpapersDir}anime-girl.jpg" 
         ];
       };
     };

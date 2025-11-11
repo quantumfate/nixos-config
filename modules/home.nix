@@ -9,9 +9,18 @@ in {
 
     users.${userCfg.userName} = {
       home.packages = with pkgs; [
+        # Ricing
+        catppuccin-kvantum
         waybar
         rofi
         npins
+        (catppuccin-kvantum.override {
+          accent = "teal";
+          variant = "mocha";
+        })
+        libsForQt5.qtstyleplugin-kvantum
+        libsForQt5.qt5ct
+        papirus-folders
 
         # Formatters
         nixfmt-classic
@@ -54,6 +63,8 @@ in {
         hypridle
         hyprpicker
         hyprlock
+        hyprcursor
+        hyprshot
         xdg-desktop-portal-hyprland
       ];
       imports = [

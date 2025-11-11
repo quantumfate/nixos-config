@@ -14,7 +14,17 @@ let
     "default" = [ ", preferred, auto, 1" ];
   };
   
-  removeHash = s: lib.strings.replaceStrings [ "#" ] [ "" ] s;
+  removeSpaces = s: lib.strings.replaceStrings [ " " ] [ "" ] s;
+  rgbToRgba = rgbString: alpha:
+    let
+      rgbaStart = lib.strings.replaceStrings [ "rgb(" ] [ "rgba(" ] rgbString;
+      content = lib.strings.substring 4 (lib.strings.stringLength rgbString - 5)
+        rgbString;
+    in removeSpaces "rgba(${content},${toString alpha})";
+    
+  borderActive = rgbToRgba colors.teal.rgb 0.6;
+  borderInActive = rgbToRgba colors.maroon.rgb 0.6;
+
   colors = config.colors.catppuccin.mocha;
 in {
   programs.hyprland = {
@@ -35,7 +45,11 @@ in {
           "XDG_SESSION_DESKTOP,Hyprland"
           "QT_QPA_PLATFORM,wayland"
           "XDG_SCREENSHOTS_DIR,$HOME/screens"
+          "XDG_PICTURES_DIR,$HOME/Pictures"
+          "HYPRSHOT_DIR,$XDG_SCREENSHOTS_DIR" 
           "EDITOR,nvim"
+          "QT_QPA_PLATFORMTHEME,hyprqt6engine"
+          "XDG_CONFIG_HOME,$HOME/.config"
         ];
 
         monitor = monitorMaps.${hostName} or monitorMaps.default;
@@ -45,8 +59,8 @@ in {
 
           border_size = 2;
 
-          "col.active_border" = "rgb(${removeHash colors.teal.hex})";
-          "col.inactive_border" = "rgb(${removeHash colors.maroon.hex})";
+          "col.active_border" = "${borderActive}";
+          "col.inactive_border" = "${borderInActive}";
 
           resize_on_border = true;
 
@@ -55,7 +69,7 @@ in {
         };
 
         decoration = {
-          rounding = 10;
+          rounding = 8;
 
           active_opacity = 1.0;
           inactive_opacity = 1.0;
