@@ -72,12 +72,12 @@ in {
         decoration = {
           rounding = 8;
 
-          active_opacity = 1.0;
-          inactive_opacity = 1.0;
+          active_opacity = 0.95;
+          inactive_opacity = 0.8;
 
           shadow = { enabled = false; };
 
-          blur = { enabled = false; };
+          blur = { enabled = true; };
         };
 
         animations = { enabled = true; };

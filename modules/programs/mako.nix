@@ -22,7 +22,7 @@ in {
         text-color = "${colors.text.hex}";
         width = 300;
         height = 100;
-        outer-margin = 0;
+        outer-margin = 20;
         margin = 10;
         padding = 10;
         border-size = 2;
@@ -36,7 +36,7 @@ in {
         output= "DP-1";
         layer = "top";
         anchor = "top-right";
-        "urgency=low" = { border-color = "${colors.green.hex}"; };
+        "urgency=low" = { border-color = "${colors.teal.hex}"; };
         "urgency=normal" = { border-color = "${colors.yellow.hex}"; };
         "urgency=high" = {
           border-color = "${colors.red.hex}";
