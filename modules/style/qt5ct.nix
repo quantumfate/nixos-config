@@ -22,9 +22,7 @@ let
     let selectedFlavorName = flavorMap.${flavor};
     in {
       home-manager.users."${userCfg.userName}" = {
-        home.file.".config/qt5ct/" = {
-          source = ./configs/qt5ct.conf;
-        };
+
         # Installs the chosen theme file into ~/.config/qt5ct/colors/
         home.file.".config/qt5ct/colors/catppuccin-${selectedFlavorName}-teal.conf" =
           {
@@ -38,6 +36,8 @@ let
               "${qt5ctRepo}/themes/catppuccin-${selectedFlavorName}-teal.conf";
             executable = false;
           };
+
+        home.file.".config/qt5ct/qt5ct.conf" = { source = ./configs/qt5ct.conf; };
         qt = {
           enable = true;
           style = {
@@ -55,7 +55,7 @@ let
               variant = "mocha";
             };
           };
-          
+
           cursorTheme = {
             name = "Catppuccin-Mocha-Dark-Cursors";
             package = pkgs.catppuccin-cursors.mochaDark;
