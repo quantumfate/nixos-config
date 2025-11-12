@@ -36,21 +36,22 @@ let
     ]) keyset);
 
 in {
-  config.lib.common = {
+  config.lib = {
+    hyprland = {
 
-    #
-    # Generates a list of Hyprland keybinding strings for switching and moving
-    # windows to workspaces (1-10), adapting the keys based on the
-    # common.peripherals.keyboard setting.
-    # * @param mainMod The Hyprland main modifier string (e.g., "$mainMod" or "SUPER").
-    # @returns A list of Hyprland bind strings.
-    generateKeybindings = { mainMod ? "$mainMod" }:
-      let
-        # Select the appropriate key map based on the configured keyboard
-        keyset = if cfg.peripherals.keyboard == "programmer-dvorak" then
-          programmerDvorakMap
-        else
-          defaultMap;
-      in generateBindingsList { inherit keyset mainMod; };
+      # Generates a list of Hyprland keybinding strings for switching and moving
+      # windows to workspaces (1-10), adapting the keys based on the
+      # common.peripherals.keyboard setting.
+      # @param mainMod The Hyprland main modifier string (e.g., "$mainMod" or "SUPER").
+      # @returns A list of Hyprland bind strings.
+      generateKeybindings = { mainMod ? "$mainMod" }:
+        let
+          # Select the appropriate key map based on the configured keyboard
+          keyset = if cfg.peripherals.keyboard == "programmer-dvorak" then
+            programmerDvorakMap
+          else
+            defaultMap;
+        in generateBindingsList { inherit keyset mainMod; };
+    };
   };
 }

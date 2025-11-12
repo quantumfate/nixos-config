@@ -15,6 +15,9 @@
       keyboard = "programmer-dvorak";
       monitors = [ "DP-1" "HDMI-A-1" ];
     };
+    style = {
+      fontFamily = "Inconsolata Nerd Font";
+    };
   };
 
   # System
