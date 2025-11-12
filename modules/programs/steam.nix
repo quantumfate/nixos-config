@@ -4,7 +4,7 @@
 
 let
   hostName = config.networking.hostName;
-  userCfg = config.mainUser;
+  userCfg = config.common;
 in
 {
   programs.steam.enable = true;

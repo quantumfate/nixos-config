@@ -1,6 +1,6 @@
 { config, pkgs, lib, inputs, ... }:
 
-let userCfg = config.mainUser;
+let userCfg = config.common;
 in {
   home-manager = {
     useGlobalPkgs = true;

@@ -2,7 +2,7 @@
 
 let
   hostName = config.networking.hostName;
-  userCfg = config.mainUser;
+  userCfg = config.common;
   userHome = config.users.users."${userCfg.userName}".home;
   wallpapersDir = "${userHome}/.config/hypr/wallpapers/";
 in {

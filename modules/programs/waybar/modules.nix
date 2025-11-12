@@ -2,7 +2,7 @@
 
 let
   hostName = config.networking.hostName;
-  userCfg = config.mainUser;
+  userCfg = config.common;
   scriptLocation = "/home/${userCfg.userName}/.config/waybar/scripts";
   colors = config.colors.catppuccin.mocha;
 in {

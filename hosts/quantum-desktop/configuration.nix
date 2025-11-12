@@ -8,9 +8,9 @@
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   # User Modules
-  mainUser.enable = true;
-  mainUser.userName = "quantum"; 
-  mainUser.shell = pkgs.zsh;
+  common.enable = true;
+  common.userName = "quantum"; 
+  common.shell = pkgs.zsh;
 
   # System
   networking.hostName = "quantum-desktop"; 
@@ -45,7 +45,7 @@
   system.stateVersion = "25.05";
 
   # to be moved
-  services.getty.autologinUser = config.mainUser.userName;
+  services.getty.autologinUser = config.common.userName;
   programs.firefox.enable = true;
 }
 

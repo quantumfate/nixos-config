@@ -2,7 +2,7 @@
 
 let
   hostName = config.networking.hostName;
-  userCfg = config.mainUser;
+  userCfg = config.common;
 
   qt5ctRepo = pkgs.fetchFromGitHub {
     owner = "catppuccin";

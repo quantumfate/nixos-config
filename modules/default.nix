@@ -1,6 +1,6 @@
 {
   imports = [
-    ./main-user.nix
+    ./common
     ./home.nix
     ./catppuccin.nix
     ./nixos

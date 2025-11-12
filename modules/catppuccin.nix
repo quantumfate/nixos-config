@@ -3,7 +3,7 @@
 let
   cfg = config.colorscheme.catppuccin;
   hostName = config.networking.hostName;
-  userCfg = config.mainUser;
+  userCfg = config.common;
 
   flavor = "mocha";
   accent = "rosewater";
