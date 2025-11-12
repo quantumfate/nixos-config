@@ -1,7 +1,7 @@
 { lib, config, pkgs, ... }:
 
 {
-  options.common = lib.mkOption {
+  options.common = {
     userName = lib.mkOption {
       default = "quantum";
       description = ''

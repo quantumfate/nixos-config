@@ -8,12 +8,17 @@
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   # User Modules
-  common.enable = true;
-  common.userName = "quantum"; 
-  common.shell = pkgs.zsh;
+  common = {
+    userName = "quantum";
+    shell = pkgs.zsh;
+    peripherals = {
+      keyboard = "programmer-dvorak";
+      monitors = [ "DP-1" "HDMI-A-1" ];
+    };
+  };
 
   # System
-  networking.hostName = "quantum-desktop"; 
+  networking.hostName = "quantum-desktop";
   networking.networkmanager.enable = true;
 
   boot.loader = {
