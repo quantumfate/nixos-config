@@ -59,13 +59,12 @@ in {
           neofetch
 
           # Hyprland
-          #hyprpaper
-          #hypridle
-          #hyprpicker
-          #hyprlock
-          #hyprcursor
-          #hyprshot
-          #xdg-desktop-portal-hyprland
+          hyprpaper
+          hypridle
+          hyprpicker
+          hyprlock
+          hyprcursor
+          hyprshot
         ];
       };
       imports = [

@@ -31,9 +31,6 @@ in {
     enable = true;
     package = inputs.hyprland.packages."${pkgs.system}".hyprland;
     xwayland.enable = true;
-    xdg-desktop-portal.enable = true;
-    xdg-desktop-portal.wlr.enable = true; # Or use the Hyprland specific portal
-    xdg-desktop-portal.config = { "hyprland" = { default = [ "hyprland" ]; }; };
   };
 
   home-manager.users."${userCfg.userName}" = {
