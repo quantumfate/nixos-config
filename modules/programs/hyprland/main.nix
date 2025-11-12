@@ -13,7 +13,7 @@ let
     "quantum-laptop" = [ "eDP-1, 1920x1080@60, auto, 1" ];
     "default" = [ ", preferred, auto, 1" ];
   };
-  
+
   removeSpaces = s: lib.strings.replaceStrings [ " " ] [ "" ] s;
   rgbToRgba = rgbString: alpha:
     let
@@ -21,7 +21,7 @@ let
       content = lib.strings.substring 4 (lib.strings.stringLength rgbString - 5)
         rgbString;
     in removeSpaces "rgba(${content},${toString alpha})";
-    
+
   borderActive = rgbToRgba colors.teal.rgb 0.6;
   borderInActive = rgbToRgba colors.maroon.rgb 0.6;
 
@@ -31,12 +31,18 @@ in {
     enable = true;
     package = inputs.hyprland.packages."${pkgs.system}".hyprland;
     xwayland.enable = true;
+    xdg-desktop-portal.enable = true;
+    xdg-desktop-portal.wlr.enable = true; # Or use the Hyprland specific portal
+    xdg-desktop-portal.config = { "hyprland" = { default = [ "hyprland" ]; }; };
   };
 
   home-manager.users."${userCfg.userName}" = {
     wayland.windowManager.hyprland = {
       enable = true;
       systemd.enable = true;
+      # https://wiki.hypr.land/Nix/Hyprland-on-Home-Manager/#using-the-home-manager-module-with-nixos
+      package = null;
+      portalPackage = null;
       settings = {
         env = [
           "NIXOS_OZONE_WL,1"
@@ -46,11 +52,10 @@ in {
           "QT_QPA_PLATFORM,wayland"
           "XDG_PICTURES_DIR,$HOME/Pictures"
           "XDG_SCREENSHOTS_DIR,$HOME/Pictures/screens"
-          "HYPRSHOT_DIR,$HOME/Pictures/screens" 
+          "HYPRSHOT_DIR,$HOME/Pictures/screens"
           "EDITOR,nvim"
           "QT_QPA_PLATFORMTHEME,hyprqt6engine"
           "XDG_CONFIG_HOME,$HOME/.config"
-          "GKT_THEME,Catppuccin-Mocha-Standard-Teal-Dark"
         ];
 
         monitor = monitorMaps.${hostName} or monitorMaps.default;
