@@ -34,6 +34,15 @@ in {
   };
 
   home-manager.users."${userCfg.userName}" = {
+    home.packages = with pkgs; [
+      hyprpaper
+      hypridle
+      hyprpicker
+      hyprlock
+      hyprcursor
+      hyprshot
+    ];
+
     wayland.windowManager.hyprland = {
       enable = true;
       systemd.enable = true;
