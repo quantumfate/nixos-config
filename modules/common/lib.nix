@@ -3,17 +3,19 @@
 let
   cfg = config.common;
 
+  # https://github.com/xkbcommon/libxkbcommon/blob/master/include/xkbcommon/xkbcommon-keysyms.h
+  # https://wiki.hypr.land/Configuring/Binds/#uncommon-syms--binding-with-a-keycode
   programmerDvorakMap = {
-    "1" = "&";
-    "2" = "[";
-    "3" = "{";
-    "4" = "}";
-    "5" = "(";
-    "6" = "=";
-    "7" = "*";
-    "8" = ")";
-    "9" = "+";
-    "0" = "]";
+    "1" = "ampersand"; # &
+    "2" = "bracketleft"; # [
+    "3" = "braceleft"; # {
+    "4" = "braceright"; # }
+    "5" = "parenleft"; # (
+    "6" = "equal"; # =
+    "7" = "asterisk"; # *
+    "8" = "parenright"; # )
+    "9" = "plus"; # +
+    "10" = "bracketright"; # ]
   };
 
   defaultMap = {
@@ -26,7 +28,7 @@ let
     "7" = "7";
     "8" = "8";
     "9" = "9";
-    "0" = "0";
+    "10" = "0";
   };
 
   generateBindingsList = { keyset, mainMod }:

@@ -10,14 +10,12 @@
     };
 
     fontFamily = lib.mkOption {
-        type = lib.types.str;
-        default = "Monospace";
-        description = ''
-          Font family.
-        '';
-      };
+      type = lib.types.str;
+      default = "Monospace";
+      description = ''
+        Font family.
+      '';
     };
-
     borderRadius = lib.mkOption {
       type = lib.types.int;
       default = 8;
