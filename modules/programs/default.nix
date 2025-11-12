@@ -11,6 +11,5 @@
     ./udiskie.nix
     ./git.nix
     ./ssh.nix
-    ./qmk.nix
   ];
 }
