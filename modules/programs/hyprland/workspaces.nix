@@ -17,7 +17,7 @@ in {
           "7,monitor:DP-1"
           "8,monitor:DP-1"
           "9,monitor:DP-1"
-          "0,monitor:DP-1"
+          "10,monitor:DP-1"
         ];
       };
     };

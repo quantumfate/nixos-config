@@ -22,14 +22,14 @@ in {
         libsForQt5.qt5ct
         papirus-folders
 
-        # Formatters
+        ## Formatters
         nixfmt-classic
 
-        # Office
+        ## Office
         anki
         obsidian
 
-        # Tools
+        ## Tools
         networkmanagerapplet
         pavucontrol
         pamixer
@@ -40,22 +40,23 @@ in {
         udisks2
         gimp
 
-        # Media
+        ## Media
         discord
         spotify
 
-        # Programming
+        ## Programming
         vscode
         python3
         neovim
 
-        # Terminal
+        ## Terminal
         ranger
         foot
         kitty
         alacritty
         jq
         neofetch
+        zathura
       ];
       imports = [
         {

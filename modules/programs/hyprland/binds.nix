@@ -55,6 +55,11 @@ in {
           "$mainMod CTRL, right, resizeactive,  60 0"
           "$mainMod CTRL, up,    resizeactive,  0 -60"
           "$mainMod CTRL, down,  resizeactive,  0  60"
+
+          # Screenshots
+          "$mainMod, PRINT, exec, hyprshot -m window"
+          " , PRINT, exec, hyprshot -m output"
+          "$mainMod SHIFT, PRINT, exec, hyprshot -m region"
         ]; # ++ userCfg.lib.hyprland.generateKeybindings { };
 
         bindm =
