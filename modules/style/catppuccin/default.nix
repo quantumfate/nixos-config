@@ -1,24 +1,17 @@
-{ confing, pkgs, lib, ... }:
+{ config, pkgs, lib, ... }:
 
 let
-  test = rec {
-    rgb_attr = import ./rgb_attr.nix;
-    bare_hex = import ./bare_hex.nix;
-    # hex = builtins.mapAttrs ();
+  flavor = config.common.catppuccin.flavor;
+  catppuccin = {
+    rgb = (import ./rgb_attr.nix).${flavor};
+    hsl = (import ./hsl.nix).${flavor};
+    hex = (import ./bare_hex.nix).${flavor};
   };
 in {
-  catppuccin = {
-    rgb = import ./rgb_attr.nix;
-    hsl = import ./hsl.nix;
-    hex = import ./hex.nix; # TODO: map '#' to bare
-    latte = self.catppuccin
-
+  options.theme.catppuccin = lib.mkOption {
+    default = {};
+    description = " ";
   };
-
-  #imports = [
-  #  ./bare.nix
-  #  ./hex.nix
-  #  ./hsl.nix
-  #  ./rgb_attr.nix
-  #];
+  
+  config.theme.catppuccin = catppuccin;
 }

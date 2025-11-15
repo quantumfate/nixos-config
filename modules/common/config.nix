@@ -1,13 +1,13 @@
 { lib, config, pkgs, ... }:
 
-let cfg = config.common;
+let userCfg = config.common.user;
 in {
   config = {
-    users.users.${cfg.userName} = {
+    users.users.${userCfg.name} = {
       isNormalUser = true;
       extraGroups = [ "wheel" "networkmanager" "ydotool"];
       description = "main user";
-      shell = cfg.shell;
+      shell = userCfg.shell;
     };
   };
 }

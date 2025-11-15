@@ -53,7 +53,7 @@
   system.stateVersion = "25.05";
 
   # to be moved
-  services.getty.autologinUser = config.common.userName;
+  services.getty.autologinUser = config.common.user.name;
   programs.firefox.enable = true;
 }
 

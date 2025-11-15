@@ -9,5 +9,12 @@ in {
     };
   };
 
-  imports = [ ./user.nix ./peripherals.nix ./style.nix ./config.nix ./lib.nix ];
+  imports = [
+    ./user.nix
+    ./peripherals.nix
+    ./style.nix
+    ./config.nix
+    ./lib.nix
+    ./catppuccin.nix
+  ];
 }
