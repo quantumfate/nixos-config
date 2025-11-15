@@ -2,7 +2,7 @@
 
 let
   hostName = config.networking.hostName;
-  userCfg = config.common;
+  userCfg = config.common.user;
 
   monitorMaps = {
     "quantum-desktop" = [
@@ -33,7 +33,7 @@ in {
     xwayland.enable = true;
   };
 
-  home-manager.users."${userCfg.userName}" = {
+  home-manager.users."${userCfg.name}" = {
     home.packages = with pkgs; [
       hyprpaper
       hypridle

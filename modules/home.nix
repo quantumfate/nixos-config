@@ -1,13 +1,13 @@
 { config, pkgs, lib, inputs, ... }:
 
-let userCfg = config.common;
+let userCfg = config.common.user;
 in {
   home-manager = {
     useGlobalPkgs = true;
     useUserPackages = true;
     backupFileExtension = "backup";
 
-    users.${userCfg.userName} = {
+    users.${userCfg.name} = {
       home.packages = with pkgs; [
         # Ricing
         catppuccin-kvantum
@@ -57,11 +57,14 @@ in {
         jq
         neofetch
         zathura
+
+        (callPackage (../Packages/ankama-launcher.nix) {})
+        ydotool
       ];
       imports = [
         {
-          home.username = "${userCfg.userName}";
-          home.homeDirectory = "/home/${userCfg.userName}";
+          home.username = "${userCfg.name}";
+          home.homeDirectory = "/home/${userCfg.name}";
           home.stateVersion = "25.05";
           programs.home-manager.enable = true;
         }

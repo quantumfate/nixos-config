@@ -9,15 +9,15 @@
 
   # User Modules
   common = {
-    userName = "quantum";
-    shell = pkgs.zsh;
+    user = {
+      name = "quantum";
+      shell = pkgs.zsh;
+    };
     peripherals = {
       keyboard = "programmer-dvorak";
       monitors = [ "DP-1" "HDMI-A-1" ];
     };
-    style = {
-      fontFamily = "Inconsolata Nerd Font";
-    };
+    style = { fontFamily = "Inconsolata Nerd Font"; };
   };
 
   # System

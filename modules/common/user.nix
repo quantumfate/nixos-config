@@ -1,8 +1,8 @@
 { lib, config, pkgs, ... }:
 
 {
-  options.common = {
-    userName = lib.mkOption {
+  options.common.user = {
+    name = lib.mkOption {
       default = "quantum";
       description = ''
         The hosts main user.

@@ -2,14 +2,14 @@
 
 let
   hostName = config.networking.hostName;
-  userCfg = config.common;
+  userCfg = config.common.user;
 in {
-  home-manager.users."${userCfg.userName}" = {
+  home-manager.users."${userCfg.name}" = {
     programs.waybar = {
       enable = true;
       settings = {
         mainBar = {
-          include = "/home/${userCfg.userName}/.config/waybar/modules";
+          include = "/home/${userCfg.name}/.config/waybar/modules";
           position = "top";
           height = 25;
           ipc = true;

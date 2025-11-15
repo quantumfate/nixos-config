@@ -2,11 +2,11 @@
 
 let
   hostName = config.networking.hostName;
-  userCfg = config.common;
-  scriptLocation = "/home/${userCfg.userName}/.config/waybar/scripts";
+  userCfg = config.common.user;
+  scriptLocation = "/home/${userCfg.name}/.config/waybar/scripts";
   colors = config.colors.catppuccin.mocha;
 in {
-  home-manager.users."${userCfg.userName}" = {
+  home-manager.users."${userCfg.name}" = {
     home.file.".config/waybar/modules" = {
       enable = true;
       text = ''

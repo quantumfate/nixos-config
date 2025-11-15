@@ -2,7 +2,7 @@
 
 let
   hostName = config.networking.hostName;
-  userCfg = config.common;
+  userCfg = config.common.user;
 in {
 
   config = {
@@ -12,7 +12,7 @@ in {
 
     environment.pathsToLink = [ "/share/zsh" ];
 
-    home-manager.users."${userCfg.userName}" = {
+    home-manager.users."${userCfg.name}" = {
       programs.zsh = {
         enable = true;
         enableCompletion = true;

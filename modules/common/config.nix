@@ -5,7 +5,7 @@ in {
   config = {
     users.users.${cfg.userName} = {
       isNormalUser = true;
-      extraGroups = [ "wheel" "networkmanager" ];
+      extraGroups = [ "wheel" "networkmanager" "ydotool"];
       description = "main user";
       shell = cfg.shell;
     };

@@ -6,6 +6,7 @@
     ./main.nix
     ./workspaces.nix
     ./startup.nix
+    ./windowrules.nix
     ./hyprpaper.nix
   ];
 }

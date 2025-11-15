@@ -2,10 +2,10 @@
 
 let
   hostName = config.networking.hostName;
-  userCfg = config.common;
+  userCfg = config.common.user;
 in {
 
-  home-manager.users."${userCfg.userName}" = {
+  home-manager.users."${userCfg.name}" = {
     programs.bash = {
       enable = true;
       shellAliases = { btw = "echo i use hyprland btw"; };

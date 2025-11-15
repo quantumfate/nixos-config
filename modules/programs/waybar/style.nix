@@ -2,8 +2,8 @@
 
 let
   hostName = config.networking.hostName;
-  userCfg = config.common;
-  scriptLocation = "/home/${userCfg.userName}/.config/waybar/scripts";
+  userCfg = config.common.user;
+  scriptLocation = "/home/${userCfg.name}/.config/waybar/scripts";
   colors = config.colors.catppuccin.mocha;
   rgbToRgba = rgbString: alpha:
     let
@@ -14,7 +14,7 @@ let
     
   borderColor = rgbToRgba colors.crust.rgb 0.6;
 in {
-  home-manager.users."${userCfg.userName}" = {
+  home-manager.users."${userCfg.name}" = {
     programs.waybar = {
       style = ''
         * {

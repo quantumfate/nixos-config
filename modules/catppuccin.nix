@@ -3,7 +3,7 @@
 let
   cfg = config.colorscheme.catppuccin;
   hostName = config.networking.hostName;
-  userCfg = config.common;
+  userCfg = config.common.user;
 
   flavor = "mocha";
   accent = "rosewater";
@@ -567,6 +567,6 @@ in {
   };
   config = {
     catppuccin = catppuccinCfg;
-    home-manager.users."${userCfg.userName}" = { catppuccin = catppuccinCfg; };
+    home-manager.users."${userCfg.name}" = { catppuccin = catppuccinCfg; };
   };
 }

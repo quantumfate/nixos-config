@@ -2,11 +2,11 @@
 
 let
   hostName = config.networking.hostName;
-  userCfg = config.common;
-  userHome = config.users.users."${userCfg.userName}".home;
+  userCfg = config.common.user;
+  userHome = config.users.users."${userCfg.name}".home;
   wallpapersDir = "${userHome}/.config/hypr/wallpapers/";
 in {
-  home-manager.users."${userCfg.userName}" = {
+  home-manager.users."${userCfg.name}" = {
     services.hyprpaper = {
       enable = true;
       settings = {

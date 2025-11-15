@@ -6,7 +6,11 @@ let
 in {
   home-manager.users."${userCfg.name}" = {
     wayland.windowManager.hyprland = {
-      settings = { "exec-once" = [ "waybar" "hyprpaper" ]; };
+      settings = {
+        windowrule = [
+          "monitor DP-1, fullscreen, workspace 5, nomaxsize, fullscreenstate 3 3, class:Dofus.x64"
+        ];
+      };
     };
   };
 }

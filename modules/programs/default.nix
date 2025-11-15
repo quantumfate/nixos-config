@@ -12,5 +12,6 @@
     ./git.nix
     ./ssh.nix
     ./xdg.nix
+    ./ydotool.nix
   ];
 }
