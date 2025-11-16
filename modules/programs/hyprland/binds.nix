@@ -60,6 +60,13 @@ in {
           "$mainMod, PRINT, exec, hyprshot -m window"
           " , PRINT, exec, hyprshot -m output"
           "$mainMod SHIFT, PRINT, exec, hyprshot -m region"
+          
+          "$mainMod, F1, focuswindow, title:Dofus - Miserymaker"
+          "$mainMod, F2, focuswindow, title:Dofus - Rejecter"
+          "$mainMod, F3, focuswindow, title:Dofus - Memoryfracture"
+          "$mainMod, F4, focuswindow, title:Dofus - Miserymaker"
+          "$mainMod, F5, focuswindow, title:Dofus - Miserymaker"
+          "$mainMod, F6, focuswindow, title:Dofus - Miserymaker"
         ]; # ++ userCfg.lib.hyprland.generateKeybindings { };
 
         bindm =

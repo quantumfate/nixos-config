@@ -41,6 +41,8 @@ in {
       hyprlock
       hyprcursor
       hyprshot
+
+      inputs.hyprXPrimary.packages.${system}.default
     ];
 
     wayland.windowManager.hyprland = {
