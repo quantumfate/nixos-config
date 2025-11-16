@@ -60,6 +60,7 @@ in {
 
         (callPackage (../Packages/ankama-launcher.nix) {})
         ydotool
+        inputs.hyprXPrimary.packages.${system}.default
       ];
       imports = [
         {

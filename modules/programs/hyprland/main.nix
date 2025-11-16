@@ -92,6 +92,7 @@ in {
         };
 
         animations = { enabled = true; };
+        plugin = { xwaylandprimary = { display = "DP-1"; }; };
       };
     };
   };

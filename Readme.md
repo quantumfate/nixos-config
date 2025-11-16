@@ -6,6 +6,13 @@
 - configure [Stylix](https://nix-community.github.io/stylix/index.html)
 - configure potential VMs for QMK
 
+## Prerequisites
+
+1. ankama-launcher.AppImage must exist in `Packages/`
+2. execute `nix hash file /home/user/this-directory/Packages/ankama-launcher.AppImage`
+3. replace the sha256-string in `Packages/ankama-launcher.nix` with the output of the previous command
+
+
 ## My inspiration
 
 - [woioeow/hyprland-dotfiles](https://github.com/woioeow/hyprland-dotfiles/tree/main)

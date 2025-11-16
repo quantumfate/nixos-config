@@ -13,14 +13,20 @@
       url = "github:hyprwm/hyprland-plugins";
       inputs.hyprland.follows = "hyprland";
     };
+    hyprXPrimary = {
+      url = "github:zakk4223/hyprXPrimary";
+      inputs.hyprland.follows = "hyprland";
+      inputs.nixpkgs.follows = "hyprland/nixpkgs";
+    };
     catppuccin.url = "github:catppuccin/nix";
   };
 
   outputs = { self, nixpkgs, ... }@inputs:
     let
+      system = "x86_64-linux";
       common = "quantum";
       mkSystem = { configNix }: {
-        specialArgs = { inherit inputs; };
+        specialArgs = { inherit inputs system; };
         modules = [
           (import configNix)
           inputs.home-manager.nixosModules.home-manager
@@ -30,7 +36,7 @@
     in {
       nixosConfigurations.quantum-desktop = nixpkgs.lib.nixosSystem
         (mkSystem { configNix = ./hosts/quantum-desktop/configuration.nix; });
-      
+
       # todo add laptop
     };
 }
