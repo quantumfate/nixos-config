@@ -8,7 +8,7 @@ in {
   home-manager.users."${userCfg.name}" = {
     programs.chromium = {
       enable = true;
-      package = pkgs.brave;
+      package = pkgs.chromium;
       extensions = [
         # Dark Reader
         {
@@ -22,8 +22,11 @@ in {
 
         # FireShot
         { id = "mcbpblocgmgfnpjjppndjkmgjaogfceg"; }
+        
+        # KeepassXC
+        { id = "oboonakemofpalcgghocfoadofidjkkk"; }
       ];
-      commandLineArgs = [ "--force-dark-mode" ];
+      commandLineArgs = [ "--force-dark-mode" "--ignore-gpu-blocklist" ];
     };
   };
 }

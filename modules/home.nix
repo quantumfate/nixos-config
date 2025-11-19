@@ -14,12 +14,12 @@ in {
         waybar
         rofi
         npins
-        (catppuccin-kvantum.override {
-          accent = "teal";
-          variant = "mocha";
-        })
-        libsForQt5.qtstyleplugin-kvantum
-        libsForQt5.qt5ct
+        #(catppuccin-kvantum.override {
+        #  accent = "teal";
+        #  variant = "mocha";
+        #})
+        #libsForQt5.qtstyleplugin-kvantum
+        #libsForQt5.qt5ct
         papirus-folders
 
         ## Formatters
@@ -70,6 +70,7 @@ in {
           programs.home-manager.enable = true;
         }
         inputs.catppuccin.homeModules.catppuccin
+        inputs.stylix.homeModules.stylix
       ];
     };
   };

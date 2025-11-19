@@ -19,6 +19,11 @@
       inputs.nixpkgs.follows = "hyprland/nixpkgs";
     };
     catppuccin.url = "github:catppuccin/nix";
+    stylix = {
+      url = "github:nix-community/stylix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
   };
 
   outputs = { self, nixpkgs, ... }@inputs:
@@ -31,12 +36,13 @@
           (import configNix)
           inputs.home-manager.nixosModules.home-manager
           inputs.catppuccin.nixosModules.catppuccin
+          inputs.stylix.nixosModules.stylix
         ];
       };
     in {
       nixosConfigurations.quantum-desktop = nixpkgs.lib.nixosSystem
         (mkSystem { configNix = ./hosts/quantum-desktop/configuration.nix; });
-
-      # todo add laptop
+      nixosConfigurations.quantum-laptop = nixpkgs.lib.nixosSystem
+        (mkSystem { configNix = ./hosts/quantum-laptop/configuration.nix; });
     };
 }

@@ -10,7 +10,7 @@ in {
         "$mainMod" = "SUPER";
         bind = [
           "$mainMod, T, exec, alacritty"
-          "$mainMod, F, exec, brave"
+          "$mainMod, F, exec, chromium"
           "$mainMod, R, exec, rofi -show run"
           "$mainMod, X, killactive"
 

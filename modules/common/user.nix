@@ -14,5 +14,10 @@
         The shell used by the main user.
       '';
     };
+    groups = lib.mkOption {
+      type = lib.types.listOf lib.types.str;
+      default = [ "wheel" "networkmanager" ];
+      description = "Additional user groups.";
+    };
   };
 }

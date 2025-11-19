@@ -1,7 +1,7 @@
 { config, pkgs, lib, ... }:
 
 let
-  flavor = config.common.catppuccin.flavor;
+  flavor = config.common.style.catppuccin.flavor;
   catppuccin = {
     rgb = (import ./rgb_attr.nix).${flavor};
     hsl = (import ./hsl.nix).${flavor};

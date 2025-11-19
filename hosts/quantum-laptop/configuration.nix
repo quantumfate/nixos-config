@@ -1,20 +1,20 @@
 { config, lib, pkgs, inputs, ... }:
 
 {
-  imports = [ ./hardware-configuration.nix ../common.nix ];
+  imports = [ ./hardware-configuration.nix ../common.nix ../../modules ];
 
   common = {
-    hostName = "quantum-desktop";
+    hostName = "quantum-laptop";
     user = {
       name = "quantum";
       shell = pkgs.zsh;
     };
     peripherals = {
       keyboard = "programmer-dvorak";
-      monitors = [ "DP-1" "HDMI-A-1" ];
+      monitors = [ "eDP-1" ];
     };
     keyboard = {
-      layout = "us";
+      layout = "dvorak";
       variant = "intl";
     };
     style = {

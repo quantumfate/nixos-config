@@ -6,12 +6,12 @@ let
   userCfg = config.common.user;
 
   flavor = "mocha";
-  accent = "rosewater";
+  accent = "teal";
 
   catppuccinCfg = {
     enable = true;
     flavor = "mocha";
-    accent = "rosewater";
+    accent = "teal";
   };
   
   formatRgbForHyprland = rgbString:
