@@ -13,5 +13,6 @@
     ./ssh.nix
     ./xdg.nix
     ./ydotool.nix
+    ./sddm.nix
   ];
 }

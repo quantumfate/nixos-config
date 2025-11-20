@@ -82,7 +82,7 @@ in {
                 },
                 "scroll-step": 5.0,
                 "on-click": "pamixer -t",
-                "on-click-right": "pavucontrol",
+                "on-click-right": "pavucontrol-qt",
                 "on-scroll-up": "${scriptLocation}/volume.sh --inc",
                 "on-scroll-down": "${scriptLocation}/volume.sh --dec",
                 "smooth-scrolling-threshold": 1

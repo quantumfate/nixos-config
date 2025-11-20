@@ -12,6 +12,7 @@
     peripherals = {
       keyboard = "programmer-dvorak";
       monitors = [ "eDP-1" ];
+      primaryMonitor = "eDP-1";
     };
     keyboard = {
       layout = "dvorak";

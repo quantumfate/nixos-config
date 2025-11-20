@@ -10,16 +10,26 @@ in {
     users.${userCfg.name} = {
       home.packages = with pkgs; [
         # Ricing
-        catppuccin-kvantum
+        #catppuccin-kvantum
         waybar
         rofi
         npins
-        #(catppuccin-kvantum.override {
-        #  accent = "teal";
-        #  variant = "mocha";
-        #})
-        #libsForQt5.qtstyleplugin-kvantum
-        #libsForQt5.qt5ct
+        catppuccin-qt5ct
+        catppuccin-cursors.mochaTeal
+        (catppuccin-kvantum.override {
+          accent = config.common.style.catppuccin.accent;
+          variant = config.common.style.catppuccin.flavor;
+        })
+        (catppuccin-papirus-folders.override {
+          accent = config.common.style.catppuccin.accent;
+          flavor = config.common.style.catppuccin.flavor;
+        })
+        (catppuccin-sddm.override {
+          flavor = config.common.style.catppuccin.flavor;
+          font = config.common.style.fontFamily;
+          fontSize = "12";
+        })
+        lxqt.pavucontrol-qt
         papirus-folders
 
         ## Formatters
@@ -31,7 +41,6 @@ in {
 
         ## Tools
         networkmanagerapplet
-        pavucontrol
         pamixer
         obs-studio
         mpv
@@ -58,7 +67,7 @@ in {
         neofetch
         zathura
 
-        (callPackage (../Packages/ankama-launcher.nix) {})
+        (callPackage (../Packages/ankama-launcher.nix) { })
         ydotool
         xdotool
       ];

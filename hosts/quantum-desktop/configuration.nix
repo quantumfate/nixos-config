@@ -12,6 +12,7 @@
     peripherals = {
       keyboard = "programmer-dvorak";
       monitors = [ "DP-1" "HDMI-A-1" ];
+      primaryMonitor = "DP-1";
     };
     keyboard = {
       layout = "us";

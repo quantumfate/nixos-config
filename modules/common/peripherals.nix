@@ -18,5 +18,11 @@
       default = null;
       description = "A List of Monitors such as eDP-1, DP-1 or HDMI-1-A.";
     };
+    
+    primaryMonitor = lib.mkOption {
+      type = lib.types.str;
+      default = "DP-1";
+      description = "The primary monitor.";
+    };  
   };
 }

@@ -30,7 +30,6 @@ in {
   };
 
   services.xserver = {
-    enable = false; # true breaks the system xD
     xkb = {
       layout = cfg.keyboard.layout;
       variant = cfg.keyboard.variant;
@@ -48,5 +47,5 @@ in {
   system.stateVersion = "25.05";
 
   # to be moved
-  services.getty.autologinUser = cfg.user.name;
+# services.getty.autologinUser = cfg.user.name;
 }

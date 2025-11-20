@@ -34,6 +34,13 @@ in {
   };
 
   home-manager.users."${userCfg.name}" = {
+    xdg.desktopEntries."hyprland" = {
+      type = "Application";
+      name = "Hyprland";
+      exec = "Hyprland";
+      comment =
+        "Hyprland is an independent, highly customizable, dynamic tiling Wayland compositor that doesn't sacrifice on its looks.";
+    };
     home.packages = with pkgs; [
       hyprpaper
       hypridle

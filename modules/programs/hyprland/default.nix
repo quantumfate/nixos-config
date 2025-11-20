@@ -8,5 +8,6 @@
     ./startup.nix
     ./windowrules.nix
     ./hyprpaper.nix
+    ./hyprqt6engine.nix
   ];
 }

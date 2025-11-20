@@ -10,13 +10,12 @@ in {
       enable = true;
       mime.enable = true;
       mimeApps.defaultApplications = {
-        "x-scheme-handler/http" = [ "brave.desktop" ];
-        "x-scheme-handler/https" = [ "brave.desktop" ];
-        "text/html" = [ "brave.desktop" ];
+        "x-scheme-handler/http" = [ "chromium-browser.desktop" ];
+        "x-scheme-handler/https" = [ "chromium-browser.desktop" ];
+        "text/html" = [ "chromium-browser.desktop" ];
         "application/pdf" =
-          [ "zathura.desktop" "brave.desktop" ];
+          [ "zathura.desktop" "chromium-browser.desktop" ];
       };
-
     };
   };
 }
