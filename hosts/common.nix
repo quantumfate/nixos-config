@@ -45,7 +45,4 @@ in {
 
   environment.systemPackages = with pkgs; [ vim wget git zsh pciutils ];
   system.stateVersion = "25.05";
-
-  # to be moved
-# services.getty.autologinUser = cfg.user.name;
 }
