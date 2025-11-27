@@ -249,30 +249,6 @@
         "type": "github"
       }
     },
-    "hyprXPrimary": {
-      "inputs": {
-        "hyprland": [
-          "hyprland"
-        ],
-        "nixpkgs": [
-          "hyprland",
-          "nixpkgs"
-        ]
-      },
-      "locked": {
-        "lastModified": 1752371501,
-        "narHash": "sha256-oN6lAZd1jm+D9kCM4ud8Bm5L4UvyggGygheqJVQ0VtA=",
-        "owner": "zakk4223",
-        "repo": "hyprXPrimary",
-        "rev": "99268328e74829e8c2280cb512f9a26ab2cf5c4e",
-        "type": "github"
-      },
-      "original": {
-        "owner": "zakk4223",
-        "repo": "hyprXPrimary",
-        "type": "github"
-      }
-    },
     "hyprcursor": {
       "inputs": {
         "hyprlang": [
@@ -692,7 +668,6 @@
       "inputs": {
         "catppuccin": "catppuccin",
         "home-manager": "home-manager",
-        "hyprXPrimary": "hyprXPrimary",
         "hyprland": "hyprland",
         "hyprland-plugins": "hyprland-plugins",
         "nixpkgs": "nixpkgs_3",
