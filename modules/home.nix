@@ -67,8 +67,8 @@ in {
         neofetch
         zathura
 
-        (callPackage (../Packages/ankama-launcher.nix) { })
-        #ankama-launcher
+        #(callPackage (../Packages/ankama-launcher.nix) { })
+        ankama-launcher
         ydotool
         xdotool
       ];
