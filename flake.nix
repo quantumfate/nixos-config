@@ -13,11 +13,6 @@
       url = "github:hyprwm/hyprland-plugins";
       inputs.hyprland.follows = "hyprland";
     };
-    hyprXPrimary = {
-      url = "github:zakk4223/hyprXPrimary";
-      inputs.hyprland.follows = "hyprland";
-      inputs.nixpkgs.follows = "hyprland/nixpkgs";
-    };
     catppuccin.url = "github:catppuccin/nix";
     stylix = {
       url = "github:nix-community/stylix";
