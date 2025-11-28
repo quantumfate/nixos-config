@@ -22,10 +22,6 @@ in {
       };
     };
 
-    home.file.".config/hypr/scripts/" = {
-      source = ./scripts;
-      recursive = true;
-    };
     home.file.".config/hypr/wallpapers/" = {
       source = ../../../assets/wallpapers;
       recursive = true;

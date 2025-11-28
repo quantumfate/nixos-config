@@ -34,6 +34,10 @@ in {
   };
 
   home-manager.users."${userCfg.name}" = {
+    home.file.".config/hypr/scripts/" = {
+      source = ./scripts;
+      recursive = true;
+    };
     xdg.desktopEntries."hyprland" = {
       type = "Application";
       name = "Hyprland";

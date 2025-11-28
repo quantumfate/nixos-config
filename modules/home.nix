@@ -71,6 +71,7 @@ in {
         ankama-launcher
         ydotool
         xdotool
+        socat
       ];
       imports = [
         {
