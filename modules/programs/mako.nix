@@ -48,7 +48,7 @@ in {
         };
         "app-name=Dofus-Launch" = {
           default-timeout = 3000;
-        },
+        };
         "app-name=pavucontrol" = {
           width = 80;
           default-timeout = 3000;
