@@ -8,7 +8,7 @@ in {
     wayland.windowManager.hyprland = {
       settings = {
         windowrule = [
-          "monitor DP-1, workspace 5, match:class Dofus.x64"
+          "workspace 5, maximize on, match:class Dofus.x64"
         ];
       };
     };

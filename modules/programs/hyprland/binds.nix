@@ -62,12 +62,10 @@ in {
           " , PRINT, exec, hyprshot -m output"
           "$mainMod SHIFT, PRINT, exec, hyprshot -m region"
           
-          "$mainMod, F1, focuswindow, title:Dofus - Miserymaker"
-          "$mainMod, F2, focuswindow, title:Dofus - Rejecter"
-          "$mainMod, F3, focuswindow, title:Dofus - Memoryfracture"
-          "$mainMod, F4, focuswindow, title:Dofus - Miserymaker"
-          "$mainMod, F5, focuswindow, title:Dofus - Miserymaker"
-          "$mainMod, F6, focuswindow, title:Dofus - Miserymaker"
+          ",F1, alterzorder, top, title:Dofus Miserymaker"
+          ",F2, alterzorder, top, title:Dofus Rejecter"
+          ",F3, exec, xdotool windowactivate 'Dofus Miserymaker'"
+          ",F4, exec, xdotool windowactivate 'Dofus Rejecter'"
         ]; # ++ userCfg.lib.hyprland.generateKeybindings { };
 
         bindm =

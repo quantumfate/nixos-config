@@ -14,8 +14,8 @@ process_window () {
   echo "address: $window_address" 
   echo "pid: $client_pid" 
   window_id=$(xdotool search --pid "$client_pid")
-  xdotool set_window -name "Dofus - ${dofus_chars[$char_count]}" "$window_id"   
-  echo "window name: Dofus - ${dofus_chars[$char_count]}" 
+  xdotool set_window -name "Dofus ${dofus_chars[$char_count]}" "$window_id"   
+  echo "window name: Dofus ${dofus_chars[$char_count]}" 
   ((char_count++))
 }
 
