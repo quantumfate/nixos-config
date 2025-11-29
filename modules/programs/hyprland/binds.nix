@@ -40,22 +40,22 @@ in {
           "$mainMod SHIFT, 0, movetoworkspace, 10"
 
           # Moving focus
-          "$mainMod, left, movefocus, l"
-          "$mainMod, right, movefocus, r"
-          "$mainMod, up, movefocus, u"
-          "$mainMod, down, movefocus, d"
+          "$mainMod, h, movefocus, l"
+          "$mainMod, l, movefocus, r"
+          "$mainMod, j, movefocus, u"
+          "$mainMod, k, movefocus, d"
 
           # Moving windows
-          "$mainMod SHIFT, left,  swapwindow, l"
-          "$mainMod SHIFT, right, swapwindow, r"
-          "$mainMod SHIFT, up,    swapwindow, u"
-          "$mainMod SHIFT, down,  swapwindow, d"
+          "$mainMod SHIFT, h,  swapwindow, l"
+          "$mainMod SHIFT, l, swapwindow, r"
+          "$mainMod SHIFT, j,    swapwindow, u"
+          "$mainMod SHIFT, k,  swapwindow, d"
 
           # Resizeing windows                   X  Y
-          "$mainMod CTRL, left,  resizeactive, -60 0"
-          "$mainMod CTRL, right, resizeactive,  60 0"
-          "$mainMod CTRL, up,    resizeactive,  0 -60"
-          "$mainMod CTRL, down,  resizeactive,  0  60"
+          "$mainMod CTRL, h,  resizeactive, -60 0"
+          "$mainMod CTRL, l, resizeactive,  60 0"
+          "$mainMod CTRL, j,    resizeactive,  0 -60"
+          "$mainMod CTRL, k,  resizeactive,  0  60"
 
           # Screenshots
           "$mainMod, PRINT, exec, hyprshot -m window"
@@ -66,8 +66,6 @@ in {
           ",F1, focuswindow, title:Dofus Miserymaker"
           ",F2, alterzorder, top, title:Dofus Rejecter"
           ",F2, focuswindow, title:Dofus Rejecter"
-          ",F3, exec, xdotool windowactivate 'Dofus Miserymaker'"
-          ",F4, exec, xdotool windowactivate 'Dofus Rejecter'"
         ]; # ++ userCfg.lib.hyprland.generateKeybindings { };
 
       };
