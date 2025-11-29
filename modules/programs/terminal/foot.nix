@@ -12,7 +12,7 @@ in {
       enable = true;
       settings = { 
         main = {
-          font = "${userCfg.style.fontFamily}:size=13";
+          font = "${config.common.style.fontFamily}:size=14";
         };
       };
     };

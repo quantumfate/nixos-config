@@ -12,8 +12,8 @@ in {
       enable = true;
       shellIntegration.enableZshIntegration = true;
       font = {
-        name = "${userCfg.style.fontFamily}";
-        size = 13;
+        name = "${config.common.style.fontFamily}";
+        size = 14;
       }; 
     };
   };
