@@ -72,10 +72,6 @@ in {
         ydotool
         xdotool
         socat
-        inputs.grim-hyprland.packages.${pkgs.system}.default
-        fzf
-        foot
-        chafa
       ];
       imports = [
         {

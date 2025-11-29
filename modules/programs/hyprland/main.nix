@@ -58,6 +58,10 @@ in {
       hyprlock
       hyprcursor
       hyprshot
+      
+      inputs.grim-hyprland.packages.${pkgs.system}.default
+      fzf
+      chafa
     ];
 
     wayland.windowManager.hyprland = {
