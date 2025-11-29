@@ -17,6 +17,8 @@ process_window () {
   xdotool set_window -name "Dofus ${dofus_chars[$char_count]}" "$window_id"   
   echo "window name: Dofus ${dofus_chars[$char_count]}" 
   ((char_count++))
+  
+  # Todo exit script when done 
 }
 
 handle() {

@@ -9,7 +9,7 @@ in {
       settings = {
         "$mainMod" = "SUPER";
         bind = [
-          "$mainMod, T, exec, alacritty"
+          "$mainMod, T, exec, foot"
           "$mainMod, F, exec, chromium"
           "$mainMod, R, exec, rofi -show run"
           "$mainMod, X, killactive"
