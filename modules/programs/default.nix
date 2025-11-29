@@ -14,5 +14,6 @@
     ./xdg.nix
     ./ydotool.nix
     ./sddm.nix
+    ./terminal
   ];
 }

@@ -61,7 +61,7 @@ in {
           "$mainMod, PRINT, exec, hyprshot -m window"
           " , PRINT, exec, hyprshot -m output"
           "$mainMod SHIFT, PRINT, exec, hyprshot -m region"
-          
+
           ",F1, alterzorder, top, title:Dofus Miserymaker"
           ",F1, focuswindow, title:Dofus Miserymaker"
           ",F2, alterzorder, top, title:Dofus Rejecter"
@@ -70,8 +70,6 @@ in {
           ",F4, exec, xdotool windowactivate 'Dofus Rejecter'"
         ]; # ++ userCfg.lib.hyprland.generateKeybindings { };
 
-        bindm =
-          [ "ALT, mouse:272, movewindow" "$mainMod, mouse:273, resizewindow" ];
       };
     };
   };

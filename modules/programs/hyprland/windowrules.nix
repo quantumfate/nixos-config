@@ -8,7 +8,10 @@ in {
     wayland.windowManager.hyprland = {
       settings = {
         windowrule = [
-          "workspace 5, float off, tile off, min_size 2536 1376, min_size 2536 1376, match:class Dofus.x64"
+          "workspace 3 silent, match:class spotify"
+          "workspace 3 silent, match:class discord"
+          "workspace 4, match:class Ankama Launcher"
+          "workspace 5, center on, content game, decorate off, no_anim on, match:class Dofus.x64"
         ];
       };
     };

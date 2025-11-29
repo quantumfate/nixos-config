@@ -38,7 +38,7 @@ in {
       source = ./scripts;
     };
     home.file.".config/hypr/scripts/alttab/" = {
-      source = .config/hypr/scripts/alttab/;
+      source = ./scripts/alttab;
     };
     home.file.".config/hypr/conf/" = {
       source = ./conf;
@@ -91,7 +91,7 @@ in {
           "col.active_border" = "${borderActive}";
           "col.inactive_border" = "${borderInActive}";
 
-          resize_on_border = true;
+          resize_on_border = false;
 
           allow_tearing = false;
           layout = "master";
@@ -109,9 +109,9 @@ in {
         };
 
         animations = { enabled = true; };
-        source = {
+        source = [
           "/home/${userCfg.name}/.config/hypr/conf/alt-tab.conf"
-        };
+        ];
       };
     };
   };
