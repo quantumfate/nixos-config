@@ -8,7 +8,7 @@ in {
     wayland.windowManager.hyprland = {
       settings = {
         windowrule = [
-          "workspace 5, maximize on, match:class Dofus.x64"
+          "workspace 5, float off, tile off, min_size 2536 1376, min_size 2536 1376, match:class Dofus.x64"
         ];
       };
     };

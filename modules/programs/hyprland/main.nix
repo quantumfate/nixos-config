@@ -36,6 +36,12 @@ in {
   home-manager.users."${userCfg.name}" = {
     home.file.".config/hypr/scripts/" = {
       source = ./scripts;
+    };
+    home.file.".config/hypr/scripts/alttab/" = {
+      source = .config/hypr/scripts/alttab/;
+    };
+    home.file.".config/hypr/conf/" = {
+      source = ./conf;
       recursive = true;
     };
     xdg.desktopEntries."hyprland" = {
@@ -103,6 +109,9 @@ in {
         };
 
         animations = { enabled = true; };
+        source = {
+          "/home/${userCfg.name}/.config/hypr/conf/alt-tab.conf"
+        };
       };
     };
   };

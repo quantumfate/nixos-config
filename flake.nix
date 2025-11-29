@@ -18,6 +18,10 @@
       url = "github:nix-community/stylix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    grim-hyprland = {
+      url = "github:eriedaberrie/grim-hyprland";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
   };
 
