@@ -70,10 +70,10 @@ in {
           ",XF86AudioLowerVolume, exec, ${scriptDir}/volume.sh --dec"
           ",XF86AudioRaiseVolume, exec, ${scriptDir}/volume.sh --inc"
           ",XF86AudioMute, exec, ${scriptDir}/volume.sh --toggle"
-          ",XF86AudioMicMute, ${scriptDir}/volume.sh --toggle-mic"
+          ",XF86AudioMicMute, exec, ${scriptDir}/volume.sh --toggle-mic"
 
-          ",XF86MonBrightnessDown, exec, brightnessctl s 10%-"
-          ",XF86MonBrightnessUp, exec, brightnessctl s +10%"
+          ",XF86MonBrightnessDown, exec, ${scriptDir}/brightness.sh --dec"
+          ",XF86MonBrightnessUp, exec, ${scriptDir}/brightness.sh --inc"
         ]; # ++ userCfg.lib.hyprland.generateKeybinding { };
 
       };

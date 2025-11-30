@@ -8,7 +8,7 @@
     user = {
       name = "quantum";
       shell = pkgs.zsh;
-      groups = config.common.user.groups ++ [ "video" "input" ];
+      groups = [ "video" "input" "ydotool" ];
       packages = [ pkgs.brightnessctl ];
     };
     peripherals = {

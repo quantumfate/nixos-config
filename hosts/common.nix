@@ -38,7 +38,7 @@ in {
 
   users.users.${cfg.user.name} = {
     isNormalUser = true;
-    extraGroups = cfg.user.groups ++ [ "ydotool" ];
+    extraGroups = cfg.user.groups ++ [ "wheel" "networkmanager" ];
     description = "main user";
     shell = cfg.user.shell;
   };

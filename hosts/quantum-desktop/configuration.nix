@@ -8,6 +8,7 @@
     user = {
       name = "quantum";
       shell = pkgs.zsh;
+      groups = [ "ydotool" ];
     };
     peripherals = {
       keyboard = "programmer-dvorak";

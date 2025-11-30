@@ -16,7 +16,7 @@
     };
     groups = lib.mkOption {
       type = lib.types.listOf lib.types.str;
-      default = [ "wheel" "networkmanager" ];
+      default = [ ];
       description = "Additional user groups.";
     };
     packages = lib.mkOption {
