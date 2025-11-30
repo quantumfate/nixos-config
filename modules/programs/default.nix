@@ -15,6 +15,6 @@
     ./ydotool.nix
     ./sddm.nix
     ./terminal
-    ./keepassxc
+    #./keepassxc
   ];
 }

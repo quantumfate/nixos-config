@@ -6,7 +6,7 @@ let
 in {
 
   home-manager.users."${userCfg.name}" = {
-    keepassxc.enable = true;
+    programs.keepassxc.enable = true;
     home.file.".config/keepassxc/keepassxc.ini" = {
       source = config.lib.file.mkOutOfStoreSymlink ./config.ini;
     };
