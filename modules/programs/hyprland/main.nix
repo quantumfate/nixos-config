@@ -111,6 +111,11 @@ in {
 
           blur = { enabled = true; };
         };
+        
+        input = {
+          kb_layout = "${config.common.keyboard.layout}";
+          kb_variant = "${config.common.keyboard.variant}";
+        };
 
         animations = { enabled = true; };
         source = [

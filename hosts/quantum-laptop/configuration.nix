@@ -15,8 +15,8 @@
       primaryMonitor = "eDP-1";
     };
     keyboard = {
-      layout = "dvorak";
-      variant = "intl";
+      layout = "us";
+      variant = "dvorak";
     };
     style = {
       fontFamily = "Inconsolata Nerd Font";
