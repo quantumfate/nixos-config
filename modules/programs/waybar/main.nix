@@ -19,7 +19,7 @@ in {
           layer = "top";
           spacing = 0;
           fixed-center = true;
-          output = [ "DP-1" ]; # TODO: set a list of active monitors
+          output = [ "${config.common.peripherals.primaryMonitor}" ]; # TODO: set a list of active monitors
           modules-left =
             [ "hyprland/workspaces" "cpu" "memory" "disk" "network" ];
           modules-center =

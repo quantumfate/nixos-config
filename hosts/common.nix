@@ -11,7 +11,7 @@ in {
   # System
   networking.hostName = cfg.hostName;
   networking.networkmanager.enable = true;
-
+  
   boot.loader = {
     efi = { canTouchEfiVariables = true; };
     grub = {

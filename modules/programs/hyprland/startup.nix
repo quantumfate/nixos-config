@@ -8,7 +8,7 @@ in {
     wayland.windowManager.hyprland = {
       settings = {
         "exec-once" = [
-          "xrandr --output DP-1 --primary"
+          "xrandr --output ${config.common.peripherals.primaryMonitor} --primary"
           "waybar"
           "hyprpaper"
           "discord"
