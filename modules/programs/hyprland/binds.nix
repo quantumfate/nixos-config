@@ -12,8 +12,8 @@ in {
           "$mainMod, T, exec, foot"
           "$mainMod, F, exec, chromium"
           "$mainMod, R, exec, rofi -show run"
-          "$mainMod, X, killactive"
-          "$mainMod, l, exec, hyprlock"
+          "$mainMod, X, exec, /home/${userCfg.name}/.config/hypr/scripts/minimize.sh"
+          "$mainMod SHIFT, c, exec, hyprlock"
           "$mainMod, d, exec, pkill -SIGINT dofuslaunch.sh || /home/${userCfg.name}/.config/hypr/scripts/dofuslaunch.sh"
 
           # Switching workspaces

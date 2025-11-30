@@ -44,7 +44,6 @@ in {
         pamixer
         obs-studio
         mpv
-        keepassxc
         udiskie
         udisks2
         gimp
