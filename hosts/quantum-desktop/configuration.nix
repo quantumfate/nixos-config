@@ -22,6 +22,11 @@
       fontFamily = "Inconsolata Nerd Font";
       borderRadius = 8;
     };
+    modules = {
+      nvidia.enable = true;
+      dofus.enable = true;
+      steam.enable = true;
+    };
   };
 
 }
