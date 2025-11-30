@@ -19,5 +19,10 @@
       default = [ "wheel" "networkmanager" ];
       description = "Additional user groups.";
     };
+    packages = lib.mkOption {
+      type = lib.types.listOf lib.types.attrs;
+      default = [ ];
+      description = "Additional packages to install through home-manager.";
+    };
   };
 }

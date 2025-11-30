@@ -1,6 +1,6 @@
-activeWindow = $(hyprctl activewindow -j | jq -r ".class")
+#!/usr/bin/env bash
 
-if [ "$activeWindow" = "steam" ]; then
+if [ "$(hyprctl activewindow -j | jq -r ".class")" = "steam" ]; then
     xdotool getactivewindow windowunmap
 else
     hyprctl dispatch killactive ""

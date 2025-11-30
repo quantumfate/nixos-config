@@ -43,7 +43,8 @@ in {
         #pulseaudio,
         #clock,
         #tray,
-        #custom-mako {
+        #custom-mako,
+        #battery {
           background-color: @surface0;
           color: @teal;
           border: 2px solid ${borderColor};

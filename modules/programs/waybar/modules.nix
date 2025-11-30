@@ -3,7 +3,7 @@
 let
   hostName = config.networking.hostName;
   userCfg = config.common.user;
-  scriptLocation = "/home/${userCfg.name}/.config/waybar/scripts";
+  scriptLocation = "/home/${userCfg.name}/.config/hypr/scripts";
   colors = config.colors.catppuccin.mocha;
 in {
   home-manager.users."${userCfg.name}" = {
@@ -121,6 +121,17 @@ in {
                 "exec": "${scriptLocation}/mako.sh",
                 "on-click": "makoctl mode -t do-not-disturb",
                 "restart-interval": 1
+            },
+            "battery": {
+                "bat": "BATT",
+                "interval": 60,
+                "states": {
+                "warning": 30,
+                "critical": 15
+                },
+                "format": "{capacity}% {icon}",
+                "format-icons": ["", "", "", "", ""],
+                "max-length": 25
             },
             "custom/lock": {
                 "format": "<span color='${colors.teal.hex}'>  </span>",

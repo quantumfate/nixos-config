@@ -3,6 +3,7 @@
 let
   hostName = config.networking.hostName;
   userCfg = config.common.user;
+  scriptDir = "/home/${userCfg.name}/.config/hypr/scripts";
 in {
   home-manager.users."${userCfg.name}" = {
     wayland.windowManager.hyprland = {
@@ -12,9 +13,9 @@ in {
           "$mainMod, T, exec, foot"
           "$mainMod, F, exec, chromium"
           "$mainMod, R, exec, rofi -show run"
-          "$mainMod, X, exec, /home/${userCfg.name}/.config/hypr/scripts/minimize.sh"
+          "$mainMod, X, exec, ${scriptDir}/minimize.sh"
           "$mainMod SHIFT, c, exec, hyprlock"
-          "$mainMod, d, exec, pkill -SIGINT dofuslaunch.sh || /home/${userCfg.name}/.config/hypr/scripts/dofuslaunch.sh"
+          "$mainMod, d, exec, pkill -SIGINT dofuslaunch.sh || ${scriptDir}/dofuslaunch.sh"
 
           # Switching workspaces
           "$mainMod, 1, workspace, 1"
@@ -63,11 +64,17 @@ in {
           " , PRINT, exec, hyprshot -m output"
           "$mainMod SHIFT, PRINT, exec, hyprshot -m region"
 
-          ",F1, alterzorder, top, title:Dofus Miserymaker"
-          ",F1, focuswindow, title:Dofus Miserymaker"
-          ",F2, alterzorder, top, title:Dofus Rejecter"
-          ",F2, focuswindow, title:Dofus Rejecter"
-        ]; # ++ userCfg.lib.hyprland.generateKeybindings { };
+          ",F1, exec, ${scriptDir}/processFn.sh Miserymaker"
+          ",F2, exec, ${scriptDir}/processFn.sh Rejecter"
+
+          ",XF86AudioLowerVolume, exec, ${scriptDir}/volume.sh --dec"
+          ",XF86AudioRaiseVolume, exec, ${scriptDir}/volume.sh --inc"
+          ",XF86AudioMute, exec, ${scriptDir}/volume.sh --toggle"
+          ",XF86AudioMicMute, ${scriptDir}/volume.sh --toggle-mic"
+
+          ",XF86MonBrightnessDown, exec, brightnessctl s 10%-"
+          ",XF86MonBrightnessUp, exec, brightnessctl s +10%"
+        ]; # ++ userCfg.lib.hyprland.generateKeybinding { };
 
       };
     };

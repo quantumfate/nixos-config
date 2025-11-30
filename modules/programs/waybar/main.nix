@@ -3,6 +3,40 @@
 let
   hostName = config.networking.hostName;
   userCfg = config.common.user;
+
+  modulesRight = {
+    "quantum-desktop" = [
+      "hyprland/language"
+      "pulseaudio"
+      "clock"
+      "tray"
+      "custom/mako"
+      "custom/lock"
+      "custom/reboot"
+      "custom/power"
+    ];
+    "quantum-laptop" = [
+      "hyprland/language"
+      "pulseaudio"
+      "clock"
+      "tray"
+      "custom/mako"
+      "battery"
+      "custom/lock"
+      "custom/reboot"
+      "custom/power"
+    ];
+    "default" = [
+      "hyprland/language"
+      "pulseaudio"
+      "clock"
+      "tray"
+      "custom/mako"
+      "custom/lock"
+      "custom/reboot"
+      "custom/power"
+    ];
+  };
 in {
   home-manager.users."${userCfg.name}" = {
     programs.waybar = {
@@ -19,19 +53,15 @@ in {
           layer = "top";
           spacing = 0;
           fixed-center = true;
-          output = [ "${config.common.peripherals.primaryMonitor}" ]; # TODO: set a list of active monitors
+          output = [
+            "${config.common.peripherals.primaryMonitor}"
+          ]; # TODO: set a list of active monitors
           modules-left =
             [ "hyprland/workspaces" "cpu" "memory" "disk" "network" ];
-          modules-center =
-            [ "hyprland/window" ];
-          modules-right =
-            [ "hyprland/language" "pulseaudio" "clock" "tray" "custom/mako" "custom/lock" "custom/reboot" "custom/power" ];
+          modules-center = [ "hyprland/window" ];
+          modules-right = modulesRight.${hostName} or modulesRight.default;
         };
       };
-    };
-    home.file.".config/waybar/scripts/" = {
-      source = ./scripts;
-      recursive = true;
     };
   };
 }

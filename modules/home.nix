@@ -35,6 +35,7 @@ in {
 
           ## Formatters
           nixfmt-classic
+          nixd
 
           ## Office
           anki
@@ -73,7 +74,7 @@ in {
           socat
           keepassxc
         ] ++ lib.optionals config.common.modules.dofus.enable
-        [ pkgs.ankama-launcher ];
+        [ pkgs.ankama-launcher ] ++ config.common.user.packages;
       imports = [
         {
           home.username = "${userCfg.name}";

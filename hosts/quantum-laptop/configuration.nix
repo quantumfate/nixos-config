@@ -8,6 +8,8 @@
     user = {
       name = "quantum";
       shell = pkgs.zsh;
+      groups = config.common.user.groups ++ [ "video" "input" ];
+      packages = [ pkgs.brightnessctl ];
     };
     peripherals = {
       keyboard = "programmer-dvorak";
