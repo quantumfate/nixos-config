@@ -50,6 +50,10 @@ in {
           width = 80;
           default-timeout = 3000;
         };
+        "app-name=brightnessctl" = {
+          width = 150;
+          default-timeout = 3000;
+        };
         "mode=do-not-disturb" = {
           invisible = 1;
         };

@@ -22,7 +22,7 @@ get_icon() {
 
 # Notify
 notify_user() {
-	notify-send --app-name=$APP_NAME -h string:x-canonical-private-synchronous:sys-notify -u low "$(get_brightness)%"
+	notify-send --app-name=$APP_NAME -h string:x-canonical-private-synchronous:sys-notify -u low "Brightness: $(get_brightness)%"
 }
 
 # Increase Volume
