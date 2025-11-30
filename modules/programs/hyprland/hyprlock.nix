@@ -4,6 +4,7 @@ let
   hostName = config.networking.hostName;
   userCfg = config.common.user;
   userHome = config.users.users."${userCfg.name}".home;
+  wallpapersDir = "${userHome}/.config/hypr/wallpapers/";
   iconsDir = "${userHome}/.config/hypr/icons/";
   colors = config.colors.catppuccin.mocha;
 in {

@@ -13,6 +13,7 @@ in {
           "$mainMod, F, exec, chromium"
           "$mainMod, R, exec, rofi -show run"
           "$mainMod, X, killactive"
+          "$mainMod, l, exec, hyprlock"
           "$mainMod, d, exec, pkill -SIGINT dofuslaunch.sh || /home/${userCfg.name}/.config/hypr/scripts/dofuslaunch.sh"
 
           # Switching workspaces
