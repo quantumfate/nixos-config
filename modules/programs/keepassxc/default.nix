@@ -7,11 +7,11 @@ in {
 
   home-manager.users."${userCfg.name}" = {
     programs.keepassxc.enable = true;
-    home.file.".config/keepassxc/keepassxc.ini" = {
-      source = config.lib.file.mkOutOfStoreSymlink ./config.ini;
-    };
-    home.file.".cache/keepassxc/keepassxc.ini" = {
-      source = config.lib.file.mkOutOfStoreSymlink ./cache.ini;
-    };
+    #home.file.".config/keepassxc/keepassxc.ini" = {
+    #  source = config.lib.file.mkOutOfStoreSymlink ./config.ini;
+    #};
+    #home.file.".cache/keepassxc/keepassxc.ini" = {
+    #  source = config.lib.file.mkOutOfStoreSymlink ./cache.ini;
+    #};
   };
 }
