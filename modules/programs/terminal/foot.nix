@@ -13,6 +13,7 @@ in {
       settings = { 
         main = {
           font = "${config.common.style.fontFamily}:size=14";
+          pad = "15x15";
         };
       };
     };

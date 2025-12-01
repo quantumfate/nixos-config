@@ -15,5 +15,6 @@
     ./ydotool.nix
     ./sddm.nix
     ./terminal
+    ./cliphist.nix
   ];
 }
