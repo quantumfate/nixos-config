@@ -1,7 +1,6 @@
 { config, ... }:
 
 let
-  hostName = config.networking.hostName;
   userCfg = config.common.user;
   scriptDir = "/home/${userCfg.name}/.config/hypr/scripts";
 in {
