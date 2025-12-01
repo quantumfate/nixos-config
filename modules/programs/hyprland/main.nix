@@ -78,6 +78,8 @@ in {
           "XDG_SCREENSHOTS_DIR,$HOME/Pictures/screens"
           "HYPRSHOT_DIR,$HOME/Pictures/screens"
           "EDITOR,nvim"
+          "VISUAL,nvim"
+          "PAGER,more"
           "QT_QPA_PLATFORMTHEME,hyprqt6engine"
           "XDG_CONFIG_HOME,$HOME/.config"
         ];

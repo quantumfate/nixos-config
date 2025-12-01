@@ -9,18 +9,17 @@ in {
       settings = {
         "$mainMod" = "SUPER";
         bind = [
+          # Applications
           "$mainMod, return, exec, foot"
           "$mainMod, b, exec, brave"
           "$mainMod, f, exec, foot ranger"
           "$mainMod, X, exec, ${scriptDir}/minimize.sh"
-          "$mainMod ALT, l, exec, hyprlock"
           "$mainMod, d, exec, pkill -SIGINT dofuslaunch.sh || ${scriptDir}/dofuslaunch.sh"
-          
+
           # Rofi
           "$mainMod, R, exec, rofi -show drun"
           "$mainMod ALT, R, exec, rofi -modi clipboard:/etc/profiles/per-user/${userCfg.name}/bin/cliphist-rofi -show clipboard"
           "$mainMod SHIFT, R, exec, rofi -modi clipboard:/etc/profiles/per-user/${userCfg.name}/bin/cliphist-rofi-img -show clipboard -show-icons"
-          
 
           # Switching workspaces
           "$mainMod, 1, workspace, 1"
@@ -75,6 +74,9 @@ in {
           ",F4, exec, ${scriptDir}/processFn.sh Reminiscer"
           ",F5, exec, ${scriptDir}/processFn.sh Sayer"
           ",F6, exec, ${scriptDir}/processFn.sh Doom"
+
+          # System
+          "$mainMod ALT, l, exec, hyprlock"
 
           ",XF86AudioLowerVolume, exec, ${scriptDir}/volume.sh --dec"
           ",XF86AudioRaiseVolume, exec, ${scriptDir}/volume.sh --inc"
