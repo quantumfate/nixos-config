@@ -11,10 +11,15 @@ in {
         bind = [
           "$mainMod, T, exec, foot"
           "$mainMod, F, exec, chromium"
-          "$mainMod, R, exec, rofi -show run"
           "$mainMod, X, exec, ${scriptDir}/minimize.sh"
-          "$mainMod SHIFT, c, exec, hyprlock"
+          "$mainMod ALT, l, exec, hyprlock"
           "$mainMod, d, exec, pkill -SIGINT dofuslaunch.sh || ${scriptDir}/dofuslaunch.sh"
+          
+          # Rofi
+          "$mainMod, R, exec, rofi -show run"
+          "$mainMod ALT, R, exec, rofi -modi clipboard:/etc/profiles/per-user/${userCfg.name}/bin/cliphist-rofi -show clipboard"
+          "$mainMod SHIFT, R, exec, rofi -modi clipboard:/etc/profiles/per-user/${userCfg.name}/bin/cliphist-rofi-img -show clipboard -show-icons"
+          
 
           # Switching workspaces
           "$mainMod, 1, workspace, 1"
