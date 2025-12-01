@@ -28,7 +28,6 @@
   outputs = { self, nixpkgs, ... }@inputs:
     let
       system = "x86_64-linux";
-      common = "quantum";
       mkSystem = { configNix }: {
         specialArgs = { inherit inputs system; };
         modules = [
