@@ -1,7 +1,6 @@
 { config, ... }:
 
 let
-  hostName = config.networking.hostName;
   userCfg = config.common.user;
   scriptLocation = "/home/${userCfg.name}/.config/hypr/scripts";
   colors = config.colors.catppuccin.mocha;
@@ -72,8 +71,8 @@ in {
                 "format-icons": {
                     "headphone": "",
                     "hands-free": "",
-                    "speaker": "ﰝ",
-                    "hifi": "醙",
+                    "speaker": "",
+                    "hifi": "",
                     "headset": "",
                     "phone": "",
                     "portable": "",

@@ -1,13 +1,10 @@
 { config, lib, ... }:
 
 let
-  hostName = config.networking.hostName;
   userCfg = config.common.user;
-  scriptLocation = "/home/${userCfg.name}/.config/waybar/scripts";
   colors = config.colors.catppuccin.mocha;
   rgbToRgba = rgbString: alpha:
     let
-      rgbaStart = lib.strings.replaceStrings [ "rgb(" ] [ "rgba(" ] rgbString;
       content = lib.strings.substring 4 (lib.strings.stringLength rgbString - 5)
         rgbString;
     in "rgba(${content}, ${toString alpha})";
@@ -18,7 +15,7 @@ in {
     programs.waybar = {
       style = ''
         * {
-          font-family: Fira Code Nerd Font, FontAwesome, Roboto, Helvetica, Arial, sans-serif;
+          font-family: ${config.common.style.fontFamily}, FontAwesome, Roboto, Helvetica, Arial, sans-serif;
           font-size: 13px;
         }
 
