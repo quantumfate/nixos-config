@@ -35,9 +35,7 @@ in {
   home-manager.users."${userCfg.name}" = {
     home.file.".config/hypr/scripts/" = {
       source = ./scripts;
-    };
-    home.file.".config/hypr/scripts/alttab/" = {
-      source = ./scripts/alttab;
+      recursive = true;
     };
     home.file.".config/hypr/conf/" = {
       source = ./conf;

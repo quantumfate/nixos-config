@@ -1,7 +1,6 @@
 { config, ... }:
 
 let
-  hostName = config.networking.hostName;
   userCfg = config.common.user;
   userHome = config.users.users."${userCfg.name}".home;
   wallpapersDir = "${userHome}/.config/hypr/wallpapers/";
@@ -10,7 +9,7 @@ let
 in {
   home-manager.users."${userCfg.name}" = {
     home.file.".config/hypr/icons/" = {
-      source = ../../../assets/icons;
+      source = ../../../../assets/icons;
       recursive = true;
     };
     catppuccin.hyprlock.enable = false;

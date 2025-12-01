@@ -7,8 +7,6 @@
     ./workspaces.nix
     ./startup.nix
     ./windowrules.nix
-    ./hyprpaper.nix
-    ./hyprqt6engine.nix
-    ./hyprlock.nix
+    ./ecosystem
   ];
 }
