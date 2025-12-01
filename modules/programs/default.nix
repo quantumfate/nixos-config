@@ -16,6 +16,6 @@
     ./sddm.nix
     ./terminal
     ./cliphist.nix
-    ./ranger.nix
+    ./ranger
   ];
 }
