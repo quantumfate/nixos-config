@@ -2,6 +2,8 @@
 
 ![Laptop Desktop](./assets/readme/laptop_desktop.png)
 
+![Rofi](./assets/readme/rofi.png)
+
 ## Content
 
 - [Hyprland](https://github.com/hyprwm/Hyprland)
