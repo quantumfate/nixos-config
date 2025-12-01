@@ -1,7 +1,6 @@
-{ config, lib, pkgs, ... }:
+{ config, pkgs, ... }:
 
 let
-  hostName = config.networking.hostName;
   userCfg = config.common.user;
   colors = config.colors.catppuccin.mocha;
 in {

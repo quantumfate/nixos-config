@@ -3,8 +3,6 @@
 # TODO: eventually add ProtonGE for more compatibility
 
 let
-  hostName = config.networking.hostName;
-  userCfg = config.common.user;
   cfg = config.common.modules.steam;
 in {
   config = lib.mkIf cfg.enable {

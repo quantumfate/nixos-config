@@ -1,12 +1,7 @@
 { config, lib, ... }:
 
 let
-  cfg = config.colorscheme.catppuccin;
-  hostName = config.networking.hostName;
   userCfg = config.common.user;
-
-  flavor = "mocha";
-  accent = "teal";
 
   catppuccinCfg = {
     enable = true;

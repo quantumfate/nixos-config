@@ -1,7 +1,6 @@
-{ config, pkgs, lib, ... }:
+{ config, pkgs, ... }:
 
 let
-  hostName = config.networking.hostName;
   userCfg = config.common.user;
 in {
 

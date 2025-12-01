@@ -1,8 +1,6 @@
 { pkgs, config, ... }:
 let
-  hostName = config.networking.hostName;
   userCfg = config.common.user;
-  colors = config.colors.catppuccin.mocha;
   flavor = config.common.style.catppuccin.flavor;
   
   stylix = {

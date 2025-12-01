@@ -1,7 +1,6 @@
-{ lib, config, pkgs, ... }:
+{ lib, ... }:
 
-let cfg = config.common;
-in {
+{
   options.common = {
     _options = lib.mkOption {
       default = { };
