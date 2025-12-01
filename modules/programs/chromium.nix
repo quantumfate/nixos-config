@@ -7,7 +7,7 @@ in {
   home-manager.users."${userCfg.name}" = {
     programs.chromium = {
       enable = true;
-      package = pkgs.chromium;
+      package = pkgs.brave;
       extensions = [
         # Dark Reader
         {

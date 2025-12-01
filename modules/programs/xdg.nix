@@ -14,6 +14,7 @@ in {
         "text/html" = [ "chromium-browser.desktop" ];
         "application/pdf" =
           [ "zathura.desktop" "chromium-browser.desktop" ];
+        "inode/directory" = [ "ranger.desktop" ];
       };
       userDirs = {
         enable = true;
