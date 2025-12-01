@@ -79,7 +79,7 @@ in {
         {
           home.username = "${userCfg.name}";
           home.homeDirectory = "/home/${userCfg.name}";
-          home.stateVersion = "25.05";
+          home.stateVersion = "25.11";
           programs.home-manager.enable = true;
         }
         inputs.catppuccin.homeModules.catppuccin

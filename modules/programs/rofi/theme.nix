@@ -1,11 +1,11 @@
-{ config, ... }:
+{ config, lib, ... }:
 
 let userCfg = config.common.user;
 in {
   home-manager.users."${userCfg.name}" = {
     # https://mynixos.com/options/programs.rofi
     programs.rofi = {
-      theme = let inherit (config.lib.formats.rasi) mkLiteral;
+      theme = let inherit (lib.formats.rasi) mkLiteral;
       in {
         "*" = {
           background-color = mkLiteral "#000000";
@@ -13,7 +13,7 @@ in {
           border-color = mkLiteral "#FFFFFF";
           width = 512;
         };
-        "@theme" = "custom";
+        #"@theme" = "custom";
         "#inputbar" = { children = map mkLiteral [ "prompt" "entry" ]; };
 
         "#textbox-prompt-colon" = {
