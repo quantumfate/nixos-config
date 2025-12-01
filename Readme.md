@@ -1,17 +1,29 @@
-# TODO
+# Nixos Configuration
 
-- Implement preferred [hyprland workspaces](https://github.com/Duckonaut/split-monitor-workspaces)
+![Laptop Desktop](./assets/readme/laptop_desktop.png)
+
+## Content
+
+- [Hyprland](https://github.com/hyprwm/Hyprland)
+- [Waybar](https://github.com/Alexays/Waybar)
+- [Rofi](https://github.com/davatorium/rofi)
+
+### Theme
+
+- [Stylix](https://nix-community.github.io/stylix/installation.html)
+- [Catppuccin-nix](https://nix.catppuccin.com/)
+
+<h3 align="center">
+ <img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/logos/exports/1544x1544_circle.png" width="100" alt="Logo"/><br/>
+ <img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/misc/transparent.png" height="30" width="0px"/>
+ <a href="https://catppuccin.com/"> Catppuccin</a>
+ <img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/misc/transparent.png" height="30" width="0px"/>
+</h3>
+
+## TODO
+
 - Implement a module to track the upstream of the nixOS color palette
-- ensure screenshot path exists
-- configure QT and GTK with [Stylix](https://nix-community.github.io/stylix/index.html)
 - configure potential VMs for QMK
-
-## Prerequisites
-
-1. ankama-launcher.AppImage must exist in `Packages/`
-2. execute `nix hash file /home/user/this-directory/Packages/ankama-launcher.AppImage`
-3. replace the sha256-string in `Packages/ankama-launcher.nix` with the output of the previous command
-
 
 ## My inspiration
 
