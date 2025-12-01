@@ -4,5 +4,6 @@
     ./audio.nix
     ./kernel.nix
     ./fonts.nix
+    ./bluetooth.nix
   ];
 }

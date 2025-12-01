@@ -1,4 +1,4 @@
-{ config, lib, pkgs, inputs, ... }:
+{ pkgs, ... }:
 
 {
   imports = [ ./hardware-configuration.nix ../common.nix ../../modules ];
@@ -24,6 +24,7 @@
       fontFamily = "Inconsolata Nerd Font";
       borderRadius = 8;
     };
+    modules = { bluetooth.enable = true; };
   };
 
 }
