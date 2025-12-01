@@ -16,6 +16,10 @@ in {
         "application/pdf" =
           [ "zathura.desktop" "chromium-browser.desktop" ];
       };
+      userDirs = {
+        enable = true;
+        createDirectories = true;
+      };
     };
   };
 }

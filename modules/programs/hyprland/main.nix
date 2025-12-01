@@ -17,7 +17,6 @@ let
   removeSpaces = s: lib.strings.replaceStrings [ " " ] [ "" ] s;
   rgbToRgba = rgbString: alpha:
     let
-      rgbaStart = lib.strings.replaceStrings [ "rgb(" ] [ "rgba(" ] rgbString;
       content = lib.strings.substring 4 (lib.strings.stringLength rgbString - 5)
         rgbString;
     in removeSpaces "rgba(${content},${toString alpha})";
