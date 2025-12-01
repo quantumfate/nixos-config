@@ -21,7 +21,7 @@ in {
 
         initContent = let
           zshSourcing = lib.mkOrder 500 ''
-            source = /home/${userCfg.name}/.config/ranger/rangercd.sh
+            source /home/${userCfg.name}/.config/ranger/rangercd.sh
           '';
           zshConfig = lib.mkOrder 1200 ''
             neofetch
@@ -34,7 +34,7 @@ in {
             "sudo nixos-rebuild switch --flake '/home/${userCfg.name}/nixos-config#${hostName}' ";
           upgrade_system =
             "sudo nixos-rebuild switch --upgrade --flake '/home/${userCfg.name}/nixos-config#${hostName}' ";
-
+          ranger = "ranger-cd";
         };
         profileExtra = ''
           if [ -z "$WAYLAND_DISPLAY" ] && [ "$XDG_VTNR" = 1 ]; then
