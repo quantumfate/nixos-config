@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 tool=$1
 loc="$2"
 loc=${loc#"file://"}

@@ -6,22 +6,22 @@ let
 in {
   home-manager.users."${userCfg.name}" = {
     xdg.desktopEntries."ranger" = {
-      version = "1.0";
       type = "Application";
       name = "ranger";
+      genericName = "File Manager";
       exec = "${scriptDir}/open-tui.sh ranger %F";
-      comment =
-        "Launches the ranger file manager.";
+      comment = "Launches the ranger file manager.";
       icon = "utilities-terminal";
       terminal = false;
-      "X-MultipleArgs" = false;
-      mimetype = "inode/directory";
-      startupnotify = true;
-      categories= "System;FileTools;FileManager";
+      mimeType = [ "inode/directory" ];
+      startupNotify = true;
+      categories = [ "System" "FileTools" "FileManager" ];
+      settings = {
+        "X-MultipleArgs" = "false";
+      #version = "1.0";
+      };
     };
-    programs.ranger = {
-      enable = true;
-    };
+    programs.ranger = { enable = true; };
   };
 }
 

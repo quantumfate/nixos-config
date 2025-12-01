@@ -9,14 +9,15 @@ in {
       settings = {
         "$mainMod" = "SUPER";
         bind = [
-          "$mainMod, T, exec, foot"
-          "$mainMod, F, exec, chromium"
+          "$mainMod, return, exec, foot"
+          "$mainMod, b, exec, brave"
+          "$mainMod, f, exec, foot ranger"
           "$mainMod, X, exec, ${scriptDir}/minimize.sh"
           "$mainMod ALT, l, exec, hyprlock"
           "$mainMod, d, exec, pkill -SIGINT dofuslaunch.sh || ${scriptDir}/dofuslaunch.sh"
           
           # Rofi
-          "$mainMod, R, exec, rofi -show run"
+          "$mainMod, R, exec, rofi -show drun"
           "$mainMod ALT, R, exec, rofi -modi clipboard:/etc/profiles/per-user/${userCfg.name}/bin/cliphist-rofi -show clipboard"
           "$mainMod SHIFT, R, exec, rofi -modi clipboard:/etc/profiles/per-user/${userCfg.name}/bin/cliphist-rofi-img -show clipboard -show-icons"
           
