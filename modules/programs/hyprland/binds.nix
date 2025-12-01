@@ -70,6 +70,10 @@ in {
 
           ",F1, exec, ${scriptDir}/processFn.sh Miserymaker"
           ",F2, exec, ${scriptDir}/processFn.sh Rejecter"
+          ",F3, exec, ${scriptDir}/processFn.sh Traumafactory"
+          ",F4, exec, ${scriptDir}/processFn.sh Reminiscer"
+          ",F5, exec, ${scriptDir}/processFn.sh Sayer"
+          ",F6, exec, ${scriptDir}/processFn.sh Doom"
 
           ",XF86AudioLowerVolume, exec, ${scriptDir}/volume.sh --dec"
           ",XF86AudioRaiseVolume, exec, ${scriptDir}/volume.sh --inc"
