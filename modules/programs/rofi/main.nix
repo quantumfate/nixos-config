@@ -1,11 +1,16 @@
 { config, ... }:
 
-let
-  hostName = config.networking.hostName;
-  userCfg = config.common.user;
+let userCfg = config.common.user;
 in {
   home-manager.users."${userCfg.name}" = {
     # https://mynixos.com/options/programs.rofi
-    programs.rofi = { enable = true; };
+    programs.rofi = {
+      enable = true;
+      terminal = "/etc/profiles/per-user/${userCfg.name}/bin/foot";
+      font = "${config.common.style.fontFamily}";
+      cycle = true;
+      location = "center";
+      modes = [ "run" "drun" "window" ];
+    };
   };
 }

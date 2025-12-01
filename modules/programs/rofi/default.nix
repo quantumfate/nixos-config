@@ -1,4 +1,3 @@
-{ config, lib, ... }:
 {
-  imports = [ ./main.nix ];
+  imports = [ ./main.nix ./theme.nix ];
 }
