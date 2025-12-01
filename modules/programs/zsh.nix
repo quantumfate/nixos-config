@@ -19,10 +19,15 @@ in {
         autosuggestion.enable = true;
         syntaxHighlighting.enable = true;
 
-        initContent = lib.mkOrder 1200 ''
-          neofetch
-          if [ -n "$RANGER_LEVEL" ]; then export PS1="[ranger]$PS1"; fi
-        '';
+        initContent = let
+          zshSourcing = lib.mkOrder 500 ''
+            source = /home/${userCfg.name}/.config/ranger/rangercd.sh
+          '';
+          zshConfig = lib.mkOrder 1200 ''
+            neofetch
+            if [ -n "$RANGER_LEVEL" ]; then export PS1="[ranger]$PS1"; fi
+          '';
+        in lib.mkMerge [ zshSourcing zshConfig ];
         shellAliases = {
           ll = "ls -l";
           update_system =

@@ -38,7 +38,7 @@ in {
 
   users.users.${cfg.user.name} = {
     isNormalUser = true;
-    extraGroups = cfg.user.groups ++ [ "wheel" "networkmanager" ];
+    extraGroups = cfg.user.groups ++ [ "wheel" "networkmanager" "mlocate" ];
     description = "main user";
     shell = cfg.user.shell;
   };

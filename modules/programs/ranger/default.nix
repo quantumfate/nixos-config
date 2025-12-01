@@ -4,10 +4,18 @@ let
   userCfg = config.common.user;
   scriptDir = "/home/${userCfg.name}/.config/hypr/scripts";
 in {
+  services.locate = {
+    enable = true;
+    package = pkgs.mlocate;
+  };
   home-manager.users."${userCfg.name}" = {
-    home.packages = with pkgs; [ fzf ];
+    home.packages = with pkgs; [ fzf mlocate ];
     home.file.".config/ranger/commands.py" = {
       source = ./commands.py;
+      executable = true;
+    };
+    home.file.".config/ranger/rangercd.sh" = {
+      source = ./rangercd.sh;
       executable = true;
     };
 
@@ -34,7 +42,10 @@ in {
         confirm_on_delete = "never";
         scroll_offset = 8;
         unicode_ellipsis = true;
-        map = [ "<A-f> fzf_select" "<C-g> fzf_locate" ];
+      };
+      mappings = {
+        "<A-f>" = "fzf_select";
+        "<C-g>" = "fzf_locate";
       };
     };
   };

@@ -1,3 +1,5 @@
+from ranger.api.commands import Command   
+
 class fzf_select(Command):
     """
     :fzf_select
@@ -129,6 +131,7 @@ class fzf_locate(Command):
     See: https://github.com/junegunn/fzf
     """
     def execute(self):
+        import os
         import subprocess
         if self.quantifier:
             command="locate home | fzf -e -i"
