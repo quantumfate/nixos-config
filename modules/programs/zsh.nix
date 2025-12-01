@@ -19,12 +19,15 @@ in {
         autosuggestion.enable = true;
         syntaxHighlighting.enable = true;
 
+        initContent = lib.mkOrder 1200 ''
+          neofetch
+        '';
         shellAliases = {
           ll = "ls -l";
           update_system =
-            "sudo nixos-rebuild switch --flake '~/nixos-config#${hostName}' ";
+            "sudo nixos-rebuild switch --flake '/home/${userCfg.name}/nixos-config#${hostName}' ";
           upgrade_system =
-            "sudo nixos-rebuild switch --upgrade --flake '~/nixos-config#${hostName}' ";
+            "sudo nixos-rebuild switch --upgrade --flake '/home/${userCfg.name}/nixos-config#${hostName}' ";
 
         };
         profileExtra = ''
