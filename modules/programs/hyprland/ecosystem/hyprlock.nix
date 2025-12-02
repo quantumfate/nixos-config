@@ -1,4 +1,4 @@
-{ config, ... }:
+{ config, lib, ... }:
 
 let
   userCfg = config.common.user;
@@ -70,17 +70,17 @@ in {
             halign = "center";
             valign = "center";
           }
-          {
-            monitor = "";
-            text = "cmd[update:5000] ${userHome}/.config/hypr/scripts/battery.sh";
-            color = "${catppuccin.rgb.text}";
-            font_size = 14;
-            font_family = "${config.common.style.fontFamily}";
-            position = "0, -107";
-            halign = "left";
-            valign = "top";
-          }
-        ];
+        ] ++ lib.optionals (config.networking.hostName == "quantum-laptop") [{
+          monitor = "";
+          text = "cmd[update:1000] ${userHome}/.config/hypr/scripts/battery.sh";
+          color = "${catppuccin.rgb.text}";
+          font_size = 14;
+          font_family = "${config.common.style.fontFamily}";
+          position = "30, -110";
+          halign = "left";
+          valign = "top";
+        }];
+
         image = [{
           monitor = "";
           path = "${iconsDir}avatar.png";

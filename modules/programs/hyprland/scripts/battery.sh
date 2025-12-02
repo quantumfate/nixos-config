@@ -15,26 +15,28 @@ for battery in /sys/class/power_supply/*BAT*; do
   fi
 done
 
+
 ############# Output #############
 if [[ $enable_battery == true ]]; then
-  if [[ $battery_charging == true ]]; then
-    echo -n "(+) "
-  fi
-  capacity = $(cat /sys/class/power_supply/*/capacity | head -1)
 
-  if [[ "$capacity" -eq "100" ]]; then
-    echo -n " $capacity%"
-  elif [[ "$capacity" -gt "74" ]]; then
-    echo -n " $capacity%"
-  elif [[ "$capacity" -gt "49" ]]; then
-    echo -n " $capacity%"
-  elif [[ "$capacity" -gt "24" ]]; then
-    echo -n " $capacity%"
+  capacity=$(cat /sys/class/power_supply/*/capacity | head -1)
+
+  if [ "$capacity" -eq 100 ]; then
+    echo -n "$capacity% "
+  elif [ "$capacity" -gt 74 ]; then
+    echo -n "$capacity% "
+  elif [ "$capacity" -gt 49 ]; then
+    echo -n "$capacity% "
+  elif [ "$capacity" -gt 24 ]; then
+    echo -n "$capacity% "
   else
-    echo -n " $capacity%"
+    echo -n "$capacity% "
   fi
+
   if [[ $battery_charging == false ]]; then
-    echo -n " remaining"
+    echo -n "   remaining"
+  else
+    echo -n "   charging"
   fi
 fi
 
