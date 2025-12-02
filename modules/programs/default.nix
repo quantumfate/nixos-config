@@ -1,7 +1,5 @@
 {
   imports = [
-    ./zsh.nix
-    ./bash.nix
     ./hyprland
     ./waybar
     ./rofi
@@ -16,6 +14,5 @@
     ./sddm.nix
     ./terminal
     ./cliphist.nix
-    ./ranger
   ];
 }
