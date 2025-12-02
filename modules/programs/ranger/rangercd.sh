@@ -1,17 +1,9 @@
 #!/bin/sh
-# https://github.com/ranger/ranger/wiki/Integration-with-other-programs#allow-deciding-whether-your-shell-should-change-to-rangers-directory-on-quit
 function ranger-cd {
-    local IFS=$'\t\n'
     local tempfile="$(mktemp -t tmp.XXXXXX)"
-    local ranger_cmd=(
-        command
-        ranger
-        --cmd="map Q chain shell echo %d > "$tempfile"; quitall"
-    )
-    
-    ${ranger_cmd[@]} "$@"
-    if [[ -f "$tempfile" ]] && [[ "$(cat -- "$tempfile")" != "$(echo -n `pwd`)" ]]; then
-        cd -- "$(cat "$tempfile")" || return
+    ranger --choosedir="$tempfile" "${@:-$(pwd)}"
+    if [[ -f "$tempfile" ]] && [[ "$(cat -- "$tempfile")" != "$PWD" ]]; then
+        cd -- "$(cat "$tempfile")"
     fi
-    command rm -f -- "$tempfile" 2>/dev/null
+    rm -f -- "$tempfile"
 }   

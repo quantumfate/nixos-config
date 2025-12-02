@@ -35,7 +35,7 @@
 
       accent = lib.mkOption {
         type = lib.types.str;
-        default = "teal";
+        default = "mauve";
         description = "Catppuccin's accent color.";
       };
     };

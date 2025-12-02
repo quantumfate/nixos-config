@@ -6,7 +6,7 @@ let
   catppuccinCfg = {
     enable = true;
     flavor = "mocha";
-    accent = "teal";
+    accent = "mauve";
   };
   
   formatRgbForHyprland = rgbString:
