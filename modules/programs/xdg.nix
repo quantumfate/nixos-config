@@ -9,11 +9,11 @@ in {
       enable = true;
       mime.enable = true;
       mimeApps.defaultApplications = {
-        "x-scheme-handler/http" = [ "chromium-browser.desktop" ];
-        "x-scheme-handler/https" = [ "chromium-browser.desktop" ];
-        "text/html" = [ "chromium-browser.desktop" ];
+        "x-scheme-handler/http" = [ "brave-browser.desktop" ];
+        "x-scheme-handler/https" = [ "brave-browser.desktop" ];
+        "text/html" = [ "neovim.desktop" "brave-browser.desktop" ];
         "application/pdf" =
-          [ "zathura.desktop" "chromium-browser.desktop" ];
+          [ "zathura.desktop" "brave-browser.desktop" ];
         "inode/directory" = [ "ranger.desktop" ];
       };
       userDirs = {

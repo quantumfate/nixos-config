@@ -13,6 +13,9 @@ in {
           email = "leonconnorholm@gmail.com";
           init.defaultBranch = "main";
         };
+        global = {
+          init.defaultBranch = "main";
+        };
       };
     };
   };
