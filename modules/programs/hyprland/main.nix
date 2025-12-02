@@ -21,8 +21,8 @@ let
         rgbString;
     in removeSpaces "rgba(${content},${toString alpha})";
 
-  borderActive = rgbToRgba colors.teal.rgb 0.6;
-  borderInActive = rgbToRgba colors.maroon.rgb 0.6;
+  borderActive = config.theme.catppuccin.rgba.teal 0.6;
+  borderInActive = config.theme.catppuccin.rgba.maroon 0.6;
 
   colors = config.colors.catppuccin.mocha;
 in {

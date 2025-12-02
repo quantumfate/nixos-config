@@ -2,14 +2,8 @@
 
 let
   userCfg = config.common.user;
-  colors = config.colors.catppuccin.mocha;
-  rgbToRgba = rgbString: alpha:
-    let
-      content = lib.strings.substring 4 (lib.strings.stringLength rgbString - 5)
-        rgbString;
-    in "rgba(${content}, ${toString alpha})";
-    
-  borderColor = rgbToRgba colors.crust.rgb 0.6;
+  catppuccin = config.theme.catppuccin;
+  borderColor = catppuccin.rgba.crust 0.6;
 in {
   home-manager.users."${userCfg.name}" = {
     programs.waybar = {
@@ -118,7 +112,7 @@ in {
 
         tooltip {
           margin-top: 2px;
-          background: ${rgbToRgba colors.base.rgb 0.8};
+          background: ${catppuccin.rgba.base 0.8};
           border: 2px solid ${borderColor};
           border-radius: 8px;
         }

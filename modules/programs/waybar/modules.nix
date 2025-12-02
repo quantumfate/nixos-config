@@ -3,7 +3,7 @@
 let
   userCfg = config.common.user;
   scriptLocation = "/home/${userCfg.name}/.config/hypr/scripts";
-  colors = config.colors.catppuccin.mocha;
+  catppuccin = config.theme.catppuccin;
 in {
   home-manager.users."${userCfg.name}" = {
     home.file.".config/waybar/modules" = {
@@ -97,11 +97,11 @@ in {
                     "on-scroll": 1,
                     "on-click-right": "mode",
                     "format": {
-                        "months": "<span color='#cdd6f4'><b>{}</b></span>",
-                        "days": "<span color='#fab387'><b>{}</b></span>",
-                        "weeks": "<span color='#a6e3a1'><b>W{}</b></span>",
-                        "weekdays": "<span color='#f5c2e7'><b>{}</b></span>",
-                        "today": "<span color='#f9e2af'><b><u>{}</u></b></span>"
+                        "months": "<span color='${catppuccin.hex.teal}'><b>{}</b></span>",
+                        "days": "<span color='${catppuccin.hex.peach}'><b>{}</b></span>",
+                        "weeks": "<span color='${catppuccin.hex.green}'><b>W{}</b></span>",
+                        "weekdays": "<span color='${catppuccin.hex.pink}'><b>{}</b></span>",
+                        "today": "<span color='${catppuccin.hex.yellow}'><b><u>{}</u></b></span>"
                     }
                 },
             "actions":  {
@@ -133,19 +133,19 @@ in {
                 "max-length": 25
             },
             "custom/lock": {
-                "format": "<span color='${colors.teal.hex}'>  </span>",
+                "format": "<span color='${catppuccin.hex.teal}'>  </span>",
                 "on-click": "hyprlock",
                 "tooltip": true,
                 "tooltip-format": "Lock the screen."
                 },
             "custom/reboot": {
-                "format": "<span color='${colors.yellow.hex}'>  </span>",
+                "format": "<span color='${catppuccin.hex.yellow}'>  </span>",
                 "on-click": "systemctl reboot",
                 "tooltip": true,
                 "tooltip-format": "Reboot the system."
             },
             "custom/power": {
-                "format": "<span color='${colors.red.hex}'>  </span>",
+                "format": "<span color='${catppuccin.hex.red}'>  </span>",
                 "on-click": "systemctl poweroff",
                 "tooltip": true,
                 "tooltip-format": "Power off the system."
