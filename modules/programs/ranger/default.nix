@@ -9,7 +9,7 @@ in {
     package = pkgs.mlocate;
   };
   home-manager.users."${userCfg.name}" = {
-    home.packages = with pkgs; [ fzf mlocate ];
+    home.packages = with pkgs; [ fzf mlocate libsixel ];
     home.file.".config/ranger/commands.py" = {
       source = ./commands.py;
       executable = true;
@@ -42,10 +42,14 @@ in {
         confirm_on_delete = "never";
         scroll_offset = 8;
         unicode_ellipsis = true;
+        preview_images = true;
+        preview_images_method = "sixel";
       };
       mappings = {
         "<A-f>" = "fzf_select";
         "<C-g>" = "fzf_locate";
+        "<C-n>" = "fzf_content_open";
+        "<C-y>" = "YankContentWl";
       };
     };
   };

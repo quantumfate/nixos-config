@@ -79,7 +79,7 @@ in {
           "HYPRSHOT_DIR,$HOME/Pictures/screens"
           "EDITOR,nvim"
           "VISUAL,nvim"
-          "PAGER,more"
+          "PAGER,less"
           "QT_QPA_PLATFORMTHEME,hyprqt6engine"
           "XDG_CONFIG_HOME,$HOME/.config"
         ];

@@ -145,3 +145,102 @@ class fzf_locate(Command):
                 self.fm.cd(fzf_file)
             else:
                 self.fm.select_file(fzf_file)
+
+class fzf_content_open(Command):
+    """
+    :fzf_content_open
+    Pre-requisites: fzf, rg, bat, awk, vim or neovim
+    Using `rg` to search file content recursively in current directory.
+    Filtering with `fzf` and preview with `bat`.
+    Pressing `Enter` on target will open at line in (neo)vim.
+    """
+
+    def execute(self):
+        import subprocess
+        import os
+        from ranger.ext.get_executables import get_executables
+
+        if 'rg' in get_executables():
+            rg = 'rg'
+        else:
+            self.fm.notify("Couldn't find rg in the PATH.", bad=True)
+            return
+
+        if 'fzf' in get_executables():
+            fzf = 'fzf'
+        else:
+            self.fm.notify("Couldn't find fzf in the PATH.", bad=True)
+            return
+
+        if 'bat' in get_executables():
+            bat = 'bat'
+        else:
+            self.fm.notify("Couldn't find bat in the PATH.", bad=True)
+            return
+
+        editor = None
+        if 'nvim' in get_executables():
+            editor = 'nvim'
+        elif 'vim' in get_executables():
+            editor = 'vim'
+
+        if rg is not None and fzf is not None and bat is not None and editor is not None:
+            # we should not recursively search through all file content from home directory
+            if (self.fm.thisdir.path == self.fm.home_path):
+                self.fm.notify("Searching from home directory is not allowed", bad=True)
+                return
+            fzf = self.fm.execute_command(
+                'rg --line-number "${1:-.}" | fzf --delimiter \':\' \
+                    --preview \'bat --color=always --highlight-line {2} {1}\' \
+                    | awk -F \':\' \'{print "+"$2" "$1}\'',
+                universal_newlines=True,stdout=subprocess.PIPE)
+
+            stdout, _ = fzf.communicate()
+            if fzf.returncode == 0:
+                if len(stdout) < 2:
+                    return
+
+                selected_line = stdout.split()[0]
+                full_path = stdout.split()[1].strip()
+
+                file_fullpath = os.path.abspath(full_path)
+                file_basename = os.path.basename(full_path)
+
+                if os.path.isdir(file_fullpath):
+                    self.fm.cd(file_fullpath)
+                else:
+                    self.fm.select_file(file_fullpath)
+
+                self.fm.execute_command(editor + " " + selected_line + " " + file_basename)
+                
+import os
+import subprocess
+from ranger.api.commands import Command
+from ranger.container.file import File
+from ranger.ext.get_executables import get_executables
+class YankContentWl(Command):
+    def execute(self):
+        if "wl-copy" not in get_executables():
+            self.fm.notify("wl-clipboard is not found.", bad=True)
+            return
+
+        arg = self.rest(1)
+        if arg:
+            if not os.path.isfile(arg):
+                self.fm.notify("{} is not a file".format(arg))
+                return
+            file = File(arg)
+        else:
+            file = self.fm.thisfile
+            if not file.is_file:
+                self.fm.notify("{} is not a file".format(file.relative_path))
+                return
+        if file.is_binary or file.image:
+            with open(file.path, 'r') as f:
+                subprocess.run(
+                    ['wl-copy'],
+                    stdin=f,
+                    check=True,
+                )
+        else:
+            self.fm.notify("{} is not an image file or a text file".format(file.relative_path))
