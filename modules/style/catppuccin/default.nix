@@ -1,4 +1,4 @@
-{ config, pkgs, lib, ... }:
+{ config, lib, ... }:
 
 let
   catppuccinCfg = config.common.style.catppuccin;

@@ -1,4 +1,4 @@
-{ pkgs, config, inputs, lib, ... }:
+{ pkgs, config, inputs, ... }:
 
 let
   hostName = config.networking.hostName;
@@ -13,18 +13,8 @@ let
     "quantum-laptop" = [ "eDP-1, 1920x1080@60, auto, 1" ];
     "default" = [ ", preferred, auto, 1" ];
   };
-
-  removeSpaces = s: lib.strings.replaceStrings [ " " ] [ "" ] s;
-  rgbToRgba = rgbString: alpha:
-    let
-      content = lib.strings.substring 4 (lib.strings.stringLength rgbString - 5)
-        rgbString;
-    in removeSpaces "rgba(${content},${toString alpha})";
-
   borderActive = config.theme.catppuccin.rgba.teal 0.6;
   borderInActive = config.theme.catppuccin.rgba.maroon 0.6;
-
-  colors = config.colors.catppuccin.mocha;
 in {
   programs.hyprland = {
     enable = true;
