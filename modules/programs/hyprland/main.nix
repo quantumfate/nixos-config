@@ -18,7 +18,7 @@ let
 in {
   programs.hyprland = {
     enable = true;
-    package = inputs.hyprland.packages."${pkgs.system}".hyprland;
+    package = inputs.hyprland.packages."${pkgs.stdenv.hostPlatform.system}".hyprland;
     xwayland.enable = true;
   };
 
@@ -46,7 +46,7 @@ in {
       hyprcursor
       hyprshot
       
-      inputs.grim-hyprland.packages.${pkgs.system}.default
+      inputs.grim-hyprland.packages.${pkgs.stdenv.hostPlatform.system}.default
       fzf
       chafa
     ];
