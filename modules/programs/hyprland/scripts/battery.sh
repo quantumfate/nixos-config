@@ -20,7 +20,19 @@ if [[ $enable_battery == true ]]; then
   if [[ $battery_charging == true ]]; then
     echo -n "(+) "
   fi
-  echo -n "$(cat /sys/class/power_supply/*/capacity | head -1)"%
+  capacity = $(cat /sys/class/power_supply/*/capacity | head -1)
+
+  if [[ "$capacity" -eq "100" ]]; then
+    echo -n " $capacity%"
+  elif [[ "$capacity" -gt "74" ]]; then
+    echo -n " $capacity%"
+  elif [[ "$capacity" -gt "49" ]]; then
+    echo -n " $capacity%"
+  elif [[ "$capacity" -gt "24" ]]; then
+    echo -n " $capacity%"
+  else
+    echo -n " $capacity%"
+  fi
   if [[ $battery_charging == false ]]; then
     echo -n " remaining"
   fi

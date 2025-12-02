@@ -36,6 +36,7 @@ in {
           ## Formatters
           nixfmt-classic
           nixd
+          shfmt
 
           ## Office
           anki
