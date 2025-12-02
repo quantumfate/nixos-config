@@ -5,7 +5,7 @@ let
   userHome = config.users.users."${userCfg.name}".home;
   wallpapersDir = "${userHome}/.config/hypr/wallpapers/";
   iconsDir = "${userHome}/.config/hypr/icons/";
-  colors = config.colors.catppuccin.mocha;
+  catppuccin = config.theme.catppuccin;
 in {
   home-manager.users."${userCfg.name}" = {
     home.file.".config/hypr/icons/" = {
@@ -33,7 +33,7 @@ in {
           {
             monitor = "";
             text = "Layout: $LAYOUT";
-            color = "${colors.text.rgb}";
+            color = "${catppuccin.rgb.text}";
             font_size = 25;
             font_family = "${config.common.style.fontFamily}";
             position = "30, -30";
@@ -43,7 +43,7 @@ in {
           {
             monitor = "";
             text = "$TIME";
-            color = "${colors.text.rgb}";
+            color = "${catppuccin.rgb.text}";
             font_size = 90;
             font_family = "${config.common.style.fontFamily}";
             position = "-30, 0";
@@ -53,7 +53,7 @@ in {
           {
             monitor = "";
             text = ''cmd[update:43200000] date +"%A, %d %B %Y"'';
-            color = "${colors.text.rgb}";
+            color = "${catppuccin.rgb.text}";
             font_size = 25;
             font_family = "${config.common.style.fontFamily}";
             position = "-30, -150";
@@ -63,7 +63,7 @@ in {
           {
             monitor = "";
             text = "$FPRINTPROMPT";
-            color = "${colors.text.rgb}";
+            color = "${catppuccin.rgb.text}";
             font_size = 14;
             font_family = "${config.common.style.fontFamily}";
             position = "0, -107";
@@ -75,7 +75,7 @@ in {
           monitor = "";
           path = "${iconsDir}avatar.png";
           size = 100;
-          border_color = "${colors.teal.rgb}";
+          border_color = "${catppuccin.rgb.mauve}";
           position = "0, 75";
           halign = "center";
           valign = "center";
@@ -87,17 +87,17 @@ in {
           dots_size = 0.2;
           dots_spacing = 0.2;
           dots_center = true;
-          outer_color = "${colors.teal.rgb}";
-          inner_color = "${colors.surface0.rgb}";
-          font_color = "${colors.text.rgb}";
+          outer_color = "${catppuccin.rgb.mauve}";
+          inner_color = "${catppuccin.rgb.surface0}";
+          font_color = "${catppuccin.rgb.text}";
           fade_on_empty = false;
           placeholder_text = ''
-            <span foreground="#${colors.text.hex}"><i>󰌾 Logged in as </i><span foreground="#${colors.teal.hex}">$USER</span></span>'';
+            <span foreground="#${catppuccin.hex.text}"><i>󰌾 Logged in as </i><span foreground="#${catppuccin.hex.mauve}">$USER</span></span>'';
           hide_input = false;
-          check_color = "${colors.teal.rgb}";
-          fail_color = "${colors.red.rgb}";
+          check_color = "${catppuccin.hex.teal}";
+          fail_color = "${catppuccin.hex.red}";
           fail_text = "<i>$FAIL <b>($ATTEMPTS)</b></i>";
-          capslock_color = "${colors.yellow.rgb}";
+          capslock_color = "${catppuccin.hex.yellow}";
           position = "0, -47";
           halign = "center";
           valign = "center";
