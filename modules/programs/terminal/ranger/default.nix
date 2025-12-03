@@ -28,10 +28,11 @@ in {
       recursive = true;
       executable = true;
     };
-    
-    home.file.".config/ranger/colorschemes/catppuccin_${catppuccinCfg.flavor}.py" = {
-      source = catppuccinForRanger;
-    };
+    home.file.".config/ranger/rifle.conf" = { source = ./rifle.conf; };
+    home.file.".config/ranger/colorschemes/catppuccin_${catppuccinCfg.flavor}.py" =
+      {
+        source = catppuccinForRanger;
+      };
     xdg.desktopEntries."ranger" = {
       type = "Application";
       name = "ranger";
