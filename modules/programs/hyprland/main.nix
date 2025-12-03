@@ -108,6 +108,7 @@ in {
         input = {
           kb_layout = "${config.common.keyboard.layout}";
           kb_variant = "${config.common.keyboard.variant}";
+          follow_mouse = 0;
           mouse_refocus = true;
           touchpad = {
             disable_while_typing = true;
@@ -116,6 +117,10 @@ in {
 
         group = {
           auto_group = true;
+        };
+        
+        cursor = {
+          no_warps = true;
         };
 
         misc = {

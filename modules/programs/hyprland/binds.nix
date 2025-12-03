@@ -68,12 +68,12 @@ in {
           " , PRINT, exec, ${scriptDir}/hyprshot.sh --output"
           "$mainMod SHIFT, PRINT, exec, ${scriptDir}/hyprshot.sh --region"
 
-          ",F1, exec, ${scriptDir}/processFn.sh Miserymaker"
-          ",F2, exec, ${scriptDir}/processFn.sh Rejecter"
-          ",F3, exec, ${scriptDir}/processFn.sh Traumafactory"
-          ",F4, exec, ${scriptDir}/processFn.sh Reminiscer"
-          ",F5, exec, ${scriptDir}/processFn.sh Sayer"
-          ",F6, exec, ${scriptDir}/processFn.sh Doom"
+          ",F1, exec, ${scriptDir}/processFn.sh Rejecter"
+          ",F2, exec, ${scriptDir}/processFn.sh Draintouch"
+          ",F3, exec, ${scriptDir}/processFn.sh Reminiscer"
+          ",F4, exec, ${scriptDir}/processFn.sh Traumafactory"
+          ",F5, exec, ${scriptDir}/processFn.sh Memoryfracture"
+          ",F6, exec, ${scriptDir}/processFn.sh Miserymaker"
 
           # System
           "$mainMod ALT, l, exec, hyprlock"

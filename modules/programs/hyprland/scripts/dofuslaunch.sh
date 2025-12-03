@@ -2,7 +2,7 @@
 
 notify-send --app-name=Dofus-Launch -h string:x-canonical-private-synchronous:sys-notify -u low "Dofus Launch Script started"
 
-dofus_chars=("Miserymaker" "Rejecter")
+dofus_chars=("Rejecter" "Draintouch" "Reminiscer" "Traumafactory" "Memoryfracture" "Miserymaker" )
 char_count=0
 
 # openwindow>>56386538dc70,5,Dofus.x64,Dofus
