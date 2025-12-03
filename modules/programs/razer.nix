@@ -14,9 +14,15 @@ in {
         frequency = 10000;
       }; 
     };
+    
+    services.input-remapper = {
+      enable = true;
+      enableUdevRules = true;
+      package = pkgs.input-remapper;
+    };
 
     home-manager.users."${userCfg.name}" = {
-      home.packages = with pkgs; [ razergenie ];
+      home.packages = with pkgs; [ razergenie input-remapper ];
     };
   };
 }
