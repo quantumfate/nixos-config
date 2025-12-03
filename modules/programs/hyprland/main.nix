@@ -88,6 +88,9 @@ in {
 
           allow_tearing = false;
           layout = "master";
+          snap = {
+            enabled = true;
+          };
         };
 
         decoration = {
@@ -104,6 +107,21 @@ in {
         input = {
           kb_layout = "${config.common.keyboard.layout}";
           kb_variant = "${config.common.keyboard.variant}";
+          mouse_refocus = true;
+          touchpad = {
+            disable_while_typing = true;
+          };
+        };
+
+        group = {
+          auto_group = true;
+        };
+
+        misc = {
+          disable_hyprland_logo = true;
+          font_family = "${config.common.style.fontFamily}";
+          splash_font_family = "${config.common.style.fontFamily}";
+          focus_on_activate = true;
         };
 
         animations = { enabled = true; };

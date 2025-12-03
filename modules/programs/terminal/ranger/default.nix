@@ -50,6 +50,7 @@ in {
       fontforge
       openscad
       drawio
+      feh
     ];
     home.file.".config/ranger/" = {
       source = ./scripts;

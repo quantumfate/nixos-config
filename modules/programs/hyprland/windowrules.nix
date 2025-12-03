@@ -13,6 +13,7 @@ in {
           "workspace 5, match:class steam"
           "workspace 5, match:class Ankama Launcher"
           "workspace 6, center on, content game, decorate off, no_anim on, match:class Dofus.x64"
+          "float on, content photo, center on, size (window_w*0.85) (window_h*0.85), match:class feh"
         ];
       };
     };
