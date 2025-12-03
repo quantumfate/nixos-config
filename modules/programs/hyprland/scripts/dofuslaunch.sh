@@ -1,13 +1,11 @@
 #!/bin/sh
 
-notify-send --app-name=Dofus-Launch -h string:x-canonical-private-synchronous:sys-notify -u low "Dofus Launch Script started"
-
+APP_NAME="Dofus Launch"
 dofus_chars=("Rejecter" "Draintouch" "Reminiscer" "Traumafactory" "Memoryfracture" "Miserymaker" )
 char_count=0
 
-# openwindow>>56386538dc70,5,Dofus.x64,Dofus
-
 process_window () {
+  # openwindow>>56386538dc70,5,Dofus.x64,Dofus
   window_address="0x$(cut -d ',' -f1 <<< $(cut -d '>' -f3 <<< $1))"
   client_pid=$(hyprctl -j clients | jq --arg addr "$window_address" '.[] | select(.address == $addr)' | jq -r '.pid')
 
@@ -19,7 +17,7 @@ process_window () {
   ((char_count++))
   
   if [ $char_count -eq 5 ]; then
-    notify-send --app-name=Dofus-Launch -h string:x-canonical-private-synchronous:sys-notify -u low "Dofus Launch done"
+    notify-send --app-name=$APP_NAME -h string:x-canonical-private-synchronous:sys-notify -u low "Dofus Launch done"
     exit 1
   fi
 }
