@@ -45,6 +45,7 @@ in {
       hyprlock
       hyprcursor
       hyprshot
+      wl-clipboard
       
       inputs.grim-hyprland.packages.${pkgs.stdenv.hostPlatform.system}.default
       fzf

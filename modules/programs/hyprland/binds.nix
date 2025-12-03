@@ -16,6 +16,8 @@ in {
           "$mainMod, X, exec, ${scriptDir}/minimize.sh"
           "$mainMod, d, exec, ${scriptDir}/dofus_toggle_launch.sh"
 
+          "ALT, p, exec, hyprpicker -a -n"
+
           # Rofi
           "$mainMod, R, exec, rofi -show drun"
           "$mainMod ALT, R, exec, rofi -modi clipboard:/etc/profiles/per-user/${userCfg.name}/bin/cliphist-rofi -show clipboard"
