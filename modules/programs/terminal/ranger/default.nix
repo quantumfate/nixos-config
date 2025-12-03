@@ -23,14 +23,12 @@ in {
   };
   home-manager.users."${userCfg.name}" = {
     home.packages = with pkgs; [ fzf mlocate libsixel ];
-    home.file.".config/ranger/commands.py" = {
-      source = ./commands.py;
+    home.file.".config/ranger/scripts/" = {
+      source = ./scripts;
+      recursive = true;
       executable = true;
     };
-    home.file.".config/ranger/rangercd.sh" = {
-      source = ./rangercd.sh;
-      executable = true;
-    };
+    
     home.file.".config/ranger/colorschemes/catppuccin_${catppuccinCfg.flavor}.py" = {
       source = catppuccinForRanger;
     };
