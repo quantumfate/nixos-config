@@ -51,9 +51,13 @@ SQLITE_TABLE_LIMIT=20  # Display only the top <limit> tables in database, set to
 SQLITE_ROW_LIMIT=5     # Display only the first and the last (<limit> - 1) records in each table, set to 0 for no limits.
 
 handle_extension() {
+    echo test > /home/quantum/test.txt
     case "${FILE_EXTENSION_LOWER}" in
         lua)
-            bat --color=always --style=${BAT_STYLE} --language=lua && exit 5
+            env COLORTERM=8bit bat ${FILE_PATH} --color=always --style=${BAT_STYLE} --language=lua && exit 5
+            exit 1;;
+        js)
+            env COLORTERM=8bit bat ${FILE_PATH} --color=always --style=${BAT_STYLE} --language=javascript && exit 5
             exit 1;;
         ## Archive
         a|ace|alz|arc|arj|bz|bz2|cab|cpio|deb|gz|jar|lha|lz|lzh|lzma|lzo|\

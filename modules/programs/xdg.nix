@@ -15,6 +15,7 @@ in {
         "application/pdf" =
           [ "zathura.desktop" "brave-browser.desktop" ];
         "inode/directory" = [ "ranger.desktop" ];
+        "text/x-lua" = [ "nvim.desktop" ];
       };
       userDirs = {
         enable = true;

@@ -56,6 +56,9 @@ in {
         scroll_offset = 8;
         unicode_ellipsis = true;
         preview_images = true;
+        preview_files = true;
+        preview_script = "/home/quantum/.config/ranger/scope.sh";
+        use_preview_script = true;
         preview_images_method = "sixel";
         colorscheme = "catppuccin_${catppuccinCfg.flavor}";
       };
