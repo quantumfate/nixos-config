@@ -3,6 +3,7 @@
 let
   userCfg = config.common.user;
   scriptDir = "/home/${userCfg.name}/.config/hypr/scripts";
+  userHome = config.users.users."${userCfg.name}".home;
   catppuccinCfg = config.common.style.catppuccin;
   flavorHashMap = {
     frappe = "sha256-6ZkChSs77uorkGAgW8dWqBxxCyboGksE1V0ZqFd/BYY=";
@@ -58,7 +59,7 @@ in {
         unicode_ellipsis = true;
         preview_images = true;
         preview_files = true;
-        preview_script = "/home/quantum/.config/ranger/scope.sh";
+        preview_script = "${userHome}/.config/ranger/scope.sh";
         use_preview_script = true;
         preview_images_method = "sixel";
         colorscheme = "catppuccin_${catppuccinCfg.flavor}";
