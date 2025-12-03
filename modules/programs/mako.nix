@@ -12,16 +12,14 @@ in {
     services.mako = {
       enable = true;
       settings = {
-        # Global Options
         max-history = "8";
-        # Style options
         font = "Inconsolata Nerd Font 10";
         default-timeout = 0;
         background-color = "${catppuccin.hex.base}";
         text-color = "${catppuccin.hex.text}";
         width = 300;
         height = 100;
-        outer-margin = 0;
+        outer-margin = "0,0,10,0";
         margin = 10;
         padding = 10;
         border-size = 2;
@@ -32,7 +30,7 @@ in {
         max-icon-size = 64;
         icon-path = "/run/current-system/sw/share/icons/hicolor";
         icon-location = "left";
-        output= "DP-1";
+        output= "${config.common.peripherals.primaryMonitor}";
         layer = "top";
         anchor = "top-right";
         "urgency=low" = { border-color = "${catppuccin.hex.teal}"; };
