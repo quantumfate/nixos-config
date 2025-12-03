@@ -8,12 +8,8 @@ process_window () {
   # openwindow>>56386538dc70,5,Dofus.x64,Dofus
   window_address="0x$(cut -d ',' -f1 <<< $(cut -d '>' -f3 <<< $1))"
   client_pid=$(hyprctl -j clients | jq --arg addr "$window_address" '.[] | select(.address == $addr)' | jq -r '.pid')
-
-  echo "address: $window_address" 
-  echo "pid: $client_pid" 
   window_id=$(xdotool search --pid "$client_pid")
   xdotool set_window -name "Dofus ${dofus_chars[$char_count]}" "$window_id"   
-  echo "window name: Dofus ${dofus_chars[$char_count]}" 
   ((char_count++))
   
   if [ $char_count -eq 5 ]; then
