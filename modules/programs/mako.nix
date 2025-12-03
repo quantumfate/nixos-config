@@ -21,7 +21,7 @@ in {
         text-color = "${catppuccin.hex.text}";
         width = 300;
         height = 100;
-        outer-margin = 20;
+        outer-margin = 0;
         margin = 10;
         padding = 10;
         border-size = 2;
@@ -43,7 +43,7 @@ in {
         };
         "app-name=Spotify" = {
           default-timeout = 3000;
-          anchor = "top-center";
+          anchor = "bottom-left";
         };
         "app-name=pavucontrol" = {
           width = 80;
@@ -57,7 +57,7 @@ in {
           width = 150;
           default-timeout = 3000;
           format = "<b>%a</b>\\n<b>%s</b>\\n%b";
-          anchor = "top-center";
+          anchor = "top-left";
           text-alignment = "center";
         };
         "mode=do-not-disturb" = {
