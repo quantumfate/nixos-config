@@ -12,7 +12,7 @@ process_window () {
   xdotool set_window -name "Dofus ${dofus_chars[$char_count]}" "$window_id"   
   ((char_count++))
   
-  if [ $char_count -eq 5 ]; then
+  if [ $char_count -eq 6 ]; then
     notify-send --app-name="$APP_NAME" -h string:x-canonical-private-synchronous:sys-notify -u low "Done"
     exit 1
   fi
