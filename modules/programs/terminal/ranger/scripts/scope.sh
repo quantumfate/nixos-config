@@ -52,6 +52,9 @@ SQLITE_ROW_LIMIT=5     # Display only the first and the last (<limit> - 1) recor
 
 handle_extension() {
     case "${FILE_EXTENSION_LOWER}" in
+        lua)
+            bat --color=always --style=${BAT_STYLE} --language=lua && exit 5
+            exit 1;;
         ## Archive
         a|ace|alz|arc|arj|bz|bz2|cab|cpio|deb|gz|jar|lha|lz|lzh|lzma|lzo|\
         rpm|rz|t7z|tar|tbz|tbz2|tgz|tlz|txz|tZ|tzo|war|xpi|xz|Z|zip)

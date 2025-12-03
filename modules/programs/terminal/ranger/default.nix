@@ -22,7 +22,7 @@ in {
     package = pkgs.mlocate;
   };
   home-manager.users."${userCfg.name}" = {
-    home.packages = with pkgs; [ fzf mlocate libsixel ];
+    home.packages = with pkgs; [ fzf mlocate libsixel bat ];
     home.file.".config/ranger/" = {
       source = ./scripts;
       recursive = true;
