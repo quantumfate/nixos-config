@@ -14,7 +14,7 @@ in {
           "$mainMod, b, exec, brave"
           "$mainMod, f, exec, foot ranger"
           "$mainMod, X, exec, ${scriptDir}/minimize.sh"
-          "$mainMod, d, exec, pkill -SIGINT dofuslaunch.sh || ${scriptDir}/dofuslaunch.sh"
+          "$mainMod, d, exec, sh -c 'pkill -SIGINT dofuslaunch.sh || ${scriptDir}/dofuslaunch.sh &'"
 
           # Rofi
           "$mainMod, R, exec, rofi -show drun"

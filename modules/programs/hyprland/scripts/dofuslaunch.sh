@@ -18,7 +18,10 @@ process_window () {
   echo "window name: Dofus ${dofus_chars[$char_count]}" 
   ((char_count++))
   
-  # Todo exit script when done 
+  if [ $char_count -eq 5 ]; then
+    notify-send --app-name=Dofus-Launch -h string:x-canonical-private-synchronous:sys-notify -u low "Dofus Launch done"
+    exit 1
+  fi
 }
 
 handle() {
@@ -28,6 +31,3 @@ handle() {
 }
 
 socat -U - UNIX-CONNECT:$XDG_RUNTIME_DIR/hypr/$HYPRLAND_INSTANCE_SIGNATURE/.socket2.sock | while read -r line; do handle "$line"; done
-
-
-trap "$(notify-send --app-name=Dofus-Launch -h string:x-canonical-private-synchronous:sys-notify -u low "Dofus Launch Script exited")" EXIT
