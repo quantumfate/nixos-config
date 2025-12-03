@@ -43,7 +43,7 @@ in {
       poppler-utils
       djvulibre
       calibre
-      transmission-qt
+      transmission_4-qt
       mediainfo
       odt2txt
       sqlite
