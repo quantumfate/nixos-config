@@ -23,7 +23,34 @@ in {
     package = pkgs.mlocate;
   };
   home-manager.users."${userCfg.name}" = {
-    home.packages = with pkgs; [ fzf mlocate libsixel bat ];
+    home.packages = with pkgs; [
+      fzf
+      mlocate
+      libsixel
+      # specific for scope.sh
+      bat
+      imagemagick
+      librsvg
+      ffmpegthumbnailer
+      highlight
+      atool
+      unrar
+      _7zz
+      libarchive 
+      unrar
+      unzip
+      w3m
+      poppler-utils
+      djvulibre
+      calibre
+      transmission-qt
+      mediainfo
+      odt2txt
+      sqlite
+      fontforge
+      openscad
+      drawio
+    ];
     home.file.".config/ranger/" = {
       source = ./scripts;
       recursive = true;
