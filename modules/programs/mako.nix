@@ -53,6 +53,13 @@ in {
           width = 150;
           default-timeout = 3000;
         };
+        "app-name='Dofus Launch'" = {
+          width = 150;
+          default-timeout = 3000;
+          format = "<b>%a</b>\n<b>%s</b>\n%b";
+          anchor = "top-center";
+          text-alignment = "center";
+        };
         "mode=do-not-disturb" = {
           invisible = 1;
         };
