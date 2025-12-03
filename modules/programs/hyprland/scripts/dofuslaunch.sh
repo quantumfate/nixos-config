@@ -17,7 +17,7 @@ process_window () {
   ((char_count++))
   
   if [ $char_count -eq 5 ]; then
-    notify-send --app-name=$APP_NAME -h string:x-canonical-private-synchronous:sys-notify -u low "Dofus Launch done"
+    notify-send --app-name="$APP_NAME" -h string:x-canonical-private-synchronous:sys-notify -u low "Done"
     exit 1
   fi
 }
