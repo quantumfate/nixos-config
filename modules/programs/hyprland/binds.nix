@@ -66,7 +66,7 @@ in {
           # Screenshots
           "$mainMod, PRINT, exec, ${scriptDir}/hyprshot.sh --window"
           " , PRINT, exec, ${scriptDir}/hyprshot.sh --output"
-          "$mainMod SHIFT, PRINT, ${scriptDir}/hyprshot.sh --region"
+          "$mainMod SHIFT, PRINT, exec, ${scriptDir}/hyprshot.sh --region"
 
           ",F1, exec, ${scriptDir}/processFn.sh Miserymaker"
           ",F2, exec, ${scriptDir}/processFn.sh Rejecter"
