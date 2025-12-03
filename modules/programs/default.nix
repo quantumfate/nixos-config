@@ -14,5 +14,6 @@
     ./sddm.nix
     ./terminal
     ./cliphist.nix
+    ./razer.nix
   ];
 }

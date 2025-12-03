@@ -13,8 +13,8 @@ in {
           "workspace 5, match:class steam"
           "workspace 5, center on, match:class Ankama Launcher, match:title overlay"
           "workspace 5, match:class Ankama Launcher, match:title Ankama Launcher"
-          "workspace 6, center on, content game, decorate off, no_anim on, match:class Dofus.x64"
-          "float on, content photo, center on, size (window_w*0.85) (window_h*0.85), match:class feh"
+          "workspace 6, center on, content game, decorate off, opacity 1.0 override, no_anim on, match:class Dofus.x64"
+          "float on, content photo, center on, size (window_w*0.85) (window_h*0.85), opacity 1.0 override, match:class feh"
         ];
       };
     };
