@@ -1,4 +1,4 @@
-{ config, ... }:
+{ config, pkgs, ... }:
 
 let
   userCfg = config.common.user;
@@ -14,7 +14,10 @@ in {
     };
     qt = {
       enable = true;
-      style.name = "kvantum";
+      style = {
+        name = "kvantum";
+        package = pkgs.catppuccin-kvantum;
+      };
     };
   };
 }

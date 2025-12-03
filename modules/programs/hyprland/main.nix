@@ -71,6 +71,7 @@ in {
           "VISUAL,nvim"
           "PAGER,less"
           "QT_QPA_PLATFORMTHEME,hyprqt6engine"
+          "QT_STYLE_OVERRIDE,kvantum"
           "XDG_CONFIG_HOME,$HOME/.config"
         ];
 
