@@ -92,6 +92,7 @@ in {
           layout = "master";
           snap = {
             enabled = true;
+            monitor_gap = 30;
           };
         };
 
@@ -101,7 +102,10 @@ in {
           active_opacity = 0.95;
           inactive_opacity = 0.8;
 
-          shadow = { enabled = false; };
+          shadow = { 
+            enabled = true; 
+            range = 6;
+          };
 
           blur = { enabled = true; };
         };
@@ -118,6 +122,9 @@ in {
 
         group = {
           auto_group = true;
+          groupbar = {
+            enabled = true;
+          };
         };
         
         cursor = {
@@ -129,9 +136,15 @@ in {
           font_family = "${config.common.style.fontFamily}";
           splash_font_family = "${config.common.style.fontFamily}";
           focus_on_activate = true;
+          mouse_move_enables_dpms = true;
         };
 
         animations = { enabled = true; };
+        
+        binds = {
+workspace_back_and_forth = true;         
+
+        };
         source = [
           "/home/${userCfg.name}/.config/hypr/conf/alt-tab.conf"
         ];

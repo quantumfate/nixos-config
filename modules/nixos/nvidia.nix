@@ -10,6 +10,7 @@ in {
 
     hardware.nvidia = {
       modesetting.enable = true;
+      # https://wiki.hypr.land/Nvidia/#suspendwakeup-issues
       powerManagement.enable = true;
       powerManagement.finegrained = false;
       open = false;
