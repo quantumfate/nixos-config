@@ -18,7 +18,8 @@ let
 in {
   programs.hyprland = {
     enable = true;
-    package = inputs.hyprland.packages."${pkgs.stdenv.hostPlatform.system}".hyprland;
+    package =
+      inputs.hyprland.packages."${pkgs.stdenv.hostPlatform.system}".hyprland;
     xwayland.enable = true;
   };
 
@@ -47,7 +48,7 @@ in {
       hyprcursor
       hyprshot
       wl-clipboard
-      
+
       inputs.grim-hyprland.packages.${pkgs.stdenv.hostPlatform.system}.default
       fzf
       chafa
@@ -103,34 +104,28 @@ in {
           active_opacity = 0.95;
           inactive_opacity = 0.8;
 
-          shadow = { 
-            enabled = true; 
+          shadow = {
+            enabled = true;
             range = 6;
           };
 
           blur = { enabled = true; };
         };
-        
+
         input = {
           kb_layout = "${config.common.keyboard.layout}";
           kb_variant = "${config.common.keyboard.variant}";
           follow_mouse = 0;
-          mouse_refocus = true;
-          touchpad = {
-            disable_while_typing = true;
-          };
+          mouse_refocus = false;
+          touchpad = { disable_while_typing = true; };
         };
 
         group = {
           auto_group = true;
-          groupbar = {
-            enabled = true;
-          };
+          groupbar = { enabled = true; };
         };
-        
-        cursor = {
-          no_warps = true;
-        };
+
+        cursor = { no_warps = true; };
 
         misc = {
           disable_hyprland_logo = true;
@@ -141,14 +136,12 @@ in {
         };
 
         animations = { enabled = true; };
-        
+
         binds = {
-workspace_back_and_forth = true;         
+          workspace_back_and_forth = true;
 
         };
-        source = [
-          "/home/${userCfg.name}/.config/hypr/conf/alt-tab.conf"
-        ];
+        source = [ "/home/${userCfg.name}/.config/hypr/conf/alt-tab.conf" ];
       };
     };
   };

@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+hyprctl -q dispatch submap alttab
 start=$1
 address=$(hyprctl -j clients | jq -r 'sort_by(.focusHistoryID) | .[] | select(.workspace.id >= 0) | select(.class != "Dofus.x64") | "\(.address)\t\(.title)"' |
 	      fzf --color prompt:green,pointer:green,current-bg:-1,current-fg:green,gutter:-1,border:bright-black,current-hl:red,hl:red \
@@ -14,7 +15,7 @@ address=$(hyprctl -j clients | jq -r 'sort_by(.focusHistoryID) | .[] | select(.w
 	      awk -F"\t" '{print $1}')
 
 if [ -n "$address" ] ; then
-    hyprctl --batch -q "dispatch focuswindow address:$address ; dispatch alterzorder top"
+	echo "$address" > /tmp/alttab/address
 fi
 
 hyprctl -q dispatch submap reset
