@@ -9,7 +9,7 @@ address=$(hyprctl -j clients | jq -r 'sort_by(.focusHistoryID) | .[] | select(.w
 		  --delimiter=$'\t' \
 		  --with-nth=2 \
 		  --preview "$XDG_CONFIG_HOME/hypr/scripts/alttab/preview.sh {}" \
-		  --preview-window=down:80% \
+		  --preview-window=down:80%,border-none \
 		  --layout=reverse |
 	      awk -F"\t" '{print $1}')
 
