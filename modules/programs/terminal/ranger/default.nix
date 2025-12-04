@@ -2,7 +2,7 @@
 
 let
   userCfg = config.common.user;
-  scriptDir = "/home/${userCfg.name}/.config/hypr/scripts";
+  scriptDir = "/home/${userCfg.name}/.config/ranger/scripts";
   userHome = config.users.users."${userCfg.name}".home;
   catppuccinCfg = config.common.style.catppuccin;
   flavorHashMap = {

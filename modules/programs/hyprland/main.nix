@@ -25,6 +25,7 @@ in {
   home-manager.users."${userCfg.name}" = {
     home.file.".config/hypr/scripts/" = {
       source = ./scripts;
+      executable = true;
       recursive = true;
     };
     home.file.".config/hypr/conf/" = {

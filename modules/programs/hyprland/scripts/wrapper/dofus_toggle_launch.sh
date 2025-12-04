@@ -10,6 +10,6 @@ if [ -n "$PID" ]; then
     sleep 0.1
     notify-send --app-name="$APP_NAME" -h string:x-canonical-private-synchronous:sys-notify -u low "Script STOPPED"
 else
-    ${XDG_CONFIG_HOME}/hypr/scripts/${SCRIPT_NAME} &
+    exec "${XDG_CONFIG_HOME}/hypr/scripts/${SCRIPT_NAME}" &
     notify-send --app-name="$APP_NAME" -h string:x-canonical-private-synchronous:sys-notify -u low "Script STARTED"
 fi

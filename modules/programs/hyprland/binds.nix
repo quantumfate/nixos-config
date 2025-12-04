@@ -2,7 +2,7 @@
 
 let
   userCfg = config.common.user;
-  scriptDir = "/home/${userCfg.name}/.config/hypr/scripts";
+  scriptDir = "/home/${userCfg.name}/.config/hypr/scripts/wrapper";
 in {
   home-manager.users."${userCfg.name}" = {
     wayland.windowManager.hyprland = {
