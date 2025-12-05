@@ -10,7 +10,7 @@ in {
           "xrandr --output ${config.common.peripherals.primaryMonitor} --primary"
           "waybar"
           "hyprpaper"
-          "discord"
+          "vesktop"
           "spotify"
           "keepassxc"
         ];

@@ -1,6 +1,8 @@
 { config, ... }:
 
-let userCfg = config.common.user;
+let 
+  userCfg = config.common.user;
+  catppuccin = config.theme.catppuccin;
 in {
 
   home-manager.users."${userCfg.name}" = {
@@ -25,11 +27,11 @@ in {
         clickTrayToShowHide = false;
         customTitleBar = false;
 
-        enableSplashScreen = false;
-        #splashTheming = true;
-        #splashColor = "#ffffff";
-        #splashBackground = "#000000";
-        #splashPixelated = true;
+        enableSplashScreen = true;
+        splashTheming = true;
+        splashColor = "${catppuccin.hex.text}";
+        splashBackground = "${catppuccin.hex.base}";
+        splashPixelated = true;
 
         spellCheckLanguages = [ "EN" "DE" ];
 
