@@ -74,6 +74,7 @@ in {
           xdotool
           socat
           keepassxc
+          obs-studio
         ] ++ lib.optionals config.common.modules.dofus.enable
         [ pkgs.ankama-launcher ] ++ config.common.user.packages;
       imports = [
