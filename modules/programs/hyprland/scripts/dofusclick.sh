@@ -1,4 +1,5 @@
 #!/bin/sh
+hyprctl -q keyword animations:enabled false
 
 dofus_chars=("Rejecter" "Draintouch" "Reminiscer" "Traumafactory" "Memoryfracture" "Miserymaker" )
 
@@ -11,3 +12,5 @@ for char in ${dofus_chars[@]}; do
     xdotool mousemove ${x_mouse_pos} ${y_mouse_pos}
     xdotool click 1
 done
+
+hyprctl -q keyword animations:enabled true
