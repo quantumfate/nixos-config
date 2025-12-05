@@ -4,5 +4,6 @@
     ./kitty.nix    
     ./ranger
     ./shell
+    ./btop.nix
   ];
 }

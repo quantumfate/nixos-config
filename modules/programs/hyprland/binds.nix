@@ -76,6 +76,7 @@ in {
           ",F4, exec, ${scriptDir}/processFn.sh Traumafactory"
           ",F5, exec, ${scriptDir}/processFn.sh Memoryfracture"
           ",F6, exec, ${scriptDir}/processFn.sh Miserymaker"
+          "$mainMod ALT, B, exec, hyprctl dispatch exec \"brave --new-window https://www.dofuspourlesnoobs.com/ https://dofusdb.fr/en/ https://dofensive.com/en https://www.dofusbook.net/en/\""
           ",mouse:274, exec, ${scriptDir}/processMButton.sh"
 
           # System
