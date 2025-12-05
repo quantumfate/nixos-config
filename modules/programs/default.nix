@@ -15,5 +15,6 @@
     ./terminal
     ./cliphist.nix
     ./razer.nix
+    ./vesktop.nix
   ];
 }
