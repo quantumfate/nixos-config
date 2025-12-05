@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 hyprctl -q dispatch submap alttab
 start=$1
-address=$(hyprctl -j clients | jq -r 'sort_by(.focusHistoryID) | .[] | select(.workspace.id >= 0) | select(.class != "Dofus.x64") | "\(.address)\t\(.title)"' |
+filter=${2:-"| select(.class != \"Dofus.x64\")"}
+address=$(hyprctl -j clients | jq -r "sort_by(.focusHistoryID) | .[] | select(.workspace.id >= 0) ${filter} | \"\(.address)\t\(.title)\"" |
 	      fzf --color prompt:green,pointer:green,current-bg:-1,current-fg:green,gutter:-1,border:bright-black,current-hl:red,hl:red \
 		  --cycle \
 		  --sync \

@@ -21,7 +21,7 @@ in {
         hardwareAcceleration = true;
         hardwareVideoAcceleration = true;
         arRPC = true;
-        appBadge = false;
+        appBadge = true;
         disableMinSize = true;
         checkUpdates = true;
         clickTrayToShowHide = false;
@@ -59,6 +59,7 @@ in {
             ReverseImageSearch.enabled = true;
             Translate.enabled = true;
             YoutubeAdblock.enabled = true;
+            WebRichPresence.enabled = true;
           };
         };
       };
