@@ -16,5 +16,6 @@
     ./cliphist.nix
     ./razer.nix
     ./vesktop.nix
+    ./spotify.nix
   ];
 }

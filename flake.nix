@@ -22,6 +22,7 @@
       url = "github:eriedaberrie/grim-hyprland";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    spicetify-nix.url = "github:Gerg-L/spicetify-nix";
 
   };
 
@@ -35,6 +36,7 @@
           inputs.home-manager.nixosModules.home-manager
           inputs.catppuccin.nixosModules.catppuccin
           inputs.stylix.nixosModules.stylix
+          inputs.spicetify-nix.nixosModules.spicetify
         ];
       };
     in {

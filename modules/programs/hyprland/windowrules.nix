@@ -8,7 +8,7 @@ in {
       settings = {
         windowrule = [
           "workspace 3 silent, match:class spotify"
-          "workspace 3 silent, match:class discord"
+          "workspace 3 silent, match:class vesktop"
           "workspace 4 silent, match:class org.keepassxc.KeePassXC"
           "workspace 5, match:class steam"
           "workspace 5, center on, match:class Ankama Launcher, match:title overlay"

@@ -51,9 +51,6 @@ in {
           udisks2
           gimp
 
-          ## Media
-          spotify
-
           ## Programming
           vscode
           python3
