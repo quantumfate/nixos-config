@@ -76,7 +76,7 @@ in {
           ",F4, exec, ${scriptDir}/processFn.sh Traumafactory"
           ",F5, exec, ${scriptDir}/processFn.sh Memoryfracture"
           ",F6, exec, ${scriptDir}/processFn.sh Miserymaker"
-          ",F7, exec, ${scriptDir}/processMButton.sh"
+          ",mouse:274, exec, ${scriptDir}/processMButton.sh"
 
           # System
           "$mainMod ALT, l, exec, hyprlock"
