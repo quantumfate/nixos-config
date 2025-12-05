@@ -25,11 +25,11 @@ in {
         clickTrayToShowHide = false;
         customTitleBar = false;
 
-        enableSplashScreen = true;
-        splashTheming = true;
-        splashColor = "#ffffff";
-        splashBackground = "#000000";
-        splashPixelated = true;
+        enableSplashScreen = false;
+        #splashTheming = true;
+        #splashColor = "#ffffff";
+        #splashBackground = "#000000";
+        #splashPixelated = true;
 
         spellCheckLanguages = [ "EN" "DE" ];
 
@@ -46,11 +46,19 @@ in {
               enabled = true;
               ignoreSelf = true;
             };
+            CustomRPC.enabled = true;
+            MessageTags.enabled = true;
+            NoF1.enabled = true;
+            NoReplyMention.enabled = true;
+            OpenInApp.enabled = true;
+            PreviewMessage.enabled = true;
+            ReadAllNotificationsButton.enabled = true;
+            ReplaceGoogleSearch.enabled = true;
+            ReverseImageSearch.enabled = true;
+            Translate.enabled = true;
+            YoutubeAdblock.enabled = true;
           };
         };
-        themes = [
-          "@import url('https://catppuccin.github.io/discord/dist/catppuccin-${config.common.style.catppuccin.flavor}-${config.common.style.catppuccin.accent}.theme.css');"
-        ];
       };
     };
   };

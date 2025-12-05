@@ -52,7 +52,6 @@ in {
           gimp
 
           ## Media
-          discord
           spotify
 
           ## Programming
