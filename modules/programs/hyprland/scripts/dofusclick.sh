@@ -8,7 +8,7 @@ y_mouse_pos=$(cut -d ":" -f2 <<< $(cut -d " " -f2  <<< $(xdotool getmouselocatio
 
 for char in ${dofus_chars[@]}; do
     hyprctl --batch -q "dispatch focuswindow title:Dofus $char ; dispatch alterzorder top"
-    sleep 0.05
+    sleep 0.25
     xdotool mousemove ${x_mouse_pos} ${y_mouse_pos}
     xdotool click 1
 done
