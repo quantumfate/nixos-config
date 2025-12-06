@@ -25,5 +25,5 @@
   };
 
   imports =
-    [ ./user.nix ./peripherals.nix ./style.nix ./lib.nix ./keyboard.nix ./modules.nix ];
+    [ ./user.nix ./peripherals.nix ./style.nix ./modules.nix ];
 }

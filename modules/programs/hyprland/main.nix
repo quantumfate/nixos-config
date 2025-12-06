@@ -120,8 +120,6 @@ in {
         };
 
         input = {
-          #kb_layout = "${config.common.keyboard.layout}";
-          #kb_variant = "${config.common.keyboard.variant}";
           kb_layout = "real-prog-dvorak";
           kb_variant = "real-prog-dvorak";
 

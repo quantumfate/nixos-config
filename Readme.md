@@ -18,6 +18,7 @@
 - [Rofi](https://github.com/davatorium/rofi)
 - [Ranger](https://github.com/ranger/ranger)
 - [Btop](https://github.com/aristocratos/btop)
+- [Real Programmer Dvorak - ThePrimeagen](https://github.com/ThePrimeagen/keyboards)
 
 ### Ricing
 

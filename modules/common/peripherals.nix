@@ -6,13 +6,7 @@
       default = {};
       description = "Configuration options for peripherals.";
     };
-    
-    keyboard = lib.mkOption {
-      type = lib.types.str;
-      default = "standard";
-      description = "The external keyboard used on the host.";
-    };
-
+  
     monitors = lib.mkOption {
       type = lib.types.nullOr (lib.types.listOf lib.types.str);
       default = null;

@@ -29,13 +29,6 @@ in {
     useXkbConfig = true; # use xkbOptions in tty.
   };
 
-  #services.xserver = {
-  #  xkb = {
-  #    layout = cfg.keyboard.layout;
-  #    variant = cfg.keyboard.variant;
-  #  };
-  #};
-
   users.users.${cfg.user.name} = {
     isNormalUser = true;
     extraGroups = cfg.user.groups ++ [ "wheel" "networkmanager" "mlocate" ];

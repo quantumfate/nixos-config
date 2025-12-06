@@ -4,6 +4,7 @@ let
   layoutName = "real-prog-dvorak";
 in
 {
+  # https://www.reddit.com/r/NixOS/comments/1lf67uq/creating_a_custom_keyboard_layout_in_nix/ 
   config.services.xserver = {
     xkb.layout = layoutName;
     xkb.variant = layoutName;
