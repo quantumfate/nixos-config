@@ -41,6 +41,8 @@
 - implement [lf](https://github.com/gokcehan/lf)
 - implement [Quickshell](https://quickshell.org/)
 - see if swap caps with esc works on laptop
+- Implement a mix solution of xkb custom layout, dvorak, qmk, etc. - get the best of both worlds
+    - or just implement keyd
 
 ## My inspiration
 

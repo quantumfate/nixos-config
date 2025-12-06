@@ -19,7 +19,7 @@ in {
           xkb_symbols "${layoutName}" {
               include "pc"
               include "inet(evdev)"
-              include "us(dvorak)"
+              include "us"
 
               name[Group1]= "English (Real Programmers Dvorak)";
 
@@ -41,38 +41,12 @@ in {
               key <AD01> { [  semicolon,  colon, dead_acute, dead_diaeresis       ] };
               key <AD02> { [      comma,  less,   dead_cedilla, dead_caron        ] };
               key <AD03> { [      period, greater, dead_abovedot, periodcentered  ] };
-              key <AD04> { [          p,  P               ]       };
-              key <AD05> { [          y,  Y               ]       };
-              key <AD06> { [          f,  F               ]       };
-              key <AD07> { [          g,  G               ]       };
-              key <AD08> { [          c,  C               ]       };
-              key <AD09> { [          r,  R               ]       };
-              key <AD10> { [          l,  L               ]       };
               key <AD11> { [      slash,  question        ]       };
               key <AD12> { [      at,     asciicircum             ]       };
 
-              key <AC01> { [          a,  A,  adiaeresis,  Adiaeresis            ]       };
-              key <AC02> { [          o,  O,   odiaeresis,  Odiaeresis            ]       };
-              key <AC03> { [          e,  E,   ediaeresis,  Ediaeresis            ]       };
-              key <AC04> { [          u,  U,   udiaeresis,  Udiaeresis            ]       };
-              key <AC05> { [          i,  I,   idiaeresis,  Idiaeresis            ]       };
-              key <AC06> { [          d,  D               ]       };
-              key <AC07> { [          h,  H               ]       };
-              key <AC08> { [          t,  T               ]       };
-              key <AC09> { [          n,  N               ]       };
-              key <AC10> { [          s,  S               ]       };
               key <AC11> { [      minus,  underscore      ]       };
 
               key <AB01> { [   apostrophe,        quotedbl, dead_ogonek, dead_doubleacute ] };
-              key <AB02> { [          q,  Q               ]       };
-              key <AB03> { [          j,  J               ]       };
-              key <AB04> { [          k,  K               ]       };
-              key <AB05> { [          x,  X               ]       };
-              key <AB06> { [          b,  B               ]       };
-              key <AB07> { [          m,  M               ]       };
-              key <AB08> { [          w,  W               ]       };
-              key <AB09> { [          v,  V               ]       };
-              key <AB10> { [          z,  Z               ]       };
 
               key <BKSL> { [  backslash,  numbersign             ]       };
               
