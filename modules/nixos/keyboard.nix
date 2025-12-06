@@ -11,12 +11,11 @@ in
       languages = [ "us" "de" ];
       description = "Programmers Dvorak with custom AltGr maps";
       symbolsFile = builtins.toFile "symbols-${layoutName}" ''
-        include "pc"
-        include "us"
-        include "inet(evdev)"
-
         partial alphanumeric_keys
         xkb_symbols "${layoutName}" {
+            include "pc"
+            include "us"
+            include "inet(evdev)"
 
             name[Group1]= "English (Real Programmers Dvorak)";
 
