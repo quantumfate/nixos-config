@@ -16,8 +16,6 @@ let
   borderActive = config.theme.catppuccin.rgba.mauve 0.8;
   borderInActive = config.theme.catppuccin.rgba.base 0.8;
 in {
-  environment.systemPackages = with pkgs; [ qmk dos2unix ];
-  hardware.keyboard.qmk.enable = true;
   programs.hyprland = {
     enable = true;
     package =
@@ -122,7 +120,6 @@ in {
         input = {
           kb_layout = "real-prog-dvorak";
           kb_variant = "real-prog-dvorak";
-          kb_options = "caps:swapescape";
 
           follow_mouse = 0;
           mouse_refocus = false;
@@ -155,4 +152,3 @@ in {
     };
   };
 }
-

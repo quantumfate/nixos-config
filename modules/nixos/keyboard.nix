@@ -4,6 +4,9 @@ let
   layoutName = "real-prog-dvorak";
 in
 {
+  environment.systemPackages = with pkgs; [ qmk dos2unix ];
+  hardware.keyboard.qmk.enable = true;
+
   # https://github.com/ThePrimeagen/keyboards
   # https://www.reddit.com/r/NixOS/comments/1lf67uq/creating_a_custom_keyboard_layout_in_nix/ 
   config.services.xserver = {
@@ -73,7 +76,7 @@ in
             key <AB10> { [          z,  Z               ]       };
 
             key <BKSL> { [  backslash,  numbersign             ]       };
-
+            
             include "level3(ralt_switch)"
         };
       '';

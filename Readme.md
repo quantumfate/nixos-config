@@ -40,6 +40,7 @@
 - configure potential VMs for QMK
 - implement [lf](https://github.com/gokcehan/lf)
 - implement [Quickshell](https://quickshell.org/)
+- see if swap caps with esc works on laptop
 
 ## My inspiration
 
