@@ -47,11 +47,16 @@ in {
       hyprlock
       hyprcursor
       hyprshot
-      wl-clipboard
 
+      jq
+      wl-clipboard
+      socat
       inputs.grim-hyprland.packages.${pkgs.stdenv.hostPlatform.system}.default
       fzf
       chafa
+      
+      ydotool
+      xdotool
     ];
 
     wayland.windowManager.hyprland = {

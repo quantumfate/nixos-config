@@ -1,4 +1,4 @@
-{ config, lib, ... }:
+{ config, lib, pkgs, ... }:
 
 let
   catppuccinCfg = config.common.style.catppuccin;
@@ -42,6 +42,26 @@ in {
   };
   config = {
     catppuccin = catppuccinParams;
-    home-manager.users."${userCfg.name}" = { catppuccin = catppuccinParams; };
+    home-manager.users."${userCfg.name}" = {
+      home.packages = with pkgs; [
+        catppuccin-qt5ct
+        catppuccin-cursors.mochaTeal
+        (catppuccin-kvantum.override {
+          accent = config.common.style.catppuccin.accent;
+          variant = config.common.style.catppuccin.flavor;
+        })
+        (catppuccin-papirus-folders.override {
+          accent = config.common.style.catppuccin.accent;
+          flavor = config.common.style.catppuccin.flavor;
+        })
+        (catppuccin-sddm.override {
+          flavor = config.common.style.catppuccin.flavor;
+          font = config.common.style.fontFamily;
+          fontSize = "12";
+        })
+
+      ];
+      catppuccin = catppuccinParams;
+    };
   };
 }

@@ -11,25 +11,6 @@ in {
       home.packages = with pkgs;
         [
           # Ricing
-          #catppuccin-kvantum
-          waybar
-          rofi
-          npins
-          catppuccin-qt5ct
-          catppuccin-cursors.mochaTeal
-          (catppuccin-kvantum.override {
-            accent = config.common.style.catppuccin.accent;
-            variant = config.common.style.catppuccin.flavor;
-          })
-          (catppuccin-papirus-folders.override {
-            accent = config.common.style.catppuccin.accent;
-            flavor = config.common.style.catppuccin.flavor;
-          })
-          (catppuccin-sddm.override {
-            flavor = config.common.style.catppuccin.flavor;
-            font = config.common.style.fontFamily;
-            fontSize = "12";
-          })
           lxqt.pavucontrol-qt
           papirus-folders
 
@@ -47,8 +28,6 @@ in {
           pamixer
           obs-studio
           mpv
-          udiskie
-          udisks2
           gimp
 
           ## Programming
@@ -57,18 +36,10 @@ in {
           neovim
 
           ## Terminal
-          ranger
-          foot
-          kitty
-          alacritty
-          jq
-          neofetch
           zathura
 
           #(callPackage (../Packages/ankama-launcher.nix) { })
-          ydotool
-          xdotool
-          socat
+          
           keepassxc
           obs-studio
         ] ++ lib.optionals config.common.modules.dofus.enable

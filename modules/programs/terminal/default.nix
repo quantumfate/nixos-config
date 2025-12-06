@@ -1,9 +1,9 @@
 {
-  imports = [
-    ./foot.nix
-    ./kitty.nix    
-    ./ranger
-    ./shell
-    ./btop.nix
-  ];
+  imports = [ ./foot.nix ./kitty.nix ./ranger ./shell ./btop.nix ];
+
+  home-manager.users."${userCfg.name}" = {
+    home.packages = with pkgs; [
+      neofetch
+    ];
+  };
 }
