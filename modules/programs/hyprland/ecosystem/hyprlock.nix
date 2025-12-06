@@ -72,7 +72,7 @@ in {
           }
         ] ++ lib.optionals (config.networking.hostName == "quantum-laptop") [{
           monitor = "";
-          text = "cmd[update:1000] ${userHome}/.config/hypr/scripts/battery.sh";
+          text = "cmd[update:1000] ${userHome}/.config/hypr/scripts/interface/battery.sh";
           color = "${catppuccin.rgb.text}";
           font_size = 14;
           font_family = "${config.common.style.fontFamily}";

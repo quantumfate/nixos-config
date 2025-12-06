@@ -1,4 +1,4 @@
-{ config, ... }:
+{ config, pkgs, ... }:
 
 let
   userCfg = config.common.user;
@@ -82,8 +82,8 @@ in {
                 "scroll-step": 5.0,
                 "on-click": "pamixer -t",
                 "on-click-right": "pavucontrol-qt",
-                "on-scroll-up": "${scriptLocation}/volume.sh --inc",
-                "on-scroll-down": "${scriptLocation}/volume.sh --dec",
+                "on-scroll-up": "${scriptLocation}/wrapper/volume.sh --inc",
+                "on-scroll-down": "${scriptLocation}/wrapper/volume.sh --dec",
                 "smooth-scrolling-threshold": 1
             },
             "clock": {
@@ -114,10 +114,14 @@ in {
             },
             "tray": {
                 "icon-size": 14,
-                "spacing": 6
+                "spacing": 6,
+                "show-passive-items": true,
+                "icons": {
+                    "blueman": "bluetooth",
+                }
             },
             "custom/mako": {
-                "exec": "${scriptLocation}/mako.sh",
+                "exec": "${scriptLocation}/interface/mako.sh",
                 "on-click": "makoctl mode -t do-not-disturb",
                 "restart-interval": 1
             },

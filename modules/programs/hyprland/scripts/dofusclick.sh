@@ -7,10 +7,13 @@ x_mouse_pos=$(cut -d ":" -f2 <<< $(cut -d " " -f1  <<< $(xdotool getmouselocatio
 y_mouse_pos=$(cut -d ":" -f2 <<< $(cut -d " " -f2  <<< $(xdotool getmouselocation)))
 
 for char in ${dofus_chars[@]}; do
-    hyprctl --batch -q "dispatch focuswindow title:Dofus $char ; dispatch alterzorder top"
-    sleep 0.25
-    xdotool mousemove ${x_mouse_pos} ${y_mouse_pos}
-    xdotool click 1
+    address=$(hyprctl -j clients | jq -r " .[] | select(.title == \"Dofus $char\") | \"\(.address)\"")
+    if [ -n "$address" ]; then
+        hyprctl --batch -q "dispatch focuswindow title:Dofus $char ; dispatch alterzorder top"
+        sleep 0.25
+        xdotool mousemove ${x_mouse_pos} ${y_mouse_pos}
+        xdotool click 1
+    fi
 done
 
 hyprctl -q keyword animations:enabled true
