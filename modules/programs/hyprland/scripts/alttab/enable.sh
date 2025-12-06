@@ -3,7 +3,7 @@ mkdir -p /tmp/alttab
 hyprctl -q --batch "keyword animations:enabled false; keyword unbind ALT, TAB ; keyword unbind ALT SHIFT, TAB"
 
 if [ "$(hyprctl activewindow -j | jq -r ".class")" = "Dofus.x64" ]; then
-    footclient -a alttab ~/.config/hypr/scripts/alttab/alttab.sh $1 "| select(.class == \"Dofus.x64\")"
+    footclient -a alttab ~/.config/hypr/scripts/alttab/alttab.sh $1 "| select(.class == \"Dofus.x64\" or (.class == \"Ankama Launcher\" and .title == \"overlay\"))"
 else
     footclient -a alttab ~/.config/hypr/scripts/alttab/alttab.sh $1
 fi

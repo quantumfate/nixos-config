@@ -35,8 +35,10 @@
 
 ## TODO
 
-- Implement a module to track the upstream of the nixOS color palette
+- Implement a module to track the upstream of the catppuccin color palette
 - configure potential VMs for QMK
+- implement [lf](https://github.com/gokcehan/lf)
+- implement [Quickshell](https://quickshell.org/)
 
 ## My inspiration
 

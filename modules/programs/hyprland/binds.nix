@@ -37,6 +37,9 @@ in {
           "$mainMod, 9, workspace, 9"
           "$mainMod, 0, workspace, 10"
 
+          # Special workspaces
+          "$mainMod ALT, k, togglespecialworkspace, keepass"
+          "$mainMod ALT, d, togglespecialworkspace, ankama-launcher"
           # Send window to workspaces
           "$mainMod SHIFT, 1, movetoworkspace, 1"
           "$mainMod SHIFT, 2, movetoworkspace, 2"
