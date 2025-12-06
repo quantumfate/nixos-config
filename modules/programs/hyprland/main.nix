@@ -13,9 +13,11 @@ let
     "quantum-laptop" = [ "eDP-1, 1920x1080@60, auto, 1" ];
     "default" = [ ", preferred, auto, 1" ];
   };
-  borderActive = config.theme.catppuccin.rgba.teal 0.6;
-  borderInActive = config.theme.catppuccin.rgba.maroon 0.6;
+  borderActive = config.theme.catppuccin.rgba.mauve 0.8;
+  borderInActive = config.theme.catppuccin.rgba.base 0.8;
 in {
+  environment.systemPackages = with pkgs; [ qmk dos2unix ];
+  hardware.keyboard.qmk.enable = true;
   programs.hyprland = {
     enable = true;
     package =
@@ -54,7 +56,7 @@ in {
       inputs.grim-hyprland.packages.${pkgs.stdenv.hostPlatform.system}.default
       fzf
       chafa
-      
+
       ydotool
       xdotool
     ];
@@ -107,19 +109,22 @@ in {
           rounding = 8;
 
           active_opacity = 0.95;
-          inactive_opacity = 0.8;
+          inactive_opacity = 0.95;
 
           shadow = {
             enabled = true;
-            range = 6;
+            range = 4;
           };
 
           blur = { enabled = true; };
         };
 
         input = {
-          kb_layout = "${config.common.keyboard.layout}";
-          kb_variant = "${config.common.keyboard.variant}";
+          #kb_layout = "${config.common.keyboard.layout}";
+          #kb_variant = "${config.common.keyboard.variant}";
+          kb_layout = "real-prog-dvorak";
+          kb_variant = "real-prog-dvorak";
+
           follow_mouse = 0;
           mouse_refocus = false;
           touchpad = { disable_while_typing = true; };
