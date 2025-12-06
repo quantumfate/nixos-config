@@ -10,7 +10,7 @@ in {
           "xrandr --output ${config.common.peripherals.primaryMonitor} --primary"
           "waybar"
           "hyprpaper"
-          "vesktop"
+          "vesktop --ozone-platform-hint=auto"
           "spotify"
           "keepassxc"
         ];
