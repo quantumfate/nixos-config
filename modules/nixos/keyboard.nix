@@ -12,13 +12,12 @@ in {
       xkb.layout = layoutName;
       xkb.variant = layoutName;
       xkb.extraLayouts.${layoutName} = rec {
-        languages = [ "us" "de" ];
+        languages = [ "eng" "deu" ];
         description = "Programmers Dvorak with custom AltGr maps";
         symbolsFile = builtins.toFile "symbols-${layoutName}" ''
           partial alphanumeric_keys
           xkb_symbols "${layoutName}" {
-              include "pc"
-              include "us"
+              include "us(dvorak)"
               include "inet(evdev)"
 
               name[Group1]= "English (Real Programmers Dvorak)";
