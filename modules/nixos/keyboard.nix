@@ -17,8 +17,9 @@ in {
         symbolsFile = builtins.toFile "symbols-${layoutName}" ''
           partial alphanumeric_keys
           xkb_symbols "${layoutName}" {
-              include "us(dvorak)"
+              include "pc"
               include "inet(evdev)"
+              include "us(dvorak)"
 
               name[Group1]= "English (Real Programmers Dvorak)";
 
