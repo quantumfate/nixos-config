@@ -7,7 +7,6 @@ in {
   home-manager.users."${userCfg.name}" = {
     programs.zathura = {
       enable = true;
-      automount = true;
       options = {
         sandbox = "none";
         statusbar-h-padding = 0;
