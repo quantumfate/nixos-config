@@ -54,7 +54,7 @@ in {
 
           # Special workspaces
           "$mainMod ALT, k, togglespecialworkspace, keepass"
-          "$mainMod ALT, d, togglespecialworkspace, ankama-launcher"
+          "$mainMod ALT, d, togglespecialworkspace, ankama"
 
           # Send window to workspaces
           "$mainMod SHIFT, 1, movetoworkspace, 1"

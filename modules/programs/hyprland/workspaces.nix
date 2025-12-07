@@ -18,7 +18,7 @@ in {
           "9,monitor:${config.common.peripherals.primaryMonitor}"
           "10,monitor:${config.common.peripherals.primaryMonitor}"
           "s[true]m[${config.common.peripherals.primaryMonitor}], name:keepass, on-created-empty:keepassxc"
-          "s[true]m[${config.common.peripherals.primaryMonitor}], name:ankama-launcher, on-created-empty:ankama-launcher"
+          "s[true]m[${config.common.peripherals.primaryMonitor}], name:ankama, on-created-empty:ankama-launcher"
         ];
       };
     };

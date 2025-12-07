@@ -12,7 +12,6 @@ in {
           "hyprpaper"
           "vesktop --ozone-platform-hint=auto"
           "spotify"
-          "keepassxc [workspace special:keepass silent]"
         ];
       };
     };
