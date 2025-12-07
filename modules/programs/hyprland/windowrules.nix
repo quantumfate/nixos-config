@@ -17,7 +17,7 @@ in {
           "workspace special:ankama, match:class Ankama Launcher, match:title Ankama Launcher"
           "workspace special:vesktop, match:class vesktop"
           "workspace special:spotify, match:class spotify"
-          "workspace special:obs, match:title OBS"
+          "workspace special:obs, match:initial_class com.obsproject.Studio"
 
           "match:class brave-browser, opacity 1.0 override"
           "float on, content photo, center on, size (window_w*0.85) (window_h*0.85), opacity 1.0 override, match:class feh"
