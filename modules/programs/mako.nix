@@ -30,7 +30,7 @@ in {
         max-icon-size = 64;
         icon-path = "/run/current-system/sw/share/icons/hicolor";
         icon-location = "left";
-        output= "${config.common.peripherals.primaryMonitor}";
+        output= "${config.common.peripherals.primaryMonitor.name}";
         layer = "top";
         anchor = "top-right";
         "urgency=low" = { border-color = "${catppuccin.hex.teal}"; };

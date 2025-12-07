@@ -10,7 +10,7 @@ let
   };
   buildCommands = monitors:
     lib.strings.concatMapStrings (monitor:
-      if monitor == cfg.peripherals.primaryMonitor then ''
+      if monitor == cfg.peripherals.primaryMonitor.name then ''
         /run/current-system/sw/bin/xrandr --output ${monitorXsessionMap.${monitor}} --primary --auto
       '' else ''
         /run/current-system/sw/bin/xrandr --output ${monitorXsessionMap.${monitor}} --off

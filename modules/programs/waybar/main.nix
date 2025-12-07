@@ -54,7 +54,7 @@ in {
           spacing = 0;
           fixed-center = true;
           output = [
-            "${config.common.peripherals.primaryMonitor}"
+            "${config.common.peripherals.primaryMonitor.name}"
           ]; # TODO: set a list of active monitors
           modules-left =
             [ "hyprland/workspaces" "cpu" "memory" "disk" "network" ];

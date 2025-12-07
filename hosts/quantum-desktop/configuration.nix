@@ -12,7 +12,11 @@
     };
     peripherals = {
       monitors = [ "DP-1" "HDMI-A-1" ];
-      primaryMonitor = "DP-1";
+      primaryMonitor = {
+        name = "DP-1";
+        mode = "2560x1440";
+        rate = "144";
+      };
     };
     style = {
       fontFamily = "Inconsolata Nerd Font";

@@ -13,7 +13,11 @@
     };
     peripherals = {
       monitors = [ "eDP-1" ];
-      primaryMonitor = "eDP-1";
+      primaryMonitor = {
+        name = "eDP-1";
+        mode = "1920x1080";
+        rate = "60";
+      };
     };
     style = {
       fontFamily = "Inconsolata Nerd Font";
