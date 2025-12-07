@@ -81,6 +81,7 @@ in {
           "QT_QPA_PLATFORMTHEME,hyprqt6engine"
           "QT_STYLE_OVERRIDE,kvantum"
           "XDG_CONFIG_HOME,$HOME/.config"
+          "GSK_RENDERER,gl"
         ];
 
         monitor = monitorMaps.${hostName} or monitorMaps.default;

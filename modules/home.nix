@@ -37,6 +37,7 @@ in {
 
           ## Terminal
           zathura
+          whatsapp-electron
 
 #          (callPackage (../Packages/ankama-launcher.nix) { })
           
