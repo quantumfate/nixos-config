@@ -25,10 +25,6 @@ in {
   time.timeZone = cfg.timeZone;
   i18n.defaultLocale = cfg.defaultLocale;
 
-  console = {
-    useXkbConfig = true; # use xkbOptions in tty.
-  };
-
   users.users.${cfg.user.name} = {
     isNormalUser = true;
     extraGroups = cfg.user.groups ++ [ "wheel" "networkmanager" "mlocate" ];

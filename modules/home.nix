@@ -38,7 +38,7 @@ in {
           ## Terminal
           zathura
 
-          #(callPackage (../Packages/ankama-launcher.nix) { })
+#          (callPackage (../Packages/ankama-launcher.nix) { })
           
           keepassxc
           obs-studio

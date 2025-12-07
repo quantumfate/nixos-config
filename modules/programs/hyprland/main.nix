@@ -118,8 +118,8 @@ in {
         };
 
         input = {
-          kb_layout = "real-prog-dvorak";
-          kb_variant = "real-prog-dvorak";
+          kb_layout = "us";
+          kb_variant = "dvp";
 
           follow_mouse = 0;
           mouse_refocus = false;
