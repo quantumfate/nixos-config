@@ -16,7 +16,7 @@ let
     "7" = "asterisk"; # *
     "8" = "parentright"; # )
     "9" = "plus"; # +
-    "10" = "bracketright"; # ]
+    "0" = "bracketright"; # ]
   };
 in {
   home-manager.users."${userCfg.name}" = {
@@ -41,32 +41,32 @@ in {
           "$mainMod SHIFT, R, exec, rofi -modi clipboard:/etc/profiles/per-user/${userCfg.name}/bin/cliphist-rofi-img -show clipboard -show-icons"
 
           # Switching workspaces
-          "$mainMod, 1, workspace, 1"
-          "$mainMod, 2, workspace, 2"
-          "$mainMod, 3, workspace, 3"
-          "$mainMod, 4, workspace, 4"
-          "$mainMod, 5, workspace, 5"
-          "$mainMod, 6, workspace, 6"
-          "$mainMod, 7, workspace, 7"
-          "$mainMod, 8, workspace, 8"
-          "$mainMod, 9, workspace, 9"
-          "$mainMod, 0, workspace, 10"
+          "$mainMod, ${programmerDvorakMap."1"}, workspace, 1"
+          "$mainMod, ${programmerDvorakMap."2"}, workspace, 2"
+          "$mainMod, ${programmerDvorakMap."3"}, workspace, 3"
+          "$mainMod, ${programmerDvorakMap."4"}, workspace, 4"
+          "$mainMod, ${programmerDvorakMap."5"}, workspace, 5"
+          "$mainMod, ${programmerDvorakMap."6"}, workspace, 6"
+          "$mainMod, ${programmerDvorakMap."7"}, workspace, 7"
+          "$mainMod, ${programmerDvorakMap."8"}, workspace, 8"
+          "$mainMod, ${programmerDvorakMap."9"}, workspace, 9"
+          "$mainMod, ${programmerDvorakMap."0"}, workspace, 10"
 
           # Special workspaces
           "$mainMod ALT, k, togglespecialworkspace, keepass"
           "$mainMod ALT, d, togglespecialworkspace, ankama"
 
           # Send window to workspaces
-          "$mainMod SHIFT, 1, movetoworkspace, 1"
-          "$mainMod SHIFT, 2, movetoworkspace, 2"
-          "$mainMod SHIFT, 3, movetoworkspace, 3"
-          "$mainMod SHIFT, 4, movetoworkspace, 4"
-          "$mainMod SHIFT, 5, movetoworkspace, 5"
-          "$mainMod SHIFT, 6, movetoworkspace, 6"
-          "$mainMod SHIFT, 7, movetoworkspace, 7"
-          "$mainMod SHIFT, 8, movetoworkspace, 8"
-          "$mainMod SHIFT, 9, movetoworkspace, 9"
-          "$mainMod SHIFT, 0, movetoworkspace, 10"
+          "$mainMod SHIFT, ${programmerDvorakMap."1"}, movetoworkspace, 1"
+          "$mainMod SHIFT, ${programmerDvorakMap."2"}, movetoworkspace, 2"
+          "$mainMod SHIFT, ${programmerDvorakMap."3"}, movetoworkspace, 3"
+          "$mainMod SHIFT, ${programmerDvorakMap."4"}, movetoworkspace, 4"
+          "$mainMod SHIFT, ${programmerDvorakMap."5"}, movetoworkspace, 5"
+          "$mainMod SHIFT, ${programmerDvorakMap."6"}, movetoworkspace, 6"
+          "$mainMod SHIFT, ${programmerDvorakMap."7"}, movetoworkspace, 7"
+          "$mainMod SHIFT, ${programmerDvorakMap."8"}, movetoworkspace, 8"
+          "$mainMod SHIFT, ${programmerDvorakMap."9"}, movetoworkspace, 9"
+          "$mainMod SHIFT, ${programmerDvorakMap."0"}, movetoworkspace, 10"
 
           # Moving focus
           "$mainMod, h, movefocus, l"
