@@ -8,7 +8,7 @@ in {
       settings = {
         windowrule = [
           "workspace 1, center on, match:class Ankama Launcher, match:title overlay"
-          "workspace 1, center on, content game, fullscreen_state 0 0, fullscreen off, decorate off, opacity 1.0 override, no_anim on, match:class Dofus.x64"
+          "workspace 1, center on, content game, fullscreen_state 1 1, fullscreen on, decorate off, opacity 1.0 override, no_anim on, match:class Dofus.x64"
           "workspace 1, match:class code"
           "workspace 3, match:class steam"
 
@@ -20,7 +20,7 @@ in {
           "workspace special:obs, match:initial_class com.obsproject.Studio"
 
           "match:class brave-browser, opacity 1.0 override"
-          "float on, content photo, center on, size (window_w*0.85) (window_h*0.85), opacity 1.0 override, match:class feh"
+          "float on, content photo, center on, dim_around on, size (window_w*0.85) (window_h*0.85), opacity 1.0 override, match:class feh"
         ];
       };
     };

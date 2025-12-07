@@ -107,15 +107,24 @@ in {
         decoration = {
           rounding = 8;
 
-          active_opacity = 0.95;
-          inactive_opacity = 0.95;
+          active_opacity = 0.88;
+          inactive_opacity = 0.88;
+          
+          dim_special = 0.4;
+          dim_around = 0.6;
 
           shadow = {
             enabled = true;
-            range = 4;
+            range = 2;
           };
 
-          blur = { enabled = true; };
+          blur = { 
+            enabled = true; 
+            size = 12;
+            passes = 2;
+            new_optimizations = true;
+            ignore_opacity = true;
+          };
         };
 
         input = {
