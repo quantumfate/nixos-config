@@ -20,7 +20,7 @@ in {
 
           # Special Workspaces
           "workspace special:keepass, match:class org.keepassxc.KeePassXC"
-          "workspace special:ankama-launcher, match:class Ankama Launcher, match:title Ankama Launcher"
+          "workspace special:ankama, match:class Ankama Launcher, match:title Ankama Launcher"
 
           "float on, content photo, center on, size (window_w*0.85) (window_h*0.85), opacity 1.0 override, match:class feh"
         ];
