@@ -25,6 +25,7 @@ in {
           "s[true]m[${primaryMonitor.name}]n[e:vesktop], name:vesktop, on-created-empty:vesktop"
           "s[true]m[${primaryMonitor.name}]n[e:spotify], name:spotiy, on-created-empty:spotify"
           "s[true]m[${primaryMonitor.name}]n[e:obs], name:obs, on-created-empty:${scriptDir}/on_created_empty.sh"
+          "s[true]m[${primaryMonitor.name}]n[e:whatsapp], name:whatsapp, on-created-empty:whatsapp-electron"
         ];
       };
     };

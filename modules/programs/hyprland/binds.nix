@@ -59,6 +59,7 @@ in {
           "$mainMod ALT, v, togglespecialworkspace, vesktop"
           "$mainMod ALT, s, togglespecialworkspace, spotify"
           "$mainMod ALT, o, togglespecialworkspace, obs"
+          "$mainMod ALT, w, togglespecialworkspace, whatsapp"
 
           # Send window to workspaces
           "$mainMod SHIFT, ${programmerDvorakMap."1"}, movetoworkspace, 1"

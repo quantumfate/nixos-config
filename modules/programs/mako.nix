@@ -60,7 +60,7 @@ in {
           padding = "0,0,0,30";
           format = "<b>%s</b>\\n%b";
           on-button-left =
-            "exec hyprctl dispatch exec whatsapp-electron";
+            "exec hyprctl dispatch focuswindow class:whatsapp-electron";
         };
         "app-name=vesktop" = {
           default-timeout = 0;
