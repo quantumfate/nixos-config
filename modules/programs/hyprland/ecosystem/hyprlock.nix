@@ -83,7 +83,7 @@ in {
 
         image = [{
           monitor = "";
-          path = "${iconsDir}avatar.png";
+          path = "${iconsDir}avatar-small.png";
           size = 100;
           border_color = "${catppuccin.rgb.mauve}";
           position = "0, 75";
