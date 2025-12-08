@@ -144,13 +144,13 @@ in {
                 },
             "custom/reboot": {
                 "format": "<span color='${catppuccin.hex.yellow}'>  </span>",
-                "on-click": "systemctl reboot",
+                "on-click": "hyprshutdown -t 'Restarting...' --post-cmd 'reboot'",
                 "tooltip": true,
                 "tooltip-format": "Reboot the system."
             },
             "custom/power": {
                 "format": "<span color='${catppuccin.hex.red}'>  </span>",
-                "on-click": "systemctl poweroff",
+                "on-click": "hyprshutdown -t 'Shutting down...' --post-cmd 'shutdown -P 0'",
                 "tooltip": true,
                 "tooltip-format": "Power off the system."
             }

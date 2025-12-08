@@ -47,6 +47,7 @@ in {
       hyprlock
       hyprcursor
       hyprshot
+      hyprshutdown
 
       jq
       wl-clipboard
