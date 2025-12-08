@@ -24,7 +24,7 @@ in {
           "s[true]m[${primaryMonitor.name}]n[e:dofus], name:dofus, on-created-empty:hyprctl --batch \"dispatch exec brave --new-window https://www.dofuspourlesnoobs.com/ https://dofusdb.fr/en/ https://dofensive.com/en https://www.dofusbook.net/en/\""
           "s[true]m[${primaryMonitor.name}]n[e:vesktop], name:vesktop, on-created-empty:vesktop"
           "s[true]m[${primaryMonitor.name}]n[e:spotify], name:spotiy, on-created-empty:spotify"
-          "s[true]m[${primaryMonitor.name}]n[e:obs-studio], name:obs-studio, on-created-empty:${scriptDir}/on_created_empty.sh obs-studio"
+          "s[true]m[${primaryMonitor.name}]n[e:obs], name:obs, on-created-empty:${scriptDir}/on_created_empty.sh obs-studio"
           "s[true]m[${primaryMonitor.name}]n[e:whatsapp-electron], name:whatsapp, on-created-empty:${scriptDir}/on_created_empty.sh whatsapp-electron"
         ];
       };
