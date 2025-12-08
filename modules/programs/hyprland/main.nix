@@ -47,12 +47,12 @@ in {
       hyprlock
       hyprcursor
       hyprshot
-      hyprshutdown
 
       jq
       wl-clipboard
       socat
       inputs.grim-hyprland.packages.${pkgs.stdenv.hostPlatform.system}.default
+      inputs.hyprshutdown.packages.${pkgs.stdenv.hostPlatform.system}.default
       fzf
       chafa
 
