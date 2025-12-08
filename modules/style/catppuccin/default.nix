@@ -59,7 +59,6 @@ in {
           font = config.common.style.fontFamily;
           fontSize = "12";
         })
-
       ];
       catppuccin = catppuccinParams;
     };

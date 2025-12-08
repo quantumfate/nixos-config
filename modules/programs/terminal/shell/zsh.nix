@@ -34,6 +34,7 @@ in {
             "sudo nixos-rebuild switch --flake '/home/${userCfg.name}/nixos-config#${hostName}' ";
           upgrade_system =
             "sudo nixos-rebuild switch --upgrade --flake '/home/${userCfg.name}/nixos-config#${hostName}' ";
+          cleanup_system = "nix-collect-garbage --delete-older-than 14d";
           ranger = "ranger-cd";
         };
         profileExtra = ''
