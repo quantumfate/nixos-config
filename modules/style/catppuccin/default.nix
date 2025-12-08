@@ -45,7 +45,7 @@ in {
     home-manager.users."${userCfg.name}" = {
       home.packages = with pkgs; [
         catppuccin-qt5ct
-        catppuccin-cursors.mochaTeal
+        pkgs.catppuccin-cursors.mochaMauve
         (catppuccin-kvantum.override {
           accent = config.common.style.catppuccin.accent;
           variant = config.common.style.catppuccin.flavor;
