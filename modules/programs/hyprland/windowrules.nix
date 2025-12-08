@@ -8,7 +8,7 @@ in {
       settings = {
         windowrule = [
           "workspace 1, center on, match:class Ankama Launcher, match:title overlay"
-          "workspace 1, center on, content game, fullscreen_state 1 1, fullscreen on, decorate off, opacity 1.0 override, no_anim on, match:class Dofus.x64"
+          "workspace 1, center on, content game, fullscreen_state 1 1, decorate off, opacity 1.0 override, no_anim on, match:class Dofus.x64"
           "workspace 1, match:class code"
           "workspace 3, match:class steam"
 
