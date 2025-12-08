@@ -60,9 +60,18 @@ in {
           padding = "0,0,0,30";
           format = "<b>%s</b>\\n%b";
           on-button-left =
-            "exec hyprctl dispatch focuswindow class:whatsapp-electron";
+            "exec hyprctl dispatch exec whatsapp-electron";
         };
-
+        "app-name=vesktop" = {
+          default-timeout = 0;
+          icon-border-radius = 8;
+          icon-location = "right";
+          anchor = "bottom-right";
+          padding = "0,0,0,30";
+          format = "<b>%s</b>\\n%b";
+          on-button-left =
+            "exec hyprctl dispatch focuswindow class:vesktop";
+        };
         "app-name=pavucontrol" = {
           width = 100;
           default-timeout = 3000;
