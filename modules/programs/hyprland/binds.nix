@@ -26,14 +26,13 @@ in {
         bind = [
           # Applications
           "$mainMod, return, exec, foot"
-          "$mainMod, b, exec, brave"
+          "$mainMod, b, exec, zen-twilight"
           "$mainMod, f, exec, foot ranger"
           "$mainMod, X, exec, ${scriptDir}/minimize.sh"
           "$mainMod, d, exec, ${scriptDir}/dofus_toggle_launch.sh"
 
           "ALT, p, exec, hyprpicker -a -n"
           "$mainMod, s, exec, btop"
-          
 
           # Rofi
           "$mainMod, R, exec, rofi -show drun"
