@@ -135,6 +135,7 @@ in {
           follow_mouse = 0;
           mouse_refocus = false;
           touchpad = { disable_while_typing = true; };
+          sensitivity = 0.2;  
         };
 
         group = {
