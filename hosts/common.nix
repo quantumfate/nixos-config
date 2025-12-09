@@ -32,6 +32,6 @@ in {
     shell = cfg.user.shell;
   };
 
-  environment.systemPackages = with pkgs; [ vim wget git zsh pciutils ];
+  environment.systemPackages = with pkgs; [ vim wget git zsh pciutils nix-prefetch-github ];
   system.stateVersion = "25.05";
 }

@@ -17,5 +17,6 @@
     ./vesktop.nix
     ./spotify.nix
     ./zathura.nix
+    ./zen-browser.nix
   ];
 }

@@ -24,6 +24,17 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     spicetify-nix.url = "github:Gerg-L/spicetify-nix";
+    zen-browser = {
+      url = "github:0xc000022070/zen-browser-flake";
+      inputs = {
+        nixpkgs.follows = "nixpkgs";
+        home-manager.follows = "home-manager";
+      };
+    };
+    firefox-addons = {
+      url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
   };
 
@@ -41,13 +52,13 @@
         ];
       };
     in {
-      #nix.settings = {
-      #  substituters = [ "https://hyprland.cachix.org" ];
-      #  trusted-substituters = [ "https://hyprland.cachix.org" ];
-      #  trusted-public-keys = [
-      #    "hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc="
-      #  ];
-      #};
+      nix.settings = {
+        substituters = [ "https://hyprland.cachix.org" ];
+        trusted-substituters = [ "https://hyprland.cachix.org" ];
+        trusted-public-keys = [
+          "hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc="
+        ];
+      };
       nixosConfigurations.quantum-desktop = nixpkgs.lib.nixosSystem
         (mkSystem { configNix = ./hosts/quantum-desktop/configuration.nix; });
       nixosConfigurations.quantum-laptop = nixpkgs.lib.nixosSystem
