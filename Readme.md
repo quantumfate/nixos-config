@@ -44,6 +44,9 @@
 - Implement a mix solution of xkb custom layout, dvorak, qmk, etc. - get the best of both worlds
     - or just implement keyd
 
+### Socket hyprland
+- override window opacity of zen when YT or crunchyroll is active
+- bind escape on special workspaces
 ## My inspiration
 
 - [woioeow/hyprland-dotfiles](https://github.com/woioeow/hyprland-dotfiles/tree/main)

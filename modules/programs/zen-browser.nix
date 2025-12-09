@@ -75,8 +75,8 @@ in {
           "zen.view.compact.toolbar-flash-popup" = true;
           "zen.view.show-newtab-button-top" = false;
           "zen.view.window.scheme" = 0;
-          "zen.welcome-screen.seen" = false;
-          "zen.workspaces.continue-where-left-off" = true;
+          "zen.welcome-screen.seen" = true;
+          "zen.workspaces.continue-where-left-off" = false;
           "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
           # Mods
           ## Lean

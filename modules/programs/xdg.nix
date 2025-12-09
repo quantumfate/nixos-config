@@ -9,11 +9,11 @@ in {
       enable = true;
       mime.enable = true;
       mimeApps.defaultApplications = {
-        "x-scheme-handler/http" = [ "brave-browser.desktop" ];
-        "x-scheme-handler/https" = [ "brave-browser.desktop" ];
-        "text/html" = [ "neovim.desktop" "brave-browser.desktop" ];
+        "x-scheme-handler/http" = [ "zen-twilight.desktop" ];
+        "x-scheme-handler/https" = [ "zen-twilight.desktop" ];
+        "text/html" = [ "neovim.desktop" "zen-twilight.desktop" ];
         "application/pdf" =
-          [ "zathura.desktop" "brave-browser.desktop" ];
+          [ "zathura.desktop" "zen-twilight.desktop" ];
         "inode/directory" = [ "ranger.desktop" ];
         "text/x-lua" = [ "nvim.desktop" ];
       };
