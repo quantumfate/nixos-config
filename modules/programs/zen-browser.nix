@@ -41,7 +41,7 @@ in {
         DisableTelemetry = true;
         DisableProfileImport = true;
         DisableSetDesktopBackground = true;
-        DisableFirefoxAccounts = false;
+        DisableFirefoxAccounts = false; # needed for sync
         DisableFirefoxScreenshots = true;
         DontCheckDefaultBrowser = true;
         DisplayBookmarksToolbar = "always";
@@ -66,7 +66,7 @@ in {
         };
 
       };
-      profiles."default" = {
+      profiles = let
         settings = {
           "zen.tabs.show-newtab-vertical" = false;
           "zen.urlbar.behavior" = "float";
@@ -106,52 +106,81 @@ in {
           "uc.hidecontext.selectalltext" = true;
           "uc.hidecontext.separators" = true;
         };
-        containersForce = true;
-        containers = {
-          Personal = {
-            color = "purple";
-            icon = "tree";
-            id = 1;
-          };
-          Coding = {
-            color = "blue";
-            icon = "briefcase";
-            id = 2;
-          };
-          Gaming = {
-            color = "yellow";
-            icon = "chill";
-            id = 3;
-          };
-        };
-        extensions.packages =
+        extPackages =
           with inputs.firefox-addons.packages.${pkgs.stdenv.hostPlatform.system}; [
             ublock-origin
             keepassxc-browser
           ];
-        spacesForce = true;
-        spaces = let containers = profiles."default".containers;
-        in {
-          "Personal" = {
-            id = "c6de089c-410d-4206-961d-ab11f988d40a";
-            icon = "🌹";
-            position = 1000;
-            container = containers."Personal".id;
+      in {
+        "default" = {
+          settings = settings;
+          containersForce = true;
+          containers = {
+            Personal = {
+              color = "purple";
+              icon = "tree";
+              id = 1;
+            };
+            Coding = {
+              color = "blue";
+              icon = "briefcase";
+              id = 2;
+            };
+            Gaming = {
+              color = "yellow";
+              icon = "chill";
+              id = 3;
+            };
           };
-          "Coding" = {
-            id = "cdd10fab-4fc5-494b-9041-325e5759195b";
-            icon = "🖥";
-            container = containers."Coding".id;
-            position = 2000;
-          };
-          "Gaming" = {
-            id = "78aabdad-8aae-4fe0-8ff0-2a0c6c4ccc24";
-            icon = "🎮";
-            container = containers."Gaming".id;
-            position = 3000;
+          extensions.packages = extPackages;
+          spacesForce = true;
+          spaces = let containers = profiles."default".containers;
+          in {
+            "Personal" = {
+              id = "c6de089c-410d-4206-961d-ab11f988d40a";
+              icon = "🌹";
+              position = 1000;
+              container = containers."Personal".id;
+            };
+            "Coding" = {
+              id = "cdd10fab-4fc5-494b-9041-325e5759195b";
+              icon = "🖥";
+              container = containers."Coding".id;
+              position = 2000;
+            };
+            "Gaming" = {
+              id = "78aabdad-8aae-4fe0-8ff0-2a0c6c4ccc24";
+              icon = "🎮";
+              container = containers."Gaming".id;
+              position = 3000;
+            };
           };
         };
+        "dofus" = {
+          settings = settings;
+          containersForce = true;
+          containers = {
+            Main = {
+              color = "purple";
+              icon = "tree";
+              id = 1;
+            };
+          };
+          extensions.packages = extPackages;
+          spacesForce = true;
+          spaces = let containers = profiles."default".containers;
+          in {
+            "Personal" = {
+              id = "d748ace5-c1c3-45e5-bd31-a332bea82411";
+              icon = "/etc/profiles/per-user/${userCfg.name}/share/icons/hicolor/256x256/apps/zaap.png";
+              position = 1000;
+              container = containers."Personal".id;
+            };
+          };
+        };
+
       };
+
     };
 
   };
