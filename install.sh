@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+# Not used for installation from a live image
+
 ADDITIONAL_FLAGS=${2:""}
 cd "$HOME/nixos-config" || exit 1
 HOST=$(hostname)
