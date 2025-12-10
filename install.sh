@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-ADDITIONAL_FLAGS=${$ADDITIONAL_FLAGS:-""}
+ADDITIONAL_FLAGS=${2:""}
 
 if [[ "$1" == "--upgrade" || "$1" == "-u" ]]; then
     pkill zen-twilight
