@@ -83,6 +83,7 @@ in {
           "QT_STYLE_OVERRIDE,kvantum"
           "XDG_CONFIG_HOME,$HOME/.config"
           "GSK_RENDERER,gl"
+          "BROWSER,zen-twilight"
         ];
 
         monitor = monitorMaps.${hostName} or monitorMaps.default;

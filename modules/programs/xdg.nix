@@ -1,21 +1,43 @@
-{ config, ... }:
+{ config, inputs, pkgs, ... }:
 
-let
-  userCfg = config.common.user;
+let userCfg = config.common.user;
 in {
 
   home-manager.users."${userCfg.name}" = {
     xdg = {
       enable = true;
       mime.enable = true;
-      mimeApps.defaultApplications = {
-        "x-scheme-handler/http" = [ "zen-twilight.desktop" ];
-        "x-scheme-handler/https" = [ "zen-twilight.desktop" ];
-        "text/html" = [ "neovim.desktop" "zen-twilight.desktop" ];
-        "application/pdf" =
-          [ "zathura.desktop" "zen-twilight.desktop" ];
-        "inode/directory" = [ "ranger.desktop" ];
-        "text/x-lua" = [ "nvim.desktop" ];
+      mimeApps = {
+        enable = true;
+        defaultApplications = let
+          zenDesktopFileName =
+            inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.twilight.meta.desktopFileName;
+          associations = builtins.listToAttrs (map (name: {
+            inherit name;
+            value = [ zenDesktopFileName ];
+          }) [
+            "application/x-extension-shtml"
+            "application/x-extension-xhtml"
+            "application/x-extension-html"
+            "application/x-extension-xht"
+            "application/x-extension-htm"
+            "x-scheme-handler/https"
+            "x-scheme-handler/http"
+            "application/xhtml+xml"
+            "text/html"
+
+            # Optional, often better left to text/editor:
+            # "application/json" 
+            # "text/plain"
+          ]);
+
+        in associations // { # Use '//' to merge attrsets in Nix
+
+          "application/pdf" = [ "zathura.desktop" zenDesktopFileName ];
+          "inode/directory" = [ "ranger.desktop" ];
+          "text/x-lua" = [ "nvim.desktop" ];
+        };
+
       };
       userDirs = {
         enable = true;
