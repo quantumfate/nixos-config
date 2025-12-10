@@ -22,6 +22,13 @@ in {
       source = "${catppuccinZenTheme}/themes/${flavor}/${accent}/";
       recursive = true;
     };
+    home.file.".zen/dofus/chrome" = {
+      source = "${catppuccinZenTheme}/themes/${flavor}/${accent}/";
+      recursive = true;
+    };
+    home.file.".zen/dofus" = {
+      source = ../../assets/zaap.svg;
+    };
     programs.zen-browser = rec {
       enable = true;
       nativeMessagingHosts = [ pkgs.firefoxpwa ];
@@ -113,6 +120,8 @@ in {
           ];
       in {
         "default" = {
+          id = 0;
+          isDefault = true;
           settings = settings;
           containersForce = true;
           containers = {
@@ -157,10 +166,11 @@ in {
           };
         };
         "dofus" = {
+          id = 1;
           settings = settings;
           containersForce = true;
           containers = {
-            Main = {
+            Dofus = {
               color = "purple";
               icon = "tree";
               id = 1;
@@ -168,13 +178,13 @@ in {
           };
           extensions.packages = extPackages;
           spacesForce = true;
-          spaces = let containers = profiles."default".containers;
+          spaces = let containers = profiles."dofus".containers;
           in {
-            "Personal" = {
+            "Dofus" = {
               id = "d748ace5-c1c3-45e5-bd31-a332bea82411";
-              icon = "/etc/profiles/per-user/${userCfg.name}/share/icons/hicolor/256x256/apps/zaap.png";
+              icon = "/home/${userCfg.name}/.zen/dofus/zaap.svg";
               position = 1000;
-              container = containers."Personal".id;
+              container = containers."Dofus".id;
             };
           };
         };
