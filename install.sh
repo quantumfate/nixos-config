@@ -2,7 +2,7 @@
 
 ADDITIONAL_FLAGS=${2:""}
 cd "$HOME/nixos-config" || exit 1
-echo $HOST
+HOST=$(hostname)
 
 if [[ "$1" == "--upgrade" || "$1" == "-u" ]]; then
     pkill zen-twilight
