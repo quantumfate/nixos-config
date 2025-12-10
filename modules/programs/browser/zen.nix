@@ -26,9 +26,6 @@ in {
       source = "${catppuccinZenTheme}/themes/${flavor}/${accent}/";
       recursive = true;
     };
-    home.file.".zen/dofus" = {
-      source = ../../assets/zaap.svg;
-    };
     programs.zen-browser = rec {
       enable = true;
       nativeMessagingHosts = [ pkgs.firefoxpwa ];
@@ -182,7 +179,7 @@ in {
           in {
             "Dofus" = {
               id = "d748ace5-c1c3-45e5-bd31-a332bea82411";
-              icon = "/home/${userCfg.name}/.zen/dofus/zaap.svg";
+              icon = "🥚";
               position = 1000;
               container = containers."Dofus".id;
             };

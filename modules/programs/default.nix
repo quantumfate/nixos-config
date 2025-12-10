@@ -1,22 +1,21 @@
 {
   imports = [
+    ./browser
     ./hyprland
-    ./waybar
     ./rofi
-    ./mako.nix
-    ./steam.nix
-    ./chromium.nix
-    ./udiskie.nix
+    ./terminal
+    ./waybar
+    ./cliphist.nix
     ./git.nix
+    ./mako.nix
+    ./sddm.nix
+    ./spotify.nix
     ./ssh.nix
+    ./steam.nix
+    ./udiskie.nix
+    ./vesktop.nix
     ./xdg.nix
     ./ydotool.nix
-    ./sddm.nix
-    ./terminal
-    ./cliphist.nix
-    ./vesktop.nix
-    ./spotify.nix
     ./zathura.nix
-    ./zen-browser.nix
   ];
 }
