@@ -3,12 +3,12 @@
 let userCfg = config.common.user;
 in {
 
-  home-manager.users."${userCfg.name}" = { config, ... }: {
+  home-manager.users."${userCfg.name}" = {
     programs.keepassxc = {
       enable = true;
       settings = {
         General = {
-          RememberLastDatabase = true;
+          RememberLastDatabases = true;
           RememberLastKeyFiles = true;
           OpenPreviousDatabasesOnStartup = true;
           AutoSaveAfterEveryChange = true;
@@ -18,6 +18,8 @@ in {
             "/home/${userCfg.name}/Documents/Keepass/Keepass/privatepw_final.kdbx";
           LastOpenedDatabases =
             "/home/${userCfg.name}/Documents/Keepass/Keepass/privatepw_final.kdbx";
+          LastKeyFiles =
+            "/home/${userCfg.name}/Documents/Keepass/Keepass/privatepwkeyfile";
         };
         GUI = {
           ApplicationTheme = "classic";
@@ -25,6 +27,8 @@ in {
           MinimizeToTray = true;
           ShowTrayIcon = true;
           TrayIconAppearance = "monochrome-dark";
+          CheckForUpdates = false;
+          ColorPasswords = true;
         };
         Security = {
           ClearClipboardTimeout = 15;
@@ -33,6 +37,7 @@ in {
         Browser = {
           Enabled = true;
           AlwaysAllowAccess = true;
+          UpdateBinaryPath = false;
         };
       };
     };
