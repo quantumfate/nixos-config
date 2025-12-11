@@ -91,7 +91,7 @@ in {
           gaps_in = 5;
           gaps_out = 10;
 
-          border_size = 2;
+          border_size = 1;
 
           "col.active_border" = "${borderActive}";
           "col.inactive_border" = "${borderInActive}";

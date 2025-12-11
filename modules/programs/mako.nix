@@ -25,7 +25,7 @@ in {
         outer-margin = "0,0,10,0";
         margin = 10;
         padding = 10;
-        border-size = 3;
+        border-size = 1;
         border-color = "${catppuccin.hex.mauve}";
         border-radius = 8;
         # progress-color = "over ${catppuccin.rgba_hex.green 80}"; needs different bg and text color 
