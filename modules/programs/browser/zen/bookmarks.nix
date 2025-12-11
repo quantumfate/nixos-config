@@ -39,6 +39,11 @@ in {
                   }
                   "separator"
                   {
+                    name = "Myanimelist";
+                    tags = [ "social" "tracking" ];
+                    url = "https://myanimelist.net/";
+                  }
+                  {
                     name = "Github";
                     tags = [ "social" "programming" ];
                     url = "https://github.com/";
@@ -47,6 +52,11 @@ in {
                     name = "Hyprland Wiki";
                     tags = [ "programming" "ricing" "linux" ];
                     url = "https://wiki.hypr.land/";
+                  }
+                  {
+                    name = "Monkeytype";
+                    tags = [ "typing" "practice" "keyboard" ];
+                    url = "https://monkeytype.com/";
                   }
                   "separator"
                   {
@@ -90,6 +100,37 @@ in {
                       }
                     ];
                   }
+                  {
+                    name = "Ricing";
+                    bookmarks = [
+                      {
+                        name = "Catppuccin";
+                        tags = [ "colorscheme" ];
+                        url = "https://catppuccin.com/";
+                      }
+                      {
+                        name = "Catppuccin Ports";
+                        tags = [ "colorscheme" ];
+                        url = "https://catppuccin.com/ports/";
+                      }
+                      {
+                        name = "wiki";
+                        tags = [ "nix" "colorscheme" ];
+                        url = "https://nix.catppuccin.com/";
+                      }
+                      {
+                        name = "Stylix";
+                        tags = [ "nix" "colorscheme" ];
+                        url = "https://nix-community.github.io/stylix/";
+                      }
+                      {
+                        name = "Home-Manager Option Search";
+                        tags = [ "social" ];
+                        url = "https://www.reddit.com/r/unixporn/";
+                      }
+                    ];
+                  }
+
                 ];
               }
             ];
