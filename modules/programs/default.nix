@@ -7,6 +7,7 @@
     ./waybar
     ./cliphist.nix
     ./git.nix
+    ./keepassxc.nix
     ./mako.nix
     ./sddm.nix
     ./spotify.nix
