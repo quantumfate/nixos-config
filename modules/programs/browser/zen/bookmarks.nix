@@ -37,12 +37,12 @@ in {
                     tags = [ "media" ];
                     url = "https://www.crunchyroll.com/discover";
                   }
-                  "separator"
                   {
                     name = "Myanimelist";
                     tags = [ "social" "tracking" ];
                     url = "https://myanimelist.net/";
                   }
+                  "separator"
                   {
                     name = "Github";
                     tags = [ "social" "programming" ];
