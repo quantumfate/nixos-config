@@ -43,6 +43,7 @@
 - see if swap caps with esc works on laptop
 - Implement a mix solution of xkb custom layout, dvorak, qmk, etc. - get the best of both worlds
     - or just implement keyd
+- declarative [Bookmarks](https://home-manager-options.extranix.com/?query=bookmark&release=release-25.11)
 
 ### Socket hyprland
 - override window opacity of zen when YT or crunchyroll is active

@@ -9,6 +9,8 @@ let
     sha256 = "sha256-5A57Lyctq497SSph7B+ucuEyF1gGVTsuI3zuBItGfg4=";
   };
 
+  catppuccinTargets = [ ".zen/default/chrome" ".zen/default/chrome" ];
+
   capitalize = str:
     lib.strings.toUpper (lib.strings.substring 0 1 str)
     + lib.strings.substring 1 (lib.strings.stringLength str) str;
@@ -18,14 +20,22 @@ let
 in {
   home-manager.users."${userCfg.name}" = {
     imports = [ inputs.zen-browser.homeModules.twilight ];
-    home.file.".zen/default/chrome" = {
-      source = "${catppuccinZenTheme}/themes/${flavor}/${accent}/";
-      recursive = true;
-    };
-    home.file.".zen/dofus/chrome" = {
-      source = "${catppuccinZenTheme}/themes/${flavor}/${accent}/";
-      recursive = true;
-    };
+
+    home.file = builtins.mapAttrs (_: target: {
+      "${target}" = {
+        source = "${catppuccinZenTheme}/themes/${flavor}/${accent}/";
+        recursive = true;
+      };
+    }) catppuccinTargets;
+
+    #home.file.".zen/default/chrome" = {
+    #  source = "${catppuccinZenTheme}/themes/${flavor}/${accent}/";
+    #  recursive = true;
+    #};
+    #home.file.".zen/dofus/chrome" = {
+    #  source = "${catppuccinZenTheme}/themes/${flavor}/${accent}/";
+    #  recursive = true;
+    #};
     programs.zen-browser = rec {
       enable = true;
       nativeMessagingHosts = [ pkgs.firefoxpwa ];
@@ -160,6 +170,9 @@ in {
               container = containers."Gaming".id;
               position = 3000;
             };
+          };
+          bookmarks = {
+
           };
         };
         "dofus" = {
