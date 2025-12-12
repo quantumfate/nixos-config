@@ -26,6 +26,7 @@
       nvidia.enable = true;
       dofus.enable = true;
       steam.enable = true;
+      qmk.enable = true;
     };
   };
 

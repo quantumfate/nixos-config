@@ -37,13 +37,9 @@
 ## TODO
 
 - Implement a module to track the upstream of the catppuccin color palette
-- configure potential VMs for QMK
+- configure potential VMs
 - implement [lf](https://github.com/gokcehan/lf)
 - implement [Quickshell](https://quickshell.org/)
-- see if swap caps with esc works on laptop
-- Implement a mix solution of xkb custom layout, dvorak, qmk, etc. - get the best of both worlds
-    - or just implement keyd
-- declarative [Bookmarks](https://home-manager-options.extranix.com/?query=bookmark&release=release-25.11)
 
 ### Socket hyprland
 - override window opacity of zen when YT or crunchyroll is active

@@ -11,5 +11,6 @@
     steam.enable = lib.mkEnableOption "Enable the Steam module.";
     dofus.enable = lib.mkEnableOption "Enable the Dofus module.";  
     bluetooth.enable = lib.mkEnableOption "Enable the Bluetooth module with blueman-applet.";
+    qmk.enable = lib.mkEnableOption "Enable installation of QMK.";
   };
 }
