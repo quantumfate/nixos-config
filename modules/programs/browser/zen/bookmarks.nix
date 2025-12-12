@@ -114,7 +114,7 @@ in {
                         url = "https://catppuccin.com/ports/";
                       }
                       {
-                        name = "wiki";
+                        name = "Catppuccin Nix";
                         tags = [ "nix" "colorscheme" ];
                         url = "https://nix.catppuccin.com/";
                       }
@@ -124,7 +124,7 @@ in {
                         url = "https://nix-community.github.io/stylix/";
                       }
                       {
-                        name = "Home-Manager Option Search";
+                        name = "r/Unixporn";
                         tags = [ "social" ];
                         url = "https://www.reddit.com/r/unixporn/";
                       }
