@@ -11,7 +11,7 @@ in {
         "exec-once" = [
           "xrandr --output ${primaryMonitor.name} --primary --mode ${primaryMonitor.mode} --rate ${primaryMonitor.rate}"
           "waybar"
-          #"${scriptDir}/IPC_Wrapper.sh"
+          "${scriptDir}/IPC_Wrapper.sh"
         ];
       };
     };

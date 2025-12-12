@@ -5,21 +5,20 @@ SCRIPTDIR=${XDG_CONFIG_HOME}/hypr/scripts
 IPC_SCRIPTDIR=${SCRIPTDIR}/IPC
 
 identify_window_initial_class() {
-    window_address="0x$(cut -d ',' -f1 <<< $(cut -d '>' -f3 <<< $1))"
-    window_title="$(cut -d ',' -f2 <<< $(cut -d '>' -f3 <<< $1))"
+    window_address="0x$(cut -d ',' -f1 <<< $(cut -d '>' -f3 <<< "$1"))"
+    window_title="$(cut -d ',' -f2 <<< $(cut -d '>' -f3 <<< "$1"))"
     class=$(hyprctl -j clients | jq -r " .[] | select(.address == \"$window_address\") | \"\(.initialClass)\"")
     
-    case $class in 
+    case "$class" in 
       zen-twilight) 
-      echo "hello 2"
-      "${IPC_SCRIPTDIR}/zen_opacity_switch.sh" $window_address $window_title;; 
+      "${IPC_SCRIPTDIR}/zen_opacity_switch.sh" "$window_address" "$window_title";; 
     esac
 }
 
 handle() {
-  case $1 in
+  case "$1" in
     windowtitlev2*) 
-    identify_window_initial_class $1
+    identify_window_initial_class "$1"
     ;;
   esac
 }
