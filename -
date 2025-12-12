@@ -111,7 +111,7 @@ in {
 
           active_opacity = 0.88;
           inactive_opacity = 0.88;
-
+          
           dim_special = 0.4;
           dim_around = 0.6;
 
@@ -120,8 +120,8 @@ in {
             range = 2;
           };
 
-          blur = {
-            enabled = true;
+          blur = { 
+            enabled = true; 
             size = 12;
             passes = 2;
             new_optimizations = true;
@@ -136,7 +136,7 @@ in {
           follow_mouse = 0;
           mouse_refocus = false;
           touchpad = { disable_while_typing = true; };
-          sensitivity = 0.2;
+          sensitivity = 0.2;  
         };
 
         group = {
@@ -160,8 +160,9 @@ in {
           workspace_back_and_forth = true;
 
         };
-        source = lib.lists.forEach [ "alt-tab.conf" "named-windowrules.conf" ]
-          (conf: "/home/${userCfg.name}/.config/hypr/conf/" + conf);
+        source = [ "/home/${userCfg.name}/.config/hypr/conf/alt-tab.conf" 
+        "/home/${userCfg.name}/.config/hypr/conf/named-windowrules.conf"
+        ];
       };
     };
   };
