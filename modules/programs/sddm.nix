@@ -29,7 +29,7 @@ in {
     font = config.common.style.fontFamily;
     background = "${../../assets/wallpapers/anime-girl.jpg}";
     fontSize = "12";
-    loginBackground = true;
+    loginBackground = false;
   };
 
   services = {
