@@ -17,12 +17,8 @@ let
   rgbify = colors: lib.mapAttrs (_name: color: toRgb color) colors;
   hexify = colors: lib.mapAttrs (_name: color: toHex color) colors;
   rgba_hexify = colors:
-  lib.mapAttrs
-    (_name: color:
-      alpha:
-      toHex "${color}" + lib.toHexString (alpha * 255 / 100)
-    )
-    colors;
+    lib.mapAttrs (_name: color: alpha:
+      toHex "${color}" + lib.toHexString (alpha * 255 / 100)) colors;
 
   catppuccin_palette = {
     rgb = rgbify (import ./rgb_attr.nix).${catppuccinCfg.flavor};
@@ -40,7 +36,6 @@ let
     flavor = "${catppuccinCfg.flavor}";
     accent = "${catppuccinCfg.accent}";
   };
-
 in {
   options.theme.catppuccin = lib.mkOption {
     type = lib.types.attrs;
@@ -55,17 +50,12 @@ in {
         catppuccin-qt5ct
         pkgs.catppuccin-cursors.mochaMauve
         (catppuccin-kvantum.override {
-          accent = config.common.style.catppuccin.accent;
-          variant = config.common.style.catppuccin.flavor;
+          accent = catppuccinCfg.accent;
+          variant = catppuccinCfg.flavor;
         })
         (catppuccin-papirus-folders.override {
-          accent = config.common.style.catppuccin.accent;
-          flavor = config.common.style.catppuccin.flavor;
-        })
-        (catppuccin-sddm.override {
-          flavor = config.common.style.catppuccin.flavor;
-          font = config.common.style.fontFamily;
-          fontSize = "12";
+          accent = catppuccinCfg.accent;
+          flavor = catppuccinCfg.flavor;
         })
       ];
       catppuccin = catppuccinParams;

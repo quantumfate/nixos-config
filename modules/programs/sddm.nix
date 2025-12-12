@@ -2,7 +2,7 @@
 
 let
   cfg = config.common;
-  
+
   monitorXsessionMap = {
     DP-1 = "DP-0";
     HDMI-A-1 = "HDMI-0";
@@ -11,13 +11,26 @@ let
   buildCommands = monitors:
     lib.strings.concatMapStrings (monitor:
       if monitor == cfg.peripherals.primaryMonitor.name then ''
-        /run/current-system/sw/bin/xrandr --output ${monitorXsessionMap.${monitor}} --primary --auto
+        /run/current-system/sw/bin/xrandr --output ${
+          monitorXsessionMap.${monitor}
+        } --primary --auto
       '' else ''
-        /run/current-system/sw/bin/xrandr --output ${monitorXsessionMap.${monitor}} --off
+        /run/current-system/sw/bin/xrandr --output ${
+          monitorXsessionMap.${monitor}
+        } --off
       '') monitors;
 
+  catppuccinCfg = config.common.style.catppuccin;
 in {
   environment.systemPackages = with pkgs; [ xorg.xrandr ];
+
+  catppuccin.sddm = {
+    flavor = catppuccinCfg.flavor;
+    font = config.common.style.fontFamily;
+    background = "${../../assets/wallpapers/anime-girl.jpg}";
+    fontSize = "12";
+    loginBackground = true;
+  };
 
   services = {
     xserver = {
