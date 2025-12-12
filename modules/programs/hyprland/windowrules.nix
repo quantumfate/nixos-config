@@ -22,7 +22,6 @@ in {
 
           # Browser
           "match:class brave-browser, opacity 1.0 override"
-          "match:class zen-twilight, opacity 1.0 override"
 
           "float on, content photo, center on, dim_around on, size (window_w*0.85) (window_h*0.85), opacity 1.0 override, match:class feh"
         ];
