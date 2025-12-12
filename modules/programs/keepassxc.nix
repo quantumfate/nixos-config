@@ -18,8 +18,6 @@ in {
             "/home/${userCfg.name}/Documents/Keepass/Keepass/privatepw_final.kdbx";
           LastOpenedDatabases =
             "/home/${userCfg.name}/Documents/Keepass/Keepass/privatepw_final.kdbx";
-          LastKeyFiles =
-            "/home/${userCfg.name}/Documents/Keepass/Keepass/privatepwkeyfile";
         };
         GUI = {
           ApplicationTheme = "classic";
