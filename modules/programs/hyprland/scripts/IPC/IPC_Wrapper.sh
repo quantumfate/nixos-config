@@ -11,7 +11,7 @@ handle_based_on_class() {
     
     case "$class" in 
       zen-twilight) 
-      "${IPC_SCRIPTDIR}/zen_opacity_switch.sh" "$window_address" "$window_title";; 
+        "${IPC_SCRIPTDIR}/zen_opacity_switch.sh" "$window_address" "$window_title";; 
     esac
 }
 
