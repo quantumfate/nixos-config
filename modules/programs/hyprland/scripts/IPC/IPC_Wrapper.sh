@@ -4,7 +4,7 @@ APP_NAME="IPC Wrapper"
 SCRIPTDIR=${XDG_CONFIG_HOME}/hypr/scripts
 IPC_SCRIPTDIR=${SCRIPTDIR}/IPC
 
-identify_window_initial_class() {
+handle_based_on_class() {
     window_address="0x$(cut -d ',' -f1 <<< $(cut -d '>' -f3 <<< "$1"))"
     window_title="$(cut -d ',' -f2 <<< $(cut -d '>' -f3 <<< "$1"))"
     class=$(hyprctl -j clients | jq -r " .[] | select(.address == \"$window_address\") | \"\(.initialClass)\"")
@@ -18,7 +18,7 @@ identify_window_initial_class() {
 handle() {
   case "$1" in
     windowtitlev2*) 
-    identify_window_initial_class "$1"
+    handle_based_on_class "$1"
     ;;
   esac
 }

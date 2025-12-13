@@ -43,7 +43,6 @@
 
 ### Socket hyprland
 - override window opacity of zen when YT or crunchyroll is active
-- bind escape on special workspaces
 ## My inspiration
 
 - [woioeow/hyprland-dotfiles](https://github.com/woioeow/hyprland-dotfiles/tree/main)
