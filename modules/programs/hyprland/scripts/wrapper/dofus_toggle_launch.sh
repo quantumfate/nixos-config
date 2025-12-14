@@ -8,6 +8,8 @@ dofus_chars=()
 # Execute accordingly
 if [[ "$1" == "--additional" ]]; then
     dofus_chars=("Aiizen-Sosuke" "Yoruiichii-Shihoin")
+elif [[ "$1" == "--all" ]]; then
+    dofus_chars=("Rejecter" "Draintouch" "Reminiscer" "Traumafactory" "Memoryfracture" "Miserymaker" "Aiizen-Sosuke" "Yoruiichii-Shihoin")
 else
     dofus_chars=("Rejecter" "Draintouch" "Reminiscer" "Traumafactory" "Memoryfracture" "Miserymaker")
 fi
