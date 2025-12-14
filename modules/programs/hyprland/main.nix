@@ -160,7 +160,7 @@ in {
           workspace_back_and_forth = true;
 
         };
-        source = lib.lists.forEach [ "alt-tab.conf" "named-windowrules.conf" ]
+        source = lib.lists.forEach [ "alt-tab.conf" "named-windowrules.conf" "dofus-binds.conf" ]
           (conf: "/home/${userCfg.name}/.config/hypr/conf/" + conf);
       };
     };

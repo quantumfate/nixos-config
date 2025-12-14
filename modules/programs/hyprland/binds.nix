@@ -29,7 +29,6 @@ in {
           "$mainMod, b, exec, zen-twilight"
           "$mainMod, f, exec, foot ranger"
           "$mainMod, X, exec, ${scriptDir}/minimize.sh"
-          "$mainMod, d, exec, ${scriptDir}/dofus_toggle_launch.sh"
 
           "ALT, p, exec, hyprpicker -a -n"
           "$mainMod, s, exec, btop"

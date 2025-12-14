@@ -1,10 +1,10 @@
 #!/bin/sh
 
 APP_NAME="Dofus Launch"
-dofus_chars=("Rejecter" "Draintouch" "Reminiscer" "Traumafactory" "Memoryfracture" "Miserymaker" )
 char_count=0
+dofus_chars=$1
 
-process_window () {
+process_windows() {
   # openwindow>>56386538dc70,5,Dofus.x64,Dofus
   window_address="0x$(cut -d ',' -f1 <<< $(cut -d '>' -f3 <<< $1))"
   client_pid=$(hyprctl -j clients | jq --arg addr "$window_address" '.[] | select(.address == $addr)' | jq -r '.pid')
@@ -12,15 +12,15 @@ process_window () {
   xdotool set_window -name "Dofus ${dofus_chars[$char_count]}" "$window_id"   
   ((char_count++))
   
-  if [ $char_count -eq 6 ]; then
+  if [ $char_count -eq ${#dofus_chars[@]} ]; then
     notify-send --app-name="$APP_NAME" -h string:x-canonical-private-synchronous:sys-notify -u low "Done"
     exit 1
   fi
 }
 
 handle() {
-  case $1 in
-    openwindow*Dofus) process_window $1;;
+  case "$1" in
+    openwindow*Dofus) process_windows "$1";;
   esac
 }
 
