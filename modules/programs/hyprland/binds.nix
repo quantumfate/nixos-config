@@ -100,6 +100,8 @@ in {
           ",F4, exec, ${scriptDir}/processFn.sh Traumafactory"
           ",F5, exec, ${scriptDir}/processFn.sh Memoryfracture"
           ",F6, exec, ${scriptDir}/processFn.sh Miserymaker"
+          ",F7, exec, ${scriptDir}/processFn.sh Aiizen-Sosuke"
+          ",F8, exec, ${scriptDir}/processFn.sh Yoruiichii-Shihoin"
           ",mouse:274, exec, ${scriptDir}/processMButton.sh"
 
           # System

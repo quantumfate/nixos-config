@@ -40,9 +40,8 @@
 - configure potential VMs
 - implement [lf](https://github.com/gokcehan/lf)
 - implement [Quickshell](https://quickshell.org/)
+- dynamically bind characters to F buttons by counting the amount of dofus windows opened 
 
-### Socket hyprland
-- override window opacity of zen when YT or crunchyroll is active
 ## My inspiration
 
 - [woioeow/hyprland-dotfiles](https://github.com/woioeow/hyprland-dotfiles/tree/main)

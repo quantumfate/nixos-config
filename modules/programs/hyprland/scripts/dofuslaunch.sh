@@ -2,7 +2,7 @@
 
 APP_NAME="Dofus Launch"
 char_count=0
-dofus_chars=$1
+dofus_chars=("$@")
 
 process_windows() {
   # openwindow>>56386538dc70,5,Dofus.x64,Dofus
