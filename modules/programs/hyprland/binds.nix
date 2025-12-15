@@ -25,7 +25,10 @@ in {
         "$mainMod" = "SUPER";
         bindd = [
           "$mainMod, TAB, Previous workspace, workspace, e-1"
-          "$mainMod SHIFT, TAB, Previous workspace, workspace, e-1"
+          "$mainMod SHIFT, TAB, Previous workspace, workspace, e+1"
+
+          "$mainMod, S, Toggle split, togglesplit, # dwindle"
+          "$mainMod, P, Pseudo window, pseudo, # dwindle"
 
           # Switching workspaces
           "$mainMod, ${
@@ -90,11 +93,6 @@ in {
           "$mainMod SHIFT, ${
             programmerDvorakMap."0"
           },Switch to workspace 10,movetoworkspace, 10"
-
-          # Copy / Paste
-          "SUPER, C, Universal copy, sendshortcut, CTRL, Insert"
-          "SUPER, V, Universal paste, sendshortcut, SHIFT, Insert"
-          "SUPER, X, Universal cut, sendshortcut, CTRL, X"
         ];
         bind = [
           # Applications
@@ -127,16 +125,16 @@ in {
           "$mainMod, k, movefocus, d"
 
           # Moving windows
-          "$mainMod SHIFT, h,  swapwindow, l"
+          "$mainMod SHIFT, h, swapwindow, l"
           "$mainMod SHIFT, l, swapwindow, r"
-          "$mainMod SHIFT, j,    swapwindow, u"
-          "$mainMod SHIFT, k,  swapwindow, d"
+          "$mainMod SHIFT, j, swapwindow, u"
+          "$mainMod SHIFT, k, swapwindow, d"
 
-          # Resizeing windows                   X  Y
-          "$mainMod CTRL, h,  resizeactive, -10 0"
+          # Resizeing windows
+          "$mainMod CTRL, h, resizeactive, -10 0"
           "$mainMod CTRL, l, resizeactive,  10 0"
-          "$mainMod CTRL, j,    resizeactive,  0 -10"
-          "$mainMod CTRL, k,  resizeactive,  0  10"
+          "$mainMod CTRL, j, resizeactive,  0 -10"
+          "$mainMod CTRL, k, resizeactive,  0  10"
 
           # Screenshots
           "$mainMod, PRINT, exec, ${scriptDir}/hyprshot.sh --window"

@@ -99,7 +99,7 @@ in {
           resize_on_border = false;
 
           allow_tearing = false;
-          layout = "master";
+          layout = "dwindle";
           snap = {
             enabled = true;
             monitor_gap = 30;
@@ -109,8 +109,8 @@ in {
         decoration = {
           rounding = 8;
 
-          #active_opacity = 0.88;
-          #inactive_opacity = 0.88;
+          active_opacity = 0.95;
+          inactive_opacity = 0.85;
 
           dim_special = 0.4;
           dim_around = 0.6;
@@ -138,7 +138,14 @@ in {
           touchpad = { disable_while_typing = true; };
           sensitivity = 0.2;
         };
+        dwindle = {
+          pseudotile = true;
+          preserve_split = true;
+          force_split = 1;
+        };
 
+        # See https://wiki.hyprland.org/Configuring/Master-Layout/ for more
+        master = { new_status = "master"; };
         group = {
           auto_group = true;
           groupbar = { enabled = true; };
@@ -154,14 +161,44 @@ in {
           mouse_move_enables_dpms = true;
         };
 
-        animations = { enabled = true; };
-
-        binds = {
-          workspace_back_and_forth = true;
-
+        animations = {
+          enabled = true;
+          bezier = [
+            "easeOutQuint,0.23,1,0.32,1"
+            "easeInOutCubic,0.65,0.05,0.36,1"
+            "linear,0,0,1,1"
+            "almostLinear,0.5,0.5,0.75,1.0"
+            "quick,0.15,0,0.1,1"
+            "defout,0.16, 1, 0.3, 1"
+            "overshot, 0.18, 0.95, 0.22, 1.03"
+            "smoothOut, 0.5, 0, 0.99, 0.99"
+            "smoothIn, 0.5, -0.5, 0.68, 1.5"
+          ];
+          animation = [
+            "global, 1, 10, default"
+            "border, 1, 5.39, easeOutQuint"
+            "windows, 1, 4.79, easeOutQuint"
+            "windowsIn, 1, 4, overshot, popin 60%"
+            "windowsOut, 1, 1.1, linear, popin 70%"
+            "fadeIn, 1, 1.73, almostLinear"
+            "fadeOut, 1, 1.46, almostLinear"
+            "fade, 1, 3.03, quick"
+            "layers, 1, 3.81, easeOutQuint"
+            "layersIn, 1, 4, easeOutQuint, fade"
+            "layersOut, 1, 1.5, linear, fade"
+            "fadeLayersIn, 1, 1.79, almostLinear"
+            "fadeLayersOut, 1, 1.39, almostLinear"
+            "workspaces, 1, 4.5, defout, slidefade 15%"
+            "specialWorkspaceIn, 1, 5, default, slidefadevert"
+            "specialWorkspaceOut, 1, 5, defout, slidefadevert"
+          ];
         };
-        source = lib.lists.forEach [ "alt-tab.conf" "named-windowrules.conf" "dofus-binds.conf" ]
-          (conf: "/home/${userCfg.name}/.config/hypr/conf/" + conf);
+
+        source = lib.lists.forEach [
+          "alt-tab.conf"
+          "named-windowrules.conf"
+          "dofus-binds.conf"
+        ] (conf: "/home/${userCfg.name}/.config/hypr/conf/" + conf);
       };
     };
   };
