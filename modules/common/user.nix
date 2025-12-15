@@ -19,6 +19,11 @@
       default = [ ];
       description = "Additional user groups.";
     };
+    systemPackages = lib.mkOption {
+      type = lib.types.listOf lib.types.attrs;
+      default = [ ];
+      description = "Additional packages to install on the system.";
+    };
     packages = lib.mkOption {
       type = lib.types.listOf lib.types.attrs;
       default = [ ];

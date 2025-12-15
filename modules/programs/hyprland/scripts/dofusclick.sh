@@ -8,7 +8,7 @@ mapfile -t dofus_chars <<< "$(
 x_mouse_pos=$(cut -d ":" -f2 <<< $(cut -d " " -f1  <<< $(xdotool getmouselocation)))
 y_mouse_pos=$(cut -d ":" -f2 <<< $(cut -d " " -f2  <<< $(xdotool getmouselocation)))
 
-for "$char" in "${dofus_chars[@]}"; do
+for char in "${dofus_chars[@]}"; do
     address=$(hyprctl -j clients | jq -r " .[] | select(.title == \"$char\") | \"\(.address)\"")
     if [ -n "$address" ]; then
         hyprctl --batch -q "dispatch focuswindow title:$char ; dispatch alterzorder top"
