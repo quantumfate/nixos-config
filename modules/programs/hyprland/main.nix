@@ -109,8 +109,8 @@ in {
         decoration = {
           rounding = 8;
 
-          active_opacity = 0.88;
-          inactive_opacity = 0.88;
+          #active_opacity = 0.88;
+          #inactive_opacity = 0.88;
 
           dim_special = 0.4;
           dim_around = 0.6;

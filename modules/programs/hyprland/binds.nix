@@ -23,12 +23,85 @@ in {
     wayland.windowManager.hyprland = {
       settings = {
         "$mainMod" = "SUPER";
+        bindd = [
+          "$mainMod, TAB, Previous workspace, workspace, e-1"
+          "$mainMod SHIFT, TAB, Previous workspace, workspace, e-1"
+
+          # Switching workspaces
+          "$mainMod, ${
+            programmerDvorakMap."1"
+          }, Switch to workspace 1, workspace, 1"
+          "$mainMod, ${
+            programmerDvorakMap."2"
+          }, Switch to workspace 2, workspace, 2"
+          "$mainMod, ${
+            programmerDvorakMap."3"
+          }, Switch to workspace 3, workspace, 3"
+          "$mainMod, ${
+            programmerDvorakMap."4"
+          }, Switch to workspace 4, workspace, 4"
+          "$mainMod, ${
+            programmerDvorakMap."5"
+          }, Switch to workspace 5, workspace, 5"
+          "$mainMod, ${
+            programmerDvorakMap."6"
+          }, Switch to workspace 6, workspace, 6"
+          "$mainMod, ${
+            programmerDvorakMap."7"
+          }, Switch to workspace 7, workspace, 7"
+          "$mainMod, ${
+            programmerDvorakMap."8"
+          }, Switch to workspace 8, workspace, 8"
+          "$mainMod, ${
+            programmerDvorakMap."9"
+          }, Switch to workspace 9, workspace, 9"
+          "$mainMod, ${
+            programmerDvorakMap."0"
+          }, Switch to workspace 10, workspace, 10"
+
+          # Send window to workspaces
+          "$mainMod SHIFT, ${
+            programmerDvorakMap."1"
+          },Switch to workspace 1, movetoworkspace, 1"
+          "$mainMod SHIFT, ${
+            programmerDvorakMap."2"
+          },Switch to workspace 2, movetoworkspace, 2"
+          "$mainMod SHIFT, ${
+            programmerDvorakMap."3"
+          },Switch to workspace 3, movetoworkspace, 3"
+          "$mainMod SHIFT, ${
+            programmerDvorakMap."4"
+          },Switch to workspace 4, movetoworkspace, 4"
+          "$mainMod SHIFT, ${
+            programmerDvorakMap."5"
+          },Switch to workspace 5, movetoworkspace, 5"
+          "$mainMod SHIFT, ${
+            programmerDvorakMap."6"
+          },Switch to workspace 6, movetoworkspace, 6"
+          "$mainMod SHIFT, ${
+            programmerDvorakMap."7"
+          },Switch to workspace 7, movetoworkspace, 7"
+          "$mainMod SHIFT, ${
+            programmerDvorakMap."8"
+          },Switch to workspace 8, movetoworkspace, 8"
+          "$mainMod SHIFT, ${
+            programmerDvorakMap."9"
+          },Switch to workspace 9, movetoworkspace, 9"
+          "$mainMod SHIFT, ${
+            programmerDvorakMap."0"
+          },Switch to workspace 10,movetoworkspace, 10"
+
+          # Copy / Paste
+          "SUPER, C, Universal copy, sendshortcut, CTRL, Insert"
+          "SUPER, V, Universal paste, sendshortcut, SHIFT, Insert"
+          "SUPER, X, Universal cut, sendshortcut, CTRL, X"
+        ];
         bind = [
           # Applications
           "$mainMod, return, exec, foot"
           "$mainMod, b, exec, zen-twilight"
           "$mainMod, f, exec, foot ranger"
-          "$mainMod, X, exec, ${scriptDir}/minimize.sh"
+          "$mainMod, q, exec, ${scriptDir}/minimize.sh"
 
           "ALT, p, exec, hyprpicker -a -n"
           "$mainMod, s, exec, btop"
@@ -38,18 +111,6 @@ in {
           "$mainMod ALT, R, exec, rofi -modi clipboard:/etc/profiles/per-user/${userCfg.name}/bin/cliphist-rofi -show clipboard"
           "$mainMod SHIFT, R, exec, rofi -modi clipboard:/etc/profiles/per-user/${userCfg.name}/bin/cliphist-rofi-img -show clipboard -show-icons"
 
-          # Switching workspaces
-          "$mainMod, ${programmerDvorakMap."1"}, workspace, 1"
-          "$mainMod, ${programmerDvorakMap."2"}, workspace, 2"
-          "$mainMod, ${programmerDvorakMap."3"}, workspace, 3"
-          "$mainMod, ${programmerDvorakMap."4"}, workspace, 4"
-          "$mainMod, ${programmerDvorakMap."5"}, workspace, 5"
-          "$mainMod, ${programmerDvorakMap."6"}, workspace, 6"
-          "$mainMod, ${programmerDvorakMap."7"}, workspace, 7"
-          "$mainMod, ${programmerDvorakMap."8"}, workspace, 8"
-          "$mainMod, ${programmerDvorakMap."9"}, workspace, 9"
-          "$mainMod, ${programmerDvorakMap."0"}, workspace, 10"
-
           # Special workspaces
           "$mainMod ALT, k, togglespecialworkspace, keepass"
           "$mainMod ALT, a, togglespecialworkspace, ankama"
@@ -58,18 +119,6 @@ in {
           "$mainMod ALT, s, togglespecialworkspace, spotify"
           "$mainMod ALT, o, togglespecialworkspace, obs"
           "$mainMod ALT, w, togglespecialworkspace, whatsapp-electron"
-
-          # Send window to workspaces
-          "$mainMod SHIFT, ${programmerDvorakMap."1"}, movetoworkspace, 1"
-          "$mainMod SHIFT, ${programmerDvorakMap."2"}, movetoworkspace, 2"
-          "$mainMod SHIFT, ${programmerDvorakMap."3"}, movetoworkspace, 3"
-          "$mainMod SHIFT, ${programmerDvorakMap."4"}, movetoworkspace, 4"
-          "$mainMod SHIFT, ${programmerDvorakMap."5"}, movetoworkspace, 5"
-          "$mainMod SHIFT, ${programmerDvorakMap."6"}, movetoworkspace, 6"
-          "$mainMod SHIFT, ${programmerDvorakMap."7"}, movetoworkspace, 7"
-          "$mainMod SHIFT, ${programmerDvorakMap."8"}, movetoworkspace, 8"
-          "$mainMod SHIFT, ${programmerDvorakMap."9"}, movetoworkspace, 9"
-          "$mainMod SHIFT, ${programmerDvorakMap."0"}, movetoworkspace, 10"
 
           # Moving focus
           "$mainMod, h, movefocus, l"
