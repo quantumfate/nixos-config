@@ -11,10 +11,10 @@ in {
         "exec-once" = [
           "xrandr --output ${primaryMonitor.name} --primary --mode ${primaryMonitor.mode} --rate ${primaryMonitor.rate}"
           "waybar"
-          "spotify"
-          "keepassxc"
-          "vesktop"
-          "whatsapp-electron"
+          "sleep 2; spotify"
+          "sleep 2; keepassxc"
+          "sleep 2; vesktop"
+          "sleep 2; whatsapp-electron"
           "${scriptDir}/IPC_Wrapper.sh"
         ];
       };
