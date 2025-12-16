@@ -110,6 +110,7 @@ in {
           "$mainMod SHIFT, R, exec, rofi -modi clipboard:/etc/profiles/per-user/${userCfg.name}/bin/cliphist-rofi-img -show clipboard -show-icons"
 
           # Special workspaces
+          "$mainMod ALT, g, togglespecialworkspace, gaming"
           "$mainMod ALT, k, togglespecialworkspace, keepass"
           "$mainMod ALT, a, togglespecialworkspace, ankama"
           "$mainMod ALT, d, togglespecialworkspace, dofus"

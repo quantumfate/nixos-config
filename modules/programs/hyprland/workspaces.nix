@@ -19,6 +19,7 @@ in {
           "8,monitor:${primaryMonitor.name}"
           "9,monitor:${primaryMonitor.name}"
           "10,monitor:${primaryMonitor.name}"
+          "s[true]m[${primaryMonitor.name}]n[e:gaming], name:gaming, on-created-empty:steam"
           "s[true]m[${primaryMonitor.name}]n[e:keepass], name:keepass, on-created-empty:keepassxc"
           "s[true]m[${primaryMonitor.name}]n[e:ankama], name:ankama, on-created-empty:ankama-launcher"
           "s[true]m[${primaryMonitor.name}]n[e:dofus], name:dofus, on-created-empty:hyprctl --batch \"dispatch exec zen-twilight -P dofus\""

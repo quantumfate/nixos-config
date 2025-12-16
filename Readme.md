@@ -18,7 +18,6 @@
 - [Rofi](https://github.com/davatorium/rofi)
 - [Ranger](https://github.com/ranger/ranger)
 - [Btop](https://github.com/aristocratos/btop)
-- [Real Programmer Dvorak - ThePrimeagen](https://github.com/ThePrimeagen/keyboards)
 
 ### Ricing
 
@@ -36,11 +35,16 @@
 
 ## TODO
 
+- finish neovim configuration, handle installation of language servers potentially via nix
+    - no imperative installation via neovim plugins
 - Implement a module to track the upstream of the catppuccin color palette
 - configure potential VMs
 - implement [lf](https://github.com/gokcehan/lf)
 - implement [Quickshell](https://quickshell.org/)
 - dynamically bind characters to F buttons by counting the amount of dofus windows opened 
+
+### Hyprland IPC
+- implement keepass workspace closing after popup unlocked the database
 
 ## My inspiration
 

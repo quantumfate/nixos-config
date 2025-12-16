@@ -6,18 +6,24 @@ in {
     wayland.windowManager.hyprland = {
       settings = {
         windowrule = [
-          "workspace 1, center on, match:class Ankama Launcher, match:title overlay"
-          "workspace 1, center on, content game, fullscreen_state 0 0, decorate off, opacity 1.0 override, no_anim on, match:class Dofus.x64"
           "workspace 1, match:class code"
-          "workspace 3, match:class steam"
+          "workspace 3, center on, content game, fullscreen_state 0 0, decorate off, opacity 1.0 override, no_anim on, match:class Dofus.x64"
+          "workspace 3, center on, match:class Ankama Launcher, match:title overlay"
+          "workspace 3, fullscreen_state 2 2, match:class steam_app_\\d+"
 
           # Special Workspaces
-          "workspace special:keepass, match:class org.keepassxc.KeePassXC"
+          "workspace special:gaming, match:class (steam)"
+          "workspace special:keepass silent, match:class (org\\.keepassxc\\.KeePassXC)"
           "workspace special:ankama, match:class Ankama Launcher, match:title Ankama Launcher"
-          "workspace special:vesktop, match:class vesktop"
-          "workspace special:spotify, match:class spotify"
+          "workspace special:vesktop silent, match:class vesktop"
+          "workspace special:spotify silent, match:class spotify"
           "workspace special:obs, match:initial_class com.obsproject.Studio"
-          "workspace special:whatsapp-electron, match:initial_class whatsapp-electron"
+          "workspace special:whatsapp-electron silent, match:initial_class whatsapp-electron"
+
+          "no_initial_focus on, match:class (steam|vesktop|whatsapp-electron)"
+          "suppress_event activatefocus, match:class (steam|vesktop|whatsapp-electron)"
+          "move 300 400, match:title Friends List"
+          "move 600 600, match:title Launching..."
 
           # Specific Application Settings
           "float on, match:class (feh|xdg-desktop-portal-gtk|xdg-desktop-portal-hyprland)"
@@ -52,6 +58,8 @@ in {
           "tag +floating-window, match:class (Impala|About|bluetui|Wiremix|com.gabm.satty|Calos|About|TUI.float)"
           "tag +floating-window, match:class (xdg-desktop-portal-hyprland|xdg-desktop-portal-gtk|sublime_text|DesktopEditors), match:title (Open.*Files?|Save.*Files?|Save.*As|All Files|Save)"
           "tag +floating-window, match:class (zen|zen-twilight), match:title (Library)"
+          "tag +floating-window, match:class (org\\.keepassxc\\.KeePassXC), match:title (Unlock Database - KeePassXC)"
+
           "float on, match:class System-Update"
           "float on, match:class About"
           "animation slide top, match:class About"
