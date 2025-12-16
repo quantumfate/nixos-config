@@ -42,6 +42,7 @@
 - implement [lf](https://github.com/gokcehan/lf)
 - implement [Quickshell](https://quickshell.org/)
 - dynamically bind characters to F buttons by counting the amount of dofus windows opened 
+- migrate to UWSM
 
 ### Hyprland IPC
 - implement keepass workspace closing after popup unlocked the database

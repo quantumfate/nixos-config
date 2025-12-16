@@ -1,7 +1,16 @@
-{ config, ... }:
+{ config, lib, ... }:
 
 let
   userCfg = config.common.user;
+
+  suspendListener = {
+    timeout = 1800; # 30min
+    on-timeout = "systemctl suspend"; # suspend pc
+  } // lib.optionals (config.networking.hostName == "quantum-desktop") {
+    on-resume =
+      "hyprctl --batch 'dispatch exec nmcli c down Wired connection 1; dispatch exec sleep 2; dispatch exec nmcli c up Wired connection 1'";
+  };
+
 in {
   home-manager.users."${userCfg.name}" = {
     services.hypridle = {
@@ -23,7 +32,8 @@ in {
           }
           {
             timeout = 300;
-            on-timeout = "loginctl lock-session && (pidof hyprlock || hyprlock)";
+            on-timeout =
+              "loginctl lock-session && (pidof hyprlock || hyprlock)";
             on-resume = "loginctl unlock-session";
           }
           {
@@ -33,10 +43,7 @@ in {
             on-resume =
               "hyprctl dispatch dpms on && brightnessctl -r"; # screen on when activity is detected after timeout has fired.
           }
-          {
-            timeout = 1800; # 30min
-            on-timeout = "systemctl suspend"; # suspend pc
-          }
+          suspendListener
         ];
       };
     };
