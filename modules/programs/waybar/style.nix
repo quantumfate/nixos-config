@@ -9,7 +9,7 @@ in {
     programs.waybar = {
       style = ''
         * {
-          font-family: ${config.common.style.fontFamily}, FontAwesome, Roboto, Helvetica, Arial, sans-serif;
+          font-family: ${config.common.style.guiFont}, FontAwesome, Roboto, Helvetica, Arial, sans-serif;
           font-size: 13px;
         }
 

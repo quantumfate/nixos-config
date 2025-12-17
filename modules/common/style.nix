@@ -9,7 +9,14 @@
       '';
     };
 
-    fontFamily = lib.mkOption {
+    guiFont = lib.mkOption {
+      type = lib.types.str;
+      default = "Monospace";
+      description = ''
+        Font family.
+      '';
+    };
+    terminalFont = lib.mkOption {
       type = lib.types.str;
       default = "Monospace";
       description = ''

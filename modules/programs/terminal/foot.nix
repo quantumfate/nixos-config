@@ -10,7 +10,7 @@ in {
       enable = true;
       settings = { 
         main = {
-          font = "${config.common.style.fontFamily}:size=14";
+          font = "${config.common.style.terminalFont}:size=14";
           pad = "15x15";
         };
       };

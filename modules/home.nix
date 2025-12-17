@@ -11,7 +11,6 @@ in {
       home.packages = with pkgs;
         [
           # Ricing
-          lxqt.pavucontrol-qt
           papirus-folders
 
           ## Formatters
@@ -38,6 +37,8 @@ in {
           ## Terminal
           zathura
           whatsapp-electron
+          signal-desktop
+          wiremix
 
 #          (callPackage (../Packages/ankama-launcher.nix) { })
           obs-studio

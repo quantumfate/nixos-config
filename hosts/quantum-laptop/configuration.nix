@@ -20,7 +20,8 @@
       };
     };
     style = {
-      fontFamily = "Inconsolata Nerd Font";
+      guiFont = "DejaVuSansM Nerd Font";
+      terminalFont = "Inconsolata Nerd Font";
       borderRadius = 8;
     };
     modules = { bluetooth.enable = true; };

@@ -35,7 +35,7 @@ in {
             text = "Layout: $LAYOUT";
             color = "${catppuccin.rgb.text}";
             font_size = 25;
-            font_family = "${config.common.style.fontFamily}";
+            font_family = "${config.common.style.guiFont}";
             position = "30, -30";
             halign = "left";
             valign = "top";
@@ -45,7 +45,7 @@ in {
             text = "$TIME";
             color = "${catppuccin.rgb.text}";
             font_size = 90;
-            font_family = "${config.common.style.fontFamily}";
+            font_family = "${config.common.style.guiFont}";
             position = "-30, 0";
             halign = "right";
             valign = "top";
@@ -55,7 +55,7 @@ in {
             text = ''cmd[update:43200000] date +"%A, %d %B %Y"'';
             color = "${catppuccin.rgb.text}";
             font_size = 25;
-            font_family = "${config.common.style.fontFamily}";
+            font_family = "${config.common.style.guiFont}";
             position = "-30, -150";
             halign = "right";
             valign = "top";
@@ -65,7 +65,7 @@ in {
             text = "$FPRINTPROMPT";
             color = "${catppuccin.rgb.text}";
             font_size = 14;
-            font_family = "${config.common.style.fontFamily}";
+            font_family = "${config.common.style.guiFont}";
             position = "0, -107";
             halign = "center";
             valign = "center";
@@ -75,7 +75,7 @@ in {
           text = "cmd[update:1000] ${userHome}/.config/hypr/scripts/interface/battery.sh";
           color = "${catppuccin.rgb.text}";
           font_size = 14;
-          font_family = "${config.common.style.fontFamily}";
+          font_family = "${config.common.style.guiFont}";
           position = "30, -110";
           halign = "left";
           valign = "top";

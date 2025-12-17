@@ -9,7 +9,7 @@ in {
       enable = true;
       shellIntegration.enableZshIntegration = true;
       font = {
-        name = "${config.common.style.fontFamily}";
+        name = "${config.common.style.terminalFont}";
         size = 14;
       };
       settings = {

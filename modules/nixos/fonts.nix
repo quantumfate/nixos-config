@@ -9,6 +9,7 @@
     nerd-fonts.hack
     nerd-fonts.caskaydia-cove
     nerd-fonts.iosevka
+    nerd-fonts.dejavu-sans-mono
     # sans serif
     nerd-fonts.arimo
     nerd-fonts.overpass

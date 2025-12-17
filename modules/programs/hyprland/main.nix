@@ -155,8 +155,8 @@ in {
 
         misc = {
           disable_hyprland_logo = true;
-          font_family = "${config.common.style.fontFamily}";
-          splash_font_family = "${config.common.style.fontFamily}";
+          font_family = "${config.common.style.guiFont}";
+          splash_font_family = "${config.common.style.guiFont}";
           focus_on_activate = true;
           mouse_move_enables_dpms = true;
         };

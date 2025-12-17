@@ -19,8 +19,8 @@ in {
       gtk2.enable = true;
       gtk3.enable = true;
       font = {
-        name = "${config.common.style.fontFamily}";
-        size = 16;
+        name = "${config.common.style.guiFont}";
+        size = 14;
       };
 
       theme = {

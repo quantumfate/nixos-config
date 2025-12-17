@@ -100,6 +100,7 @@ in {
           "$mainMod, b, exec, zen-twilight"
           "$mainMod, f, exec, kitty ranger"
           "$mainMod, q, exec, ${scriptDir}/minimize.sh"
+          "$mainMod, m, exec, kitty wiremix"
 
           "ALT, p, exec, hyprpicker -a -n"
           "$mainMod, s, exec, btop"

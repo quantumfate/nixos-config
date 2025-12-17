@@ -16,7 +16,7 @@ in {
       enable = true;
       settings = {
         max-history = "8";
-        font = "${config.common.style.fontFamily} 12";
+        font = "${config.common.style.guiFont} 12";
         default-timeout = 0;
         background-color = "${catppuccin.rgba_hex.base 90}";
         text-color = "${catppuccin.hex.text}";

@@ -14,7 +14,7 @@ in {
         page-padding = 1;
         selection-clipboard = "clipboard";
         incremental-search = true;
-        font = "${config.common.style.fontFamily} 12";
+        font = "${config.common.style.guiFont} 12";
       };
       mappings = {
         u = "scroll half-up";

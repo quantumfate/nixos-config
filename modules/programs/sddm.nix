@@ -26,7 +26,7 @@ in {
 
   catppuccin.sddm = {
     flavor = catppuccinCfg.flavor;
-    font = config.common.style.fontFamily;
+    font = config.common.style.guiFont;
     background = "${../../assets/wallpapers/anime-girl.jpg}";
     fontSize = "12";
     loginBackground = false;

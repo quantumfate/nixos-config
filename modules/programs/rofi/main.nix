@@ -7,7 +7,7 @@ in {
     programs.rofi = {
       enable = true;
       terminal = "/etc/profiles/per-user/${userCfg.name}/bin/kitty";
-      font = "${config.common.style.fontFamily} 16";
+      font = "${config.common.style.guiFont} 16";
       cycle = true;
       location = "center";
       modes = [ "run" "drun" "window" ];
