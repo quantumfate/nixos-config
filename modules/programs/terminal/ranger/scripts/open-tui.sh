@@ -7,4 +7,4 @@ if [[ ! -e $loc ]]; then
     loc=$(dirname "$loc")
 fi
 
-hyprctl dispatch exec foot $tool $loc
+hyprctl dispatch exec kitty $tool $loc

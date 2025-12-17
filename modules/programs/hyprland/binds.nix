@@ -96,9 +96,9 @@ in {
         ];
         bind = [
           # Applications
-          "$mainMod, return, exec, foot"
+          "$mainMod, return, exec, kitty"
           "$mainMod, b, exec, zen-twilight"
-          "$mainMod, f, exec, foot ranger"
+          "$mainMod, f, exec, kitty ranger"
           "$mainMod, q, exec, ${scriptDir}/minimize.sh"
 
           "ALT, p, exec, hyprpicker -a -n"

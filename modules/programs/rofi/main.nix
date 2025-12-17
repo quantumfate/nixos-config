@@ -6,7 +6,7 @@ in {
     # https://mynixos.com/options/programs.rofi
     programs.rofi = {
       enable = true;
-      terminal = "/etc/profiles/per-user/${userCfg.name}/bin/foot";
+      terminal = "/etc/profiles/per-user/${userCfg.name}/bin/kitty";
       font = "${config.common.style.fontFamily} 16";
       cycle = true;
       location = "center";

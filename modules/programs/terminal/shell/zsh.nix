@@ -24,6 +24,9 @@ in {
             source /home/${userCfg.name}/.config/ranger/rangercd.sh
           '';
           zshConfig = lib.mkOrder 1200 ''
+            if [ "$TERM" = "xterm-kitty" ]; then
+              fastfetch
+            fi
             if [ -n "$RANGER_LEVEL" ]; then export PS1="[ranger]$PS1"; fi
           '';
         in lib.mkMerge [ zshSourcing zshConfig ];
