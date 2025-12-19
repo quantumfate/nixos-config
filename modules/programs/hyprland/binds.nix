@@ -112,7 +112,7 @@ in {
 
           # Special workspaces
           "$mainMod ALT, g, togglespecialworkspace, gaming"
-          "$mainMod ALT, k, togglespecialworkspace, keepass"
+          "$mainMod ALT, k, togglespecialworkspace, keepassxc"
           "$mainMod ALT, a, togglespecialworkspace, ankama"
           "$mainMod ALT, d, togglespecialworkspace, dofus"
           "$mainMod ALT, v, togglespecialworkspace, vesktop"
