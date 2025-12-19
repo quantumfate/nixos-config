@@ -12,13 +12,13 @@ in {
           "workspace 3, fullscreen_state 2 2, match:class steam_app_\\d+"
 
           # Special Workspaces
-          "workspace special:gaming, match:class (steam)"
-          "workspace special:keepass silent, match:class (org\\.keepassxc\\.KeePassXC)"
-          "workspace special:ankama, match:class Ankama Launcher, match:title Ankama Launcher"
-          "workspace special:vesktop silent, match:class vesktop"
-          "workspace special:spotify silent, match:class spotify"
-          "workspace special:obs, match:initial_class com.obsproject.Studio"
-          "workspace special:whatsapp-electron silent, match:initial_class whatsapp-electron"
+          #"workspace special:gaming, match:class (steam)"
+          #"workspace special:keepass, match:class (org\\.keepassxc\\.KeePassXC)"
+          #"workspace special:ankama, match:class Ankama Launcher, match:title Ankama Launcher"
+          #"workspace special:vesktop, match:class vesktop"
+          #"workspace special:spotify, match:class spotify"
+          #"workspace special:obs, match:initial_class com.obsproject.Studio"
+          #"workspace special:whatsapp-electron, match:initial_class whatsapp-electron"
 
           "no_initial_focus on, match:class (steam|vesktop|whatsapp-electron)"
           "suppress_event activatefocus, match:class (steam|vesktop|whatsapp-electron)"
@@ -26,7 +26,7 @@ in {
           "move 600 600, match:title Launching..."
 
           # Specific Application Settings
-          "float on, match:class (feh|xdg-desktop-portal-gtk|xdg-desktop-portal-hyprland)"
+          "float on, match:class (xdg-desktop-portal-gtk|xdg-desktop-portal-hyprland)"
           "float on, match:title (Steam Settings|Friends List|Library)"
           "size 800 400, match:title Library"
           "tag +pip, match:initial_title Discord Popout"
@@ -53,18 +53,18 @@ in {
           # Floating windows
           "float on, match:tag floating-window"
           "center on, match:tag floating-window"
-          "size 800 600, match:tag floating-window"
+          "size 900 700, match:tag floating-window"
 
           "tag +floating-window, match:class (Impala|About|bluetui|Wiremix|com.gabm.satty|Calos|About|TUI.float)"
           "tag +floating-window, match:class (xdg-desktop-portal-hyprland|xdg-desktop-portal-gtk|sublime_text|DesktopEditors), match:title (Open.*Files?|Save.*Files?|Save.*As|All Files|Save)"
           "tag +floating-window, match:class (zen|zen-twilight), match:title (Library)"
           "tag +floating-window, match:class (org\\.keepassxc\\.KeePassXC), match:title (Unlock Database - KeePassXC)"
 
-          "float on, match:class System-Update"
-          "float on, match:class About"
-          "animation slide top, match:class About"
-          "move 2630 45, match:class About"
-          "size 950 650, match:class System-Update"
+          #"float on, match:class System-Update"
+          #"float on, match:class About"
+          #"animation slide top, match:class About"
+          #"move 2630 45, match:class About"
+          #"size 950 650, match:class System-Update"
 
           # No transparency on media windows
           "opacity 1 1, match:class ^(zoom|vlc|mpv|mp4|org.kde.kdenlive|com.obsproject.Studio|com.github.PintaProject.Pinta|imv|org.gnome.NautilusPreviewer)$"

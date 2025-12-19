@@ -59,14 +59,15 @@ in {
           Fingerprinting = true;
         };
         ExtensionSettings = mkExtensionSettings {
-          "wappalyzer@crunchlabz.com" = "wappalyzer";
+          "{32a6dd4b-a3e6-4571-bc4c-9127d1787096}" = "KeePassXC-Browser";
           "{85860b32-02a8-431a-b2b1-40fbd64c9c69}" = "github-file-icons";
           "dofus-translate@isthos.com" = "Dofus Translator";
           "{e74f2cbf-fccb-4eee-bca3-7b490bc986cb}" =
             "Unhook - Remove YouTube Recommended & Shorts";
           "{bbb880ce-43c9-47ae-b746-c3e0096c5b76}" =
             "Catppuccin for Web File Explorer Icons";
-          "addon@darkreader.org" = "Dark Reader";
+          "{295bb111-99ed-415c-8f6a-a731ec1d8123}" = "Dark Reader";
+          "{f0b41b17-1558-42c8-b535-f162c07f2642}" = "uBlock Origin";
         };
       };
     };

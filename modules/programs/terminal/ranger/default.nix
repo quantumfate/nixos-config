@@ -101,7 +101,7 @@ in {
         preview_files = true;
         preview_script = "${userHome}/.config/ranger/scope.sh";
         use_preview_script = true;
-        preview_images_method = "sixel";
+        preview_images_method = "kitty";
         colorscheme = "catppuccin_${catppuccinCfg.flavor}";
       };
       mappings = {

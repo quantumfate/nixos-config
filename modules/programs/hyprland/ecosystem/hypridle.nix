@@ -1,14 +1,22 @@
-{ config, lib, ... }:
+{ config, ... }:
 
 let
   userCfg = config.common.user;
-
   suspendListener = {
-    timeout = 1800; # 30min
-    on-timeout = "systemctl suspend"; # suspend pc
-  } // lib.optionals (config.networking.hostName == "quantum-desktop") {
-    on-resume =
-      "hyprctl --batch 'dispatch exec nmcli c down Wired connection 1; dispatch exec sleep 2; dispatch exec nmcli c up Wired connection 1'";
+    "quantum-desktop" = {
+      timeout = 1800; # 30min
+      on-timeout = "systemctl suspend"; # suspend pc
+      on-resume =
+        "hyprctl --batch 'dispatch exec nmcli c down Wired connection 1; dispatch exec sleep 2; dispatch exec nmcli c up Wired connection 1'";
+
+    };
+    "default" = {
+      timeout = 1800; # 30min
+      on-timeout = "systemctl suspend"; # suspend pc
+      on-resume =
+        "hyprctl --batch 'dispatch exec nmcli c down Wired connection 1; dispatch exec sleep 2; dispatch exec nmcli c up Wired connection 1'";
+
+    };
   };
 
 in {
@@ -43,7 +51,7 @@ in {
             on-resume =
               "hyprctl dispatch dpms on && brightnessctl -r"; # screen on when activity is detected after timeout has fired.
           }
-          suspendListener
+          suspendListener.${config.networking.hostName} or suspendListener.default
         ];
       };
     };
