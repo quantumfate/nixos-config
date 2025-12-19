@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-mkdir -p /tmp/alttab
+mkdir -p $XDG_RUNTIME_DIR/hypr/alttab
 hyprctl -q --batch "keyword animations:enabled false; keyword unbind ALT, TAB ; keyword unbind ALT SHIFT, TAB"
 
 if [ "$(hyprctl activewindow -j | jq -r ".class")" = "Dofus.x64" ]; then
@@ -8,4 +8,4 @@ else
     footclient -a alttab ~/.config/hypr/scripts/alttab/alttab.sh $1
 fi
 
-hyprctl --batch -q "dispatch focuswindow address:$(cat /tmp/alttab/address) ; dispatch alterzorder top"
+hyprctl --batch -q "dispatch focuswindow address:$(cat $XDG_RUNTIME_DIR/hypr/alttab/address) ; dispatch alterzorder top"

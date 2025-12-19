@@ -16,7 +16,7 @@ address=$(hyprctl -j clients | jq -r "sort_by(.focusHistoryID) | .[] | select(.w
 	      awk -F"\t" '{print $1}')
 
 if [ -n "$address" ] ; then
-	echo "$address" > /tmp/alttab/address
+	echo "$address" > $XDG_RUNTIME_DIR/hypr/alttab/address
 fi
 
 hyprctl -q dispatch submap reset

@@ -81,7 +81,7 @@ in {
                 },
                 "scroll-step": 5.0,
                 "on-click": "pamixer -t",
-                "on-click-right": "kitty wiremix",
+                "on-click-right": "kitty --class Wiremix wiremix",
                 "on-scroll-up": "${scriptLocation}/wrapper/volume.sh --inc",
                 "on-scroll-down": "${scriptLocation}/wrapper/volume.sh --dec",
                 "smooth-scrolling-threshold": 1
