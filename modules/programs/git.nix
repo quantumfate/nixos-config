@@ -1,7 +1,6 @@
 { config, ... }:
 
-let
-  userCfg = config.common.user;
+let userCfg = config.common.user;
 in {
 
   home-manager.users."${userCfg.name}" = {
@@ -11,11 +10,9 @@ in {
         user = {
           name = "Leon Connor Holm";
           email = "leonconnorholm@gmail.com";
-          init.defaultBranch = "main";
         };
-        global = {
-          init.defaultBranch = "main";
-        };
+        init.defaultBranch = "main";
+        pull.rebase = false;
       };
     };
   };
