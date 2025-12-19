@@ -3,7 +3,7 @@
 let
   userCfg = config.common.user;
   primaryMonitor = config.common.peripherals.primaryMonitor;
-  scriptDir = "/home/${userCfg.name}/.config/hypr/scripts/IPC";
+  scriptDir = "/home/${userCfg.name}/.config/hypr/scripts";
 in {
   home-manager.users."${userCfg.name}" = {
     wayland.windowManager.hyprland = {
@@ -11,11 +11,8 @@ in {
         "exec-once" = [
           "xrandr --output ${primaryMonitor.name} --primary --mode ${primaryMonitor.mode} --rate ${primaryMonitor.rate}"
           "waybar"
-          "sleep 2; spotify"
-          "sleep 2; keepassxc"
-          "sleep 2; vesktop"
-          "sleep 2; whatsapp-electron"
-          "${scriptDir}/IPC_Wrapper.sh"
+          "${scriptDir}/wrapper/startup_special_workspaces.sh"
+          "${scriptDir}/IPC/IPC_Wrapper.sh"
         ];
       };
     };
