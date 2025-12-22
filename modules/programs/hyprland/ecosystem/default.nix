@@ -4,5 +4,6 @@
     ./hyprpaper.nix
     ./hyprqt6engine.nix
     ./hypridle.nix
+    ./hyprtoolkit.nix
   ];
 }

@@ -1,0 +1,29 @@
+{ config, ... }:
+
+let
+  userCfg = config.common.user;
+  catppuccin = config.theme.catppuccin;
+in {
+  home-manager.users."${userCfg.name}" = {
+    home.file.".config/hypr/hyprtoolkit.conf" = {
+      text = ''
+        background=${catppuccin.hex.manle}        
+        base=${catppuccin.rgba_hex.base 1}        
+        text=${catppuccin.rgba_hex.text 1}        
+        alternate_base=${catppuccin.rgba_hex.surface0 1}        
+        bright_text=${catppuccin.rgba_hex.yellow 1}        
+        accent=${catppuccin.rgba_hex."${config.common.style.catppuccin.accent}" 1}        
+        accent_secondary=${catppuccin.rgba_hex.red 1}        
+        h1_size=20
+        h2_size=16
+        h3_size=14
+        font_size=12
+        small_font_size=11
+        icon_theme=Papirus-Dark
+        font_family=${config.common.style.guiFont}
+        font_family_monospace=${config.common.style.terminalFont}
+      '';
+      
+    };
+  };
+}
