@@ -39,6 +39,7 @@ in {
           whatsapp-electron
           signal-desktop
           wiremix
+          qalculate-qt
 
 #          (callPackage (../Packages/ankama-launcher.nix) { })
           obs-studio

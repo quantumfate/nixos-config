@@ -101,6 +101,7 @@ in {
           "$mainMod, f, exec, kitty ranger"
           "$mainMod, q, exec, ${scriptDir}/minimize.sh"
           "$mainMod, m, exec, kitty --class Wiremix wiremix"
+          "$mainMod, c, exec, qalculate-qt"
 
           "ALT, p, exec, hyprpicker -a -n"
           "$mainMod, s, exec, btop"
