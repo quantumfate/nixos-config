@@ -16,10 +16,13 @@ let
     lib.mapAttrs (_name: color: alpha: toRgba color alpha) colors;
   rgbify = colors: lib.mapAttrs (_name: color: toRgb color) colors;
   hexify = colors: lib.mapAttrs (_name: color: toHex color) colors;
+  rgba_bare_hexify = colors:
+    lib.mapAttrs (_name: color: alpha:
+      "${color}" + lib.toHexString (alpha * 255 / 100)) colors;
+
   rgba_hexify = colors:
     lib.mapAttrs (_name: color: alpha:
-      toHex "${color}" + lib.toHexString (alpha * 255 / 100)) colors;
-
+     toHex "${color}" + lib.toHexString (alpha * 255 / 100)) colors;
   catppuccin_palette = {
     rgb = rgbify (import ./rgb_attr.nix).${catppuccinCfg.flavor};
     rgba = rgbaify (import ./rgb_attr.nix).${catppuccinCfg.flavor};
@@ -27,6 +30,7 @@ let
     bare_hex = (import ./bare_hex.nix).${catppuccinCfg.flavor};
     hex = hexify (import ./bare_hex.nix).${catppuccinCfg.flavor};
     rgba_hex = rgba_hexify (import ./bare_hex.nix).${catppuccinCfg.flavor};
+    rgba_bare_hex = rgba_bare_hexify (import ./bare_hex.nix).${catppuccinCfg.flavor};
   };
 
   userCfg = config.common.user;

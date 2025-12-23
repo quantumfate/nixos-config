@@ -7,12 +7,12 @@ in {
   home-manager.users."${userCfg.name}" = {
     home.file.".config/hypr/hyprtoolkit.conf" = {
       text = ''
-        background=${catppuccin.hex.manle}        
+        background=${catppuccin.rgba_bare_hex.mantle 1}        
         base=${catppuccin.rgba_hex.base 1}        
         text=${catppuccin.rgba_hex.text 1}        
         alternate_base=${catppuccin.rgba_hex.surface0 1}        
         bright_text=${catppuccin.rgba_hex.yellow 1}        
-        accent=${catppuccin.rgba_hex."${config.common.style.catppuccin.accent}" 1}        
+        accent=${catppuccin.rgba_hex.yellow 1}        
         accent_secondary=${catppuccin.rgba_hex.red 1}        
         h1_size=20
         h2_size=16

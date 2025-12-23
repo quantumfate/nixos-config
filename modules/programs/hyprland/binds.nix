@@ -107,9 +107,7 @@ in {
           "$mainMod, s, exec, btop"
 
           # Rofi
-          "$mainMod, R, exec, rofi -show drun"
-          "$mainMod ALT, R, exec, rofi -modi clipboard:/etc/profiles/per-user/${userCfg.name}/bin/cliphist-rofi -show clipboard"
-          "$mainMod SHIFT, R, exec, rofi -modi clipboard:/etc/profiles/per-user/${userCfg.name}/bin/cliphist-rofi-img -show clipboard -show-icons"
+          "$mainMod, R, exec, hyprlauncher"
 
           # Special workspaces
           "$mainMod ALT, g, togglespecialworkspace, gaming"

@@ -41,7 +41,9 @@ in {
         "Hyprland is an independent, highly customizable, dynamic tiling Wayland compositor that doesn't sacrifice on its looks.";
     };
     home.packages = with pkgs; [
+      hyprtoolkit
       hyprpaper
+      hyprlauncher
       hypridle
       hyprpicker
       hyprlock
