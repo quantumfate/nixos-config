@@ -36,8 +36,8 @@
   "menus.clock.time.military": true,
   "menus.clock.time.hideSeconds": true,
   "menus.dashboard.powermenu.avatar.image": "/home/quantum/nixos-config/assets/icons/avatar.png",
-  "menus.dashboard.powermenu.shutdown": "bash -c 'hyprshutdown -t \"Shutting down...\" --post-cmd \"shutdown -P 0\"'",
-  "menus.dashboard.powermenu.reboot": "bash -c 'hyprshutdown -t \"Restarting...\" --post-cmd \"reboot\"'",
+  "menus.dashboard.powermenu.shutdown": "hyprctl dispatch exec \"hyprshutdown -t 'Shutting down...' --post-cmd 'shutdown -P 0'\"",
+  "menus.dashboard.powermenu.reboot": "hyprctl dispatch exec \"hyprshutdown -t 'Rebooting...' --post-cmd 'reboot'\"",
   "menus.dashboard.stats.enable_gpu": true,
   "menus.dashboard.shortcuts.left.shortcut1.icon": "",
   "menus.dashboard.shortcuts.left.shortcut1.command": "zen-twilight",
@@ -479,9 +479,9 @@
   "theme.osd.orientation": "vertical",
   "theme.osd.location": "right",
   "menus.dashboard.powermenu.confirmation": false,
-  "menus.dashboard.powermenu.logout": "bash -c 'hyprshutdown -t \"Logging out...\"'",
-  "menus.power.shutdown.confirmation": false,
-  "menus.power.shutdown": "bash -c 'hyprshutdown -t \"Shutting down...\" --post-cmd \"shutdown -P 0\"'",
-  "menus.power.reboot": "bash -c 'hyprshutdown -t \"Restarting...\" --post-cmd \"reboot\"'",
-  "menus.power.logout": "bash -c 'hyprshutdown -t \"Logging out...\"'"
+  "menus.dashboard.powermenu.logout": "hyprctl dispatch exec \"hyprshutdown -t 'Logging out...'\"",
+  "menus.power.confirmation": false,
+  "menus.power.shutdown": "hyprctl dispatch exec \"hyprshutdown -t 'Shutting down...' --post-cmd 'shutdown -P 0'\"",
+  "menus.power.reboot": "hyprctl dispatch exec \"hyprshutdown -t 'Rebooting...' --post-cmd 'reboot'\"",
+  "menus.power.logout": "hyprctl dispatch exec \"hyprshutdown -t 'Logging out...'\""
 }
