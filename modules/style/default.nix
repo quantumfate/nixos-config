@@ -5,18 +5,6 @@ in {
   imports = [ ./catppuccin ./stylix.nix ];
 
   home-manager.users."${userCfg.name}" = {
-    #home.pointerCursor = {
-    #  gtk.enable = true;
-    #  # x11.enable = true;
-    #  package = pkgs.catppuccin-cursors.mochaMauve;
-    #  name = "Bibata Modern Amber";
-    #  size = 24;
-    #};
-
-    #home.file.".icons/hicolor/" = {
-    #  source = "${pkgs.papirus-icon-theme}/share/icons/";
-    #  recursive = true;
-    #};
     gtk = {
       enable = true;
       colorScheme = "dark";

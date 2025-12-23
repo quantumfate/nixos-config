@@ -22,7 +22,7 @@ let
     "${color}" + lib.toHexString (builtins.floor (alpha * 255));
 
   rgba_bare_hexify = colors:
-    lib.mapAttrs (_name: color: alpha: calc_rgba_hex color alpha) colors;
+    lib.mapAttrs (_name: color: alpha: lib.strings.toUpper (calc_rgba_hex color alpha)) colors;
 
   rgba_hexify = colors:
     lib.mapAttrs (_name: color: alpha: toHex (calc_rgba_hex color alpha))

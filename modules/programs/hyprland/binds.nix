@@ -107,7 +107,7 @@ in {
           "$mainMod, s, exec, btop"
 
           # Rofi
-          "$mainMod, R, exec, hyprlauncher"
+          "$mainMod, R, exec, rofi --dmenu run"
 
           # Special workspaces
           "$mainMod ALT, g, togglespecialworkspace, gaming"
