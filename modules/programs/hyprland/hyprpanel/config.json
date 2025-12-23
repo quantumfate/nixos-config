@@ -45,7 +45,7 @@
   "menus.dashboard.shortcuts.left.shortcut3.command": "vesktop",
   "menus.dashboard.shortcuts.left.shortcut3.tooltip": "Vesktop",
   "menus.dashboard.shortcuts.right.shortcut1.command": "sleep 0.5 && hyprpicker -a -n",
-  "menus.dashboard.shortcuts.right.shortcut3.command": "bash -c \"/home/${userCfg.name}/.config/hypr/scripts/wrapper/hyprshot.sh --outpu\"",
+  "menus.dashboard.shortcuts.right.shortcut3.command": "bash -c \"/home/quantum/.config/hypr/scripts/wrapper/hyprshot.sh --output\"",
   "bar.customModules.scrollSpeed": 6,
   "theme.bar.buttons.modules.microphone.enableBorder": false,
   "bar.customModules.microphone.rightClick": "kitty --class Wiremix wiremix",
