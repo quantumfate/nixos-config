@@ -483,5 +483,9 @@
   "menus.power.confirmation": false,
   "menus.power.shutdown": "hyprctl dispatch exec \"hyprshutdown -t 'Shutting down...' --post-cmd 'shutdown -P 0'\"",
   "menus.power.reboot": "hyprctl dispatch exec \"hyprshutdown -t 'Rebooting...' --post-cmd 'reboot'\"",
-  "menus.power.logout": "hyprctl dispatch exec \"hyprshutdown -t 'Logging out...'\""
+  "menus.power.logout": "hyprctl dispatch exec \"hyprshutdown -t 'Logging out...'\"",
+  "bar.windowtitle.custom_title": false,
+  "bar.windowtitle.class_name": false,
+  "bar.windowtitle.label": true,
+  "bar.windowtitle.icon": true
 }
