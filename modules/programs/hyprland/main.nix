@@ -60,6 +60,7 @@ in {
 
       ydotool
       xdotool
+      python313Packages.gpustat
     ];
 
     wayland.windowManager.hyprland = {
