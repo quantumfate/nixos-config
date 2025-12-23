@@ -6,5 +6,6 @@
     ./startup.nix
     ./windowrules.nix
     ./ecosystem
+    ./hyprpanel
   ];
 }

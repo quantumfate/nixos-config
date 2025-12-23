@@ -28,6 +28,8 @@
       dofus.enable = true;
       steam.enable = true;
       qmk.enable = true;
+      mako.enable = false;
+      waybar.enable = false;
     };
   };
 
