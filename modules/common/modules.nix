@@ -16,6 +16,5 @@
 
     waybar.enable = lib.mkEnableOption "waybar" // { default = true; };
     mako.enable = lib.mkEnableOption "mako" // { default = true; };
-    rofi.enable = lib.mkEnableOption "rofi" // { default = true; };
   };
 }
