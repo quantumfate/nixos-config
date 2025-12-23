@@ -7,21 +7,20 @@ in {
   home-manager.users."${userCfg.name}" = {
     home.file.".config/hypr/hyprtoolkit.conf" = {
       text = ''
-        background=${catppuccin.rgba_bare_hex.mantle 1}        
-        base=${catppuccin.rgba_hex.base 1}        
-        text=${catppuccin.rgba_hex.text 1}        
-        alternate_base=${catppuccin.rgba_hex.surface0 1}        
-        bright_text=${catppuccin.rgba_hex.yellow 1}        
-        accent=${catppuccin.rgba_hex.yellow 1}        
-        accent_secondary=${catppuccin.rgba_hex.red 1}        
-        h1_size=20
-        h2_size=16
-        h3_size=14
-        font_size=12
-        small_font_size=11
-        icon_theme=Papirus-Dark
-        font_family=${config.common.style.guiFont}
-        font_family_monospace=${config.common.style.terminalFont}
+        background = 0x${catppuccin.rgba_bare_hex.base 1} 
+        base = 0x${catppuccin.rgba_bare_hex.base 1}        
+        text = 0x${catppuccin.rgba_bare_hex.text 0.9}        
+        alternate_base = 0x${catppuccin.rgba_bare_hex.surface0 0.9}        
+        bright_text = 0x${catppuccin.rgba_bare_hex.yellow 0.9}        
+        accent = 0x${catppuccin.rgba_bare_hex.yellow 0.9}        
+        accent_secondary = 0x${catppuccin.rgba_bare_hex.red 0.9}        
+        h1_size = 20
+        h2_size = 16
+        h3_size = 14
+        font_size = 12
+        small_font_size = 11
+        font_family = ${config.common.style.guiFont}
+        font_family_monospace = ${config.common.style.terminalFont}
       '';
       
     };

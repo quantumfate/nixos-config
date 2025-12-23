@@ -12,6 +12,7 @@ in {
         [
           # Ricing
           papirus-folders
+          #papirus-icon-theme
 
           ## Formatters
           nixfmt-classic

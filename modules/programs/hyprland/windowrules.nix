@@ -60,12 +60,6 @@ in {
           "tag +floating-window, match:class (zen|zen-twilight), match:title (Library)"
           "tag +floating-window, match:class (org\\.keepassxc\\.KeePassXC), match:title (Unlock Database - KeePassXC)"
 
-          #"float on, match:class System-Update"
-          #"float on, match:class About"
-          #"animation slide top, match:class About"
-          #"move 2630 45, match:class About"
-          #"size 950 650, match:class System-Update"
-
           # No transparency on media windows
           "opacity 1 1, match:class ^(zoom|vlc|mpv|mp4|org.kde.kdenlive|com.obsproject.Studio|com.github.PintaProject.Pinta|imv|org.gnome.NautilusPreviewer)$"
 

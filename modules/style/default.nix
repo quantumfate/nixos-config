@@ -13,6 +13,10 @@ in {
     #  size = 24;
     #};
 
+    #home.file.".icons/hicolor/" = {
+    #  source = "${pkgs.papirus-icon-theme}/share/icons/";
+    #  recursive = true;
+    #};
     gtk = {
       enable = true;
       colorScheme = "dark";
