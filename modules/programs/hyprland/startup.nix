@@ -10,7 +10,7 @@ in {
       settings = {
         "exec-once" = [
           "xrandr --output ${primaryMonitor.name} --primary --mode ${primaryMonitor.mode} --rate ${primaryMonitor.rate}"
-          "waybar"
+          "hyprpanel"
           "${scriptDir}/wrapper/startup_special_workspaces.sh"
           "${scriptDir}/IPC/IPC_Wrapper.sh"
           "hyprlauncher -d"

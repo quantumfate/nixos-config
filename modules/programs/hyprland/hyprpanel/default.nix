@@ -3,9 +3,8 @@
 let userCfg = config.common.user;
 in {
   home-manager.users."${userCfg.name}" = {
-    programs.hyprpanel = { enable = true; };
+    home.packages = with pkgs; [ hyprpanel ];
+    home.file.".config/hyprpanel/config.json" = { source = ./config.json; };
   };
-  home.file.".config/hyprpanel/config.json" = {
-    source = ./config.json;
-  };
+
 }
