@@ -479,6 +479,7 @@
   "theme.osd.location": "right",
   "menus.dashboard.powermenu.confirmation": false,
   "menus.dashboard.powermenu.logout": "bash -c 'hyprshutdown -t \"Logging out...\"'",
+  "menus.power.shutdown.confirmation": false,
   "menus.power.shutdown": "bash -c 'hyprshutdown -t \"Shutting down...\" --post-cmd \"shutdown -P 0\"'",
   "menus.power.reboot": "bash -c 'hyprshutdown -t \"Restarting...\" --post-cmd \"reboot\"'",
   "menus.power.logout": "bash -c 'hyprshutdown -t \"Logging out...\"'"
