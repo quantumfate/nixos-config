@@ -1,6 +1,8 @@
 { config, lib, ... }:
 
-let userCfg = config.common.user;
+let
+  userCfg = config.common.user;
+  border_radius = 0;
 in {
   config = lib.mkIf config.common.modules.rofi.enable {
     home-manager.users."${userCfg.name}" = { config, ... }: {
@@ -15,26 +17,28 @@ in {
           };
           "window" = {
             height = 600;
-            width = 500;
+            width = 800;
             border = 2;
             border-radius = 8;
             border-color = mkLiteral "@mauve";
             background-color = mkLiteral "@base";
-            padding = 10;
+            padding = mkLiteral "10px 0px 10px 0px";
           };
-          #"mainbox" = { background-color = mkLiteral "@base"; };
+          "mainbox" = {
+            background-color = mkLiteral "@base";
+            text-color = mkLiteral "@surface1";
+          };
           "#inputbar" = {
             children = map mkLiteral [ "prompt" "entry" ];
-            #background-color = mkLiteral "@base";
-            border-radius = 8;
+            border-radius = 0;
             padding = 0;
           };
           "prompt" = {
             #background-color = mkLiteral "@green";
             padding = 4;
-            #text-color = mkLiteral "@text";
-            border-radius = 8;
-            margin = mkLiteral "10px 0px 10px 10px";
+            text-color = mkLiteral "@mauve";
+            border-radius = 0;
+            margin = mkLiteral "10px 10px 10px 10px";
           };
           "#textbox-prompt-colon" = {
             expand = false;
@@ -43,31 +47,30 @@ in {
             #text-color = mkLiteral "@foreground-color";
           };
           "entry" = {
-            padding = 6;
+            padding = 4;
             margin = mkLiteral "10px 10px 10px 10px";
-            #text-color = mkLiteral "@text";
-            #background-color = mkLiteral "@base";
-            border-radius = 8;
+            text-color = mkLiteral "@text";
+            background-color = mkLiteral "@base";
+            border-radius = 0;
           };
           "listview" = {
             border = 0;
-            padding = mkLiteral "6px 0 px 0px";
-            margin = mkLiteral "10px 0px 0px 6px";
-            columns = 1;
+            padding = mkLiteral "0px 0px 10px 0px";
+            columns = 2;
             #background-color = mkLiteral "@base";
             cycle = true;
             scrollbar = false;
           };
           "element" = {
-            padding = mkLiteral "8px";
-            margin = mkLiteral "0px 10px 4px 4px";
+            padding = mkLiteral "8px 24px 8px 24px";
+            #margin = mkLiteral "0px 10px 4px 4px";
             #background-color = mkLiteral "@base"; # tODO change
             #text-color = mkLiteral "@surface0";
           };
 
           "element-icon" = { size = 28; };
 
-          "element" = { border-radius = 8; };
+          "element" = { border-radius = 0; };
 
           "element selected.normal" = {
             background-color = mkLiteral "@mauve";
@@ -88,15 +91,15 @@ in {
           "button" = {
             padding = 10;
             #background-color = mkLiteral "@crust";
-            border-radius = 8;
+            border-radius = 0;
             #text-color = mkLiteral "@mantle";
             vertical-align = mkLiteral "0.5";
             horizontal-align = mkLiteral "0.5";
           };
 
           "button selected" = {
-            background-color = mkLiteral "@mauve";
-            text-color = mkLiteral "@crust";
+            background-color = mkLiteral "@base";
+            text-color = mkLiteral "@mauve";
           };
         };
       };

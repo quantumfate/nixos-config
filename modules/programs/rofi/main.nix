@@ -13,7 +13,7 @@ in {
         location = "center";
         modes = [ "run" "drun" "window" ];
         extraConfig = {
-          icon-theme = "Papirus-dark";
+          icon-theme = "Papirus-Dark";
           drun-display-format = "{icon} {name}";
           lines = 5;
           hide-scrollbar = true;
