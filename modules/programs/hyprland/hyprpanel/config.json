@@ -93,6 +93,7 @@
   "theme.osd.muted_zero": true,
   "menus.volume.raiseMaximumVolume": true,
   "menus.clock.weather.location": "Hamburg",
+  "menus.clock.weather.unit": "metric",
   "bar.customModules.updates.pollingInterval": 1440000,
   "theme.bar.buttons.modules.submap.enableBorder": false,
   "theme.bar.menus.menu.notifications.scrollbar.color": "#b4befe",
