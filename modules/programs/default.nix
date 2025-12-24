@@ -18,5 +18,6 @@
     ./xdg.nix
     ./ydotool.nix
     ./zathura.nix
+    ./proton.nix
   ];
 }

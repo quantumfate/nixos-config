@@ -52,6 +52,8 @@ in {
           qalculate-qt
           proton-pass
           protonmail-desktop-fix
+          protonvpn-gui
+          proton-authenticator
 
           #          (callPackage (../Packages/ankama-launcher.nix) { })
           obs-studio

@@ -57,7 +57,7 @@ in {
           "center on, match:tag floating-window"
           "size 900 700, match:tag floating-window"
 
-          "tag +floating-window, match:class (Impala|About|bluetui|Wiremix|com.gabm.satty|Calos|About|TUI.float|io\\.github\\.Qalculate\\.qalculate-qt)"
+          "tag +floating-window, match:class (protonvpn-app|Impala|About|bluetui|Wiremix|com.gabm.satty|Calos|About|TUI.float|io\\.github\\.Qalculate\\.qalculate-qt)"
           "tag +floating-window, match:class (xdg-desktop-portal-hyprland|xdg-desktop-portal-gtk|sublime_text|DesktopEditors), match:title (Open.*Files?|Save.*Files?|Save.*As|All Files|Save)"
           "tag +floating-window, match:class (zen|zen-twilight), match:title (Library)"
           "tag +floating-window, match:class (org\\.keepassxc\\.KeePassXC), match:title (Unlock Database - KeePassXC)"
