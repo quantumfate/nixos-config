@@ -1,6 +1,14 @@
 { config, pkgs, lib, inputs, ... }:
 
-let userCfg = config.common.user;
+let
+  userCfg = config.common.user;
+  protonmail-desktop-fix = prev.protonmail-desktop.overrideAttrs (oldAttrs: {
+    postInstall = (oldAttrs.postInstall or "") + ''
+      sed -i \
+        's|^Exec=proton-mail %U$|Exec=env XDG_SESSION_TYPE=x11 proton-mail %U|' \
+        usr/share/applications/proton-mail.desktop
+    '';
+  });
 in {
   home-manager = {
     useGlobalPkgs = true;
@@ -42,9 +50,9 @@ in {
           wiremix
           qalculate-qt
           proton-pass
-          protonmail-desktop
+          protonmail-desktop-fix
 
-#          (callPackage (../Packages/ankama-launcher.nix) { })
+          #          (callPackage (../Packages/ankama-launcher.nix) { })
           obs-studio
         ] ++ lib.optionals config.common.modules.dofus.enable
         [ pkgs.ankama-launcher ] ++ config.common.user.packages;
