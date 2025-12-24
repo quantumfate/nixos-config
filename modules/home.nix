@@ -2,7 +2,7 @@
 
 let
   userCfg = config.common.user;
-  protonmail-desktop-fix = prev.protonmail-desktop.overrideAttrs (oldAttrs: {
+  protonmail-desktop-fix = pkgs.protonmail-desktop.overrideAttrs (oldAttrs: {
     postInstall = (oldAttrs.postInstall or "") + ''
       sed -i \
         's|^Exec=proton-mail %U$|Exec=env XDG_SESSION_TYPE=x11 proton-mail %U|' \
