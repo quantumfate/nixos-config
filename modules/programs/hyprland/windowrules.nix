@@ -7,9 +7,11 @@ in {
       settings = {
         windowrule = [
           "workspace 1, match:class code"
-          "workspace 3, center on, content game, fullscreen_state 0 0, decorate off, opacity 1.0 override, no_anim on, match:class Dofus.x64"
-          "workspace 3, center on, match:class Ankama Launcher, match:title overlay"
-          "workspace 3, fullscreen_state 2 2, match:class steam_app_\\d+"
+          "workspace 2, match:class zen-twilight"
+          "workspace 3, match:class (Proton Mail|Proton Pass)"
+          "workspace 4, center on, content game, fullscreen_state 0 0, decorate off, opacity 1.0 override, no_anim on, match:class Dofus.x64"
+          "workspace 4, center on, match:class Ankama Launcher, match:title overlay"
+          "workspace 4, fullscreen_state 2 2, match:class steam_app_\\d+"
 
           # Special Workspaces
           #"workspace special:gaming, match:class (steam)"
