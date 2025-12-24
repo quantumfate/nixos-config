@@ -41,6 +41,8 @@ in {
           signal-desktop
           wiremix
           qalculate-qt
+          proton-pass
+          protonmail-desktop
 
 #          (callPackage (../Packages/ankama-launcher.nix) { })
           obs-studio
