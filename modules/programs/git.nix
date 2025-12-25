@@ -9,7 +9,7 @@ in {
       settings = {
         user = {
           name = "Leon Connor Holm";
-          email = "leonconnorholm@gmail.com";
+          email = "62796852+quantumfate@users.noreply.github.com";
         };
         init.defaultBranch = "main";
         pull.rebase = false;

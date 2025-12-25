@@ -54,6 +54,9 @@ in {
           protonmail-desktop-fix
           protonvpn-gui
           proton-authenticator
+          
+          # dev
+          hub
 
           #          (callPackage (../Packages/ankama-launcher.nix) { })
           obs-studio

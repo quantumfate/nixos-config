@@ -98,6 +98,16 @@ in {
                         tags = [ "nix" "doc" "flake" ];
                         url = "https://search.nixos.org/flakes?";
                       }
+                      {
+                        name = "Nix Maintenance";
+                        bookmarks = [
+                          {
+                            name = "nixpkgs-update";
+                            tags = [ "nix" "packages" "maintenance" "automation" ];
+                            url = "https://nix-community.github.io/nixpkgs-update/#introduction";
+                          }
+                        ];
+                      }
                     ];
                   }
                   {
