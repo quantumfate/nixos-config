@@ -11,10 +11,10 @@ let
     "2" = "bracketleft"; # [
     "3" = "braceleft"; # {
     "4" = "braceright"; # }
-    "5" = "parentleft"; # (
+    "5" = "parenleft"; # (
     "6" = "equal"; # =
     "7" = "asterisk"; # *
-    "8" = "parentright"; # )
+    "8" = "parenright"; # )
     "9" = "plus"; # +
     "0" = "bracketright"; # ]
   };
