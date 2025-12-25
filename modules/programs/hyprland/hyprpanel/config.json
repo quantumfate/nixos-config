@@ -505,7 +505,8 @@
     "class:Proton Pass": "",
     "class:gjs": "",
     "class:Dofus\\.x64": "󰊖",
-    "class:steam_appid_[\\d]": "󰊖"
+    "class:Ankama Launcher": "󱓞",
+    "class:steam_app_[\\d+]": "󰊖"
   },
   "bar.workspaces.applicationIconEmptyWorkspace": "",
   "theme.bar.buttons.network.enableBorder": false,

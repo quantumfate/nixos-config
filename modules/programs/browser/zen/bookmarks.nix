@@ -104,6 +104,11 @@ in {
                     name = "Ricing";
                     bookmarks = [
                       {
+                        name = "Nerd Font Icons";
+                        tags = [ "fonts" "icons" ];
+                        url = "https://www.nerdfonts.com/cheat-sheet";
+                      }
+                      {
                         name = "Catppuccin";
                         tags = [ "colorscheme" ];
                         url = "https://catppuccin.com/";
