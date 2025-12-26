@@ -12,7 +12,7 @@ for app in ${applications[@]}; do
         fi
 
         wrkspc=""
-        if [[ "$app" = "proton-pass" || "$app" = "proton-mail" ]]; then;
+        if [[ "$app" = "proton-pass" || "$app" = "proton-mail" ]]; then
             wrkspc="proton"
         else
             wrkspc=$app
