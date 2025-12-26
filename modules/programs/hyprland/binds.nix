@@ -120,6 +120,7 @@ in {
           "$mainMod ALT, s, togglespecialworkspace, spotify"
           "$mainMod ALT, o, togglespecialworkspace, obs"
           "$mainMod ALT, w, togglespecialworkspace, whatsapp-electron"
+          "$mainMod ALT, m, togglespecialworkspace, proton"
 
           # Moving focus
           "$mainMod, h, movefocus, l"

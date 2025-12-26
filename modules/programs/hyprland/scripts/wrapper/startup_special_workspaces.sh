@@ -1,21 +1,31 @@
 #!/usr/bin/env bash
 
-applications=("keepassxc" "spotify" "whatsapp-electron" "vesktop")
+applications=("keepassxc" "spotify" "whatsapp-electron" "vesktop" "proton-pass" "proton-mail")
 
 for app in ${applications[@]}; do
     (
-        hyprctl keyword "windowrule[workspace-silent-${app}]:enable true"
-        hyprctl keyword "windowrule[workspace-${app}]:enable false"
+        sleeptimer=0
+        if [ "$app" = "vesktop" ]; then
+            sleeptimer=6
+        else
+            sleeptimer=2
+        fi
+
+        wrkspc=""
+        if [ "$app" = "proton-pass" | "$app" = "proton-mail" ]; then
+            wrkspc="proton"
+        else
+            wrkspc=$app
+        fi
+
+        hyprctl keyword "windowrule[workspace-silent-${wrkspc}]:enable true"
+        hyprctl keyword "windowrule[workspace-${wrkspc}]:enable false"
         sleep 0.5
 
         exec $app &
-        if [ "$app" = "vesktop" ]; then
-            sleep 6
-        else
-            sleep 2
-        fi
+        sleep $sleeptimer
 
-        hyprctl keyword "windowrule[workspace-silent-${app}]:enable false"
-        hyprctl keyword "windowrule[workspace-${app}]:enable true"
+        hyprctl keyword "windowrule[workspace-silent-${wrkspc}]:enable false"
+        hyprctl keyword "windowrule[workspace-${wrkspc}]:enable true"
     ) &
 done
