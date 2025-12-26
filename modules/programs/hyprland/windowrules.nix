@@ -14,13 +14,9 @@ in {
           "workspace 4, fullscreen_state 2 2, match:class steam_app_\\d+"
 
           # Special Workspaces
-          #"workspace special:gaming, match:class (steam)"
-          #"workspace special:keepass, match:class (org\\.keepassxc\\.KeePassXC)"
-          #"workspace special:ankama, match:class Ankama Launcher, match:title Ankama Launcher"
-          #"workspace special:vesktop, match:class vesktop"
-          #"workspace special:spotify, match:class spotify"
-          #"workspace special:obs, match:initial_class com.obsproject.Studio"
-          #"workspace special:whatsapp-electron, match:initial_class whatsapp-electron"
+          "workspace special:gaming, match:class (steam)"
+          "workspace special:ankama, match:class Ankama Launcher, match:title Ankama Launcher"
+          "workspace special:obs, match:initial_class com.obsproject.Studio"
 
           "no_initial_focus on, match:class (steam|vesktop|whatsapp-electron)"
           "suppress_event activatefocus, match:class (steam|vesktop|whatsapp-electron)"
