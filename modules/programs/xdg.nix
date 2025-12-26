@@ -4,6 +4,7 @@ let userCfg = config.common.user;
 in {
 
   home-manager.users."${userCfg.name}" = {
+    home.file."Projects/.keep".text = "";
     xdg = {
       enable = true;
       mime.enable = true;
