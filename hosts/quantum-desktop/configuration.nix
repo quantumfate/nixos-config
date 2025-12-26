@@ -25,7 +25,7 @@
     };
     modules = {
       nvidia.enable = true;
-      dofus.enable = true;
+      dofus.enable = false;
       steam.enable = true;
       qmk.enable = true;
       mako.enable = false;

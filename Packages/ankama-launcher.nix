@@ -1,38 +1,68 @@
-{ pkgs ? import <nixpkgs> { }, lib }:
-
+{
+  lib,
+  appimageTools,
+  fetchurl,
+}:
 let
-  name = "ankama-launcher";
+  pname = "ankama-launcher";
   version = "3.13.18";
 
-  repoRoot = "/home/quantum/nixos-config";
-  appImagePath = "${repoRoot}/Packages/ankama-launcher.AppImage";
-
-  src = builtins.fetchurl {
-    url = "file://${appImagePath}";
-
-    sha256 =
-      "sha256-dWpBY/8clQT16lIPUR+y346MwRsHPU0M4ir/E9BqpwE=";
+  # The original URL for the launcher is:
+  # https://launcher.cdn.ankama.com/installers/production/Ankama%20Launcher-Setup-x86_64.AppImage
+  # As it does not encode the version, we use the wayback machine (web.archive.org) to get a fixed URL.
+  # To update the client, head to web.archive.org and create a new snapshot of the download page.
+  src = fetchurl {
+    url = "https://download.ankama.com/launcher-dofus/full/linux";
+    name = "ankama-launcher-bypass.AppImage";
+    hash = "sha256-dWpBY/8clQT16lIPUR+y346MwRsHPU0M4ir/E9BqpwE=";
+    curlOptsList = [
+      "-A" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+      "-H" "Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8"
+      "-H" "Accept-Language: en-US,en;q=0.5"
+      "-H" "Accept-Encoding: gzip, deflate, br"
+      "-e" "https://www.ankama.com/"
+      "-L"
+    ];
   };
 
-  appimageContents = pkgs.appimageTools.extractType2 {
-    inherit src version;
-    pname = name;
-    sha256 = "sha256-dWpBY/8clQT16lIPUR+y346MwRsHPU0M4ir/E9BqpwE=";
-  };
-in pkgs.appimageTools.wrapType2 {
-  pname = name;
-  inherit name src version;
+  appimageContents = appimageTools.extract { inherit pname version src; };
 
-  execName = "ankama-launcher";
+in
 
-  extraPkgs = pkgs: with pkgs; [ libglvnd xorg.libXScrnSaver xorg.libxcb ];
+appimageTools.wrapType2 {
+  inherit pname version src;
+  extraPkgs = pkgs: [ pkgs.wine ];
 
   extraInstallCommands = ''
-    # Create the directory structure for applications and icons
-    mkdir -p $out/share/applications
-    mkdir -p $out/share/icons/hicolor/256x256/apps
-    install -m 444 -D ${appimageContents}/zaap.desktop $out/share/applications/ankama-launcher.desktop
+    desktop_file="${appimageContents}/zaap.desktop"
+
+    nix_version="${version}"
+    archive_version=$(grep -oP '(?<=X-AppImage-Version=).*' $desktop_file)
+
+    if [[ "$archive_version" != "$nix_version"* ]]; then
+      echo "ERROR - Version mismatch:"
+      echo -e "\t- Expected (pkgs.ankama-launcher.version): $nix_version"
+      echo -e "\t- Version found in 'zaap.desktop': $archive_version"
+      echo -e "\n-> Update the version attribute of the derivation."
+      echo "-> Note: Ignore the last part of the version: Do not write '3.12.24.19260' but '3.12.24'."
+      exit 1
+    fi
+
+    install -m 444 -D "$desktop_file" $out/share/applications/ankama-launcher.desktop
     sed -i 's/.*Exec.*/Exec=ankama-launcher/' $out/share/applications/ankama-launcher.desktop
     install -m 444 -D ${appimageContents}/zaap.png $out/share/icons/hicolor/256x256/apps/zaap.png
   '';
+
+  meta = {
+    description = "Ankama Launcher";
+    longDescription = ''
+      Ankama Launcher is a portal that allows you to access Ankama's video games, VOD animations, webtoons, and livestreams, as well as download updates, stay up to date with the latest news, and chat with your friends.
+    '';
+    homepage = "https://www.ankama.com/en/launcher";
+    license = lib.licenses.unfree;
+    mainProgram = "ankama-launcher";
+    maintainers = with lib.maintainers; [ harbiinger ];
+    sourceProvenance = [ lib.sourceTypes.binaryNativeCode ];
+    platforms = [ "x86_64-linux" ];
+  };
 }
