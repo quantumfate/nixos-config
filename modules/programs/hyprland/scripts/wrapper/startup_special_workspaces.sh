@@ -6,13 +6,13 @@ for app in ${applications[@]}; do
     (
         sleeptimer=0
         if [ "$app" = "vesktop" ]; then
-            sleeptimer=6
+            sleeptimer=8
         else
-            sleeptimer=2
+            sleeptimer=3
         fi
 
         wrkspc=""
-        if [ "$app" = "proton-pass" | "$app" = "proton-mail" ]; then
+        if [[ "$app" = "proton-pass" || "$app" = "proton-mail" ]]; then;
             wrkspc="proton"
         else
             wrkspc=$app
