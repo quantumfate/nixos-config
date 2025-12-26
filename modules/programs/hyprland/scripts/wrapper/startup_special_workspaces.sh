@@ -5,7 +5,8 @@ applications=("keepassxc" "spotify" "whatsapp-electron" "vesktop" "proton-pass" 
 for app in ${applications[@]}; do
     (
         sleeptimer=0
-        if [ "$app" = "vesktop" ]; then
+        if [[ "$app" = "proton-pass" || "$app" = "proton-mail" || "$app" = "vesktop" ]]; then
+            # Bloated apps need more time or workspace renders before the app launched 
             sleeptimer=8
         else
             sleeptimer=3
