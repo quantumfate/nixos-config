@@ -22,7 +22,7 @@ in {
           "s[true]m[${primaryMonitor.name}]n[e:feh], name:feh"
           "s[true]m[${primaryMonitor.name}]n[e:gaming], name:gaming, on-created-empty:steam"
           "s[true]m[${primaryMonitor.name}]n[e:keepassxc], name:keepassxc, on-created-empty:keepassxc"
-          "s[true]m[${primaryMonitor.name}]n[e:proton], name:proton, on-created-empty:proton-pass && proton-mail"
+          "s[true]m[${primaryMonitor.name}]n[e:proton], name:proton"
           "s[true]m[${primaryMonitor.name}]n[e:ankama], name:ankama, on-created-empty:ankama-launcher"
           "s[true]m[${primaryMonitor.name}]n[e:dofus], name:dofus, on-created-empty:hyprctl --batch \"dispatch exec zen-twilight -P dofus\""
           "s[true]m[${primaryMonitor.name}]n[e:vesktop], name:vesktop, on-created-empty:vesktop"

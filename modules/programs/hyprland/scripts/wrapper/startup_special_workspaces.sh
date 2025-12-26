@@ -7,7 +7,7 @@ for app in ${applications[@]}; do
         sleeptimer=0
         if [[ "$app" = "proton-pass" || "$app" = "proton-mail" || "$app" = "vesktop" ]]; then
             # Bloated apps need more time or workspace renders before the app launched 
-            sleeptimer=8
+            sleeptimer=12
         else
             sleeptimer=3
         fi
@@ -21,7 +21,7 @@ for app in ${applications[@]}; do
 
         hyprctl keyword "windowrule[workspace-silent-${wrkspc}]:enable true"
         hyprctl keyword "windowrule[workspace-${wrkspc}]:enable false"
-        sleep 0.5
+        sleep 1
 
         exec $app &
         sleep $sleeptimer
