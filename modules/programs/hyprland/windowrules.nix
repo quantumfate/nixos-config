@@ -15,6 +15,7 @@ in {
 
           # Special Workspaces
           "workspace special:gaming, match:class (steam), suppress_event activatefocus"
+          "workspace special:gaming, match:class (steam), suppress_event activate"
           "workspace special:gaming, match:class (steam), move 300 400, match:title Friends List"
           "workspace special:gaming, match:class (steam), move 600 600, match:title Launching..."
           "workspace special:ankama, match:class Ankama Launcher, match:title Ankama Launcher"
