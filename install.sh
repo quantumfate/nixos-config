@@ -6,7 +6,9 @@ ADDITIONAL_FLAGS=${2:""}
 cd "$HOME/Projects/github/nixos-config" || exit 1
 HOST=$(hostname)
 
-git pull --recurse-submodules
+if [ ! -d "modules/programs/browser/zen/private" ]; then
+    git clone git@gitlab.com:my-nixos-config/zen.git modules/programs/browser/zen/private
+fi
 
 if [[ "$1" == "--upgrade" || "$1" == "-u" ]]; then
     pkill zen-twilight
