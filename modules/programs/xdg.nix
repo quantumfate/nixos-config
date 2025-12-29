@@ -5,6 +5,8 @@ in {
 
   home-manager.users."${userCfg.name}" = {
     home.file."Projects/.keep".text = "";
+    home.file."Projects/gitlab/.keep".text = "";
+    home.file."Projects/github/.keep".text = "";
     xdg = {
       enable = true;
       mime.enable = true;

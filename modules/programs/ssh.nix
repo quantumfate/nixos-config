@@ -13,6 +13,12 @@ in {
           IdentityFile ~/.ssh/github
           IdentitiesOnly yes
           AddKeysToAgent yes
+        Host gitlab.com
+          HostName gitlab.com
+          User git
+          IdentityFile ~/.ssh/gitlab
+          IdentitiesOnly yes
+          AddKeysToAgent yes
       '';
       enableDefaultConfig = false;
       matchBlocks."*" = {
