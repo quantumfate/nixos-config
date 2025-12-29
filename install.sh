@@ -6,6 +6,8 @@ ADDITIONAL_FLAGS=${2:""}
 cd "$HOME/Projects/github/nixos-config" || exit 1
 HOST=$(hostname)
 
+git pull --recurse-submodules
+
 if [[ "$1" == "--upgrade" || "$1" == "-u" ]]; then
     pkill zen-twilight
     sudo nixos-rebuild switch --upgrade $ADDITIONAL_FLAGS --flake "$HOME/Projects/github/nixos-config#$HOST"
