@@ -6,7 +6,7 @@
     ./terminal
     ./waybar
     ./cliphist.nix
-    ./git.nix
+    ./git
     ./keepassxc.nix
     ./mako.nix
     ./sddm.nix

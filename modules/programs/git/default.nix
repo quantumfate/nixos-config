@@ -12,10 +12,10 @@ in {
       enable = true;
       settings = {
         user = { name = "Leon Connor Holm"; };
-        "includeIf \"gitdir:~/projects/github/\"" = {
+        "includeIf \"gitdir:~/Projects/github/\"" = {
           path = "~/.config/git/githubconf";
         };
-        "includeIf \"gitdir:~/projects/gitlab/\"" = {
+        "includeIf \"gitdir:~/Projects/gitlab/\"" = {
           path = "~/.config/git/gitlabconf";
         };
         init.defaultBranch = "main";
