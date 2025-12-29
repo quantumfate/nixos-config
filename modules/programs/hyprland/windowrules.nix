@@ -14,10 +14,10 @@ in {
           "workspace 4, fullscreen_state 2 2, match:class steam_app_\\d+"
 
           # Special Workspaces
-          "workspace special:gaming, match:class (steam), suppress_event activatefocus"
-          "workspace special:gaming, match:class (steam), suppress_event activate"
-          "workspace special:gaming, match:class (steam), move 300 400, match:title Friends List"
-          "workspace special:gaming, match:class (steam), move 600 600, match:title Launching..."
+          "workspace special:gaming silent, match:class (steam), suppress_event activatefocus"
+          "workspace special:gaming silent, match:class (steam), suppress_event activate"
+          "workspace special:gaming silent, match:class (steam), move 300 400, match:title Friends List"
+          "workspace special:gaming silent, match:class (steam), move 600 600, match:title Launching..."
           "workspace special:ankama, match:class Ankama Launcher, match:title Ankama Launcher"
           "workspace special:obs, match:initial_class com.obsproject.Studio"
 
