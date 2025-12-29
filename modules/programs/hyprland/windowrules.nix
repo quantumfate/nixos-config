@@ -14,14 +14,15 @@ in {
           "workspace 4, fullscreen_state 2 2, match:class steam_app_\\d+"
 
           # Special Workspaces
-          "workspace special:gaming, match:class (steam)"
+          "workspace special:gaming, match:class (steam), suppress_event activatefocus"
+          "workspace special:gaming, match:class (steam), move 300 400, match:title Friends List"
+          "workspace special:gaming, match:class (steam), move 600 600, match:title Launching..."
           "workspace special:ankama, match:class Ankama Launcher, match:title Ankama Launcher"
           "workspace special:obs, match:initial_class com.obsproject.Studio"
 
           "no_initial_focus on, match:class (steam|vesktop|whatsapp-electron)"
-          "suppress_event activatefocus, match:class (steam|vesktop|whatsapp-electron)"
-          "move 300 400, match:title Friends List"
-          "move 600 600, match:title Launching..."
+          "suppress_event activatefocus, match:class (vesktop|whatsapp-electron)"
+          "suppress_event activate, match:class (vesktop|whatsapp-electron)"
 
           # Specific Application Settings
           "float on, match:class (xdg-desktop-portal-gtk|xdg-desktop-portal-hyprland)"
