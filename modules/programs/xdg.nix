@@ -6,6 +6,7 @@ in {
   home-manager.users."${userCfg.name}" = {
     home.file."Projects/.keep".text = "";
     home.file."Projects/gitlab/.keep".text = "";
+    home.file."Projects/gitlab/my-nixos-config/.keep".text = "";
     home.file."Projects/github/.keep".text = "";
     xdg = {
       enable = true;
