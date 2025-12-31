@@ -36,6 +36,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    my-zen-bookmarks = {
+      url = "file://modules/programs/zen/private?submodules=1";
+      flake = false;  # Set to false if it's not a flake
+    };
   };
 
   outputs = { self, nixpkgs, ... }@inputs:
