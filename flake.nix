@@ -37,7 +37,7 @@
     };
 
     my-zen-bookmarks = {
-      url = "file://modules/programs/zen/private?submodules=1";
+      url = "git+file:./modules/programs/browser/zen/private?shallow=1";
       flake = false;  # Set to false if it's not a flake
     };
   };

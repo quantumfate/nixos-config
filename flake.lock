@@ -873,6 +873,23 @@
         "type": "github"
       }
     },
+    "my-zen-bookmarks": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1767037067,
+        "narHash": "sha256-Pp/feo39R9PoZqhI+MfH4UF6ry2GlUgcGtsQhsqUmcA=",
+        "ref": "refs/heads/main",
+        "rev": "e6cb76cc0fa9acf6c060a822e09fdb05e6c37273",
+        "shallow": true,
+        "type": "git",
+        "url": "file:./modules/programs/browser/zen/private"
+      },
+      "original": {
+        "shallow": true,
+        "type": "git",
+        "url": "file:./modules/programs/browser/zen/private"
+      }
+    },
     "nixpkgs": {
       "locked": {
         "lastModified": 1763966396,
@@ -1010,6 +1027,7 @@
         "hyprland": "hyprland",
         "hyprland-plugins": "hyprland-plugins",
         "hyprshutdown": "hyprshutdown",
+        "my-zen-bookmarks": "my-zen-bookmarks",
         "nixpkgs": "nixpkgs_4",
         "spicetify-nix": "spicetify-nix",
         "stylix": "stylix",
