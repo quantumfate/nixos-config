@@ -18,10 +18,12 @@ let
   flavor = capitalize config.common.style.catppuccin.flavor;
   accent = capitalize config.common.style.catppuccin.accent;
 in {
-  imports = [ ./profiles.nix "${inputs.my-zen-bookmarks}/bookmarks.nix" ];
+  imports = [
+    "${inputs.my-zen-bookmarks}/bookmarks.nix"
+    "${inputs.my-zen-bookmarks}/profiles.nix"
+  ];
   home-manager.users."${userCfg.name}" = {
     imports = [ inputs.zen-browser.homeModules.twilight ];
-
     home.file = lib.attrsets.genAttrs catppuccinTargets (path: {
       source = "${catppuccinZenTheme}/themes/${flavor}/${accent}/";
       recursive = true;
