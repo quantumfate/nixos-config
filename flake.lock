@@ -876,9 +876,9 @@
     "my-zen-config": {
       "flake": false,
       "locked": {
-        "lastModified": 1767714032,
-        "narHash": "sha256-Q6xDHPGUyRojp7VwvTYIDI9zXp6OYHEmbApSOGhxVEQ=",
-        "rev": "d687807f8252da1ee2ce667ed562f639832e292a",
+        "lastModified": 1767714190,
+        "narHash": "sha256-X/8ZXBqCLAf/NgXmIsSxu1TyuPbr68ShKVvxXzBiy20=",
+        "rev": "8700601e2b9cde5b8d4af42594bfe615921829d9",
         "shallow": true,
         "type": "git",
         "url": "file:./modules/programs/browser/zen/private"
