@@ -58,7 +58,7 @@ in {
           # dev
           hub
 
-          (callPackage (../Packages/ankama-launcher.nix) { })
+          #(callPackage (../Packages/ankama-launcher.nix) { })
           obs-studio
         ] ++ lib.optionals config.common.modules.dofus.enable
         [ pkgs.ankama-launcher ] ++ config.common.user.packages;
