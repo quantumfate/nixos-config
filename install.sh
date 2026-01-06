@@ -8,6 +8,9 @@ HOST=$(hostname)
 
 git submodule update --remote
 git pull --recurse-submodules 
+git add $HOME/Projects/github/nixos-config
+git commit -m "Updated submodules"
+git push
 
 if [[ "$1" == "--upgrade" || "$1" == "-u" ]]; then
     pkill zen-twilight
