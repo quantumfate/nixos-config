@@ -46,7 +46,7 @@ appimageTools.wrapType2 {
       echo -e "\t- Version found in 'zaap.desktop': $archive_version"
       echo -e "\n-> Update the version attribute of the derivation."
       echo "-> Note: Ignore the last part of the version: Do not write '3.12.24.19260' but '3.12.24'."
-      #exit 1
+      exit 1
     fi
 
     install -m 444 -D "$desktop_file" $out/share/applications/ankama-launcher.desktop
