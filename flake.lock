@@ -426,11 +426,11 @@
         "xdph": "xdph"
       },
       "locked": {
-        "lastModified": 1767654014,
-        "narHash": "sha256-M5WVoXwlZpYcEKS23sEQKMzzdqItY/iEWoj3reIBfiE=",
+        "lastModified": 1767706705,
+        "narHash": "sha256-dhZmvfNxhLUg/6wFXhc5hXvbemoI0E5S0Gnbu6vc4yY=",
         "owner": "hyprwm",
         "repo": "Hyprland",
-        "rev": "9817553c664b0b7f6776671383a6368c74ee8dee",
+        "rev": "f1652b295130fd241bd3a6505908d6db562fdcf1",
         "type": "github"
       },
       "original": {
@@ -876,9 +876,9 @@
     "my-zen-config": {
       "flake": false,
       "locked": {
-        "lastModified": 1767705712,
-        "narHash": "sha256-3C+G/4zdR1yut6UvwFzgpEOD816Zmi0+N0sGV6P/vCo=",
-        "rev": "3ade04a668c8bc0ae7e08dc306c8727435dada73",
+        "lastModified": 1767706548,
+        "narHash": "sha256-3daHCpt+ynXIhFcHH++TnrI/OQFise1FG+jt6/4Tjps=",
+        "rev": "7e9bd8bef29cf5ed1e9ec33dcd5a80418697191b",
         "shallow": true,
         "type": "git",
         "url": "file:./modules/programs/browser/zen/private"

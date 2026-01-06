@@ -16,7 +16,7 @@ elif [[ "$1" == "--rebuild" || "$1" == "-r" ]]; then
     sudo nixos-rebuild switch $ADDITIONAL_FLAGS --flake "$HOME/Projects/github/nixos-config#$HOST"
 elif [[ "$1" == "--flake-update" || "$1" == "-f" ]]; then
     nix flake update
-    git add $HOME/nixos-config
+    git add $HOME/Projects/github/nixos-config
     git commit -m "Nix Flake Update"
     git push
     pkill zen-twilight
