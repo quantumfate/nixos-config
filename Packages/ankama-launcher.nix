@@ -5,7 +5,7 @@
 }:
 let
   pname = "ankama-launcher";
-  version = "3.13.18.1";
+  version = "3.13.19";
 
   # The original URL for the launcher is:
   # https://launcher.cdn.ankama.com/installers/production/Ankama%20Launcher-Setup-x86_64.AppImage
