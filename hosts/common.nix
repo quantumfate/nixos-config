@@ -7,6 +7,7 @@ in {
   # General
   nixpkgs.config.allowUnfree = true;
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix.settings.download-buffer-size = 524288000;
 
   # System
   networking.hostName = cfg.hostName;
