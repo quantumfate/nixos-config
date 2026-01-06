@@ -36,7 +36,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    my-zen-bookmarks = {
+    my-zen-config = {
       url = "git+file:./modules/programs/browser/zen/private?shallow=1";
       flake = false;  # Set to false if it's not a flake
     };

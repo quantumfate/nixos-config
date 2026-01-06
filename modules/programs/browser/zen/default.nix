@@ -19,8 +19,8 @@ let
   accent = capitalize config.common.style.catppuccin.accent;
 in {
   imports = [
-    "${inputs.my-zen-bookmarks}/bookmarks.nix"
-    "${inputs.my-zen-bookmarks}/profiles.nix"
+    "${inputs.my-zen-config}/bookmarks.nix"
+    "${inputs.my-zen-config}/profiles.nix"
   ];
   home-manager.users."${userCfg.name}" = {
     imports = [ inputs.zen-browser.homeModules.twilight ];
