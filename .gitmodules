@@ -1,3 +1,0 @@
-[submodule "modules/programs/browser/zen/private"]
-	path = modules/programs/browser/zen/private
-	url = git@gitlab.com:my-nixos-config/zen.git
