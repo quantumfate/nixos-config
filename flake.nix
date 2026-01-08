@@ -32,7 +32,14 @@
       };
     };
     my-zen-config = { url = "git+ssh://git@gitlab.com/my-nixos-config/zen"; };
-
+    nixpkgs-unfree = {
+      url = "github:numtide/nixpkgs-unfree";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    firefox-addons = {
+      url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
+      inputs.nixpkgs.follows = "nixpkgs-unfree";
+    };
   };
 
   outputs = { self, nixpkgs, ... }@inputs:
