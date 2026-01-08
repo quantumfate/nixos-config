@@ -326,11 +326,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1767907949,
-        "narHash": "sha256-ihO/8Dx1sz0XbXSg0bHp8+9sEB3G/StAzyrB6GPqDd4=",
+        "lastModified": 1767909183,
+        "narHash": "sha256-u/bcU0xePi5bgNoRsiqSIwaGBwDilKKFTz3g0hqOBAo=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "b1b1c68033840553f47f49e994b27a7d5dafa5e1",
+        "rev": "cd6e96d56ed4b2a779ac73a1227e0bb1519b3509",
         "type": "github"
       },
       "original": {
@@ -898,11 +898,11 @@
         "nixpkgs-unfree": "nixpkgs-unfree"
       },
       "locked": {
-        "lastModified": 1767909010,
-        "narHash": "sha256-hd86HXavk3aIQzWtuiWeDQwRpXCBV25fQriPOQwyMbk=",
+        "lastModified": 1767910751,
+        "narHash": "sha256-8BDuclWRL4v6VlDnx6MkDVOwrTS+RvXYrzxgUdpWM+w=",
         "ref": "refs/heads/main",
-        "rev": "4162dda41279917efc74b015ece63ea9b056168c",
-        "revCount": 37,
+        "rev": "7fc4c65c718e07b09b7d6e5f3a828bd14f66bb74",
+        "revCount": 40,
         "type": "git",
         "url": "ssh://git@gitlab.com/my-nixos-config/zen"
       },
