@@ -39,7 +39,13 @@
     let
       system = "x86_64-linux";
       mkSystem = { configNix }: {
-        specialArgs = { inherit inputs system; };
+        specialArgs = {
+          inherit inputs system;
+          pkgs = import nixpkgs {
+            system = "x86_64-linux";
+            config.allowUnfree = true;
+          };
+        };
         modules = [
           (import configNix)
           inputs.home-manager.nixosModules.home-manager
@@ -49,12 +55,7 @@
         ];
       };
     in {
-      nix.settings = let
-        pkgs = import nixpkgs {
-          inherit system;
-          config = { allowUnfree = true; };
-        };
-      in {
+      nix.settings = {
         substituters = [ "https://hyprland.cachix.org" ];
         trusted-substituters = [ "https://hyprland.cachix.org" ];
         trusted-public-keys = [
