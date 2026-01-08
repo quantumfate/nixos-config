@@ -6,24 +6,23 @@ let
   wallpapersDir = "${userHome}/.config/hypr/wallpapers/";
 in {
   home-manager.users."${userCfg.name}" = {
-    services.hyprpaper = {
-      enable = true;
-      settings = {
-        preload = [
-          "${wallpapersDir}Clearnight.jpg"
-          "${wallpapersDir}Rainnight.jpg"
-          "${wallpapersDir}purple-forest.jpg"
-          "${wallpapersDir}anime-girl.jpg"
-        ];
-        wallpaper = [ 
-          ",${wallpapersDir}anime-girl.jpg" 
-        ];
+    services.hyprpaper = { enable = true; };
+
+    home.file = {
+      ".config/hypr/wallpapers/" = {
+        source = ../../../../assets/wallpapers;
+        recursive = true;
+      };
+      ".config/hypr/hyprpaper.conf" = {
+        text = ''
+          wallpaper {
+            monitor =
+            path = ~/.config/hypr/wallpapers/anime-girl.jpg
+            fit_mode = cover
+          }
+        '';
       };
     };
 
-    home.file.".config/hypr/wallpapers/" = {
-      source = ../../../../assets/wallpapers;
-      recursive = true;
-    };
   };
 }
