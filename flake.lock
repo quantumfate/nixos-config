@@ -152,28 +152,6 @@
     "firefox-addons": {
       "inputs": {
         "nixpkgs": [
-          "nixpkgs-unfree"
-        ]
-      },
-      "locked": {
-        "dir": "pkgs/firefox-addons",
-        "lastModified": 1767845018,
-        "narHash": "sha256-mT00ZXQ4/myUWL3pTDw9gMV8/45yLN1/Faw9YanMa4k=",
-        "owner": "rycee",
-        "repo": "nur-expressions",
-        "rev": "fabfd99ebed009f2a44cbc3fb436d0d2a145a120",
-        "type": "gitlab"
-      },
-      "original": {
-        "dir": "pkgs/firefox-addons",
-        "owner": "rycee",
-        "repo": "nur-expressions",
-        "type": "gitlab"
-      }
-    },
-    "firefox-addons_2": {
-      "inputs": {
-        "nixpkgs": [
           "my-zen-config",
           "nixpkgs-unfree"
         ]
@@ -898,16 +876,16 @@
     },
     "my-zen-config": {
       "inputs": {
-        "firefox-addons": "firefox-addons_2",
+        "firefox-addons": "firefox-addons",
         "nixpkgs": "nixpkgs_4",
         "nixpkgs-unfree": "nixpkgs-unfree"
       },
       "locked": {
-        "lastModified": 1767879315,
-        "narHash": "sha256-3iMukjPtS44Ztl7O96/jOKQ8Kh4DP8tJD8iLMUYIlk0=",
+        "lastModified": 1767882355,
+        "narHash": "sha256-4Y5uKMZZIq8rpiz+R+50wU65/vSCDOOUit4s04OR03c=",
         "ref": "refs/heads/main",
-        "rev": "01f907f280ddf2828a4c238b4ef9dbeb74555bc1",
-        "revCount": 23,
+        "rev": "5563593ec540ddbbcd1cd678800ab2e63cfdcf86",
+        "revCount": 24,
         "type": "git",
         "url": "ssh://git@gitlab.com/my-nixos-config/zen"
       },
@@ -936,26 +914,6 @@
       "inputs": {
         "nixpkgs": [
           "my-zen-config",
-          "nixpkgs"
-        ]
-      },
-      "locked": {
-        "lastModified": 1755249704,
-        "narHash": "sha256-J1mqsd/gqZ32G3YOzWk9sppLbXXLEpu37hrZfRcTtdg=",
-        "owner": "numtide",
-        "repo": "nixpkgs-unfree",
-        "rev": "12d82a604d21a65df008bdb1515eecb96f9e55dc",
-        "type": "github"
-      },
-      "original": {
-        "owner": "numtide",
-        "repo": "nixpkgs-unfree",
-        "type": "github"
-      }
-    },
-    "nixpkgs-unfree_2": {
-      "inputs": {
-        "nixpkgs": [
           "nixpkgs"
         ]
       },
@@ -1104,7 +1062,6 @@
     "root": {
       "inputs": {
         "catppuccin": "catppuccin",
-        "firefox-addons": "firefox-addons",
         "grim-hyprland": "grim-hyprland",
         "home-manager": "home-manager",
         "hyprland": "hyprland",
@@ -1112,7 +1069,6 @@
         "hyprshutdown": "hyprshutdown",
         "my-zen-config": "my-zen-config",
         "nixpkgs": "nixpkgs_5",
-        "nixpkgs-unfree": "nixpkgs-unfree_2",
         "spicetify-nix": "spicetify-nix",
         "stylix": "stylix",
         "zen-browser": "zen-browser"
