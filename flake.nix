@@ -32,7 +32,7 @@
       };
     };
     my-zen-config = {
-      url = "git+ssh://git@gitlab.com:my-nixos-config/zen";
+      url = "git+ssh://git@gitlab.com/my-nixos-config/zen";
     };
 
   };
