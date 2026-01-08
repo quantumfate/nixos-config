@@ -38,10 +38,6 @@
   outputs = { self, nixpkgs, ... }@inputs:
     let
       system = "x86_64-linux";
-      pkgs = import nixpkgs {
-        inherit system;
-        config = { allowUnfree = true; };
-      };
       mkSystem = { configNix }: {
         specialArgs = { inherit inputs system; };
         modules = [
@@ -53,7 +49,12 @@
         ];
       };
     in {
-      nix.settings = {
+      nix.settings = let
+        pkgs = import nixpkgs {
+          inherit system;
+          config = { allowUnfree = true; };
+        };
+      in {
         substituters = [ "https://hyprland.cachix.org" ];
         trusted-substituters = [ "https://hyprland.cachix.org" ];
         trusted-public-keys = [
