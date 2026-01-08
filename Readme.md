@@ -53,3 +53,4 @@
 - [woioeow/hyprland-dotfiles](https://github.com/woioeow/hyprland-dotfiles/tree/main)
 - [abhinandh-s/catppuccin-nix](https://github.com/abhinandh-s/catppuccin-nix)
 - [cricicalart/calos](https://github.com/criticalart/calos) for hyprland window rules
+- [skifli/nixos](https://github.com/skifli/nixos) zen specific configuration
