@@ -6,11 +6,6 @@ ADDITIONAL_FLAGS=${2:""}
 cd "$HOME/Projects/github/nixos-config" || exit 1
 HOST=$(hostname)
 
-git submodule update --remote
-git add $HOME/Projects/github/nixos-config
-git commit -m "Updated submodules"
-git push
-
 if [[ "$1" == "--upgrade" || "$1" == "-u" ]]; then
     pkill zen-twilight
     sudo nixos-rebuild switch --upgrade $ADDITIONAL_FLAGS --flake "$HOME/Projects/github/nixos-config#$HOST"
