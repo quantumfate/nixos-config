@@ -39,13 +39,7 @@
     let
       system = "x86_64-linux";
       mkSystem = { configNix }: {
-        specialArgs = {
-          inherit inputs system;
-          pkgs = import nixpkgs {
-            system = "x86_64-linux";
-            config.allowUnfree = true;
-          };
-        };
+        specialArgs = { inherit inputs system; };
         modules = [
           (import configNix)
           inputs.home-manager.nixosModules.home-manager
