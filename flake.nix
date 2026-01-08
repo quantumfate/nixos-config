@@ -31,15 +31,17 @@
         home-manager.follows = "home-manager";
       };
     };
-    my-zen-config = {
-      url = "git+ssh://git@gitlab.com/my-nixos-config/zen";
-    };
+    my-zen-config = { url = "git+ssh://git@gitlab.com/my-nixos-config/zen"; };
 
   };
 
   outputs = { self, nixpkgs, ... }@inputs:
     let
       system = "x86_64-linux";
+      pkgs = import nixpkgs {
+        inherit system;
+        config = { allowUnfree = true; };
+      };
       mkSystem = { configNix }: {
         specialArgs = { inherit inputs system; };
         modules = [
