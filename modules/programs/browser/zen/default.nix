@@ -57,7 +57,7 @@ in {
           Fingerprinting = true;
         };
       };
-      profiles = inputs.my-zen-config;
+      profiles = inputs.my-zen-config.outputs.profiles;
     };
   };
 }
