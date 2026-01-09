@@ -12,7 +12,7 @@ let
   });
 in {
   home-manager = {
-    useGlobalPkgs = true;
+    useGlobalPkgs = false;
     useUserPackages = true;
     backupFileExtension = "backup";
 
@@ -24,7 +24,7 @@ in {
           #papirus-icon-theme
 
           ## Formatters
-          nixfmt-classic
+          nixfmt
           nixd
           shfmt
 
