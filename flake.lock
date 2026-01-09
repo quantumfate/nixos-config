@@ -628,11 +628,11 @@
         "systems": "systems_3"
       },
       "locked": {
-        "lastModified": 1766417675,
-        "narHash": "sha256-8WmQF/Ra5/Vj19f7XYPxBRcD7+22thcCIq5EjdnxcyE=",
+        "lastModified": 1767975060,
+        "narHash": "sha256-9rWfsiJ6X4SvcsXgRfdYDP+/g+Q+FqrJQEjesezL5+M=",
         "owner": "hyprwm",
         "repo": "hyprshutdown",
-        "rev": "813bd56e2c2644ae55759f09f65669abf7be03ce",
+        "rev": "b8e214c0cbdf28a7c69e856f9f48c18671958828",
         "type": "github"
       },
       "original": {
@@ -898,11 +898,11 @@
         "nixpkgs-unfree": "nixpkgs-unfree"
       },
       "locked": {
-        "lastModified": 1767968750,
-        "narHash": "sha256-T1ZSMu1/dmVadT694S3MtK5AH46vjGNLIYTqemr0BcQ=",
+        "lastModified": 1767975481,
+        "narHash": "sha256-CKN8FsewQ+XVhMNmdEzzJpLMVpFCVgOWksPrlakdI+8=",
         "ref": "refs/heads/main",
-        "rev": "e9e1ec17cadd72a2c2b619acd0debfbf78b6c21d",
-        "revCount": 65,
+        "rev": "3c13452cdbfd0badc4c6a1a878979be6167ce20a",
+        "revCount": 66,
         "type": "git",
         "url": "ssh://git@gitlab.com/quantumfate/zen"
       },

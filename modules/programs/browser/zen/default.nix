@@ -1,4 +1,10 @@
-{ config, pkgs, inputs, lib, ... }:
+{
+  config,
+  pkgs,
+  inputs,
+  lib,
+  ...
+}:
 
 let
   userCfg = config.common.user;
@@ -9,9 +15,13 @@ let
     sha256 = "sha256-5A57Lyctq497SSph7B+ucuEyF1gGVTsuI3zuBItGfg4=";
   };
 
-  catppuccinTargets = [ ".zen/default/chrome" ".zen/dofus/chrome" ];
+  catppuccinTargets = [
+    ".zen/default/chrome"
+    ".zen/dofus/chrome"
+  ];
 
-  capitalize = str:
+  capitalize =
+    str:
     lib.strings.toUpper (lib.strings.substring 0 1 str)
     + lib.strings.substring 1 (lib.strings.stringLength str) str;
 
@@ -23,15 +33,18 @@ let
     ".zen/default/zen-keyboard-shortcuts.json"
   ];
 
-
-in {
+in
+{
   home-manager.users."${userCfg.name}" = {
     imports = [ inputs.zen-browser.homeModules.beta ];
-    home.file = lib.attrsets.genAttrs catppuccinTargets (path: {
-      source = "${catppuccinZenTheme}/themes/${flavor}/${accent}/";
-      recursive = true;
-    }) // lib.attrsets.genAttrs zen_profiles
-      (profile: { source = ./kb-shortcuts.json; });
+    home.file =
+      lib.attrsets.genAttrs catppuccinTargets (path: {
+        source = "${catppuccinZenTheme}/themes/${flavor}/${accent}/";
+        recursive = true;
+      })
+      // lib.attrsets.genAttrs zen_profiles (profile: {
+        source = ./kb-shortcuts.json;
+      });
 
     programs.zen-browser = {
       enable = true;
@@ -63,8 +76,17 @@ in {
             private_browsing = true;
             default_area = "navbar";
             installation_mode = "force_installed";
-            install_url =
-              "https://addons.mozilla.org/firefox/downloads/latest/dofus-translate/latest.xpi";
+            install_url = "https://addons.mozilla.org/firefox/downloads/latest/dofus-translate/latest.xpi";
+          };
+          "{d7742d87-e61d-4b78-b8a1-b469842139fa}" = {
+            private_browsing = true;
+            installation_mode = "force_installed";
+            install_url = "https://addons.mozilla.org/firefox/downloads/latest/vimium-ff/latest.xpi";
+          };
+          "uBlock0@raymondhill.net" = {
+            private_browsing = true;
+            installation_mode = "force_installed";
+            install_url = "https://addons.mozilla.org/firefox/downloads/latest/youtube_recommended_videos/latest.xpi";
           };
         };
       };
