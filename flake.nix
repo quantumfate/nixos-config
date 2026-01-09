@@ -31,7 +31,7 @@
         home-manager.follows = "home-manager";
       };
     };
-    my-zen-config = { url = "git+ssh://git@gitlab.com/my-nixos-config/zen"; };
+    my-zen-config = { url = "git+ssh://git@gitlab.com/quantumfate/zen"; };
   };
 
   outputs = { self, nixpkgs, ... }@inputs:
