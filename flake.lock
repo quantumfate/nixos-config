@@ -898,11 +898,11 @@
         "nixpkgs-unfree": "nixpkgs-unfree"
       },
       "locked": {
-        "lastModified": 1767954037,
-        "narHash": "sha256-FgJUI1asN0Glvoal3JyEUosnSXX4wak5EBq4Jqxgjnc=",
+        "lastModified": 1767956757,
+        "narHash": "sha256-VqwFLxKtHPtmTWtYR6JhVoyFd2OvqPa0HHndi7R0+9E=",
         "ref": "refs/heads/main",
-        "rev": "35f529d65e0096f250481eb8e789f7ead096b4f4",
-        "revCount": 50,
+        "rev": "0cb2ff01d3c02e6c54eeccb0218070910de2618b",
+        "revCount": 51,
         "type": "git",
         "url": "ssh://git@gitlab.com/my-nixos-config/zen"
       },
