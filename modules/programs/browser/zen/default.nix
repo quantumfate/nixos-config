@@ -23,6 +23,7 @@ let
     ".zen/default/zen-keyboard-shortcuts.json"
   ];
 
+
 in {
   home-manager.users."${userCfg.name}" = {
     imports = [ inputs.zen-browser.homeModules.beta ];
@@ -36,27 +37,27 @@ in {
       enable = true;
       nativeMessagingHosts = [ pkgs.firefoxpwa ];
       policies = {
-        AutofillAddressEnabled = true;
-        AutofillCreditCardEnabled = false;
-        DisableAppUpdate = true;
-        DisableFeedbackCommands = true;
-        DisableFirefoxStudies = true;
-        DisablePocket = true;
-        DisableTelemetry = true;
-        DisableProfileImport = true;
-        DisableSetDesktopBackground = true;
-        DisableFirefoxAccounts = false; # needed for sync
-        DisableFirefoxScreenshots = true;
-        DontCheckDefaultBrowser = true;
-        DisplayBookmarksToolbar = "always";
-        OfferToSaveLogins = false;
-        OverrideFirstRunPage = "";
-        EnableTrackingProtection = {
-          Value = true;
-          Locked = true;
-          Cryptomining = true;
-          Fingerprinting = true;
-        };
+        #AutofillAddressEnabled = true;
+        #AutofillCreditCardEnabled = false;
+        #DisableAppUpdate = true;
+        #DisableFeedbackCommands = true;
+        #DisableFirefoxStudies = true;
+        #DisablePocket = true;
+        #DisableTelemetry = true;
+        #DisableProfileImport = true;
+        #DisableSetDesktopBackground = true;
+        #DisableFirefoxAccounts = false; # needed for sync
+        #DisableFirefoxScreenshots = true;
+        #DontCheckDefaultBrowser = true;
+        #DisplayBookmarksToolbar = "always";
+        #OfferToSaveLogins = false;
+        #OverrideFirstRunPage = "";
+        #EnableTrackingProtection = {
+        #  Value = true;
+        #  Locked = true;
+        #  Cryptomining = true;
+        #  Fingerprinting = true;
+        #};
         ExtensionSettings = {
           "dofus-translate@isthos.com" = {
             private_browsing = true;
