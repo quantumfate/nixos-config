@@ -97,7 +97,7 @@ in {
         bind = [
           # Applications
           "$mainMod, return, exec, kitty"
-          "$mainMod, b, exec, zen-twilight"
+          "$mainMod, b, exec, zen-beta"
           "$mainMod, f, exec, kitty ranger"
           "$mainMod, q, exec, ${scriptDir}/minimize.sh"
           "$mainMod, m, exec, kitty --class Wiremix wiremix"

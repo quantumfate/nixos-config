@@ -10,7 +10,7 @@ handle_based_on_class() {
     class=$(hyprctl -j clients | jq -r " .[] | select(.address == \"$window_address\") | \"\(.initialClass)\"")
     
     case "$class" in 
-      zen-twilight) 
+      zen-beta) 
         "${IPC_SCRIPTDIR}/zen_opacity_switch.sh" "$window_address" "$window_title";; 
     esac
 }

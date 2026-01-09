@@ -15,7 +15,7 @@ in {
         enable = true;
         defaultApplications = let
           zenDesktopFileName =
-            inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.twilight.meta.desktopFileName;
+            inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.beta.meta.desktopFileName;
           associations = builtins.listToAttrs (map (name: {
             inherit name;
             value = [ zenDesktopFileName ];

@@ -24,7 +24,7 @@ in {
           "s[true]m[${primaryMonitor.name}]n[e:keepassxc], name:keepassxc, on-created-empty:keepassxc"
           "s[true]m[${primaryMonitor.name}]n[e:proton], name:proton"
           "s[true]m[${primaryMonitor.name}]n[e:ankama], name:ankama, on-created-empty:ankama-launcher"
-          "s[true]m[${primaryMonitor.name}]n[e:dofus], name:dofus, on-created-empty:hyprctl --batch \"dispatch exec zen-twilight -P dofus\""
+          "s[true]m[${primaryMonitor.name}]n[e:dofus], name:dofus, on-created-empty:hyprctl --batch \"dispatch exec zen-beta -P dofus\""
           "s[true]m[${primaryMonitor.name}]n[e:vesktop], name:vesktop, on-created-empty:vesktop"
           "s[true]m[${primaryMonitor.name}]n[e:spotify], name:spotiy, on-created-empty:spotify"
           "s[true]m[${primaryMonitor.name}]n[e:obs], name:obs, on-created-empty:${scriptDir}/on_created_empty.sh obs"

@@ -25,7 +25,7 @@ let
 
 in {
   home-manager.users."${userCfg.name}" = {
-    imports = [ inputs.zen-browser.homeModules.twilight ];
+    imports = [ inputs.zen-browser.homeModules.beta ];
     home.file = lib.attrsets.genAttrs catppuccinTargets (path: {
       source = "${catppuccinZenTheme}/themes/${flavor}/${accent}/";
       recursive = true;

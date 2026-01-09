@@ -35,7 +35,7 @@ in {
 
           # Browsers
           "tag +chromium-based-browser, match:class ((google-)?[cC]hrom(e|ium)|[bB]rave-browser|Microsoft-edge|Vivaldi-stable|helium)"
-          "tag +firefox-based-browser, match:class ([fF]irefox|zen|librewolf|zen-twilight)"
+          "tag +firefox-based-browser, match:class ([fF]irefox|zen|librewolf|zen-twilight|zen-beta)"
           "tile on, match:tag chromium-based-browser"
 
           # Picture-in-picture overlays
@@ -55,7 +55,7 @@ in {
 
           "tag +floating-window, match:class (protonvpn-app|Impala|About|bluetui|Wiremix|com.gabm.satty|Calos|About|TUI.float|io\\.github\\.Qalculate\\.qalculate-qt)"
           "tag +floating-window, match:class (xdg-desktop-portal-hyprland|xdg-desktop-portal-gtk|sublime_text|DesktopEditors), match:title (Open.*Files?|Save.*Files?|Save.*As|All Files|Save)"
-          "tag +floating-window, match:class (zen|zen-twilight), match:title (Library)"
+          "tag +floating-window, match:class (zen|zen-twilight|zen-beta), match:title (Library)"
           "tag +floating-window, match:class (org\\.keepassxc\\.KeePassXC), match:title (Unlock Database - KeePassXC)"
 
           # No transparency on media windows
