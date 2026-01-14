@@ -35,6 +35,7 @@
 
 ## TODO
 
+- migrate zen extensions to native flake instead of nur expressions 
 - finish neovim configuration, handle installation of language servers potentially via nix
     - no imperative installation via neovim plugins
 - Implement a module to track the upstream of the catppuccin color palette
