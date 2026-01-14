@@ -23,7 +23,7 @@ in
         max-history = "8";
         font = "${config.common.style.guiFont} 12";
         default-timeout = 0;
-        background-color = "${catppuccin.rgba_hex.base 90}";
+        background-color = "${catppuccin.hex.base}";
         text-color = "${catppuccin.hex.text}";
         width = 450;
         height = 150;
