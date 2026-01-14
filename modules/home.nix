@@ -20,8 +20,8 @@ let
     # https://github.com/NixOS/nixpkgs/issues/365156#issuecomment-2955509674
     postInstall = (oldAttrs.postInstall or "") + ''
       sed -i \
-        's|^Exec=proton-authenticator %U$|Exec=env WEBKIT_DISABLE_COMPOSITING_MODE=1 proton-authenticator %U|' \
-        "$out/share/applications/Proton Authenticator.desktop"
+        's|^Exec=proton-authenticator$|Exec=env WEBKIT_DISABLE_COMPOSITING_MODE=1 proton-authenticator|' \
+        $out/share/applications/Proton\ Authenticator.desktop
     '';
   });
 in
