@@ -13,7 +13,15 @@ let
     postInstall = (oldAttrs.postInstall or "") + ''
       sed -i \
         's|^Exec=proton-mail %U$|Exec=env XDG_SESSION_TYPE=x11 proton-mail %U|' \
-        usr/share/applications/proton-mail.desktop
+        $out/share/applications/proton-mail.desktop
+    '';
+  });
+  proton-auth-fix = pkgs.proton-authenticator.overrideAttrs (oldAttrs: {
+    # https://github.com/NixOS/nixpkgs/issues/365156#issuecomment-2955509674
+    postInstall = (oldAttrs.postInstall or "") + ''
+      sed -i \
+        's|^Exec=proton-authenticator %U$|Exec=env WEBKIT_DISABLE_COMPOSITING_MODE=1 proton-authenticator %U|' \
+        "$out/share/applications/Proton Authenticator.desktop"
     '';
   });
 in
@@ -61,7 +69,7 @@ in
           proton-pass
           protonmail-desktop-fix
           protonvpn-gui
-          proton-authenticator
+          proton-auth-fix
 
           # dev
           hub
