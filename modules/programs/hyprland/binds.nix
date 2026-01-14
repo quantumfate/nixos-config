@@ -18,7 +18,8 @@ let
     "9" = "plus"; # +
     "0" = "bracketright"; # ]
   };
-in {
+in
+{
   home-manager.users."${userCfg.name}" = {
     wayland.windowManager.hyprland = {
       settings = {
@@ -31,68 +32,28 @@ in {
           "$mainMod, P, Pseudo window, pseudo, # dwindle"
 
           # Switching workspaces
-          "$mainMod, ${
-            programmerDvorakMap."1"
-          }, Switch to workspace 1, workspace, 1"
-          "$mainMod, ${
-            programmerDvorakMap."2"
-          }, Switch to workspace 2, workspace, 2"
-          "$mainMod, ${
-            programmerDvorakMap."3"
-          }, Switch to workspace 3, workspace, 3"
-          "$mainMod, ${
-            programmerDvorakMap."4"
-          }, Switch to workspace 4, workspace, 4"
-          "$mainMod, ${
-            programmerDvorakMap."5"
-          }, Switch to workspace 5, workspace, 5"
-          "$mainMod, ${
-            programmerDvorakMap."6"
-          }, Switch to workspace 6, workspace, 6"
-          "$mainMod, ${
-            programmerDvorakMap."7"
-          }, Switch to workspace 7, workspace, 7"
-          "$mainMod, ${
-            programmerDvorakMap."8"
-          }, Switch to workspace 8, workspace, 8"
-          "$mainMod, ${
-            programmerDvorakMap."9"
-          }, Switch to workspace 9, workspace, 9"
-          "$mainMod, ${
-            programmerDvorakMap."0"
-          }, Switch to workspace 10, workspace, 10"
+          "$mainMod, ${programmerDvorakMap."1"}, Switch to workspace 1, workspace, 1"
+          "$mainMod, ${programmerDvorakMap."2"}, Switch to workspace 2, workspace, 2"
+          "$mainMod, ${programmerDvorakMap."3"}, Switch to workspace 3, workspace, 3"
+          "$mainMod, ${programmerDvorakMap."4"}, Switch to workspace 4, workspace, 4"
+          "$mainMod, ${programmerDvorakMap."5"}, Switch to workspace 5, workspace, 5"
+          "$mainMod, ${programmerDvorakMap."6"}, Switch to workspace 6, workspace, 6"
+          "$mainMod, ${programmerDvorakMap."7"}, Switch to workspace 7, workspace, 7"
+          "$mainMod, ${programmerDvorakMap."8"}, Switch to workspace 8, workspace, 8"
+          "$mainMod, ${programmerDvorakMap."9"}, Switch to workspace 9, workspace, 9"
+          "$mainMod, ${programmerDvorakMap."0"}, Switch to workspace 10, workspace, 10"
 
           # Send window to workspaces
-          "$mainMod SHIFT, ${
-            programmerDvorakMap."1"
-          },Switch to workspace 1, movetoworkspace, 1"
-          "$mainMod SHIFT, ${
-            programmerDvorakMap."2"
-          },Switch to workspace 2, movetoworkspace, 2"
-          "$mainMod SHIFT, ${
-            programmerDvorakMap."3"
-          },Switch to workspace 3, movetoworkspace, 3"
-          "$mainMod SHIFT, ${
-            programmerDvorakMap."4"
-          },Switch to workspace 4, movetoworkspace, 4"
-          "$mainMod SHIFT, ${
-            programmerDvorakMap."5"
-          },Switch to workspace 5, movetoworkspace, 5"
-          "$mainMod SHIFT, ${
-            programmerDvorakMap."6"
-          },Switch to workspace 6, movetoworkspace, 6"
-          "$mainMod SHIFT, ${
-            programmerDvorakMap."7"
-          },Switch to workspace 7, movetoworkspace, 7"
-          "$mainMod SHIFT, ${
-            programmerDvorakMap."8"
-          },Switch to workspace 8, movetoworkspace, 8"
-          "$mainMod SHIFT, ${
-            programmerDvorakMap."9"
-          },Switch to workspace 9, movetoworkspace, 9"
-          "$mainMod SHIFT, ${
-            programmerDvorakMap."0"
-          },Switch to workspace 10,movetoworkspace, 10"
+          "$mainMod SHIFT, ${programmerDvorakMap."1"},Switch to workspace 1, movetoworkspace, 1"
+          "$mainMod SHIFT, ${programmerDvorakMap."2"},Switch to workspace 2, movetoworkspace, 2"
+          "$mainMod SHIFT, ${programmerDvorakMap."3"},Switch to workspace 3, movetoworkspace, 3"
+          "$mainMod SHIFT, ${programmerDvorakMap."4"},Switch to workspace 4, movetoworkspace, 4"
+          "$mainMod SHIFT, ${programmerDvorakMap."5"},Switch to workspace 5, movetoworkspace, 5"
+          "$mainMod SHIFT, ${programmerDvorakMap."6"},Switch to workspace 6, movetoworkspace, 6"
+          "$mainMod SHIFT, ${programmerDvorakMap."7"},Switch to workspace 7, movetoworkspace, 7"
+          "$mainMod SHIFT, ${programmerDvorakMap."8"},Switch to workspace 8, movetoworkspace, 8"
+          "$mainMod SHIFT, ${programmerDvorakMap."9"},Switch to workspace 9, movetoworkspace, 9"
+          "$mainMod SHIFT, ${programmerDvorakMap."0"},Switch to workspace 10,movetoworkspace, 10"
         ];
         bind = [
           # Applications
@@ -171,4 +132,3 @@ in {
     };
   };
 }
-

@@ -2,28 +2,36 @@
 
 let
   userCfg = config.common.user;
-  mkNativeMessagingHost = browser:
+  mkNativeMessagingHost =
+    browser:
     {
       name = "org.keepassxc.keepassxc_browser";
       description = "KeePassXC integration with native messaging support";
       path = "${pkgs.keepassxc}/bin/keepassxc-proxy";
       type = "stdio";
-    } // (if browser == "firefox" then {
-      allowed_extensions = [ "keepassxc-browser@keepassxc.org" ];
-    } else {
-      allowed_origins =
-        [ "chrome-extension://oboonakemofpalcgghocfoadofidjkkk/" ];
-    });
+    }
+    // (
+      if browser == "firefox" then
+        {
+          allowed_extensions = [ "keepassxc-browser@keepassxc.org" ];
+        }
+      else
+        {
+          allowed_origins = [ "chrome-extension://oboonakemofpalcgghocfoadofidjkkk/" ];
+        }
+    );
 
   native_messaging_hosts = {
     ".config/BraveSoftware/Brave-Browser/NativeMessagingHosts/org.keepassxc.keepassxc_browser.json".text =
       builtins.toJSON (mkNativeMessagingHost "brave");
     ".config/google-chrome/NativeMessagingHosts/org.keepassxc.keepassxc_browser.json".text =
       builtins.toJSON (mkNativeMessagingHost "chrome");
-    ".mozilla/native-messaging-hosts/org.keepassxc.keepassxc_browser.json".text =
-      builtins.toJSON (mkNativeMessagingHost "firefox");
+    ".mozilla/native-messaging-hosts/org.keepassxc.keepassxc_browser.json".text = builtins.toJSON (
+      mkNativeMessagingHost "firefox"
+    );
   };
-in {
+in
+{
 
   home-manager.users."${userCfg.name}" = {
     home.file = native_messaging_hosts;
@@ -35,12 +43,9 @@ in {
           RememberLastKeyFiles = true;
           OpenPreviousDatabasesOnStartup = true;
           AutoSaveAfterEveryChange = true;
-          LastActiveDatabase =
-            "/home/${userCfg.name}/Documents/Keepass/privatepw_final.kdbx";
-          LastDatabases =
-            "/home/${userCfg.name}/Documents/Keepass/privatepw_final.kdbx";
-          LastOpenedDatabases =
-            "/home/${userCfg.name}/Documents/Keepass/privatepw_final.kdbx";
+          LastActiveDatabase = "/home/${userCfg.name}/Documents/Keepass/privatepw_final.kdbx";
+          LastDatabases = "/home/${userCfg.name}/Documents/Keepass/privatepw_final.kdbx";
+          LastOpenedDatabases = "/home/${userCfg.name}/Documents/Keepass/privatepw_final.kdbx";
         };
         GUI = {
           ApplicationTheme = "classic";

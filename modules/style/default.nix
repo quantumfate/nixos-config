@@ -1,8 +1,13 @@
 { config, pkgs, ... }:
 
-let userCfg = config.common.user;
-in {
-  imports = [ ./catppuccin ./stylix.nix ];
+let
+  userCfg = config.common.user;
+in
+{
+  imports = [
+    ./catppuccin
+    ./stylix.nix
+  ];
 
   home-manager.users."${userCfg.name}" = {
     gtk = {
@@ -24,7 +29,9 @@ in {
     };
     qt = {
       enable = true;
-      style = { name = "kvantum"; };
+      style = {
+        name = "kvantum";
+      };
 
     };
   };

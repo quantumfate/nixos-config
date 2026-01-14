@@ -1,7 +1,9 @@
 { config, lib, ... }:
 
-let cfg = config.common.modules.nvidia;
-in {
+let
+  cfg = config.common.modules.nvidia;
+in
+{
   config = lib.mkIf cfg.enable {
 
     hardware.graphics.enable = true;

@@ -1,7 +1,9 @@
 { config, ... }:
 
-let userCfg = config.common.user;
-in {
+let
+  userCfg = config.common.user;
+in
+{
 
   home-manager.users."${userCfg.name}" = {
     home.file = {
@@ -11,7 +13,9 @@ in {
     programs.git = {
       enable = true;
       settings = {
-        user = { name = "Leon Connor Holm"; };
+        user = {
+          name = "Leon Connor Holm";
+        };
         "includeIf \"gitdir:~/Projects/github/\"" = {
           path = "~/.config/git/githubconf";
         };

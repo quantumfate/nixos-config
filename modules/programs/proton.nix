@@ -1,7 +1,9 @@
 { config, ... }:
 
-let userCfg = config.common.user;
-in {
+let
+  userCfg = config.common.user;
+in
+{
   home-manager.users."${userCfg.name}" = {
     # Fix not starting on wayland
     xdg.desktopEntries."proton-authenticator" = {
@@ -12,7 +14,9 @@ in {
       comment = "Proton Authenticator";
       categories = [ "Utility" ];
       terminal = false;
-      settings = { StartupWMClass = "proton-authenticator"; };
+      settings = {
+        StartupWMClass = "proton-authenticator";
+      };
     };
   };
 }

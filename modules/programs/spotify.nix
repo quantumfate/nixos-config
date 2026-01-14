@@ -1,9 +1,15 @@
-{ config, pkgs, inputs, ... }:
+{
+  config,
+  pkgs,
+  inputs,
+  ...
+}:
 
 let
   userCfg = config.common.user;
   spicePkgs = inputs.spicetify-nix.legacyPackages.${pkgs.stdenv.system};
-in {
+in
+{
   programs.spicetify = {
     enable = true;
     enabledExtensions = with spicePkgs.extensions; [
@@ -18,5 +24,7 @@ in {
     theme = spicePkgs.themes.catppuccin;
     colorScheme = "${config.common.style.catppuccin.flavor}";
   };
-  home-manager.users."${userCfg.name}" = { services.spotifyd.enable = true; };
+  home-manager.users."${userCfg.name}" = {
+    services.spotifyd.enable = true;
+  };
 }

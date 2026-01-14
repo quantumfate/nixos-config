@@ -24,6 +24,10 @@
     };
   };
 
-  imports =
-    [ ./user.nix ./peripherals.nix ./style.nix ./modules.nix ];
+  imports = [
+    ./user.nix
+    ./peripherals.nix
+    ./style.nix
+    ./modules.nix
+  ];
 }

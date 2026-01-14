@@ -1,9 +1,19 @@
-{ config, pkgs, lib, ... }:
+{
+  config,
+  pkgs,
+  lib,
+  ...
+}:
 
 {
   config = {
-    environment.systemPackages = with pkgs;
-      [ ] ++ lib.optionals config.common.modules.qmk.enable [ qmk dos2unix ];
+    environment.systemPackages =
+      with pkgs;
+      [ ]
+      ++ lib.optionals config.common.modules.qmk.enable [
+        qmk
+        dos2unix
+      ];
     hardware.keyboard.qmk.enable = config.common.modules.qmk.enable;
 
     console = {

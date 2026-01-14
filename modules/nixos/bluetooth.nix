@@ -3,7 +3,8 @@
 let
   cfg = config.common.modules.bluetooth;
   userCfg = config.common.user;
-in {
+in
+{
   config = lib.mkIf cfg.enable {
     hardware.bluetooth = {
       enable = true;
@@ -13,7 +14,9 @@ in {
           Experimental = true;
           FastConnectable = true;
         };
-        Policy = { AutoEnable = true; };
+        Policy = {
+          AutoEnable = true;
+        };
       };
     };
     services.blueman.enable = true;

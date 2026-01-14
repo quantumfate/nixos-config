@@ -12,12 +12,12 @@ let
     mocha = "sha256-4TdSa3awGONTWjn+uA5VymsUijR0jLvGQ8kWljovwGs=";
   };
   catppuccinForRanger = pkgs.fetchurl {
-    url =
-      "https://github.com/dfrico/catppuccin-ranger/releases/download/1.0.0/catppuccin_${catppuccinCfg.flavor}.py";
+    url = "https://github.com/dfrico/catppuccin-ranger/releases/download/1.0.0/catppuccin_${catppuccinCfg.flavor}.py";
     sha256 = flavorHashMap."${catppuccinCfg.flavor}";
   };
 
-in {
+in
+{
   services.locate = {
     enable = true;
     package = pkgs.mlocate;
@@ -36,7 +36,7 @@ in {
       atool
       unrar
       _7zz
-      libarchive 
+      libarchive
       unrar
       unzip
       w3m
@@ -57,11 +57,12 @@ in {
       recursive = true;
       executable = true;
     };
-    home.file.".config/ranger/rifle.conf" = { source = ./rifle.conf; };
-    home.file.".config/ranger/colorschemes/catppuccin_${catppuccinCfg.flavor}.py" =
-      {
-        source = catppuccinForRanger;
-      };
+    home.file.".config/ranger/rifle.conf" = {
+      source = ./rifle.conf;
+    };
+    home.file.".config/ranger/colorschemes/catppuccin_${catppuccinCfg.flavor}.py" = {
+      source = catppuccinForRanger;
+    };
     xdg.desktopEntries."ranger" = {
       type = "Application";
       name = "ranger";
@@ -72,7 +73,11 @@ in {
       terminal = false;
       mimeType = [ "inode/directory" ];
       startupNotify = true;
-      categories = [ "System" "FileTools" "FileManager" ];
+      categories = [
+        "System"
+        "FileTools"
+        "FileManager"
+      ];
       settings = {
         "X-MultipleArgs" = "false";
         #version = "1.0";
@@ -113,4 +118,3 @@ in {
     };
   };
 }
-

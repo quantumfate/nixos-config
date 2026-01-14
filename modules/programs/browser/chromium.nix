@@ -2,7 +2,8 @@
 
 let
   userCfg = config.common.user;
-in {
+in
+{
 
   home-manager.users."${userCfg.name}" = {
     programs.chromium = {
@@ -21,11 +22,14 @@ in {
 
         # FireShot
         { id = "mcbpblocgmgfnpjjppndjkmgjaogfceg"; }
-        
+
         # KeepassXC
         { id = "oboonakemofpalcgghocfoadofidjkkk"; }
       ];
-      commandLineArgs = [ "--force-dark-mode" "--ignore-gpu-blocklist" ];
+      commandLineArgs = [
+        "--force-dark-mode"
+        "--ignore-gpu-blocklist"
+      ];
     };
   };
 }

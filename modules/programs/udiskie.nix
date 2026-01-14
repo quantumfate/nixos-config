@@ -2,7 +2,8 @@
 
 let
   userCfg = config.common.user;
-in {
+in
+{
   services.udisks2.enable = true;
 
   home-manager.users."${userCfg.name}" = {

@@ -1,4 +1,10 @@
-{ config, pkgs, lib, inputs, ... }:
+{
+  config,
+  pkgs,
+  lib,
+  inputs,
+  ...
+}:
 
 let
   userCfg = config.common.user;
@@ -10,14 +16,16 @@ let
         usr/share/applications/proton-mail.desktop
     '';
   });
-in {
+in
+{
   home-manager = {
     useGlobalPkgs = false;
     useUserPackages = true;
     backupFileExtension = "backup";
 
     users.${userCfg.name} = {
-      home.packages = with pkgs;
+      home.packages =
+        with pkgs;
         [
           # Ricing
           papirus-folders
@@ -54,14 +62,15 @@ in {
           protonmail-desktop-fix
           protonvpn-gui
           proton-authenticator
-          
+
           # dev
           hub
 
           (callPackage (../Packages/ankama-launcher.nix) { })
           obs-studio
-        ] ++ lib.optionals config.common.modules.dofus.enable
-        [ pkgs.ankama-launcher ] ++ config.common.user.packages;
+        ]
+        ++ lib.optionals config.common.modules.dofus.enable [ pkgs.ankama-launcher ]
+        ++ config.common.user.packages;
       imports = [
         {
           home.username = "${userCfg.name}";

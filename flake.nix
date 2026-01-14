@@ -31,23 +31,29 @@
         home-manager.follows = "home-manager";
       };
     };
-    my-zen-config = { url = "git+ssh://git@gitlab.com/quantumfate/zen"; };
+    my-zen-config = {
+      url = "git+ssh://git@gitlab.com/quantumfate/zen";
+    };
   };
 
-  outputs = { self, nixpkgs, ... }@inputs:
+  outputs =
+    { self, nixpkgs, ... }@inputs:
     let
       system = "x86_64-linux";
-      mkSystem = { configNix }: {
-        specialArgs = { inherit inputs system; };
-        modules = [
-          (import configNix)
-          inputs.home-manager.nixosModules.home-manager
-          inputs.catppuccin.nixosModules.catppuccin
-          inputs.stylix.nixosModules.stylix
-          inputs.spicetify-nix.nixosModules.spicetify
-        ];
-      };
-    in {
+      mkSystem =
+        { configNix }:
+        {
+          specialArgs = { inherit inputs system; };
+          modules = [
+            (import configNix)
+            inputs.home-manager.nixosModules.home-manager
+            inputs.catppuccin.nixosModules.catppuccin
+            inputs.stylix.nixosModules.stylix
+            inputs.spicetify-nix.nixosModules.spicetify
+          ];
+        };
+    in
+    {
       nix.settings = {
         substituters = [ "https://hyprland.cachix.org" ];
         trusted-substituters = [ "https://hyprland.cachix.org" ];
@@ -55,9 +61,11 @@
           "hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc="
         ];
       };
-      nixosConfigurations.quantum-desktop = nixpkgs.lib.nixosSystem
-        (mkSystem { configNix = ./hosts/quantum-desktop/configuration.nix; });
-      nixosConfigurations.quantum-laptop = nixpkgs.lib.nixosSystem
-        (mkSystem { configNix = ./hosts/quantum-laptop/configuration.nix; });
+      nixosConfigurations.quantum-desktop = nixpkgs.lib.nixosSystem (mkSystem {
+        configNix = ./hosts/quantum-desktop/configuration.nix;
+      });
+      nixosConfigurations.quantum-laptop = nixpkgs.lib.nixosSystem (mkSystem {
+        configNix = ./hosts/quantum-laptop/configuration.nix;
+      });
     };
 }

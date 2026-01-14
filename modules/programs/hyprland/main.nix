@@ -1,4 +1,10 @@
-{ pkgs, config, inputs, lib, ... }:
+{
+  pkgs,
+  config,
+  inputs,
+  lib,
+  ...
+}:
 
 let
   hostName = config.networking.hostName;
@@ -15,11 +21,11 @@ let
   };
   borderActive = config.theme.catppuccin.rgba.mauve 0.8;
   borderInActive = config.theme.catppuccin.rgba.base 0.8;
-in {
+in
+{
   programs.hyprland = {
     enable = true;
-    package =
-      inputs.hyprland.packages."${pkgs.stdenv.hostPlatform.system}".hyprland;
+    package = inputs.hyprland.packages."${pkgs.stdenv.hostPlatform.system}".hyprland;
     xwayland.enable = true;
   };
 
@@ -37,8 +43,7 @@ in {
       type = "Application";
       name = "Hyprland";
       exec = "Hyprland";
-      comment =
-        "Hyprland is an independent, highly customizable, dynamic tiling Wayland compositor that doesn't sacrifice on its looks.";
+      comment = "Hyprland is an independent, highly customizable, dynamic tiling Wayland compositor that doesn't sacrifice on its looks.";
     };
     home.packages = with pkgs; [
       hyprtoolkit
@@ -138,7 +143,9 @@ in {
 
           follow_mouse = 0;
           mouse_refocus = false;
-          touchpad = { disable_while_typing = true; };
+          touchpad = {
+            disable_while_typing = true;
+          };
           sensitivity = 0.2;
         };
         dwindle = {
@@ -148,13 +155,19 @@ in {
         };
 
         # See https://wiki.hyprland.org/Configuring/Master-Layout/ for more
-        master = { new_status = "master"; };
+        master = {
+          new_status = "master";
+        };
         group = {
           auto_group = true;
-          groupbar = { enabled = true; };
+          groupbar = {
+            enabled = true;
+          };
         };
 
-        cursor = { no_warps = true; };
+        cursor = {
+          no_warps = true;
+        };
 
         misc = {
           disable_hyprland_logo = true;

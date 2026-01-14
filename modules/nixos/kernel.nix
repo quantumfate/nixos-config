@@ -6,7 +6,7 @@ let
     "quantum-laptop" = pkgs.linuxPackages_xanmod;
     "default" = pkgs.linuxPackages_latest;
   };
-in {
-  boot.kernelPackages =
-    hostKernelMap.${config.networking.hostName} or hostKernelMap.default;
+in
+{
+  boot.kernelPackages = hostKernelMap.${config.networking.hostName} or hostKernelMap.default;
 }

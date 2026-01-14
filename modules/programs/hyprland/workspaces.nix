@@ -4,7 +4,8 @@ let
   userCfg = config.common.user;
   primaryMonitor = config.common.peripherals.primaryMonitor;
   scriptDir = "/home/${userCfg.name}/.config/hypr/scripts/wrapper";
-in {
+in
+{
   home-manager.users."${userCfg.name}" = {
     wayland.windowManager.hyprland = {
       settings = {

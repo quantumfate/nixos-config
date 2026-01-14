@@ -1,3 +1,7 @@
 {
-  imports = [ ./main.nix ./modules.nix ./style.nix ];
+  imports = [
+    ./main.nix
+    ./modules.nix
+    ./style.nix
+  ];
 }

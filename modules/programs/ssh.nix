@@ -2,7 +2,8 @@
 
 let
   userCfg = config.common.user;
-in {
+in
+{
   home-manager.users."${userCfg.name}" = {
     programs.ssh = {
       enable = true;

@@ -1,14 +1,22 @@
 { pkgs, ... }:
 
 {
-  imports = [ ./hardware-configuration.nix ../common.nix ../../modules ];
+  imports = [
+    ./hardware-configuration.nix
+    ../common.nix
+    ../../modules
+  ];
 
   common = {
     hostName = "quantum-laptop";
     user = {
       name = "quantum";
       shell = pkgs.zsh;
-      groups = [ "video" "input" "ydotool" ];
+      groups = [
+        "video"
+        "input"
+        "ydotool"
+      ];
       packages = [ pkgs.brightnessctl ];
     };
     peripherals = {
@@ -31,4 +39,3 @@
   };
 
 }
-

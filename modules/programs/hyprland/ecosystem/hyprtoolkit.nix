@@ -3,7 +3,8 @@
 let
   userCfg = config.common.user;
   catppuccin = config.theme.catppuccin;
-in {
+in
+{
   home-manager.users."${userCfg.name}" = {
     home.file.".config/hypr/hyprtoolkit.conf" = {
       text = ''

@@ -1,12 +1,17 @@
 { config, pkgs, ... }:
 
-let cfg = config.common;
-in {
+let
+  cfg = config.common;
+in
+{
   imports = [ ../modules ];
 
   # General
   nixpkgs.config.allowUnfree = true;
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix.settings.experimental-features = [
+    "nix-command"
+    "flakes"
+  ];
   nix.settings.download-buffer-size = 524288000;
 
   # System
@@ -14,7 +19,9 @@ in {
   networking.networkmanager.enable = true;
 
   boot.loader = {
-    efi = { canTouchEfiVariables = true; };
+    efi = {
+      canTouchEfiVariables = true;
+    };
     grub = {
       enable = true;
       devices = [ "nodev" ];
@@ -28,13 +35,25 @@ in {
 
   users.users.${cfg.user.name} = {
     isNormalUser = true;
-    extraGroups = cfg.user.groups ++ [ "wheel" "networkmanager" "mlocate" ];
+    extraGroups = cfg.user.groups ++ [
+      "wheel"
+      "networkmanager"
+      "mlocate"
+    ];
     description = "main user";
     shell = cfg.user.shell;
   };
 
-  environment.systemPackages = with pkgs;
-    [ vim wget git zsh pciutils nix-prefetch-github ]
+  environment.systemPackages =
+    with pkgs;
+    [
+      vim
+      wget
+      git
+      zsh
+      pciutils
+      nix-prefetch-github
+    ]
     ++ config.common.user.systemPackages;
   system.stateVersion = "25.05";
 }

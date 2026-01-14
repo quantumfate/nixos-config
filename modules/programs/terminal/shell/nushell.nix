@@ -2,7 +2,8 @@
 
 let
   userCfg = config.common.user;
-in {
+in
+{
 
   config = {
     home-manager.users."${userCfg.name}" = {

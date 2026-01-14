@@ -1,7 +1,9 @@
 { config, lib, ... }:
 
-let userCfg = config.common.user;
-in {
+let
+  userCfg = config.common.user;
+in
+{
   home-manager.users."${userCfg.name}" = {
     # https://mynixos.com/options/programs.rofi
     programs.rofi = {
@@ -10,7 +12,11 @@ in {
       font = "${config.common.style.guiFont} 16";
       cycle = true;
       location = "center";
-      modes = [ "run" "drun" "window" ];
+      modes = [
+        "run"
+        "drun"
+        "window"
+      ];
       extraConfig = {
         icon-theme = "Papirus-Dark";
         drun-display-format = "{icon} {name}";

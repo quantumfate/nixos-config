@@ -17,11 +17,16 @@ let
     # dWpBY/8clQT16lIPUR+y346MwRsHPU0M4ir/E9BqpwE=
     hash = "sha256-2XLarZBSNDXdhQE7WGNzqZOGzVNZQdhN2ktaLUkoUZ8=";
     curlOptsList = [
-      "-A" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
-      "-H" "Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8"
-      "-H" "Accept-Language: en-US,en;q=0.5"
-      "-H" "Accept-Encoding: gzip, deflate, br"
-      "-e" "https://www.ankama.com/"
+      "-A"
+      "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+      "-H"
+      "Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8"
+      "-H"
+      "Accept-Language: en-US,en;q=0.5"
+      "-H"
+      "Accept-Encoding: gzip, deflate, br"
+      "-e"
+      "https://www.ankama.com/"
       "-L"
     ];
   };

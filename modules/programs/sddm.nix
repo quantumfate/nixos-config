@@ -1,4 +1,9 @@
-{ pkgs, config, lib, ... }:
+{
+  pkgs,
+  config,
+  lib,
+  ...
+}:
 
 let
   cfg = config.common;
@@ -8,20 +13,23 @@ let
     HDMI-A-1 = "HDMI-0";
     eDP-1 = "eDP-0";
   };
-  buildCommands = monitors:
-    lib.strings.concatMapStrings (monitor:
-      if monitor == cfg.peripherals.primaryMonitor.name then ''
-        /run/current-system/sw/bin/xrandr --output ${
-          monitorXsessionMap.${monitor}
-        } --primary --auto
-      '' else ''
-        /run/current-system/sw/bin/xrandr --output ${
-          monitorXsessionMap.${monitor}
-        } --off
-      '') monitors;
+  buildCommands =
+    monitors:
+    lib.strings.concatMapStrings (
+      monitor:
+      if monitor == cfg.peripherals.primaryMonitor.name then
+        ''
+          /run/current-system/sw/bin/xrandr --output ${monitorXsessionMap.${monitor}} --primary --auto
+        ''
+      else
+        ''
+          /run/current-system/sw/bin/xrandr --output ${monitorXsessionMap.${monitor}} --off
+        ''
+    ) monitors;
 
   catppuccinCfg = config.common.style.catppuccin;
-in {
+in
+{
   environment.systemPackages = with pkgs; [ xorg.xrandr ];
 
   catppuccin.sddm = {

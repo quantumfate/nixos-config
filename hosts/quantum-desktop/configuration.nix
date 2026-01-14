@@ -1,7 +1,10 @@
 { pkgs, ... }:
 
 {
-  imports = [ ./hardware-configuration.nix ../common.nix ];
+  imports = [
+    ./hardware-configuration.nix
+    ../common.nix
+  ];
 
   common = {
     hostName = "quantum-desktop";
@@ -11,7 +14,10 @@
       groups = [ "ydotool" ];
     };
     peripherals = {
-      monitors = [ "DP-1" "HDMI-A-1" ];
+      monitors = [
+        "DP-1"
+        "HDMI-A-1"
+      ];
       primaryMonitor = {
         name = "DP-1";
         mode = "2560x1440";
@@ -32,4 +38,3 @@
   };
 
 }
-

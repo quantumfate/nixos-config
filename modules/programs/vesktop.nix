@@ -3,7 +3,8 @@
 let
   userCfg = config.common.user;
   catppuccin = config.theme.catppuccin;
-in {
+in
+{
   # https://github.com/NixOS/nixpkgs/issues/476669#issuecomment-3707850520
   home-manager.users."${userCfg.name}" = {
     programs.vesktop = {
@@ -33,7 +34,10 @@ in {
         splashBackground = "${catppuccin.hex.base}";
         splashPixelated = true;
 
-        spellCheckLanguages = [ "EN" "DE" ];
+        spellCheckLanguages = [
+          "EN"
+          "DE"
+        ];
 
       };
       vencord = {

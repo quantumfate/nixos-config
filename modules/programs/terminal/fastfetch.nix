@@ -1,7 +1,9 @@
 { config, ... }:
 
-let userCfg = config.common.user;
-in {
+let
+  userCfg = config.common.user;
+in
+{
 
   home-manager.users."${userCfg.name}" = {
 
@@ -12,7 +14,9 @@ in {
         logo = {
           source = "${../../../assets/fastfetch/yukino.png}";
           type = "kitty";
-          padding = { top = 1; };
+          padding = {
+            top = 1;
+          };
           height = 12;
         };
         display = {
