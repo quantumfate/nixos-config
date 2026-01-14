@@ -24,7 +24,12 @@
       terminalFont = "Inconsolata Nerd Font";
       borderRadius = 8;
     };
-    modules = { bluetooth.enable = true; };
+    modules = {
+      bluetooth.enable = true;
+      mako.enable = false;
+      dofus.enable = false;
+      waybar.enable = false;
+    };
   };
 
 }

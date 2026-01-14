@@ -131,22 +131,6 @@
         "type": "github"
       }
     },
-    "betterfox": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1765663165,
-        "narHash": "sha256-zGpfQk2gY6ifxIk1fvCk5g5SIFo+o8RItmw3Yt3AeCg=",
-        "owner": "yokoffing",
-        "repo": "Betterfox",
-        "rev": "eee6e58b2b0ee10a59efb6586a5db07ae181d8c7",
-        "type": "github"
-      },
-      "original": {
-        "owner": "yokoffing",
-        "repo": "Betterfox",
-        "type": "github"
-      }
-    },
     "catppuccin": {
       "inputs": {
         "nixpkgs": "nixpkgs"
@@ -163,29 +147,6 @@
         "owner": "catppuccin",
         "repo": "nix",
         "type": "github"
-      }
-    },
-    "firefox-addons": {
-      "inputs": {
-        "nixpkgs": [
-          "my-zen-config",
-          "nixpkgs-unfree"
-        ]
-      },
-      "locked": {
-        "dir": "pkgs/firefox-addons",
-        "lastModified": 1768363414,
-        "narHash": "sha256-9LW3RqHM13WnhhpAZjZA0i/SdPAOZg4R2kG/kUD0aO0=",
-        "owner": "rycee",
-        "repo": "nur-expressions",
-        "rev": "1abc7eea7d965009e7d7fdc683985b3245933fb3",
-        "type": "gitlab"
-      },
-      "original": {
-        "dir": "pkgs/firefox-addons",
-        "owner": "rycee",
-        "repo": "nur-expressions",
-        "type": "gitlab"
       }
     },
     "firefox-gnome-theme": {
@@ -326,11 +287,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1768366276,
-        "narHash": "sha256-NUdsaB6H1wvbOC7oh1UZ7Ojg1I+mYBQv8ovlMB6FbHk=",
+        "lastModified": 1768397254,
+        "narHash": "sha256-hhvxV6RUxagnwE7WEYbm7vRaR0MtdNn2Brm3rqPNj4E=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "4e235a8746b195e335306d898f0cc93ad6c4564c",
+        "rev": "a0a505f803cb74a2bd386a1604973107f7e6c19b",
         "type": "github"
       },
       "original": {
@@ -890,27 +851,6 @@
         "type": "github"
       }
     },
-    "my-zen-config": {
-      "inputs": {
-        "betterfox": "betterfox",
-        "firefox-addons": "firefox-addons",
-        "nixpkgs": "nixpkgs_4",
-        "nixpkgs-unfree": "nixpkgs-unfree"
-      },
-      "locked": {
-        "lastModified": 1768391708,
-        "narHash": "sha256-tGtRkM5xYFUhFieTd5MU40ifX+Wz3h+TvOfm7bIbCBg=",
-        "ref": "refs/heads/main",
-        "rev": "a31d9010aa4df57ff74b88fb855fa8fe60e18bcd",
-        "revCount": 74,
-        "type": "git",
-        "url": "ssh://git@gitlab.com/quantumfate/zen"
-      },
-      "original": {
-        "type": "git",
-        "url": "ssh://git@gitlab.com/quantumfate/zen"
-      }
-    },
     "nixpkgs": {
       "locked": {
         "lastModified": 1767116409,
@@ -924,27 +864,6 @@
         "owner": "NixOS",
         "ref": "nixos-unstable",
         "repo": "nixpkgs",
-        "type": "github"
-      }
-    },
-    "nixpkgs-unfree": {
-      "inputs": {
-        "nixpkgs": [
-          "my-zen-config",
-          "nixpkgs"
-        ]
-      },
-      "locked": {
-        "lastModified": 1755249704,
-        "narHash": "sha256-J1mqsd/gqZ32G3YOzWk9sppLbXXLEpu37hrZfRcTtdg=",
-        "owner": "numtide",
-        "repo": "nixpkgs-unfree",
-        "rev": "12d82a604d21a65df008bdb1515eecb96f9e55dc",
-        "type": "github"
-      },
-      "original": {
-        "owner": "numtide",
-        "repo": "nixpkgs-unfree",
         "type": "github"
       }
     },
@@ -997,22 +916,6 @@
       }
     },
     "nixpkgs_5": {
-      "locked": {
-        "lastModified": 1768127708,
-        "narHash": "sha256-1Sm77VfZh3mU0F5OqKABNLWxOuDeHIlcFjsXeeiPazs=",
-        "owner": "nixos",
-        "repo": "nixpkgs",
-        "rev": "ffbc9f8cbaacfb331b6017d5a5abb21a492c9a38",
-        "type": "github"
-      },
-      "original": {
-        "owner": "nixos",
-        "ref": "nixos-unstable",
-        "repo": "nixpkgs",
-        "type": "github"
-      }
-    },
-    "nixpkgs_6": {
       "locked": {
         "lastModified": 1767892417,
         "narHash": "sha256-dhhvQY67aboBk8b0/u0XB6vwHdgbROZT3fJAjyNh5Ww=",
@@ -1084,8 +987,7 @@
         "hyprland": "hyprland",
         "hyprland-plugins": "hyprland-plugins",
         "hyprshutdown": "hyprshutdown",
-        "my-zen-config": "my-zen-config",
-        "nixpkgs": "nixpkgs_5",
+        "nixpkgs": "nixpkgs_4",
         "spicetify-nix": "spicetify-nix",
         "stylix": "stylix",
         "zen-browser": "zen-browser"
@@ -1093,7 +995,7 @@
     },
     "spicetify-nix": {
       "inputs": {
-        "nixpkgs": "nixpkgs_6",
+        "nixpkgs": "nixpkgs_5",
         "systems": "systems_4"
       },
       "locked": {
@@ -1131,11 +1033,11 @@
         "tinted-zed": "tinted-zed"
       },
       "locked": {
-        "lastModified": 1768241331,
-        "narHash": "sha256-li0Z2Tr5qpH+wyuCMpzXSsHYRleaTukcdLTpAsGcVzY=",
+        "lastModified": 1768403292,
+        "narHash": "sha256-9DCTgR4Dhzzh5zldoHltJRx33tVuy5eHOd5T5+w05JI=",
         "owner": "nix-community",
         "repo": "stylix",
-        "rev": "a62840a9e95801969a03b91e49c1607b5322224c",
+        "rev": "3894cae75cf50d9a8f707768b229c90e2654d8bc",
         "type": "github"
       },
       "original": {
