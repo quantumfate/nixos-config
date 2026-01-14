@@ -13,8 +13,5 @@
     bluetooth.enable =
       lib.mkEnableOption "Enable the Bluetooth module with blueman-applet.";
     qmk.enable = lib.mkEnableOption "Enable installation of QMK.";
-
-    waybar.enable = lib.mkEnableOption "waybar" // { default = true; };
-    mako.enable = lib.mkEnableOption "mako" // { default = true; };
   };
 }
