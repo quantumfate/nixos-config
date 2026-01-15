@@ -4,6 +4,7 @@ let
   userCfg = config.common.user;
   catppuccin = config.theme.catppuccin;
   borderColor = catppuccin.rgba.crust 0.6;
+  backgroundTransparency = 0.85;
 in
 {
   home-manager.users."${userCfg.name}" = {
@@ -37,7 +38,7 @@ in
         #tray,
         #custom-mako,
         #battery {
-          background-color: @surface0;
+          background-color: ${catppuccin.rgba.base backgroundTransparency};
           color: @teal;
           border: 2px solid ${borderColor};
           border-radius: 8px;
@@ -46,7 +47,7 @@ in
         }
 
         #workspaces {
-          background-color: @surface0;
+          background-color: ${catppuccin.rgba.base backgroundTransparency};
           border: 2px solid ${borderColor};
           border-radius: 8px;
           padding: 0 5px;
@@ -68,13 +69,13 @@ in
         }
 
         #workspaces button:hover {
-          background: @surface0;
-          border-color: @surface0;
+          background: ${catppuccin.rgba.base backgroundTransparency};
+          border-color: @base;
         }
 
         #window {
           border: 2px solid ${borderColor};
-          background-color: @surface0;
+          background-color: ${catppuccin.rgba.base backgroundTransparency};
           border-radius: 8px;
           padding: 0 10px;
           color: @mauve;
@@ -88,7 +89,7 @@ in
         #custom-lock,
         #custom-reboot,
         #custom-power {
-          background-color: @surface0;
+          background-color: ${catppuccin.rgba.base backgroundTransparency};
           border-bottom: 2px solid ${borderColor};
           border-top: 2px solid ${borderColor};
         }

@@ -53,7 +53,9 @@ in
                     "(.*) - Brave": "$1",
                     "(.*) - fish": "> [$1]",
                     "(.*) - alacritty": "> [$1]",
-                    "(.*) - Discord": " [$1]"
+                    "(.*) - Discord": " [$1]",
+                    "(.*) - (.*) - Visual Studio Code": " [$2]",
+                    ".*Zen Browser": "󰖟"
                 },
             "separate-outputs": true
             },
