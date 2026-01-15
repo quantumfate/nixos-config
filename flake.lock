@@ -326,11 +326,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1768410656,
-        "narHash": "sha256-9CfEGvHgQ8KdhBI5x6RVkuvqCCM7KiVxCM1n9e3lVBA=",
+        "lastModified": 1768434960,
+        "narHash": "sha256-cJbFn17oyg6qAraLr+NVeNJrXsrzJdrudkzI4H2iTcg=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "85c83f70968516f571015e260fb21c774e586c0b",
+        "rev": "b4d88c9ac42ae1a745283f6547701da43b6e9f9b",
         "type": "github"
       },
       "original": {
@@ -898,11 +898,11 @@
         "nixpkgs-unfree": "nixpkgs-unfree"
       },
       "locked": {
-        "lastModified": 1768416300,
-        "narHash": "sha256-+Tw5yId9AtqzhvqXIvQziyIcmAfZFgI9xzLOn9QEa5Y=",
+        "lastModified": 1768469302,
+        "narHash": "sha256-px9J8dTl+S/k9QGTxUTMqXYFguRGYNDWJhPHSxVMraU=",
         "ref": "refs/heads/main",
-        "rev": "7813101804bf4cb1be61c316a0af3eee7810eeda",
-        "revCount": 75,
+        "rev": "9fcca107659c1829c75a48688fbfdfe641dabff0",
+        "revCount": 76,
         "type": "git",
         "url": "ssh://git@gitlab.com/quantumfate/zen"
       },
@@ -998,11 +998,11 @@
     },
     "nixpkgs_5": {
       "locked": {
-        "lastModified": 1768127708,
-        "narHash": "sha256-1Sm77VfZh3mU0F5OqKABNLWxOuDeHIlcFjsXeeiPazs=",
+        "lastModified": 1768305791,
+        "narHash": "sha256-AIdl6WAn9aymeaH/NvBj0H9qM+XuAuYbGMZaP0zcXAQ=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "ffbc9f8cbaacfb331b6017d5a5abb21a492c9a38",
+        "rev": "1412caf7bf9e660f2f962917c14b1ea1c3bc695e",
         "type": "github"
       },
       "original": {
