@@ -6,7 +6,6 @@ let
 
   modulesRight = {
     "quantum-desktop" = [
-      "hyprland/language"
       "pulseaudio"
       "clock"
       "tray"
@@ -16,7 +15,6 @@ let
       "custom/power"
     ];
     "quantum-laptop" = [
-      "hyprland/language"
       "pulseaudio"
       "clock"
       "tray"
@@ -27,7 +25,6 @@ let
       "custom/power"
     ];
     "default" = [
-      "hyprland/language"
       "pulseaudio"
       "clock"
       "tray"
