@@ -898,11 +898,11 @@
         "nixpkgs-unfree": "nixpkgs-unfree"
       },
       "locked": {
-        "lastModified": 1768474644,
-        "narHash": "sha256-xm4arKPOSve3KbW7pHb8/gQiUSrBEwjEnZyup8EEg6c=",
+        "lastModified": 1768475354,
+        "narHash": "sha256-QzNxeRmFFxTrGy7Em7rLBBiwKgPV+prGIHy7Wfpofp0=",
         "ref": "refs/heads/main",
-        "rev": "841034b2a087411dad527eb9fe5d80a74590ef83",
-        "revCount": 80,
+        "rev": "98aa6d9c700e6fe84f9d3721a2ed2367047c3cb2",
+        "revCount": 81,
         "type": "git",
         "url": "ssh://git@gitlab.com/quantumfate/zen"
       },
