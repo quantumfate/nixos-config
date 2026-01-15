@@ -5,7 +5,7 @@
 }:
 let
   pname = "ankama-launcher";
-  version = "3.13.30";
+  version = "3.13.34";
 
   # The original URL for the launcher is:
   # https://launcher.cdn.ankama.com/installers/production/Ankama%20Launcher-Setup-x86_64.AppImage
@@ -15,7 +15,7 @@ let
     url = "https://download.ankama.com/launcher-dofus/full/linux";
     name = "ankama-launcher-bypass.AppImage";
     # dWpBY/8clQT16lIPUR+y346MwRsHPU0M4ir/E9BqpwE=
-    hash = "sha256-2XLarZBSNDXdhQE7WGNzqZOGzVNZQdhN2ktaLUkoUZ8=";
+    hash = "sha256-BNMFvlobgFVXcOa27K9N3ECHmwa1WzHzjolR6wpBW2E=";
     curlOptsList = [
       "-A"
       "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
