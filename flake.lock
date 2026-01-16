@@ -174,11 +174,11 @@
       },
       "locked": {
         "dir": "pkgs/firefox-addons",
-        "lastModified": 1768449815,
-        "narHash": "sha256-ldbEmjXbSZ3KRWgWAqBv7b0R6r/KE/Shdf7P2shLoHM=",
+        "lastModified": 1768536226,
+        "narHash": "sha256-d1VSTNa7ajTxT39QBp3gKSbgmgn7yx8RxTZuvZwNX9Y=",
         "owner": "rycee",
         "repo": "nur-expressions",
-        "rev": "8ab73ae7afde9968632293842cc546884b692c41",
+        "rev": "b092ea4a7d083e09e0aa2de909c1b35b9efb3ee0",
         "type": "gitlab"
       },
       "original": {
@@ -326,11 +326,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1768434960,
-        "narHash": "sha256-cJbFn17oyg6qAraLr+NVeNJrXsrzJdrudkzI4H2iTcg=",
+        "lastModified": 1768530555,
+        "narHash": "sha256-EBXKDho4t1YSgodAL6C8M3UTm8MGMZNQ9rQnceR5+6c=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "b4d88c9ac42ae1a745283f6547701da43b6e9f9b",
+        "rev": "d21bee5abf9fb4a42b2fa7728bf671f8bb246ba6",
         "type": "github"
       },
       "original": {
@@ -443,11 +443,11 @@
         "xdph": "xdph"
       },
       "locked": {
-        "lastModified": 1768492847,
-        "narHash": "sha256-ZrCazve+KUM47OK5rey/3wp54n/M3f4pZ9dUEbOrNdI=",
+        "lastModified": 1768551081,
+        "narHash": "sha256-rMflM+m81G612HrehUCEgCvEweGnfUFRKIz07vWp1c0=",
         "owner": "hyprwm",
         "repo": "Hyprland",
-        "rev": "ac9df44788492fd1d12da8ec0fbbf691386c45a4",
+        "rev": "0b13d398fe597c9b30beb8207828586718b8a9b0",
         "type": "github"
       },
       "original": {
@@ -898,11 +898,11 @@
         "nixpkgs-unfree": "nixpkgs-unfree"
       },
       "locked": {
-        "lastModified": 1768500886,
-        "narHash": "sha256-n/7c/i0ugbR1yBVpaT8QdqvO5BWLjCMBOxduZ1TCvV4=",
+        "lastModified": 1768556761,
+        "narHash": "sha256-aTUmKuVXsQUv/qsAj2pL/JQ/Yeja2+N+aDSgwbI2u7o=",
         "ref": "refs/heads/main",
-        "rev": "54f96ae7255dcc4313adb559a384f8c2a35f60bc",
-        "revCount": 84,
+        "rev": "f37c37bd0149aba06a478916b6e9c60553ea0e14",
+        "revCount": 85,
         "type": "git",
         "url": "ssh://git@gitlab.com/quantumfate/zen"
       },
